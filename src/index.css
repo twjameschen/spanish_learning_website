@@ -1,0 +1,98 @@
+/* 字型：只引 latin 子集的三個字重 woff2，避免單檔版 base64 爆量 */
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: 255 248 240;    /* #FFF8F0 暖米白 */
+    --surface: 255 253 249;   /* 卡片 */
+    --surface-2: 247 236 224; /* 次層／凹槽 */
+    --surface-3: 255 244 235;
+    --line: 236 222 208;
+    --body: 45 48 71;         /* #2D3047 */
+    --muted: 110 115 145;
+  }
+
+  .dark {
+    --canvas: 18 19 28;
+    --surface: 35 37 54;
+    --surface-2: 45 48 71;
+    --surface-3: 25 27 39;
+    --line: 58 62 90;
+    --body: 236 235 240;
+    --muted: 160 163 182;
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-body font-sans antialiased;
+    font-feature-settings: 'kern' 1;
+    /* 中文字距稍微放開，跟 Nunito 混排比較不擠 */
+    letter-spacing: 0.01em;
+    min-height: 100dvh;
+  }
+
+  /* 減少動態偏好：全站動畫關掉 */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-canvas;
+  }
+
+  /* 西班牙文內容統一用 Nunito，避免中文字型搶去 latin 字母 */
+  :lang(es) {
+    font-family: Nunito, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* 拉美風幾何裝飾底：太陽紋 + 波浪，低透明度 */
+  .decor-sun {
+    background-image: theme('backgroundImage.sun-rays');
+    background-repeat: no-repeat;
+  }
+
+  .flow-bar {
+    background-image: theme('backgroundImage.flow-primary');
+    background-size: 200% 100%;
+    @apply animate-flow-x;
+  }
+
+  /* 卡片基底：圓角只用 2xl / 3xl，柔和多層陰影 */
+  .card-base {
+    @apply rounded-3xl bg-surface shadow-card border border-line/60;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* 讓長西文單字在窄螢幕能斷行 */
+  .break-es {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}

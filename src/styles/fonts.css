@@ -1,0 +1,27 @@
+/*
+ * 自己寫 @font-face 而不是直接 @import @fontsource 的 CSS：
+ * fontsource 的檔案同時列出 woff2 與 woff，單檔版會把兩者都 base64 進去，
+ * 白白多出約 85KB。目標瀏覽器（Chrome / Edge）十年前就支援 woff2，woff 是純負擔。
+ * 只取 latin 子集（西班牙文用不到 cyrillic / vietnamese）。
+ */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('@fontsource/nunito/files/nunito-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('@fontsource/nunito/files/nunito-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('@fontsource/nunito/files/nunito-latin-800-normal.woff2') format('woff2');
+}

@@ -1,0 +1,119 @@
+import { useRef, useState } from 'react';
+import { Download, Upload, Check, TriangleAlert, ClipboardCopy } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  exportBackup,
+  backupFileName,
+  downloadJson,
+  parseBackup,
+  importBackup,
+} from '@/lib/backup';
+
+type Status =
+  | { kind: 'idle' }
+  | { kind: 'ok'; message: string }
+  | { kind: 'error'; message: string }
+  /** 下載被環境擋掉時，把 JSON 攤開讓使用者自己複製 */
+  | { kind: 'manual'; text: string };
+
+export function BackupControls({ compact = false }: { compact?: boolean }) {
+  const [status, setStatus] = useState<Status>({ kind: 'idle' });
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  async function handleExport() {
+    try {
+      const backup = await exportBackup();
+      const count = Object.keys(backup.data).length;
+      if (count === 0) {
+        setStatus({ kind: 'error', message: '目前還沒有任何進度可以匯出。' });
+        return;
+      }
+      const ok = downloadJson(backupFileName(), backup);
+      setStatus(
+        ok
+          ? { kind: 'ok', message: `已匯出 ${count} 筆資料。` }
+          : { kind: 'manual', text: JSON.stringify(backup, null, 2) },
+      );
+    } catch (e) {
+      setStatus({ kind: 'error', message: e instanceof Error ? e.message : '匯出失敗。' });
+    }
+  }
+
+  async function handleFile(file: File) {
+    try {
+      const backup = parseBackup(await file.text());
+      const summary = await importBackup(backup, 'replace');
+      setStatus({
+        kind: 'ok',
+        message: `已匯入 ${summary.keys} 筆資料（備份時間 ${summary.exportedAt}）。重新整理後生效。`,
+      });
+    } catch (e) {
+      setStatus({ kind: 'error', message: e instanceof Error ? e.message : '匯入失敗。' });
+    }
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-2">
+        <Button
+          variant="outline"
+          size={compact ? 'sm' : 'md'}
+          onClick={handleExport}
+          title="把全部學習進度存成一個 JSON 檔"
+        >
+          <Download aria-hidden="true" />
+          匯出進度
+        </Button>
+        <Button
+          variant="outline"
+          size={compact ? 'sm' : 'md'}
+          onClick={() => fileRef.current?.click()}
+          title="從先前匯出的 JSON 檔還原進度"
+        >
+          <Upload aria-hidden="true" />
+          匯入進度
+        </Button>
+        <input
+          ref={fileRef}
+          type="file"
+          accept="application/json,.json"
+          className="hidden"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) void handleFile(file);
+            e.target.value = '';
+          }}
+        />
+      </div>
+
+      {status.kind === 'ok' ? (
+        <p className="flex items-start gap-1.5 text-sm font-semibold text-success-700 dark:text-success-200">
+          <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          {status.message}
+        </p>
+      ) : null}
+
+      {status.kind === 'error' ? (
+        <p className="flex items-start gap-1.5 text-sm font-semibold text-error-600">
+          <TriangleAlert aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          {status.message}
+        </p>
+      ) : null}
+
+      {status.kind === 'manual' ? (
+        <div className="space-y-2 rounded-2xl bg-surface-2 p-3">
+          <p className="flex items-center gap-1.5 text-sm font-semibold text-body">
+            <ClipboardCopy aria-hidden="true" className="size-4" />
+            瀏覽器擋下了自動下載，請手動全選複製以下內容存成 .json 檔：
+          </p>
+          <textarea
+            readOnly
+            value={status.text}
+            onFocus={(e) => e.currentTarget.select()}
+            className="h-40 w-full resize-y rounded-2xl border border-line bg-surface p-3 font-mono text-xs text-body"
+          />
+        </div>
+      ) : null}
+    </div>
+  );
+}
