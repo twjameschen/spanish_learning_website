@@ -1,0 +1,56 @@
+[
+  {
+    "city": "taipei",
+    "nameZh": "台北",
+    "nameEs": "Taipéi",
+    "country": "台灣",
+    "blurb": "出發前的準備。先把發音、重音、以及拉美特有的 seseo 與 yeísmo 弄對，再學會開口打招呼和數數字。",
+    "lessonIds": [
+      "a0-alfabeto",
+      "a0-sonidos",
+      "a0-acento",
+      "a0-seseo-yeismo",
+      "a0-saludos",
+      "a0-numeros"
+    ]
+  },
+  {
+    "city": "miami",
+    "nameZh": "邁阿密",
+    "nameEs": "Miami",
+    "country": "美國",
+    "blurb": "轉機的空檔。處理中文母語者最不習慣的四件事：名詞有性別、名詞前面要冠詞、複數會傳染、動詞隨人稱變形。",
+    "lessonIds": [
+      "a0-genero",
+      "a0-articulos",
+      "a0-plural",
+      "a0-pronombres",
+      "a0-ser-estar",
+      "a0-hay"
+    ]
+  },
+  {
+    "city": "quito",
+    "nameZh": "基多",
+    "nameEs": "Quito",
+    "country": "厄瓜多",
+    "blurb": "抵達海拔 2850 公尺的首都。現在式、15 個高頻不規則動詞、gustar 型動詞，以及 Sierra 高地特有的禮貌等級。",
+    "lessonIds": []
+  },
+  {
+    "city": "cuenca",
+    "nameZh": "昆卡",
+    "nameEs": "Cuenca",
+    "country": "厄瓜多",
+    "blurb": "安地斯山谷中的殖民古城。學會講過去的事：簡單過去式、未完成過去式，以及兩者最難的對比。",
+    "lessonIds": []
+  },
+  {
+    "city": "galapagos",
+    "nameZh": "加拉巴哥",
+    "nameEs": "Galápagos",
+    "country": "厄瓜多",
+    "blurb": "旅程的終點。虛擬式三章、條件句、se 的被動與無人稱 —— 開始表達態度、假設與願望。",
+    "lessonIds": []
+  }
+]

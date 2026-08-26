@@ -1,0 +1,434 @@
+[
+  {
+    "id": "ser",
+    "es": "ser",
+    "zh": "是（本質、身分、來源）",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Yo soy de Taiwán y ella es de Ecuador.",
+    "exampleZh": "我是台灣人，她是厄瓜多人。",
+    "infinitive": "ser",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "sido",
+    "gerundio": "siendo",
+    "conjugations": {
+      "presente": {
+        "yo": "soy",
+        "tu": "eres",
+        "el_ella_usted": "es",
+        "nosotros": "somos",
+        "ellos_ustedes": "son"
+      }
+    }
+  },
+  {
+    "id": "estar",
+    "es": "estar",
+    "zh": "是；在（狀態、位置）",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "El café está caliente y yo estoy cansado.",
+    "exampleZh": "咖啡是燙的，而我很累。",
+    "infinitive": "estar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "estado",
+    "gerundio": "estando",
+    "conjugations": {
+      "presente": {
+        "yo": "estoy",
+        "tu": "estás",
+        "el_ella_usted": "está",
+        "nosotros": "estamos",
+        "ellos_ustedes": "están"
+      }
+    }
+  },
+  {
+    "id": "tener",
+    "es": "tener",
+    "zh": "有；擁有",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Tengo dos hermanos y ellos tienen una hija.",
+    "exampleZh": "我有兩個兄弟，他們有一個女兒。",
+    "infinitive": "tener",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "tenido",
+    "gerundio": "teniendo",
+    "conjugations": {
+      "presente": {
+        "yo": "tengo",
+        "tu": "tienes",
+        "el_ella_usted": "tiene",
+        "nosotros": "tenemos",
+        "ellos_ustedes": "tienen"
+      }
+    }
+  },
+  {
+    "id": "haber",
+    "es": "haber",
+    "zh": "有（存在）；（完成式助動詞）",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Hay un mercado en esta calle.",
+    "exampleZh": "這條街上有一個市場。",
+    "infinitive": "haber",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "habido",
+    "gerundio": "habiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "he",
+        "tu": "has",
+        "el_ella_usted": "ha",
+        "nosotros": "hemos",
+        "ellos_ustedes": "han"
+      }
+    }
+  },
+  {
+    "id": "ir",
+    "es": "ir",
+    "zh": "去",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Mañana voy a Quito y ellos van a Cuenca.",
+    "exampleZh": "我明天去基多，他們去昆卡。",
+    "infinitive": "ir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "ido",
+    "gerundio": "yendo",
+    "conjugations": {
+      "presente": {
+        "yo": "voy",
+        "tu": "vas",
+        "el_ella_usted": "va",
+        "nosotros": "vamos",
+        "ellos_ustedes": "van"
+      }
+    }
+  },
+  {
+    "id": "querer",
+    "es": "querer",
+    "zh": "想要；愛",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Quiero un café y ella quiere un jugo.",
+    "exampleZh": "我想要一杯咖啡，她想要一杯果汁。",
+    "infinitive": "querer",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "querido",
+    "gerundio": "queriendo",
+    "conjugations": {
+      "presente": {
+        "yo": "quiero",
+        "tu": "quieres",
+        "el_ella_usted": "quiere",
+        "nosotros": "queremos",
+        "ellos_ustedes": "quieren"
+      }
+    }
+  },
+  {
+    "id": "hablar",
+    "es": "hablar",
+    "zh": "說（語言）；講話",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Hablo chino y un poco de español.",
+    "exampleZh": "我說中文和一點西班牙文。",
+    "infinitive": "hablar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "hablado",
+    "gerundio": "hablando",
+    "conjugations": {
+      "presente": {
+        "yo": "hablo",
+        "tu": "hablas",
+        "el_ella_usted": "habla",
+        "nosotros": "hablamos",
+        "ellos_ustedes": "hablan"
+      }
+    }
+  },
+  {
+    "id": "estudiar",
+    "es": "estudiar",
+    "zh": "讀書；學習",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Estudio español todos los días.",
+    "exampleZh": "我每天學西班牙文。",
+    "infinitive": "estudiar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "estudiado",
+    "gerundio": "estudiando",
+    "conjugations": {
+      "presente": {
+        "yo": "estudio",
+        "tu": "estudias",
+        "el_ella_usted": "estudia",
+        "nosotros": "estudiamos",
+        "ellos_ustedes": "estudian"
+      }
+    }
+  },
+  {
+    "id": "trabajar",
+    "es": "trabajar",
+    "zh": "工作",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Mi madre trabaja en un hospital.",
+    "exampleZh": "我母親在醫院工作。",
+    "infinitive": "trabajar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "trabajado",
+    "gerundio": "trabajando",
+    "conjugations": {
+      "presente": {
+        "yo": "trabajo",
+        "tu": "trabajas",
+        "el_ella_usted": "trabaja",
+        "nosotros": "trabajamos",
+        "ellos_ustedes": "trabajan"
+      }
+    }
+  },
+  {
+    "id": "necesitar",
+    "es": "necesitar",
+    "zh": "需要",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Necesito diez minutos, por favor.",
+    "exampleZh": "我需要十分鐘，麻煩了。",
+    "infinitive": "necesitar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "necesitado",
+    "gerundio": "necesitando",
+    "conjugations": {
+      "presente": {
+        "yo": "necesito",
+        "tu": "necesitas",
+        "el_ella_usted": "necesita",
+        "nosotros": "necesitamos",
+        "ellos_ustedes": "necesitan"
+      }
+    }
+  },
+  {
+    "id": "comprar",
+    "es": "comprar",
+    "zh": "買",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Compramos fruta en el mercado.",
+    "exampleZh": "我們在市場買水果。",
+    "infinitive": "comprar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "comprado",
+    "gerundio": "comprando",
+    "conjugations": {
+      "presente": {
+        "yo": "compro",
+        "tu": "compras",
+        "el_ella_usted": "compra",
+        "nosotros": "compramos",
+        "ellos_ustedes": "compran"
+      }
+    }
+  },
+  {
+    "id": "llamarse",
+    "es": "llamarse",
+    "zh": "名叫（反身動詞）",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Me llamo Ana. ¿Cómo se llama usted?",
+    "exampleZh": "我叫安娜。請問您叫什麼名字？",
+    "infinitive": "llamarse",
+    "irregular": false,
+    "reflexive": true,
+    "participio": "llamado",
+    "gerundio": "llamando",
+    "conjugations": {
+      "presente": {
+        "yo": "me llamo",
+        "tu": "te llamas",
+        "el_ella_usted": "se llama",
+        "nosotros": "nos llamamos",
+        "ellos_ustedes": "se llaman"
+      }
+    }
+  },
+  {
+    "id": "comer",
+    "es": "comer",
+    "zh": "吃",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Como arroz con pollo en el almuerzo.",
+    "exampleZh": "我午餐吃雞肉飯。",
+    "infinitive": "comer",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "comido",
+    "gerundio": "comiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "como",
+        "tu": "comes",
+        "el_ella_usted": "come",
+        "nosotros": "comemos",
+        "ellos_ustedes": "comen"
+      }
+    }
+  },
+  {
+    "id": "beber",
+    "es": "beber",
+    "zh": "喝",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Bebo agua, no bebo café en la noche.",
+    "exampleZh": "我喝水，晚上不喝咖啡。",
+    "infinitive": "beber",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "bebido",
+    "gerundio": "bebiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "bebo",
+        "tu": "bebes",
+        "el_ella_usted": "bebe",
+        "nosotros": "bebemos",
+        "ellos_ustedes": "beben"
+      }
+    }
+  },
+  {
+    "id": "aprender",
+    "es": "aprender",
+    "zh": "學會；學習",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Aprendemos español en la universidad.",
+    "exampleZh": "我們在大學學西班牙文。",
+    "infinitive": "aprender",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "aprendido",
+    "gerundio": "aprendiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "aprendo",
+        "tu": "aprendes",
+        "el_ella_usted": "aprende",
+        "nosotros": "aprendemos",
+        "ellos_ustedes": "aprenden"
+      }
+    }
+  },
+  {
+    "id": "leer",
+    "es": "leer",
+    "zh": "讀；閱讀",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Leo un libro en español.",
+    "exampleZh": "我在讀一本西班牙文的書。",
+    "infinitive": "leer",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "leído",
+    "gerundio": "leyendo",
+    "conjugations": {
+      "presente": {
+        "yo": "leo",
+        "tu": "lees",
+        "el_ella_usted": "lee",
+        "nosotros": "leemos",
+        "ellos_ustedes": "leen"
+      }
+    }
+  },
+  {
+    "id": "vivir",
+    "es": "vivir",
+    "zh": "住；生活",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Vivo en Taipéi y mi ñaño vive en Quito.",
+    "exampleZh": "我住台北，我兄弟住基多。",
+    "infinitive": "vivir",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "vivido",
+    "gerundio": "viviendo",
+    "conjugations": {
+      "presente": {
+        "yo": "vivo",
+        "tu": "vives",
+        "el_ella_usted": "vive",
+        "nosotros": "vivimos",
+        "ellos_ustedes": "viven"
+      }
+    }
+  },
+  {
+    "id": "escribir",
+    "es": "escribir",
+    "zh": "寫",
+    "pos": "verb",
+    "level": "A0",
+    "topic": "verbos",
+    "exampleEs": "Escribo mi nombre aquí.",
+    "exampleZh": "我把名字寫在這裡。",
+    "infinitive": "escribir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "escrito",
+    "gerundio": "escribiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "escribo",
+        "tu": "escribes",
+        "el_ella_usted": "escribe",
+        "nosotros": "escribimos",
+        "ellos_ustedes": "escriben"
+      }
+    }
+  }
+]

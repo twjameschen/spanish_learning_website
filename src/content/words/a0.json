@@ -1,0 +1,2310 @@
+[
+  {
+    "id": "hola",
+    "es": "hola",
+    "zh": "嗨；你好",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "¡Hola! ¿Cómo estás?",
+    "exampleZh": "嗨！你好嗎？"
+  },
+  {
+    "id": "buenos-dias",
+    "es": "buenos días",
+    "zh": "早安",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Buenos días, señora Pérez.",
+    "exampleZh": "早安，佩雷斯女士。"
+  },
+  {
+    "id": "buenas-tardes",
+    "es": "buenas tardes",
+    "zh": "午安",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Buenas tardes, ¿cómo está usted?",
+    "exampleZh": "午安，您好嗎？"
+  },
+  {
+    "id": "buenas-noches",
+    "es": "buenas noches",
+    "zh": "晚安（見面或道別皆可）",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Buenas noches, hasta mañana.",
+    "exampleZh": "晚安，明天見。"
+  },
+  {
+    "id": "adios",
+    "es": "adiós",
+    "zh": "再見",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Adiós, que le vaya bien.",
+    "exampleZh": "再見，祝您一切順利。"
+  },
+  {
+    "id": "hasta-luego",
+    "es": "hasta luego",
+    "zh": "待會見",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Hasta luego, ñaño.",
+    "exampleZh": "待會見，老兄。"
+  },
+  {
+    "id": "hasta-manana",
+    "es": "hasta mañana",
+    "zh": "明天見",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Hasta mañana en la escuela.",
+    "exampleZh": "明天學校見。"
+  },
+  {
+    "id": "como-estas",
+    "es": "¿cómo estás?",
+    "zh": "你好嗎？（親近的人）",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "¿Cómo estás? Yo estoy bien.",
+    "exampleZh": "你好嗎？我很好。"
+  },
+  {
+    "id": "como-esta-usted",
+    "es": "¿cómo está usted?",
+    "zh": "您好嗎？（禮貌）",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "¿Cómo está usted, don Carlos?",
+    "exampleZh": "卡洛斯先生，您好嗎？"
+  },
+  {
+    "id": "que-tal",
+    "es": "¿qué tal?",
+    "zh": "最近如何？",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "¿Qué tal? Todo bien.",
+    "exampleZh": "最近如何？都很好。"
+  },
+  {
+    "id": "gracias",
+    "es": "gracias",
+    "zh": "謝謝",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Gracias por su ayuda.",
+    "exampleZh": "謝謝您的幫忙。"
+  },
+  {
+    "id": "muchas-gracias",
+    "es": "muchas gracias",
+    "zh": "非常感謝",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Muchas gracias, muy amable.",
+    "exampleZh": "非常感謝，您人真好。"
+  },
+  {
+    "id": "de-nada",
+    "es": "de nada",
+    "zh": "不客氣",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "—Gracias. —De nada.",
+    "exampleZh": "「謝謝。」「不客氣。」"
+  },
+  {
+    "id": "por-favor",
+    "es": "por favor",
+    "zh": "請",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Un café, por favor.",
+    "exampleZh": "請給我一杯咖啡。"
+  },
+  {
+    "id": "perdon",
+    "es": "perdón",
+    "zh": "不好意思；抱歉",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Perdón, ¿dónde está el baño?",
+    "exampleZh": "不好意思，洗手間在哪裡？"
+  },
+  {
+    "id": "lo-siento",
+    "es": "lo siento",
+    "zh": "對不起（表達遺憾）",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Lo siento, no puedo ir hoy.",
+    "exampleZh": "對不起，我今天不能去。"
+  },
+  {
+    "id": "con-permiso",
+    "es": "con permiso",
+    "zh": "借過；失陪一下",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "Con permiso, voy a salir.",
+    "exampleZh": "不好意思借過，我要出去。"
+  },
+  {
+    "id": "mucho-gusto",
+    "es": "mucho gusto",
+    "zh": "幸會",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "—Me llamo Ana. —Mucho gusto.",
+    "exampleZh": "「我叫安娜。」「幸會。」"
+  },
+  {
+    "id": "si",
+    "es": "sí",
+    "zh": "是；對",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "—¿Eres de Taiwán? —Sí.",
+    "exampleZh": "「你是台灣人嗎？」「是。」"
+  },
+  {
+    "id": "no",
+    "es": "no",
+    "zh": "不；不是",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "No, yo no hablo francés.",
+    "exampleZh": "不，我不說法文。"
+  },
+  {
+    "id": "senor",
+    "es": "señor",
+    "zh": "先生",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "El señor Ramírez es mi profesor.",
+    "exampleZh": "拉米雷斯先生是我的老師。",
+    "gender": "m"
+  },
+  {
+    "id": "senora",
+    "es": "señora",
+    "zh": "女士；太太",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "saludos",
+    "exampleEs": "La señora vive en Quito.",
+    "exampleZh": "那位女士住在基多。",
+    "gender": "f"
+  },
+  {
+    "id": "como-se-dice",
+    "es": "¿cómo se dice…?",
+    "zh": "「…」怎麼說？",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "¿Cómo se dice \"book\" en español?",
+    "exampleZh": "「book」的西班牙文怎麼說？"
+  },
+  {
+    "id": "que-significa",
+    "es": "¿qué significa…?",
+    "zh": "「…」是什麼意思？",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "¿Qué significa \"chévere\"?",
+    "exampleZh": "「chévere」是什麼意思？"
+  },
+  {
+    "id": "no-entiendo",
+    "es": "no entiendo",
+    "zh": "我不懂",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "Perdón, no entiendo.",
+    "exampleZh": "不好意思，我不懂。"
+  },
+  {
+    "id": "no-se",
+    "es": "no sé",
+    "zh": "我不知道",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "No sé dónde está la calle.",
+    "exampleZh": "我不知道那條街在哪裡。"
+  },
+  {
+    "id": "mas-despacio",
+    "es": "más despacio",
+    "zh": "慢一點",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "Más despacio, por favor.",
+    "exampleZh": "請慢一點。"
+  },
+  {
+    "id": "otra-vez",
+    "es": "otra vez",
+    "zh": "再一次",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "¿Puede decirlo otra vez?",
+    "exampleZh": "您可以再說一次嗎？"
+  },
+  {
+    "id": "como-interrog",
+    "es": "¿cómo?",
+    "zh": "什麼？（沒聽清楚時）",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "—Me llamo Xavier. —¿Cómo?",
+    "exampleZh": "「我叫哈維爾。」「什麼？」"
+  },
+  {
+    "id": "claro",
+    "es": "claro",
+    "zh": "當然；清楚",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "Claro, con mucho gusto.",
+    "exampleZh": "當然，我很樂意。"
+  },
+  {
+    "id": "tal-vez",
+    "es": "tal vez",
+    "zh": "也許",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "Tal vez mañana.",
+    "exampleZh": "也許明天吧。"
+  },
+  {
+    "id": "tambien",
+    "es": "también",
+    "zh": "也",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "clase",
+    "exampleEs": "Yo también soy estudiante.",
+    "exampleZh": "我也是學生。"
+  },
+  {
+    "id": "yo",
+    "es": "yo",
+    "zh": "我",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Yo soy de Taipéi.",
+    "exampleZh": "我來自台北。"
+  },
+  {
+    "id": "tu-pron",
+    "es": "tú",
+    "zh": "你",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "¿Tú eres el hermano de Ana?",
+    "exampleZh": "你是安娜的哥哥嗎？"
+  },
+  {
+    "id": "usted",
+    "es": "usted",
+    "zh": "您",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "¿Usted es el profesor?",
+    "exampleZh": "您是老師嗎？",
+    "regional": {
+      "region": "Ecuador",
+      "note": "在基多所在的 Sierra 高地，usted 的使用比多數教材預期得更廣，朋友甚至家人之間也常用。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "el-pron",
+    "es": "él",
+    "zh": "他",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Él vive en Cuenca.",
+    "exampleZh": "他住在昆卡。"
+  },
+  {
+    "id": "ella",
+    "es": "ella",
+    "zh": "她",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Ella es mi hermana.",
+    "exampleZh": "她是我姊姊。"
+  },
+  {
+    "id": "nosotros",
+    "es": "nosotros",
+    "zh": "我們",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Nosotros somos amigos.",
+    "exampleZh": "我們是朋友。"
+  },
+  {
+    "id": "ellos",
+    "es": "ellos",
+    "zh": "他們",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Ellos hablan español.",
+    "exampleZh": "他們說西班牙文。"
+  },
+  {
+    "id": "ustedes",
+    "es": "ustedes",
+    "zh": "你們；您們",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "¿Ustedes son de Ecuador?",
+    "exampleZh": "你們是厄瓜多人嗎？",
+    "regional": {
+      "region": "LatAm",
+      "note": "拉丁美洲的第二人稱複數一律用 ustedes，完全不使用西班牙的 vosotros。",
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "familia",
+    "es": "familia",
+    "zh": "家庭",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Mi familia es pequeña.",
+    "exampleZh": "我的家庭很小。",
+    "gender": "f"
+  },
+  {
+    "id": "madre",
+    "es": "madre",
+    "zh": "母親",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Mi madre trabaja en un hospital.",
+    "exampleZh": "我母親在醫院工作。",
+    "gender": "f"
+  },
+  {
+    "id": "padre",
+    "es": "padre",
+    "zh": "父親",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Su padre es profesor.",
+    "exampleZh": "他父親是老師。",
+    "gender": "m"
+  },
+  {
+    "id": "mama",
+    "es": "mamá",
+    "zh": "媽媽",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Mamá, ¿dónde está mi libro?",
+    "exampleZh": "媽，我的書在哪裡？",
+    "gender": "f"
+  },
+  {
+    "id": "papa-dad",
+    "es": "papá",
+    "zh": "爸爸",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Mi papá tiene cuarenta años.",
+    "exampleZh": "我爸爸四十歲。",
+    "gender": "m",
+    "genderNote": "注意重音：papá（爸爸）跟 papa（馬鈴薯）只差一個重音符號，意思完全不同。"
+  },
+  {
+    "id": "hermano",
+    "es": "hermano",
+    "zh": "哥哥；弟弟",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Tengo un hermano y una hermana.",
+    "exampleZh": "我有一個兄弟和一個姊妹。",
+    "gender": "m"
+  },
+  {
+    "id": "hermana",
+    "es": "hermana",
+    "zh": "姊姊；妹妹",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Mi hermana estudia en la universidad.",
+    "exampleZh": "我姊姊在大學讀書。",
+    "gender": "f"
+  },
+  {
+    "id": "hijo",
+    "es": "hijo",
+    "zh": "兒子",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Ellos tienen dos hijos.",
+    "exampleZh": "他們有兩個孩子。",
+    "gender": "m"
+  },
+  {
+    "id": "hija",
+    "es": "hija",
+    "zh": "女兒",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Su hija se llama Lucía.",
+    "exampleZh": "他女兒叫露西亞。",
+    "gender": "f"
+  },
+  {
+    "id": "amigo",
+    "es": "amigo",
+    "zh": "朋友（男）",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Carlos es mi amigo.",
+    "exampleZh": "卡洛斯是我朋友。",
+    "gender": "m"
+  },
+  {
+    "id": "amiga",
+    "es": "amiga",
+    "zh": "朋友（女）",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Ana es una amiga de mi hermana.",
+    "exampleZh": "安娜是我姊姊的朋友。",
+    "gender": "f"
+  },
+  {
+    "id": "hombre",
+    "es": "hombre",
+    "zh": "男人",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Ese hombre es mi vecino.",
+    "exampleZh": "那個男人是我鄰居。",
+    "gender": "m"
+  },
+  {
+    "id": "mujer",
+    "es": "mujer",
+    "zh": "女人",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "La mujer del sombrero es mi tía.",
+    "exampleZh": "戴帽子的那位女士是我阿姨。",
+    "gender": "f"
+  },
+  {
+    "id": "nino",
+    "es": "niño",
+    "zh": "男孩；小孩",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "El niño tiene cinco años.",
+    "exampleZh": "那個男孩五歲。",
+    "gender": "m"
+  },
+  {
+    "id": "nina",
+    "es": "niña",
+    "zh": "女孩",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "La niña lee un libro.",
+    "exampleZh": "那個女孩在讀一本書。",
+    "gender": "f"
+  },
+  {
+    "id": "estudiante",
+    "es": "estudiante",
+    "zh": "學生",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "Soy estudiante de español.",
+    "exampleZh": "我是西班牙文的學生。",
+    "gender": "m",
+    "genderNote": "陰陽同形：男生用 el estudiante，女生用 la estudiante，字尾不變。"
+  },
+  {
+    "id": "profesor",
+    "es": "profesor",
+    "zh": "老師（男）",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "personas",
+    "exampleEs": "El profesor es de Quito.",
+    "exampleZh": "那位老師來自基多。",
+    "gender": "m"
+  },
+  {
+    "id": "cero",
+    "es": "cero",
+    "zh": "零",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Hay cero problemas.",
+    "exampleZh": "一個問題也沒有。"
+  },
+  {
+    "id": "uno",
+    "es": "uno",
+    "zh": "一",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Tengo un hermano.",
+    "exampleZh": "我有一個兄弟。"
+  },
+  {
+    "id": "dos",
+    "es": "dos",
+    "zh": "二",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Quiero dos cafés, por favor.",
+    "exampleZh": "請給我兩杯咖啡。"
+  },
+  {
+    "id": "tres",
+    "es": "tres",
+    "zh": "三",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "La clase es a las tres.",
+    "exampleZh": "課是三點開始。"
+  },
+  {
+    "id": "cuatro",
+    "es": "cuatro",
+    "zh": "四",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Somos cuatro en mi familia.",
+    "exampleZh": "我家有四個人。"
+  },
+  {
+    "id": "cinco",
+    "es": "cinco",
+    "zh": "五",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "El niño tiene cinco años.",
+    "exampleZh": "那個男孩五歲。"
+  },
+  {
+    "id": "seis",
+    "es": "seis",
+    "zh": "六",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Trabajo seis días a la semana.",
+    "exampleZh": "我一週工作六天。"
+  },
+  {
+    "id": "siete",
+    "es": "siete",
+    "zh": "七",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "La semana tiene siete días.",
+    "exampleZh": "一週有七天。"
+  },
+  {
+    "id": "ocho",
+    "es": "ocho",
+    "zh": "八",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Son las ocho de la mañana.",
+    "exampleZh": "現在是早上八點。"
+  },
+  {
+    "id": "nueve",
+    "es": "nueve",
+    "zh": "九",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Vivo en el piso nueve.",
+    "exampleZh": "我住在九樓。"
+  },
+  {
+    "id": "diez",
+    "es": "diez",
+    "zh": "十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Necesito diez minutos.",
+    "exampleZh": "我需要十分鐘。"
+  },
+  {
+    "id": "once",
+    "es": "once",
+    "zh": "十一",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Mi hermana tiene once años.",
+    "exampleZh": "我妹妹十一歲。"
+  },
+  {
+    "id": "doce",
+    "es": "doce",
+    "zh": "十二",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "El año tiene doce meses.",
+    "exampleZh": "一年有十二個月。"
+  },
+  {
+    "id": "trece",
+    "es": "trece",
+    "zh": "十三",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Hay trece estudiantes en la clase.",
+    "exampleZh": "班上有十三個學生。"
+  },
+  {
+    "id": "catorce",
+    "es": "catorce",
+    "zh": "十四",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Es el catorce de febrero.",
+    "exampleZh": "今天是二月十四日。"
+  },
+  {
+    "id": "quince",
+    "es": "quince",
+    "zh": "十五",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Quince dólares, por favor.",
+    "exampleZh": "十五美元，麻煩了。"
+  },
+  {
+    "id": "dieciseis",
+    "es": "dieciséis",
+    "zh": "十六",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Hay dieciséis estudiantes aquí.",
+    "exampleZh": "這裡有十六個學生。"
+  },
+  {
+    "id": "diecisiete",
+    "es": "diecisiete",
+    "zh": "十七",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Son las diecisiete horas.",
+    "exampleZh": "現在是十七點。"
+  },
+  {
+    "id": "dieciocho",
+    "es": "dieciocho",
+    "zh": "十八",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Mi hermano tiene dieciocho años.",
+    "exampleZh": "我哥哥十八歲。"
+  },
+  {
+    "id": "diecinueve",
+    "es": "diecinueve",
+    "zh": "十九",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Hay diecinueve libros en la mesa.",
+    "exampleZh": "桌上有十九本書。"
+  },
+  {
+    "id": "veinte",
+    "es": "veinte",
+    "zh": "二十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Veinte personas viven aquí.",
+    "exampleZh": "二十個人住在這裡。"
+  },
+  {
+    "id": "treinta",
+    "es": "treinta",
+    "zh": "三十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "El mes tiene treinta días.",
+    "exampleZh": "這個月有三十天。"
+  },
+  {
+    "id": "cuarenta",
+    "es": "cuarenta",
+    "zh": "四十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Mi papá tiene cuarenta años.",
+    "exampleZh": "我爸爸四十歲。"
+  },
+  {
+    "id": "cincuenta",
+    "es": "cincuenta",
+    "zh": "五十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Cincuenta dólares es mucho.",
+    "exampleZh": "五十美元很多。"
+  },
+  {
+    "id": "sesenta",
+    "es": "sesenta",
+    "zh": "六十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "La hora tiene sesenta minutos.",
+    "exampleZh": "一小時有六十分鐘。"
+  },
+  {
+    "id": "setenta",
+    "es": "setenta",
+    "zh": "七十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Mi abuela tiene setenta años.",
+    "exampleZh": "我奶奶七十歲。"
+  },
+  {
+    "id": "ochenta",
+    "es": "ochenta",
+    "zh": "八十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Hay ochenta sillas en la sala.",
+    "exampleZh": "大廳裡有八十張椅子。"
+  },
+  {
+    "id": "noventa",
+    "es": "noventa",
+    "zh": "九十",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Noventa por ciento es suficiente.",
+    "exampleZh": "百分之九十就夠了。"
+  },
+  {
+    "id": "cien",
+    "es": "cien",
+    "zh": "一百",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "numeros",
+    "exampleEs": "Cien dólares, por favor.",
+    "exampleZh": "一百美元，麻煩了。"
+  },
+  {
+    "id": "rojo",
+    "es": "rojo",
+    "zh": "紅色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "El carro rojo es de mi papá.",
+    "exampleZh": "那台紅色的車是我爸爸的。"
+  },
+  {
+    "id": "azul",
+    "es": "azul",
+    "zh": "藍色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "El cielo está azul hoy.",
+    "exampleZh": "今天天空是藍的。"
+  },
+  {
+    "id": "verde",
+    "es": "verde",
+    "zh": "綠色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "Quiero la manzana verde.",
+    "exampleZh": "我要那顆綠蘋果。"
+  },
+  {
+    "id": "amarillo",
+    "es": "amarillo",
+    "zh": "黃色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "El taxi amarillo está allí.",
+    "exampleZh": "黃色計程車在那邊。"
+  },
+  {
+    "id": "negro",
+    "es": "negro",
+    "zh": "黑色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "Tengo un sombrero negro.",
+    "exampleZh": "我有一頂黑帽子。"
+  },
+  {
+    "id": "blanco",
+    "es": "blanco",
+    "zh": "白色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "La casa blanca es muy grande.",
+    "exampleZh": "那棟白房子很大。"
+  },
+  {
+    "id": "naranja",
+    "es": "naranja",
+    "zh": "橘色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "Su mochila es naranja.",
+    "exampleZh": "他的背包是橘色的。"
+  },
+  {
+    "id": "gris",
+    "es": "gris",
+    "zh": "灰色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "Hoy el día está gris.",
+    "exampleZh": "今天天色灰濛濛的。"
+  },
+  {
+    "id": "rosado",
+    "es": "rosado",
+    "zh": "粉紅色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "La niña tiene un vestido rosado.",
+    "exampleZh": "那個女孩有一件粉紅色洋裝。",
+    "regional": {
+      "region": "LatAm",
+      "note": "拉美普遍用 rosado；西班牙較常說 rosa。",
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "cafe-color",
+    "es": "café",
+    "zh": "咖啡色的；棕色的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "colores",
+    "exampleEs": "Sus ojos son color café.",
+    "exampleZh": "他的眼睛是棕色的。",
+    "regional": {
+      "region": "LatAm",
+      "note": "拉美常用 café 表示棕色；西班牙用 marrón。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "lunes",
+    "es": "lunes",
+    "zh": "星期一",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El lunes tengo clase de español.",
+    "exampleZh": "星期一我有西班牙文課。",
+    "gender": "m"
+  },
+  {
+    "id": "martes",
+    "es": "martes",
+    "zh": "星期二",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Nos vemos el martes.",
+    "exampleZh": "我們星期二見。",
+    "gender": "m"
+  },
+  {
+    "id": "miercoles",
+    "es": "miércoles",
+    "zh": "星期三",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El miércoles no trabajo.",
+    "exampleZh": "星期三我不上班。",
+    "gender": "m"
+  },
+  {
+    "id": "jueves",
+    "es": "jueves",
+    "zh": "星期四",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El jueves voy al mercado.",
+    "exampleZh": "星期四我要去市場。",
+    "gender": "m"
+  },
+  {
+    "id": "viernes",
+    "es": "viernes",
+    "zh": "星期五",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El viernes salgo temprano.",
+    "exampleZh": "星期五我早退。",
+    "gender": "m"
+  },
+  {
+    "id": "sabado",
+    "es": "sábado",
+    "zh": "星期六",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El sábado estudio en casa.",
+    "exampleZh": "星期六我在家讀書。",
+    "gender": "m"
+  },
+  {
+    "id": "domingo",
+    "es": "domingo",
+    "zh": "星期日",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "El domingo como con mi familia.",
+    "exampleZh": "星期日我跟家人吃飯。",
+    "gender": "m"
+  },
+  {
+    "id": "hoy",
+    "es": "hoy",
+    "zh": "今天",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Hoy estoy muy cansado.",
+    "exampleZh": "我今天很累。"
+  },
+  {
+    "id": "manana-adv",
+    "es": "mañana",
+    "zh": "明天",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Mañana voy a Quito.",
+    "exampleZh": "我明天要去基多。"
+  },
+  {
+    "id": "ayer",
+    "es": "ayer",
+    "zh": "昨天",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Ayer no fui al trabajo.",
+    "exampleZh": "我昨天沒去上班。"
+  },
+  {
+    "id": "dia",
+    "es": "día",
+    "zh": "日；天",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Buenos días, ¿qué tal el día?",
+    "exampleZh": "早安，今天過得如何？",
+    "gender": "m",
+    "genderNote": "字尾是 -a 卻是陽性（el día），是必須背下來的例外。"
+  },
+  {
+    "id": "semana",
+    "es": "semana",
+    "zh": "週；星期",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "La semana tiene siete días.",
+    "exampleZh": "一週有七天。",
+    "gender": "f"
+  },
+  {
+    "id": "mes",
+    "es": "mes",
+    "zh": "月",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Este mes tengo mucho trabajo.",
+    "exampleZh": "這個月我工作很多。",
+    "gender": "m"
+  },
+  {
+    "id": "ano",
+    "es": "año",
+    "zh": "年；歲",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "Tengo treinta años.",
+    "exampleZh": "我三十歲。",
+    "gender": "m",
+    "genderNote": "務必打出 ñ：año 是「年」，而 ano 是「肛門」，差一個字母意思天差地遠。"
+  },
+  {
+    "id": "hora",
+    "es": "hora",
+    "zh": "小時；時間",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "tiempo",
+    "exampleEs": "¿Qué hora es?",
+    "exampleZh": "現在幾點？",
+    "gender": "f"
+  },
+  {
+    "id": "agua",
+    "es": "agua",
+    "zh": "水",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Un vaso de agua, por favor.",
+    "exampleZh": "請給我一杯水。",
+    "gender": "f",
+    "genderNote": "陰性名詞但單數要配 el（el agua fría），因為字首是重音的 a-。複數恢復 las aguas。"
+  },
+  {
+    "id": "cafe-bebida",
+    "es": "café",
+    "zh": "咖啡",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Tomo café todas las mañanas.",
+    "exampleZh": "我每天早上喝咖啡。",
+    "gender": "m"
+  },
+  {
+    "id": "leche",
+    "es": "leche",
+    "zh": "牛奶",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "¿Quiere café con leche?",
+    "exampleZh": "您要拿鐵嗎？",
+    "gender": "f"
+  },
+  {
+    "id": "jugo",
+    "es": "jugo",
+    "zh": "果汁",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Quiero un jugo de naranja.",
+    "exampleZh": "我要一杯柳橙汁。",
+    "gender": "m",
+    "regional": {
+      "region": "LatAm",
+      "note": "拉美說 jugo；西班牙說 zumo。",
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "pan",
+    "es": "pan",
+    "zh": "麵包",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Compro pan en la tienda.",
+    "exampleZh": "我在店裡買麵包。",
+    "gender": "m"
+  },
+  {
+    "id": "arroz",
+    "es": "arroz",
+    "zh": "米飯",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "El almuerzo tiene arroz y pollo.",
+    "exampleZh": "午餐有飯和雞肉。",
+    "gender": "m"
+  },
+  {
+    "id": "pollo",
+    "es": "pollo",
+    "zh": "雞肉",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "El pollo está muy rico.",
+    "exampleZh": "這雞肉很好吃。",
+    "gender": "m"
+  },
+  {
+    "id": "carne",
+    "es": "carne",
+    "zh": "肉",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "No como carne los lunes.",
+    "exampleZh": "我星期一不吃肉。",
+    "gender": "f"
+  },
+  {
+    "id": "pescado",
+    "es": "pescado",
+    "zh": "魚（食用）",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "En la costa el pescado es fresco.",
+    "exampleZh": "在海岸地區魚很新鮮。",
+    "gender": "m"
+  },
+  {
+    "id": "huevo",
+    "es": "huevo",
+    "zh": "蛋",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Quiero dos huevos, por favor.",
+    "exampleZh": "請給我兩顆蛋。",
+    "gender": "m"
+  },
+  {
+    "id": "sopa",
+    "es": "sopa",
+    "zh": "湯",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "La sopa está caliente.",
+    "exampleZh": "湯很燙。",
+    "gender": "f"
+  },
+  {
+    "id": "papa-comida",
+    "es": "papa",
+    "zh": "馬鈴薯",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "La papa es muy importante en los Andes.",
+    "exampleZh": "馬鈴薯在安地斯地區非常重要。",
+    "gender": "f",
+    "regional": {
+      "region": "LatAm",
+      "note": "拉美說 papa；西班牙說 patata。注意 papa（馬鈴薯）與 papá（爸爸）只差重音。",
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "fruta",
+    "es": "fruta",
+    "zh": "水果",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Como fruta todos los días.",
+    "exampleZh": "我每天吃水果。",
+    "gender": "f"
+  },
+  {
+    "id": "manzana",
+    "es": "manzana",
+    "zh": "蘋果",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Una manzana verde, por favor.",
+    "exampleZh": "請給我一顆青蘋果。",
+    "gender": "f"
+  },
+  {
+    "id": "queso",
+    "es": "queso",
+    "zh": "起司",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "El pan con queso está rico.",
+    "exampleZh": "起司麵包很好吃。",
+    "gender": "m"
+  },
+  {
+    "id": "sal",
+    "es": "sal",
+    "zh": "鹽",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "La sopa necesita sal.",
+    "exampleZh": "湯需要加鹽。",
+    "gender": "f"
+  },
+  {
+    "id": "azucar",
+    "es": "azúcar",
+    "zh": "糖",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "¿Café con azúcar?",
+    "exampleZh": "咖啡要加糖嗎？",
+    "gender": "m",
+    "genderNote": "通常用陽性（el azúcar），但陰性 la azúcar 也聽得到，兩者都可接受。"
+  },
+  {
+    "id": "almuerzo",
+    "es": "almuerzo",
+    "zh": "午餐",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "El almuerzo es a la una.",
+    "exampleZh": "午餐是一點。",
+    "gender": "m"
+  },
+  {
+    "id": "cena",
+    "es": "cena",
+    "zh": "晚餐",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "La cena está lista.",
+    "exampleZh": "晚餐好了。",
+    "gender": "f"
+  },
+  {
+    "id": "guineo",
+    "es": "guineo",
+    "zh": "香蕉",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "comida",
+    "exampleEs": "Quiero un guineo, por favor.",
+    "exampleZh": "請給我一根香蕉。",
+    "gender": "m",
+    "regional": {
+      "region": "Ecuador",
+      "note": "厄瓜多常用 guineo 指一般食用香蕉，plátano 則多指要煮的大蕉。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "casa",
+    "es": "casa",
+    "zh": "家；房子",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Mi casa está cerca del mercado.",
+    "exampleZh": "我家在市場附近。",
+    "gender": "f"
+  },
+  {
+    "id": "escuela",
+    "es": "escuela",
+    "zh": "學校",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Los niños están en la escuela.",
+    "exampleZh": "孩子們在學校。",
+    "gender": "f"
+  },
+  {
+    "id": "universidad",
+    "es": "universidad",
+    "zh": "大學",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Ella estudia en la universidad.",
+    "exampleZh": "她在大學讀書。",
+    "gender": "f"
+  },
+  {
+    "id": "trabajo",
+    "es": "trabajo",
+    "zh": "工作；工作地點",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Voy al trabajo a las ocho.",
+    "exampleZh": "我八點去上班。",
+    "gender": "m"
+  },
+  {
+    "id": "ciudad",
+    "es": "ciudad",
+    "zh": "城市",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Quito es una ciudad grande.",
+    "exampleZh": "基多是個大城市。",
+    "gender": "f"
+  },
+  {
+    "id": "pais",
+    "es": "país",
+    "zh": "國家",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Ecuador es un país pequeño.",
+    "exampleZh": "厄瓜多是個小國家。",
+    "gender": "m",
+    "genderNote": "重音符號在 í 上，把 a 和 i 拆成兩個音節：pa-ís。"
+  },
+  {
+    "id": "calle",
+    "es": "calle",
+    "zh": "街道",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "La tienda está en esta calle.",
+    "exampleZh": "那家店在這條街上。",
+    "gender": "f"
+  },
+  {
+    "id": "tienda",
+    "es": "tienda",
+    "zh": "商店",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Compro pan en la tienda.",
+    "exampleZh": "我在店裡買麵包。",
+    "gender": "f"
+  },
+  {
+    "id": "mercado",
+    "es": "mercado",
+    "zh": "市場",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "El mercado abre temprano.",
+    "exampleZh": "市場很早開。",
+    "gender": "m"
+  },
+  {
+    "id": "restaurante",
+    "es": "restaurante",
+    "zh": "餐廳",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Hay un restaurante en la esquina.",
+    "exampleZh": "轉角有一家餐廳。",
+    "gender": "m"
+  },
+  {
+    "id": "bano",
+    "es": "baño",
+    "zh": "洗手間",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "¿Dónde está el baño?",
+    "exampleZh": "洗手間在哪裡？",
+    "gender": "m"
+  },
+  {
+    "id": "mesa",
+    "es": "mesa",
+    "zh": "桌子",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "El libro está en la mesa.",
+    "exampleZh": "書在桌上。",
+    "gender": "f"
+  },
+  {
+    "id": "silla",
+    "es": "silla",
+    "zh": "椅子",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Hay cuatro sillas en la cocina.",
+    "exampleZh": "廚房裡有四張椅子。",
+    "gender": "f"
+  },
+  {
+    "id": "puerta",
+    "es": "puerta",
+    "zh": "門",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "La puerta está abierta.",
+    "exampleZh": "門開著。",
+    "gender": "f"
+  },
+  {
+    "id": "ventana",
+    "es": "ventana",
+    "zh": "窗戶",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "La ventana es grande.",
+    "exampleZh": "那扇窗很大。",
+    "gender": "f"
+  },
+  {
+    "id": "libro",
+    "es": "libro",
+    "zh": "書",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Este libro es de español.",
+    "exampleZh": "這是一本西班牙文的書。",
+    "gender": "m"
+  },
+  {
+    "id": "telefono",
+    "es": "teléfono",
+    "zh": "電話；手機",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Mi teléfono está en la mesa.",
+    "exampleZh": "我的手機在桌上。",
+    "gender": "m"
+  },
+  {
+    "id": "dinero",
+    "es": "dinero",
+    "zh": "錢",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "No tengo dinero hoy.",
+    "exampleZh": "我今天沒錢。",
+    "gender": "m"
+  },
+  {
+    "id": "bueno",
+    "es": "bueno",
+    "zh": "好的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "El café de Ecuador es muy bueno.",
+    "exampleZh": "厄瓜多的咖啡很好。"
+  },
+  {
+    "id": "malo",
+    "es": "malo",
+    "zh": "壞的；不好的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Hoy hace mal tiempo.",
+    "exampleZh": "今天天氣不好。"
+  },
+  {
+    "id": "grande",
+    "es": "grande",
+    "zh": "大的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Quito es una ciudad grande.",
+    "exampleZh": "基多是個大城市。"
+  },
+  {
+    "id": "pequeno",
+    "es": "pequeño",
+    "zh": "小的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Mi casa es pequeña.",
+    "exampleZh": "我家很小。"
+  },
+  {
+    "id": "nuevo",
+    "es": "nuevo",
+    "zh": "新的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Tengo un teléfono nuevo.",
+    "exampleZh": "我有一支新手機。"
+  },
+  {
+    "id": "viejo",
+    "es": "viejo",
+    "zh": "舊的；老的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Ese libro es muy viejo.",
+    "exampleZh": "那本書很舊。"
+  },
+  {
+    "id": "alto",
+    "es": "alto",
+    "zh": "高的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Mi hermano es alto.",
+    "exampleZh": "我哥哥很高。"
+  },
+  {
+    "id": "bajo",
+    "es": "bajo",
+    "zh": "矮的；低的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "La mesa es muy baja.",
+    "exampleZh": "這張桌子很矮。"
+  },
+  {
+    "id": "bonito",
+    "es": "bonito",
+    "zh": "漂亮的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Cuenca es una ciudad bonita.",
+    "exampleZh": "昆卡是個漂亮的城市。"
+  },
+  {
+    "id": "feo",
+    "es": "feo",
+    "zh": "醜的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "El sombrero es feo.",
+    "exampleZh": "那頂帽子很醜。"
+  },
+  {
+    "id": "facil",
+    "es": "fácil",
+    "zh": "容易的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "El español no es fácil.",
+    "exampleZh": "西班牙文不容易。"
+  },
+  {
+    "id": "dificil",
+    "es": "difícil",
+    "zh": "困難的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "La pronunciación es difícil.",
+    "exampleZh": "發音很難。"
+  },
+  {
+    "id": "caro",
+    "es": "caro",
+    "zh": "貴的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "El restaurante es caro.",
+    "exampleZh": "那家餐廳很貴。"
+  },
+  {
+    "id": "barato",
+    "es": "barato",
+    "zh": "便宜的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "La fruta del mercado es barata.",
+    "exampleZh": "市場的水果很便宜。"
+  },
+  {
+    "id": "frio",
+    "es": "frío",
+    "zh": "冷的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "En Quito hace frío en la noche.",
+    "exampleZh": "基多晚上很冷。"
+  },
+  {
+    "id": "caliente",
+    "es": "caliente",
+    "zh": "熱的（物體）",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "El café está caliente.",
+    "exampleZh": "咖啡是燙的。"
+  },
+  {
+    "id": "cansado",
+    "es": "cansado",
+    "zh": "累的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Estoy muy cansado hoy.",
+    "exampleZh": "我今天很累。"
+  },
+  {
+    "id": "contento",
+    "es": "contento",
+    "zh": "開心的",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "adjetivos",
+    "exampleEs": "Ella está contenta con su trabajo.",
+    "exampleZh": "她對她的工作很滿意。"
+  },
+  {
+    "id": "chevere",
+    "es": "chévere",
+    "zh": "讚；很棒",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "¡Qué chévere tu casa!",
+    "exampleZh": "你家真讚！",
+    "regional": {
+      "region": "LatAm",
+      "note": "厄瓜多、哥倫比亞、委內瑞拉等地常用的口語讚美詞。",
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "bacan",
+    "es": "bacán",
+    "zh": "超讚；很酷",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "El concierto estuvo bacán.",
+    "exampleZh": "那場演唱會超讚。",
+    "regional": {
+      "region": "Ecuador",
+      "note": "厄瓜多年輕人常用，語感比 chévere 更口語。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "nano",
+    "es": "ñaño",
+    "zh": "兄弟；哥們",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "Mi ñaño vive en Guayaquil.",
+    "exampleZh": "我兄弟住在瓜亞基爾。",
+    "gender": "m",
+    "regional": {
+      "region": "Ecuador",
+      "note": "源自 Kichwa 的厄瓜多用詞，既可指親兄弟，也可像「哥們」一樣稱呼好友。陰性為 ñaña。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "guagua",
+    "es": "guagua",
+    "zh": "小孩；嬰兒",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "La guagua está durmiendo.",
+    "exampleZh": "小寶寶在睡覺。",
+    "gender": "f",
+    "genderNote": "來自 Kichwa 的 wawa，安地斯地區常用；在加勒比地區 guagua 卻是「公車」，意思完全不同。",
+    "regional": {
+      "region": "Andes",
+      "note": "Kichwa 借詞（wawa＝小孩），厄瓜多、祕魯、玻利維亞的安地斯地區通用。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "chuchaqui",
+    "es": "chuchaqui",
+    "zh": "宿醉",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "Tengo chuchaqui, no quiero comer.",
+    "exampleZh": "我宿醉，不想吃東西。",
+    "gender": "m",
+    "regional": {
+      "region": "Ecuador",
+      "note": "厄瓜多特有詞，其他西語國家多說 resaca。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "de-ley",
+    "es": "de ley",
+    "zh": "一定；肯定",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "De ley que viene mañana.",
+    "exampleZh": "他明天一定會來。",
+    "regional": {
+      "region": "Ecuador",
+      "note": "厄瓜多口語，相當於「絕對是」「一定」。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "ahorita",
+    "es": "ahorita",
+    "zh": "等一下；馬上",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "Ahorita voy, espere un ratito.",
+    "exampleZh": "我馬上來，請稍等一下。",
+    "regional": {
+      "region": "Ecuador",
+      "note": "語意刻意模糊：可以指「立刻」，也可以指「等一下再說」，實際多久要看語氣與情境。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "un-ratito",
+    "es": "un ratito",
+    "zh": "一小會兒",
+    "pos": "phrase",
+    "level": "A0",
+    "topic": "ecuador",
+    "exampleEs": "Espere un ratito, por favor.",
+    "exampleZh": "請稍等一下下。",
+    "regional": {
+      "region": "Ecuador",
+      "note": "-ito 指小詞在此不是「小」，而是把語氣變柔和、更有禮貌。",
+      "needsVerify": true
+    }
+  },
+  {
+    "id": "y",
+    "es": "y",
+    "zh": "和；而",
+    "pos": "conj",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Mi hermano y yo estudiamos español.",
+    "exampleZh": "我哥哥和我學西班牙文。"
+  },
+  {
+    "id": "o",
+    "es": "o",
+    "zh": "或者",
+    "pos": "conj",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "¿Café o jugo?",
+    "exampleZh": "咖啡還是果汁？"
+  },
+  {
+    "id": "pero",
+    "es": "pero",
+    "zh": "但是",
+    "pos": "conj",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Es caro, pero muy bueno.",
+    "exampleZh": "很貴，但是很好。"
+  },
+  {
+    "id": "porque",
+    "es": "porque",
+    "zh": "因為",
+    "pos": "conj",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "No como carne porque no me gusta.",
+    "exampleZh": "我不吃肉，因為我不喜歡。"
+  },
+  {
+    "id": "en",
+    "es": "en",
+    "zh": "在（裡面、上面）",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "El libro está en la mesa.",
+    "exampleZh": "書在桌上。"
+  },
+  {
+    "id": "de",
+    "es": "de",
+    "zh": "的；來自",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Soy de Taiwán.",
+    "exampleZh": "我來自台灣。"
+  },
+  {
+    "id": "con",
+    "es": "con",
+    "zh": "和…一起；帶有",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Quiero café con leche.",
+    "exampleZh": "我要咖啡加牛奶。"
+  },
+  {
+    "id": "sin",
+    "es": "sin",
+    "zh": "沒有；不加",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Un café sin azúcar, por favor.",
+    "exampleZh": "請給我一杯不加糖的咖啡。"
+  },
+  {
+    "id": "a",
+    "es": "a",
+    "zh": "到；向",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Voy a Quito mañana.",
+    "exampleZh": "我明天去基多。"
+  },
+  {
+    "id": "para",
+    "es": "para",
+    "zh": "為了；給",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Este libro es para mi hermana.",
+    "exampleZh": "這本書是給我姊姊的。"
+  },
+  {
+    "id": "cerca-de",
+    "es": "cerca de",
+    "zh": "靠近",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "Mi casa está cerca del mercado.",
+    "exampleZh": "我家在市場附近。"
+  },
+  {
+    "id": "lejos-de",
+    "es": "lejos de",
+    "zh": "遠離",
+    "pos": "prep",
+    "level": "A0",
+    "topic": "conectores",
+    "exampleEs": "La universidad está lejos de aquí.",
+    "exampleZh": "大學離這裡很遠。"
+  },
+  {
+    "id": "que",
+    "es": "qué",
+    "zh": "什麼",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Qué es esto?",
+    "exampleZh": "這是什麼？"
+  },
+  {
+    "id": "quien",
+    "es": "quién",
+    "zh": "誰",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Quién es ella?",
+    "exampleZh": "她是誰？"
+  },
+  {
+    "id": "donde",
+    "es": "dónde",
+    "zh": "哪裡",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Dónde está el baño?",
+    "exampleZh": "洗手間在哪裡？"
+  },
+  {
+    "id": "cuando",
+    "es": "cuándo",
+    "zh": "什麼時候",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Cuándo vas a Cuenca?",
+    "exampleZh": "你什麼時候去昆卡？"
+  },
+  {
+    "id": "como-adv",
+    "es": "cómo",
+    "zh": "如何；怎麼樣",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Cómo está usted?",
+    "exampleZh": "您好嗎？"
+  },
+  {
+    "id": "cuanto",
+    "es": "cuánto",
+    "zh": "多少",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Cuánto cuesta?",
+    "exampleZh": "這多少錢？"
+  },
+  {
+    "id": "cual",
+    "es": "cuál",
+    "zh": "哪一個",
+    "pos": "pron",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Cuál es tu nombre?",
+    "exampleZh": "你的名字是哪一個？"
+  },
+  {
+    "id": "por-que",
+    "es": "por qué",
+    "zh": "為什麼",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "preguntas",
+    "exampleEs": "¿Por qué estudias español?",
+    "exampleZh": "你為什麼學西班牙文？"
+  },
+  {
+    "id": "muy",
+    "es": "muy",
+    "zh": "很；非常",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "El café está muy caliente.",
+    "exampleZh": "咖啡很燙。"
+  },
+  {
+    "id": "mucho",
+    "es": "mucho",
+    "zh": "很多",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Trabajo mucho los lunes.",
+    "exampleZh": "我星期一工作很多。"
+  },
+  {
+    "id": "poco",
+    "es": "poco",
+    "zh": "一點點；很少",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Hablo un poco de español.",
+    "exampleZh": "我說一點西班牙文。"
+  },
+  {
+    "id": "bien",
+    "es": "bien",
+    "zh": "好地；不錯",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Estoy bien, gracias.",
+    "exampleZh": "我很好，謝謝。"
+  },
+  {
+    "id": "mal",
+    "es": "mal",
+    "zh": "不好地",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Hoy me siento mal.",
+    "exampleZh": "我今天不舒服。"
+  },
+  {
+    "id": "aqui",
+    "es": "aquí",
+    "zh": "這裡",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Aquí no hay restaurantes.",
+    "exampleZh": "這裡沒有餐廳。"
+  },
+  {
+    "id": "alli",
+    "es": "allí",
+    "zh": "那裡",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "El mercado está allí.",
+    "exampleZh": "市場在那邊。"
+  },
+  {
+    "id": "ahora",
+    "es": "ahora",
+    "zh": "現在",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Ahora estudio español.",
+    "exampleZh": "我現在在學西班牙文。"
+  },
+  {
+    "id": "siempre",
+    "es": "siempre",
+    "zh": "總是",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Siempre bebo café en la mañana.",
+    "exampleZh": "我早上總是喝咖啡。"
+  },
+  {
+    "id": "nunca",
+    "es": "nunca",
+    "zh": "從不",
+    "pos": "adv",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Nunca como pescado.",
+    "exampleZh": "我從不吃魚。"
+  },
+  {
+    "id": "este",
+    "es": "este",
+    "zh": "這個",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Este libro es de español.",
+    "exampleZh": "這本書是西班牙文的。"
+  },
+  {
+    "id": "ese",
+    "es": "ese",
+    "zh": "那個",
+    "pos": "adj",
+    "level": "A0",
+    "topic": "comunes",
+    "exampleEs": "Ese hombre es mi profesor.",
+    "exampleZh": "那個男人是我老師。"
+  },
+  {
+    "id": "perro",
+    "es": "perro",
+    "zh": "狗",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "animales",
+    "exampleEs": "El perro está en la casa.",
+    "exampleZh": "狗在家裡。",
+    "gender": "m"
+  },
+  {
+    "id": "gato",
+    "es": "gato",
+    "zh": "貓",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "animales",
+    "exampleEs": "Mi gata se llama Luna.",
+    "exampleZh": "我的貓叫露娜。",
+    "gender": "m",
+    "genderNote": "公貓 el gato、母貓 la gata，字尾隨性別變。"
+  },
+  {
+    "id": "mano",
+    "es": "mano",
+    "zh": "手",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Tengo un libro en la mano.",
+    "exampleZh": "我手上拿著一本書。",
+    "gender": "f",
+    "genderNote": "字尾是 -o 卻是陰性（la mano），是最常被考的例外之一。"
+  },
+  {
+    "id": "problema",
+    "es": "problema",
+    "zh": "問題",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "No hay problema.",
+    "exampleZh": "沒問題。",
+    "gender": "m",
+    "genderNote": "字尾是 -a 卻是陽性（el problema）。源自希臘文的 -ma 結尾字多為陽性。"
+  },
+  {
+    "id": "mapa",
+    "es": "mapa",
+    "zh": "地圖",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "El mapa está en la mesa.",
+    "exampleZh": "地圖在桌上。",
+    "gender": "m",
+    "genderNote": "字尾 -a 但是陽性（el mapa），跟 problema 同一類例外。"
+  },
+  {
+    "id": "luz",
+    "es": "luz",
+    "zh": "燈；光",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "La luz de la cocina está aquí.",
+    "exampleZh": "廚房的燈在這裡。",
+    "gender": "f",
+    "genderNote": "複數是 luces：字尾 -z 變複數時要改成 -ces。"
+  },
+  {
+    "id": "lapiz",
+    "es": "lápiz",
+    "zh": "鉛筆",
+    "pos": "noun",
+    "level": "A0",
+    "topic": "lugares",
+    "exampleEs": "Necesito un lápiz, por favor.",
+    "exampleZh": "我需要一支鉛筆。",
+    "gender": "m",
+    "genderNote": "複數是 lápices：-z 要改成 -ces，而且重音符號**保留**（lá-pi-ces 重音在倒數第三音節，這類字一律要標）。"
+  }
+]

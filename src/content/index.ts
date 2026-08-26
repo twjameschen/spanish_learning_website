@@ -1,0 +1,180 @@
+import {
+  wordArraySchema, verbArraySchema, lessonArraySchema, journeySchema,
+  type Word, type Verb, type GrammarLesson, type JourneyStop, type Exercise,
+} from './schema';
+
+import rawWordsA0 from './words/a0.json';
+import rawVerbsA0 from './verbs/a0.json';
+import rawLessonsA0 from './lessons/a0.json';
+import rawJourney from './journey.json';
+
+/**
+ * 內容載入與驗證。
+ *
+ * zod 驗證在 module init 就執行 —— 資料壞掉會在 app 啟動的第一瞬間爆出可讀的錯誤，
+ * 而不是等到某個元件 render 到那筆資料才出現莫名其妙的 undefined。
+ * `npm run build` 也會先跑 `validate:content`，所以壞資料進不了 build 產物。
+ */
+
+function parseOrThrow<T>(
+  schema: { parse: (v: unknown) => T },
+  raw: unknown,
+  label: string,
+): T {
+  try {
+    return schema.parse(raw);
+  } catch (err) {
+    // zod 的錯誤訊息很長，前面加上檔案名稱才知道要去哪裡改
+    throw new Error(
+      `內容驗證失敗（${label}）：\n${err instanceof Error ? err.message : String(err)}`,
+    );
+  }
+}
+
+export const wordsA0: Word[] = parseOrThrow(wordArraySchema, rawWordsA0, 'words/a0.json');
+export const verbsA0: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA0, 'verbs/a0.json');
+export const lessonsA0: GrammarLesson[] = parseOrThrow(
+  lessonArraySchema, rawLessonsA0, 'lessons/a0.json',
+);
+export const journey: JourneyStop[] = parseOrThrow(journeySchema, rawJourney, 'journey.json');
+
+/** 所有單字（含動詞）。動詞也是 Word 的子型別，可以混在一起查。 */
+export const allWords: Word[] = [...wordsA0, ...verbsA0];
+export const allVerbs: Verb[] = [...verbsA0];
+export const allLessons: GrammarLesson[] = [...lessonsA0];
+
+const wordIndex = new Map<string, Word>(allWords.map((w) => [w.id, w]));
+const verbIndex = new Map<string, Verb>(allVerbs.map((v) => [v.id, v]));
+const lessonIndex = new Map<string, GrammarLesson>(allLessons.map((l) => [l.id, l]));
+
+export const getWord = (id: string): Word | undefined => wordIndex.get(id);
+export const getVerb = (id: string): Verb | undefined => verbIndex.get(id);
+export const getLesson = (id: string): GrammarLesson | undefined => lessonIndex.get(id);
+
+/** 所有出現過的主題，依單字數量由多到少 */
+export function allTopics(): { topic: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const w of allWords) counts.set(w.topic, (counts.get(w.topic) ?? 0) + 1);
+  return [...counts.entries()]
+    .map(([topic, count]) => ({ topic, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export const TOPIC_LABEL: Record<string, string> = {
+  saludos: '問候與禮貌',
+  clase: '課堂與求助',
+  personas: '人稱與家庭',
+  numeros: '數字',
+  colores: '顏色',
+  tiempo: '時間與星期',
+  comida: '食物與飲料',
+  lugares: '地點與物件',
+  adjetivos: '形容詞',
+  verbos: '動詞',
+  conectores: '介系詞與連接詞',
+  preguntas: '疑問詞',
+  comunes: '常用副詞',
+  animales: '動物',
+  ecuador: '厄瓜多特色詞',
+};
+
+export const topicLabel = (topic: string): string => TOPIC_LABEL[topic] ?? topic;
+
+export const POS_LABEL: Record<Word['pos'], string> = {
+  noun: '名詞', verb: '動詞', adj: '形容詞', adv: '副詞',
+  prep: '介系詞', conj: '連接詞', pron: '代名詞', phrase: '片語',
+};
+
+/* ------------------------------------------------------------------ *
+ * 完整性檢查：zod 只能驗單一檔案內的形狀，跨檔的引用要另外查
+ * ------------------------------------------------------------------ */
+
+export interface IntegrityIssue {
+  where: string;
+  message: string;
+}
+
+/** 找出所有跨檔引用問題。回傳空陣列代表內容一致。 */
+export function findIntegrityIssues(): IntegrityIssue[] {
+  const issues: IntegrityIssue[] = [];
+  const push = (where: string, message: string) => issues.push({ where, message });
+
+  const exerciseRefs = (lessonId: string, ex: Exercise): void => {
+    const at = `${lessonId} / ${ex.id}`;
+    switch (ex.type) {
+      case 'flashcard':
+        if (!wordIndex.has(ex.wordId)) push(at, `flashcard 指向不存在的單字 ${ex.wordId}`);
+        break;
+      case 'conjugation': {
+        const verb = verbIndex.get(ex.verbId);
+        if (!verb) {
+          push(at, `conjugation 指向不存在的動詞 ${ex.verbId}`);
+          break;
+        }
+        const table = verb.conjugations[ex.tense];
+        if (!table) {
+          push(at, `動詞 ${ex.verbId} 沒有 ${ex.tense} 的變化表`);
+          break;
+        }
+        if (table[ex.person] !== ex.answer) {
+          push(at, `答案 "${ex.answer}" 與變化表的 "${table[ex.person]}" 不一致`);
+        }
+        break;
+      }
+      case 'genderSort':
+        for (const id of ex.wordIds) {
+          const word = wordIndex.get(id);
+          if (!word) push(at, `genderSort 指向不存在的單字 ${id}`);
+          else if (word.pos !== 'noun') push(at, `genderSort 只能用名詞，但 ${id} 是 ${word.pos}`);
+          else if (!word.gender) push(at, `genderSort 的 ${id} 沒有標註性別`);
+        }
+        break;
+      case 'wordOrder':
+        if ([...ex.tokens].sort().join('|') !== [...ex.answer].sort().join('|')) {
+          push(at, 'wordOrder 的 tokens 與 answer 內容不一致');
+        }
+        break;
+      case 'mcq':
+        if (!ex.options[ex.answerIndex]) push(at, `answerIndex ${ex.answerIndex} 超出選項範圍`);
+        break;
+      case 'translate':
+        if (!ex.accept.some((a) => a.trim().length > 0)) push(at, 'translate 沒有可接受的答案');
+        break;
+      case 'listening':
+        if (!ex.accept.some((a) => a.trim().length > 0)) push(at, 'listening 沒有可接受的答案');
+        break;
+    }
+  };
+
+  for (const lesson of allLessons) {
+    for (const id of lesson.prerequisites) {
+      if (!lessonIndex.has(id)) push(lesson.id, `前置課程 ${id} 不存在`);
+    }
+    for (const id of lesson.vocabIds) {
+      if (!wordIndex.has(id)) push(lesson.id, `vocabIds 指向不存在的單字 ${id}`);
+    }
+    for (const ex of lesson.exercises) exerciseRefs(lesson.id, ex);
+  }
+
+  for (const stop of journey) {
+    for (const id of stop.lessonIds) {
+      if (!lessonIndex.has(id)) push(`journey/${stop.city}`, `課程 ${id} 不存在`);
+    }
+  }
+
+  // 前置關係不得成環，否則技能樹會永遠解不開
+  const state = new Map<string, 'visiting' | 'done'>();
+  const walk = (id: string, trail: string[]): void => {
+    if (state.get(id) === 'done') return;
+    if (state.get(id) === 'visiting') {
+      push(id, `前置課程出現循環：${[...trail, id].join(' → ')}`);
+      return;
+    }
+    state.set(id, 'visiting');
+    for (const dep of lessonIndex.get(id)?.prerequisites ?? []) walk(dep, [...trail, id]);
+    state.set(id, 'done');
+  };
+  for (const lesson of allLessons) walk(lesson.id, []);
+
+  return issues;
+}

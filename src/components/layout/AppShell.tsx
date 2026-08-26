@@ -78,7 +78,7 @@ export function AppShell({
 
       <div className={cn('mx-auto grid max-w-6xl gap-6 px-4 py-6', gridCols(!!sidebar, !!aside))}>
         {sidebar ? <nav className="hidden lg:block">{sidebar}</nav> : null}
-        <main className={cn('min-w-0', !sidebar && !aside && 'mx-auto w-full max-w-3xl')}>
+        <main className={cn('min-w-0 pb-20 lg:pb-0', !sidebar && !aside && 'mx-auto w-full max-w-3xl')}>
           {children}
         </main>
         {aside ? <aside className="hidden xl:block">{aside}</aside> : null}
