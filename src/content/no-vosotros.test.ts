@@ -174,11 +174,39 @@ describe('拉美發音變體', () => {
     expect(text).toMatch(/θ|th/);
   });
 
-  it('每一課都寫了 chineseTrap，明講中文母語者的難點', () => {
+  it('每一課都寫了 chineseTrap，點出最容易犯的錯', () => {
     for (const lesson of allLessons) {
       expect(lesson.chineseTrap, `${lesson.id} 缺 chineseTrap`).toBeTruthy();
       expect(lesson.chineseTrap!.length).toBeGreaterThan(30);
     }
+  });
+
+  /**
+   * chineseTrap 的口吻守則：直接講西班牙文本身的規則與陷阱，
+   * 不拿別的語言的情境來對照。這支測試存在的理由是 Phase 5 還有 29 課要寫，
+   * 沒有把關很容易寫著寫著就滑回「A 語言這樣、西班牙文那樣」的比較句式。
+   */
+  it('chineseTrap 不以其他語言為參照點', () => {
+    const BANNED = [
+      '中文', '國語', '漢字', '華語', '注音', '四聲',
+      'ㄅ', 'ㄆ', 'ㄉ', 'ㄊ', 'ㄍ', 'ㄎ', 'ㄏ', 'ㄌ', 'ㄙ',
+    ];
+    const hits: string[] = [];
+    for (const lesson of allLessons) {
+      const text = lesson.chineseTrap ?? '';
+      for (const token of BANNED) {
+        if (text.includes(token)) hits.push(`  [${lesson.id}] 出現「${token}」`);
+      }
+    }
+    expect(hits, `chineseTrap 走回了比較句式：\n${hits.join('\n')}`).toEqual([]);
+  });
+
+  it('chineseTrap 用 ✗/✓ 對照具體示範錯誤與正確寫法', () => {
+    // 純敘述的說明對初學者幫助有限，要看得到真正錯在哪
+    const withoutContrast = allLessons
+      .filter((l) => !/[✗✓]/.test(l.chineseTrap ?? ''))
+      .map((l) => l.id);
+    expect(withoutContrast, `這些課缺少 ✗/✓ 對照：${withoutContrast.join(', ')}`).toEqual([]);
   });
 });
 

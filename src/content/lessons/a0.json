@@ -68,7 +68,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文是「認字形」的系統：你看到「憂鬱」認得出來，但不看拼音就不知道怎麼唸。\n\n西班牙文相反 —— 字形直接告訴你怎麼唸。所以**不要用背漢字的方式背西班牙文單字**。與其盯著 restaurante 記它長什麼樣，不如出聲唸 res-tau-ran-te，讓耳朵和嘴巴記住它。這個習慣轉換得越早，後面越省力。",
+    "chineseTrap": "西班牙文的拼字與發音幾乎一對一對應 —— 看到字就能唸，聽到音就能拼。\n\n所以背單字的方式要對：不要盯著 restaurante 記它長什麼樣，而是出聲唸 res-tau-ran-te，讓耳朵和嘴巴記住它。\n\n> 每學一個新字，先唸出聲三次再看意思。\n\n另外有一件非做不可的事：**ñ 的波浪號不能省**。它是獨立字母，不是 n 的裝飾。\n\n- ✗ Tengo treinta anos. → ✓ Tengo treinta **años**.\n\n漏掉波浪號會讓句子的意思變得非常尷尬。打字前先確認輸入法打得出 ñ。",
     "pronunciation": [
       {
         "letter": "ñ",
@@ -342,7 +342,7 @@
         ]
       }
     ],
-    "chineseTrap": "**這一課的重點只有一個：p / t / k 不要送氣。**\n\n國語的ㄆㄊㄎ是送氣音 —— 把手掌放在嘴前唸「趴」，會感覺到一股氣噴出來。西班牙文的 p、t、k 沒有這股氣，聽起來反而更接近ㄅㄉㄍ。\n\n自我檢查法：手掌放在嘴前唸 papá。如果感覺到噴氣，就是還在用國語的ㄆ。調整成接近「巴巴」的感覺，母語者聽起來才自然。\n\n另外兩點：西班牙文**沒有聲調**，所以不要用國語的四聲去唸單字，音高變化只用來表達語氣（疑問、驚訝），不改變字義。還有，中文的音節幾乎都以母音或 n/ng 結尾，所以 el、mar、papel 這種子音收尾的音節要特別練，不要偷偷加個母音變成「ㄟ-ㄌㄜ」。",
+    "chineseTrap": "**這一課只有一個重點：p / t / k 不送氣。**\n\n自我檢查法：手掌放在嘴前唸 papá。**如果感覺到一股氣噴到手掌，就是唸錯了。** 正確的唸法幾乎沒有氣流。同樣的測試也適用於 taxi 的 t 和 casa 的 c。\n\n另外三件要留意的事：\n\n- **b 和 v 完全同音**，都不咬下唇。\n  - ✗ vivir 咬下唇唸成英文的 v\n  - ✓ vivir 兩個 v 都唸成 b 的音\n- **子音收尾的音節不要多加母音。**\n  - ✗ el 唸成 e-le　✗ papel 唸成 pa-pe-le\n  - ✓ el、papel 的結尾就停在子音上\n- **沒有聲調。** 音高只用來表達語氣（疑問、驚訝），不改變字義。整句要平順流動，只在重音音節上稍微加強。\n\n> 最難的是 rr 顫音，需要時間累積。先把 p/t/k 的送氣改掉 —— 那個改起來最快，對聽感的改善也最明顯。",
     "pronunciation": [
       {
         "letter": "p / t / c(k)",
@@ -636,7 +636,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文有聲調但沒有「重音」這個概念 —— 國語的每個字都有固定調值，音節之間沒有輕重之分。\n\n所以中文母語者最常見的兩個問題是：\n\n**一、把重音平均分配。** 每個音節都唸一樣重，聽起來像機器人。西班牙文必須有一個音節明顯突出。\n\n**二、用聲調代替重音。** 把重音唸成第四聲或第一聲。重音是「音量大、時間長」，不是「音調高」。\n\n還有一點很實際：重音放錯位置，母語者可能真的聽不懂。papa（馬鈴薯）和 papá（爸爸）只差重音；hablo（我說）和 habló（他說了）也只差重音，而後者已經是不同的時態了。",
+    "chineseTrap": "重音是「音量大、時間長」，不是「音調高」。整個字只有一個音節突出，其餘保持平穩。\n\n兩個常見問題：\n\n- **每個音節唸得一樣重** —— 聽起來很平板，母語者要多花力氣才聽得懂。\n- **把重音唸成上揚的音調** —— 重音是加重，不是升調。\n\n重音放錯會直接改變意思，這不是小事：\n\n- 想說「爸爸」卻唸成 ✗ **PA**-pa（那是馬鈴薯） → ✓ pa-**PÁ**\n- 想說「我說」卻唸成 ✗ ha-**BLÓ**（那是「他說了」，已經是不同時態） → ✓ **HA**-blo\n\n寫的時候也一樣，符號少一個就是另一個字：\n\n- ✗ Tengo un cafe. → ✓ Tengo un **café**.\n- ✗ Tu eres mi amigo. → ✓ **Tú** eres mi amigo.（tu 是「你的」，tú 才是「你」）\n\n> 學新字時連重音一起記。唸出聲並刻意把重音音節拉長一點，比在心裡默念有效得多。",
     "exercises": [
       {
         "id": "ex-ace-1",
@@ -874,7 +874,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文母語者在這一課其實有優勢：國語本來就沒有 /θ/（英文 th）這個音，所以你不會不小心把它加進去。**不用刻意去學西班牙的 th 唸法。**\n\n真正要注意的是另一件事：不要把 s 唸成國語的「ㄙ」再加上捲舌或送氣。西班牙文的 /s/ 就是單純的 s，舌尖靠近上齒齦，不捲舌。\n\n還有一個常見混淆：看到 ll 會想唸成兩個 l（像英文 well 的 ll）。不對 —— ll 是一個音，接近「一」，calle 唸「卡耶」不是「卡了」。",
+    "chineseTrap": "**不要學西班牙的 /θ/（類似英文 th 的音）。** 在厄瓜多，c（在 e、i 前）和 z 一律唸 /s/。\n\n網路上大量教材來自西班牙，會把 gracias 唸成 GRA-thias。在厄瓜多這樣唸不會被誤解，但一聽就知道不是當地口音。從一開始就用 /s/，之後不必再改。\n\n第二件事：**ll 不是兩個 l**。\n\n- ✗ calle 唸成 CA-le\n- ✓ calle 唸成 CA-ye\n\nll 和 y 是同一個音。ella 唸 E-ya，pollo 唸 PO-yo，llamar 唸 ya-MAR。\n\n> seseo 的副作用：casa 和 caza 變成同音字，只能靠上下文分辨。這很正常，母語者也是這樣判斷的。",
     "regional": {
       "region": "LatAm",
       "note": "seseo（無 /θ/）與 yeísmo（ll = y）是整個拉丁美洲的標準發音，厄瓜多含括在內。西班牙中北部才有 /θ/ 的區分。",
@@ -1155,7 +1155,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文問「你叫什麼名字」和「請問您貴姓」，動詞完全一樣，只換稱謂和語氣詞。\n\n西班牙文不是這樣。選 tú 還是 usted 會**改變動詞本身**：\n\n- ¿Cómo **te llamas**? （tú）\n- ¿Cómo **se llama** usted? （usted）\n\n動詞 llamas / llama 長得不一樣。這是中文母語者最不習慣的地方 —— 禮貌等級不是靠加「請」「您」這種詞來表達，而是嵌在動詞裡。\n\n**保險策略：不確定就用 usted。** 用 usted 對同輩最多顯得有點正式；用 tú 對長輩或陌生人則可能真的失禮。等對方說 「Puedes tutearme」（你可以用 tú 稱呼我）再換過去。",
+    "chineseTrap": "每次開口前都要先決定用 **tú** 還是 **usted**，因為這會改變動詞的形式：\n\n- ¿Cómo **te llamas**?（tú）\n- ¿Cómo **se llama** usted?（usted）\n\nllamas 和 llama 長得不一樣，不能混用：\n\n- ✗ ¿Cómo se llamas usted?　✗ ¿Cómo te llama?\n- ✓ ¿Cómo **se llama** usted?　✓ ¿Cómo **te llamas**?\n\n對陌生長輩用 tú 是最常見的失禮：\n\n- ✗ ¿Cómo **estás**, señora? → ✓ ¿Cómo **está** usted, señora?\n\n> **不確定就用 usted。** 對同輩用 usted 最多顯得正式一點；對長輩或陌生人用 tú 才是真的失禮。等對方說 \"Puedes tutearme\"（你可以用 tú 稱呼我）再換過去。\n\n在基多所在的 Sierra 高地，usted 的使用範圍比多數教材說的更廣 —— 朋友之間、甚至家人之間都可能使用，並不代表關係疏遠。",
     "regional": {
       "region": "Ecuador",
       "note": "基多所在的 Sierra 高地 usted 的使用範圍比多數教材預期得廣 —— 朋友之間、甚至父母與子女之間都可能用 usted，並不代表疏遠。厄瓜多不使用阿根廷式的 voseo（vos）。",
@@ -1477,7 +1477,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文的數字組合完全規律：二十一、三十五、九十九，全部都是「十位 + 個位」直接接上。\n\n西班牙文在 **16–29** 這一段破例合寫成一個字，而且還帶重音符號：\ndieciséis、veintidós、veintitrés。到了 31 才回到「分開寫 + y」的規律。\n\n另一個中文沒有的坑：**年齡用「有」不用「是」**。\n中文說「我是三十歲」或「我三十歲」，西班牙文一律是 Tengo treinta años（我「有」三十年）。說 Soy treinta años 是很典型的初學者錯誤，母語者一聽就知道。\n\n還有 uno → un 的縮短：中文說「一本書」，「一」不會變形；西班牙文的 uno 放在陽性名詞前一定要縮成 un。",
+    "chineseTrap": "三件會出錯的事。\n\n**一、16–29 合寫成一個字，31 以上分開寫。**\n\n- ✓ dieciséis、veintidós、veinticinco（一個字，有些帶重音符號）\n- ✓ treinta y uno、cuarenta y cinco（三個字，中間有 y）\n- ✗ diez y seis　✗ cuarentaycinco\n\n**二、年齡用 tener，不用 ser。**\n\n- ✗ Soy treinta años. → ✓ **Tengo** treinta años.\n- 問別人也一樣：¿Cuántos años **tiene** usted?\n\n**三、uno 放在名詞前要縮短。**\n\n- ✗ Tengo uno hermano. → ✓ Tengo **un** hermano.\n- 陰性用 una：**una** hermana\n- 組合數字裡也一樣：treinta y **un** años\n\n> 這三項各自獨立，但都很常出現在同一句話裡：Tengo veintiún años. —— 縮短、合寫、tener 三者同時到齊。",
     "exercises": [
       {
         "id": "ex-num-1",
@@ -1788,7 +1788,7 @@
         ]
       }
     ],
-    "chineseTrap": "**這是中文母語者學西班牙文的第一道大坎。**\n\n中文完全沒有語法性別 —— 「桌子」就是「桌子」，不需要額外資訊。所以我們的直覺是：學會 mesa = 桌子，就算學會這個字了。\n\n**這個直覺會害你之後全部重學。** 因為性別會牽動一整串：\n\n- 冠詞：**la** mesa，不是 el mesa\n- 形容詞：la mesa **blanca**，不是 la mesa blanco\n- 代名詞：後面提到它時要用陰性\n\n所以從第一天起就養成一個習慣：\n\n> **背單字時一定連冠詞一起背。背 la mesa，不要背 mesa。**\n\n多花的力氣是零 —— 反正你都要記這個字 —— 但省下的是之後每一句話都要停下來猜性別的時間。本 app 的單字表一律標上性別色標，就是為了幫你建立這個習慣。",
+    "chineseTrap": "**性別無法從字義推測。** mesa 是陰性、libro 是陽性，這跟桌子或書本身的性質無關，純粹是語法分類。不要花時間找理由，那不存在。\n\n之所以非記不可，是因為性別會牽動一整串：\n\n- ✗ **el** mesa → ✓ **la** mesa\n- ✗ la mesa **blanco** → ✓ la mesa **blanca**\n- ✗ **los** mesas blancas → ✓ **las** mesas **blancas**\n\n> **背單字時一定連冠詞一起背。背 la mesa，不要背 mesa。** 多花的力氣接近零，但省下的是之後每句話都要停下來猜性別的時間。\n\n大原則是 -o 陽性、-a 陰性，涵蓋約八成。必背的例外只有幾個：\n\n- ✗ la día、la problema、la mapa → ✓ **el** día、**el** problema、**el** mapa\n- ✗ el mano → ✓ **la** mano\n\n另外 -dad / -tad / -ción / -sión 結尾**一律陰性**，這條完全沒有例外，記起來很划算。",
     "exercises": [
       {
         "id": "ex-gen-1",
@@ -2050,7 +2050,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文沒有冠詞，所以錯誤幾乎都集中在兩個方向：\n\n**一、該加卻沒加。** 中文說「書在桌上」，直譯成 Libro está en mesa —— 這是錯的。西班牙文必須說 **El** libro está en **la** mesa。只要是具體的、特定的名詞，前面幾乎一定有冠詞。\n\n**二、不該加卻加了。** 中文說「我是一個學生」很自然，所以會想說 Soy **un** estudiante —— 但職業前面不加冠詞，正確是 Soy estudiante。\n\n有個好用的檢查法：\n\n> 造完句子後，把每個名詞掃一遍，問自己「這個名詞前面有沒有東西？」\n> 除了職業、國籍這類例外，答案通常應該是「有」。\n\n初學階段寧可多加也不要漏加 —— 漏掉冠詞聽起來像電報，加錯冠詞只是小瑕疵。",
+    "chineseTrap": "錯誤集中在兩個方向。\n\n**一、具體名詞前面漏掉冠詞。**\n\n- ✗ Libro está en mesa. → ✓ **El** libro está en **la** mesa.\n- ✗ Teléfono está aquí. → ✓ **El** teléfono está aquí.\n\n只要是特定的、雙方都知道的東西，前面幾乎一定有冠詞。\n\n**二、職業前面多加了冠詞。**\n\n- ✗ Soy **un** estudiante. → ✓ Soy estudiante.\n- ✗ Ella es **una** profesora. → ✓ Ella es profesora.\n\nser + 職業／國籍，不加冠詞。\n\n> 自我檢查：造完句子後把每個名詞掃一遍，問「這個名詞前面有沒有東西？」除了職業、國籍這類例外，答案通常應該是「有」。\n\n還有一個容易漏的：談論**整類事物**時要加定冠詞。\n\n- ✓ Me gusta **el** café.（喜歡咖啡這種東西）\n- ✓ **La** fruta es buena.（水果是好的）\n\n初學階段寧可多加也不要漏加 —— 漏掉冠詞聽起來像電報，加錯只是小瑕疵。",
     "exercises": [
       {
         "id": "ex-art-1",
@@ -2333,7 +2333,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文的複數幾乎不標記。「一本書」和「三本書」裡的「書」長得一模一樣，數量資訊全靠前面的數詞或量詞承擔。\n\n西班牙文相反：**數量資訊要在整個名詞片語裡重複標記**。\n\n```\n中文： 三本  新   書      ← 只有「三」帶了數量資訊\n西文： tres libros nuevos ← libro 和 nuevo 都要加 s\n```\n\n所以造句時養成一個習慣：**決定了複數，就把整串掃過去** —— 冠詞、名詞、形容詞，一個都不能漏。\n\n另外注意 -z → -ces 這條：lápiz → lápices，複數時重音符號反而消失了，因為音節數變了之後它已經符合基本重音規則，不需要再標示。",
+    "chineseTrap": "**複數會傳染。** 冠詞、名詞、形容詞必須同時變，漏掉任何一個都是錯的。\n\n- ✗ las casa blanca\n- ✗ las casas blanca\n- ✓ **las casas blancas**\n\n規則本身很單純：\n\n- 母音結尾 → 加 **-s**：libro → libros\n- 子音結尾 → 加 **-es**：ciudad → ciudades\n- **-z 結尾 → 改成 -ces**：luz → luces、lápiz → lápices\n\n> 自我檢查：決定用複數之後，把整串掃過去 —— 冠詞、名詞、形容詞，一個都不能漏。\n\nlápiz → lápices 要特別注意：z 變成 c，而**重音符號保留**（lá-pi-ces 的重音落在倒數第三音節，這類字一律要標）。反過來 inglés → ingleses 的符號會消失，因為複數之後重音變成倒數第二音節又以 s 結尾，正好符合基本規則。",
     "exercises": [
       {
         "id": "ex-plu-1",
@@ -2600,7 +2600,7 @@
         ]
       }
     ],
-    "chineseTrap": "**中文的動詞永遠不變形。** 我是、你是、他是、我們是 —— 全部都是「是」。\n\n西班牙文完全相反，同一個動詞有五種長相：\n\n```\n中文：  我是    你是     他是    我們是    他們是\n西文：  soy    eres    es     somos    son\n```\n\n這帶來兩個必須同時建立的新習慣：\n\n**一、學動詞就是學一整組，不是學一個字。** 看到 ser 要想到五個形式，就像背中文成語不會只背前兩個字。\n\n**二、主詞可以省略 —— 而且通常應該省略。** 中文不能說「是台灣人」，一定要有主詞；西班牙文因為動詞已經帶了人稱資訊，Soy de Taiwán 就完全清楚了。初學者常常每句都加 yo，聽起來會有點像在強調「是我，不是別人」。\n\n**三、usted 用第三人稱動詞。** 意思是「您」（第二人稱），動詞卻跟「他」一樣。說 Usted eres 是很常見的錯誤，正確是 Usted es。\n\n> 好消息：因為不學 vosotros，你要記的變化比西班牙的教材少六分之一。",
+    "chineseTrap": "三件事要同時建立。\n\n**一、學動詞是學一整組，不是學一個字。**\n\n看到 ser 就要想到五個形式：soy / eres / es / somos / son。只記住 ser 本身等於什麼都沒記住。\n\n**二、主詞代名詞通常要省略。**\n\n- ✓ Soy de Taiwán.（自然）\n- ○ Yo soy de Taiwán.（文法正確，但聽起來像在強調「是我，不是別人」）\n\n動詞形式已經帶了人稱資訊，代名詞只在強調或對比時才出現：Yo soy de Taiwán y **él** es de Ecuador.\n\n**三、usted 用第三人稱動詞。**\n\n- ✗ Usted **eres** profesor. → ✓ Usted **es** profesor.\n- ✗ ¿Usted **tienes** hijos? → ✓ ¿Usted **tiene** hijos?\n\nusted 的意思是「您」，動詞卻跟 él / ella 完全一樣。這是最常見的錯配。\n\n> 好消息：本課程不教 vosotros（拉美不使用），所以你要記的變化比西班牙的教材少六分之一。",
     "regional": {
       "region": "LatAm",
       "note": "拉丁美洲全境以 ustedes 作為唯一的第二人稱複數，不使用 vosotros。厄瓜多使用 tú／usted，不使用阿根廷式的 voseo（vos）。",
@@ -2905,7 +2905,7 @@
         ]
       }
     ],
-    "chineseTrap": "這一課有**兩個**中文帶來的困難，而且第二個常被忽略。\n\n**困難一：一個「是」對應兩個動詞。**\n中文說「我是學生」和「我在家」，前者用「是」後者用「在」，所以位置這部分其實中文有幫上忙。真正麻煩的是狀態：\n「我很累」中文根本沒有動詞，西班牙文卻必須選 estar。\n\n**困難二：中文形容詞不需要繫詞。** 這個更隱蔽。\n\n```\n中文： 他  高。          ← 沒有「是」，直接接形容詞\n西文： Él es alto.      ← 必須有動詞 es\n```\n\n中文說「他高」「我累」「咖啡燙」完全成立，不需要任何動詞。所以中文母語者最典型的錯誤不是「選錯 ser 或 estar」，而是**整個動詞漏掉**：\n\n- ✗ Él alto.  → ✓ Él **es** alto.\n- ✗ Yo cansado. → ✓ **Estoy** cansado.\n- ✗ El café caliente. → ✓ El café **está** caliente.\n\n**造句自我檢查：每一個西班牙文句子都必須有動詞。** 如果你的句子只有「主詞 + 形容詞」，那就是漏了 ser 或 estar。\n\n至於怎麼選：形容詞描述的是「這是什麼樣的人／東西」用 ser，「現在處於什麼狀態」用 estar。cansado、contento、caliente 這類會變的，幾乎都是 estar。",
+    "chineseTrap": "最容易犯的錯不是選錯 ser 或 estar，而是**整個動詞漏掉**：\n\n- ✗ Él alto. → ✓ Él **es** alto.\n- ✗ Yo cansado. → ✓ Yo **estoy** cansado.\n- ✗ El café caliente. → ✓ El café **está** caliente.\n\n> 自我檢查：每個句子都必須有動詞。只有「主詞 + 形容詞」的組合不成立，不管那個形容詞看起來多完整。\n\n選哪一個的判準：\n\n- 描述「這是什麼人、什麼東西」（身分、職業、來源、本質特徵）→ **ser**\n- 描述「現在處於什麼狀態」或「在哪裡」→ **estar**\n\ncansado、contento、caliente、frío 這類會變的狀態，幾乎都是 estar。**位置一律 estar**，即使那個位置永遠不會改變：Quito **está** en Ecuador。\n\n同一個形容詞換動詞會改變意思，這是進階但很實用的一組：\n\n- La sopa **es** buena.（這道湯品質好）\n- La sopa **está** buena.（這湯現在嚐起來很好吃）",
     "exercises": [
       {
         "id": "ex-se-1",
@@ -3200,7 +3200,7 @@
         ]
       }
     ],
-    "chineseTrap": "中文的「有」是一個非常忙碌的字，一個字包辦了西班牙文三種不同的表達：\n\n```\n中文                  西班牙文        用途\n──────────────────────────────────────────\n這裡「有」一家餐廳    hay            存在\n我「有」兩個兄弟      tengo          擁有\n我「有」三十歲        tengo          年齡（固定搭配）\n```\n\n所以造句前先問自己：**這個「有」是「某處存在某物」還是「某人擁有某物」？**\n前者 hay，後者 tener。\n\n**第二個坑：hay 後面不要放定冠詞。**\n中文說「桌上有那本書」很自然，但西班牙文的 Hay el libro 是錯的。原因很直觀 —— hay 是要介紹一個「新的、聽者還不知道」的東西，而定冠詞 el 正好相反，表示「雙方都知道是哪一個」，兩者邏輯上互相衝突。\n要講已知的東西在哪裡，就改用 estar：El libro está en la mesa。\n\n**好消息：hay 完全不變化。** 不分單複數、不分性別、不隨人稱變。這是你到目前為止學到最省力的字。",
+    "chineseTrap": "**hay 表示「存在」，tener 表示「擁有」，兩者不能互換。**\n\n- ✓ **Hay** dos hermanos en la casa.（某處存在兩個兄弟）\n- ✓ **Tengo** dos hermanos.（我擁有／我的親屬關係）\n\n造句前先確認：這是「某處存在某物」還是「某人擁有某物」？\n\n**第二個坑：hay 後面不接定冠詞。**\n\n- ✓ Hay **un** libro en la mesa.\n- ✓ Hay libros en la mesa.\n- ✗ Hay **el** libro en la mesa.\n\n原因很直觀：hay 是用來介紹聽者還不知道的新東西，而定冠詞 el 表示「雙方都知道是哪一個」，兩者邏輯上互相衝突。要講已知的東西在哪裡，改用 estar：El libro **está** en la mesa。\n\n> hay 和 estar 的分工：問存不存在用 **hay**（¿Hay un baño aquí?），已知它存在、要問在哪裡用 **estar**（¿Dónde está el baño?）。\n\n**好消息：hay 完全不變化。** 不分單複數、不分性別、不隨人稱變 —— 一家餐廳是 hay，三家餐廳還是 hay。",
     "exercises": [
       {
         "id": "ex-hay-1",
