@@ -1,6 +1,7 @@
 import {
   wordArraySchema, verbArraySchema, lessonArraySchema, journeySchema,
   type Word, type Verb, type GrammarLesson, type JourneyStop, type Exercise,
+  type Localized,
 } from './schema';
 
 import rawWordsA0 from './words/a0.json';
@@ -60,29 +61,36 @@ export function allTopics(): { topic: string; count: number }[] {
     .sort((a, b) => b.count - a.count);
 }
 
-export const TOPIC_LABEL: Record<string, string> = {
-  saludos: '問候與禮貌',
-  clase: '課堂與求助',
-  personas: '人稱與家庭',
-  numeros: '數字',
-  colores: '顏色',
-  tiempo: '時間與星期',
-  comida: '食物與飲料',
-  lugares: '地點與物件',
-  adjetivos: '形容詞',
-  verbos: '動詞',
-  conectores: '介系詞與連接詞',
-  preguntas: '疑問詞',
-  comunes: '常用副詞',
-  animales: '動物',
-  ecuador: '厄瓜多特色詞',
+export const TOPIC_LABEL: Record<string, Localized> = {
+  saludos: { zh: '問候與禮貌', en: 'Greetings & courtesy' },
+  clase: { zh: '課堂與求助', en: 'Classroom & asking for help' },
+  personas: { zh: '人稱與家庭', en: 'People & family' },
+  numeros: { zh: '數字', en: 'Numbers' },
+  colores: { zh: '顏色', en: 'Colours' },
+  tiempo: { zh: '時間與星期', en: 'Time & days' },
+  comida: { zh: '食物與飲料', en: 'Food & drink' },
+  lugares: { zh: '地點與物件', en: 'Places & objects' },
+  adjetivos: { zh: '形容詞', en: 'Adjectives' },
+  verbos: { zh: '動詞', en: 'Verbs' },
+  conectores: { zh: '介系詞與連接詞', en: 'Prepositions & conjunctions' },
+  preguntas: { zh: '疑問詞', en: 'Question words' },
+  comunes: { zh: '常用副詞', en: 'Common adverbs' },
+  animales: { zh: '動物', en: 'Animals' },
+  ecuador: { zh: '厄瓜多特色詞', en: 'Ecuadorian usage' },
 };
 
-export const topicLabel = (topic: string): string => TOPIC_LABEL[topic] ?? topic;
+export const topicLabel = (topic: string): Localized =>
+  TOPIC_LABEL[topic] ?? { zh: topic, en: topic };
 
-export const POS_LABEL: Record<Word['pos'], string> = {
-  noun: '名詞', verb: '動詞', adj: '形容詞', adv: '副詞',
-  prep: '介系詞', conj: '連接詞', pron: '代名詞', phrase: '片語',
+export const POS_LABEL: Record<Word['pos'], Localized> = {
+  noun: { zh: '名詞', en: 'noun' },
+  verb: { zh: '動詞', en: 'verb' },
+  adj: { zh: '形容詞', en: 'adjective' },
+  adv: { zh: '副詞', en: 'adverb' },
+  prep: { zh: '介系詞', en: 'preposition' },
+  conj: { zh: '連接詞', en: 'conjunction' },
+  pron: { zh: '代名詞', en: 'pronoun' },
+  phrase: { zh: '片語', en: 'phrase' },
 };
 
 /* ------------------------------------------------------------------ *

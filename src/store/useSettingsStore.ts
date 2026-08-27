@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { zustandStorage } from '@/lib/storage';
+import type { Locale } from '@/content/schema';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
 /** 每日目標（分鐘） */
@@ -8,6 +9,8 @@ export type DailyGoal = 10 | 20 | 30;
 
 interface SettingsState {
   theme: ThemeMode;
+  /** 介面與解說的語言。一個開關切全部，不分開設定。 */
+  locale: Locale;
   dailyGoal: DailyGoal;
   /** 關掉之後聽力題不出現（沒有 es 語音時也會自動失效） */
   speechEnabled: boolean;
@@ -17,6 +20,7 @@ interface SettingsState {
   hydrated: boolean;
 
   setTheme: (theme: ThemeMode) => void;
+  setLocale: (locale: Locale) => void;
   setDailyGoal: (goal: DailyGoal) => void;
   setSpeechEnabled: (on: boolean) => void;
   setShowNeedsVerify: (on: boolean) => void;
@@ -28,12 +32,14 @@ export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
       theme: 'system',
+      locale: 'zh',
       dailyGoal: 20,
       speechEnabled: true,
       showNeedsVerify: true,
       hydrated: false,
 
       setTheme: (theme) => set({ theme }),
+      setLocale: (locale) => set({ locale }),
       setDailyGoal: (dailyGoal) => set({ dailyGoal }),
       setSpeechEnabled: (speechEnabled) => set({ speechEnabled }),
       setShowNeedsVerify: (showNeedsVerify) => set({ showNeedsVerify }),

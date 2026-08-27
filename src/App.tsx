@@ -6,9 +6,11 @@ import { LessonListPage, LessonPage } from '@/pages/LessonPage';
 import { CompassLoading } from '@/components/decor/Illustrations';
 import { useRoute } from '@/lib/router';
 import { useSettingsStore } from '@/store/useSettingsStore';
+import { useT } from '@/i18n';
 
 export default function App() {
   const { route } = useRoute();
+  const { t } = useT();
   const hydrated = useSettingsStore((s) => s.hydrated);
 
   if (!hydrated) {
@@ -16,7 +18,7 @@ export default function App() {
       <AppShell>
         <div className="grid place-items-center gap-4 py-24 text-center">
           <CompassLoading />
-          <p className="text-sm font-semibold text-muted">正在載入你的進度…</p>
+          <p className="text-sm font-semibold text-muted">{t('loadingProgress')}</p>
         </div>
       </AppShell>
     );

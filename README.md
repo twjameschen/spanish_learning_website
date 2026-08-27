@@ -1,13 +1,13 @@
 # Camino a Quito · 西班牙文之路
 
 一套**完全離線**的西班牙文學習網站，語言變體鎖定**拉丁美洲 / 厄瓜多 Sierra（基多）**，
-介面全繁體中文，給中文母語者從 A0 讀到 B1。
+說明與解說可在**繁體中文 ↔ English** 之間切換，從 A0 讀到 B1。
 
 無後端、無 API 呼叫、無 CDN、無 Google Fonts —— 所有字型、資料、圖示都打包進 build 產物。
 
 > **目前進度：Phase 2 / 7（A0 內容）**
 > 骨架、色彩系統、三層儲存、雙 build、content schema 與 **A0 全部內容**已完成。
-> 可以瀏覽 232 個單字與 12 課課文（唯讀）。
+> 可以瀏覽 232 個單字與 12 課課文（唯讀），全部中英雙語。
 > 實際作答、間隔複習與遊戲化在 Phase 3 之後交付。
 
 ---
@@ -135,6 +135,26 @@ src/
 | A0 課程 | 12（台北 6 + 邁阿密 6） |
 | 練習題 | 99，涵蓋全部 7 種題型 |
 | 標註區域用法 | 15 筆，其中不確定的都標了「待母語者確認」 |
+| 雙語欄位 | 1,306 組 `{zh, en}`，兩種語言都必填 |
+
+---
+
+## 語言切換
+
+右上角的 **中／EN** 按鈕一次切換**全部** —— 介面、單字字義、例句翻譯、
+課文、題目解釋都跟著換。設定會存進儲存層，重整後保持。
+
+西班牙文本身（單字、例句、變位表）當然不隨語言改變，那是要學的東西。
+
+### 為什麼兩種語言都強制必填
+
+`schema.ts` 的 `localizedSchema` 要求 `{ zh, en }` 兩邊都非空。
+刻意不做「缺英文就 fallback 回中文」—— 那樣切到英文時會看到一半中文一半英文，
+比整頁中文更難用。缺翻譯就讓驗證失敗，`npm run build` 直接擋下。
+
+`src/i18n/i18n.test.ts` 另外檢查：
+所有 1,306 組欄位兩邊都在、英文欄位不含中文字、
+該翻譯的欄位沒有兩版一模一樣（純數字與注音式重音標記如 `CA-sa`、`/k/` 除外）。
 
 ---
 
@@ -151,18 +171,20 @@ src/
 {
   "id": "ventana",
   "es": "ventana",
-  "zh": "窗戶",
+  "gloss": { "zh": "窗戶", "en": "window" },
   "pos": "noun",
   "gender": "f",
   "level": "A0",
   "topic": "lugares",
   "exampleEs": "La ventana es grande.",
-  "exampleZh": "那扇窗很大。"
+  "exampleGloss": { "zh": "那扇窗很大。", "en": "The window is big." }
 }
 ```
 
-必填欄位：`id`（小寫、數字、連字號）、`es`、`zh`、`pos`、`level`、`topic`、
-`exampleEs`、`exampleZh`。
+必填欄位：`id`（小寫、數字、連字號）、`es`、`gloss`、`pos`、`level`、`topic`、
+`exampleEs`、`exampleGloss`。
+
+**所有給人看的文字都是 `{ zh, en }` 物件，兩邊都必填。**
 
 **`pos` 是 `noun` 時 `gender` 必填**（`m` 或 `f`）—— 這條由 schema 強制，
 因為中文沒有性別，這是最容易漏的欄位。反過來，非名詞不准標 `gender`。
@@ -175,9 +197,11 @@ src/
 
 ```json
 {
-  "id": "abrir", "es": "abrir", "zh": "打開",
+  "id": "abrir", "es": "abrir",
+  "gloss": { "zh": "打開", "en": "to open" },
   "pos": "verb", "level": "A0", "topic": "verbos",
-  "exampleEs": "Abro la ventana.", "exampleZh": "我打開窗戶。",
+  "exampleEs": "Abro la ventana.",
+  "exampleGloss": { "zh": "我打開窗戶。", "en": "I open the window." },
   "infinitive": "abrir", "irregular": false, "reflexive": false,
   "participio": "abierto", "gerundio": "abriendo",
   "conjugations": {
@@ -197,7 +221,10 @@ src/
 ```json
 "regional": {
   "region": "Ecuador",
-  "note": "厄瓜多常用，其他西語區多說 …",
+  "note": {
+    "zh": "厄瓜多常用，其他西語區多說 …",
+    "en": "Common in Ecuador; elsewhere people usually say …"
+  },
   "needsVerify": true
 }
 ```
@@ -214,8 +241,9 @@ npm test                   # 全部測試
 ```
 
 驗證會檢查：schema 形狀、id 唯一、名詞有性別、例句非空、每題都有解釋、
-跨檔引用都解析得到（題目指向的單字要存在、變位題答案要跟變化表一致）、
-前置課程無循環，以及**沒有任何 vosotros 或 voseo 形式混進來**。
+**中英兩種語言都不缺**、跨檔引用都解析得到（題目指向的單字要存在、
+變位題答案要跟變化表一致）、前置課程無循環，
+以及**沒有任何 vosotros 或 voseo 形式混進來**。
 
 ---
 
@@ -229,6 +257,10 @@ src/content/
 ├─ verbs/a0.json     18 個動詞（含現在式變化表）
 ├─ lessons/a0.json   12 課
 └─ journey.json      5 個城市 → 課程分組
+
+src/i18n/
+├─ ui.ts            介面字串（按鈕、標題、狀態訊息）
+└─ index.ts         useT()：t() 取介面字串、L() 取內容的 Localized 欄位
 ```
 
 每一課的結構：
@@ -237,11 +269,20 @@ src/content/
 |---|---|
 | `intro` | 白話的中文導言 |
 | `rules[]` | 規則 + 雙語例句 |
-| `chineseTrap` | **中文母語者會踩的坑，明講** —— 這是全站最重要的教學資產 |
+| `pitfalls` | **最容易犯的錯，明講** —— 這是全站最重要的教學資產 |
 | `pronunciation[]` | 發音課專用：字母、IPA、中文說明、例字 |
 | `exercises[]` | 練習題，7 種題型 |
 | `prerequisites[]` | 前置課程 id，用於技能樹解鎖 |
 | `usesOnlyTaughtGrammar` | 自我聲明：規則例句只用了本課與前置課教過的文法 |
+
+### pitfalls 的撰寫口吻
+
+**直接講西班牙文本身的規則與陷阱，不拿其他語言的情境來對照。**
+
+結構固定為：點出最容易犯的錯 → `✗ / ✓` 具體示範 → 可操作的判準 → 自我檢查法。
+
+`src/content/no-vosotros.test.ts` 有兩支測試把關：
+禁止以其他語言為參照的詞彙、每課都必須有 `✗/✓` 對照。
 
 ### 例句難度政策
 

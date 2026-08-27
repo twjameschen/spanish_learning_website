@@ -2,2309 +2,3680 @@
   {
     "id": "hola",
     "es": "hola",
-    "zh": "嗨；你好",
+    "gloss": {
+      "zh": "嗨；你好",
+      "en": "hi; hello"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "¡Hola! ¿Cómo estás?",
-    "exampleZh": "嗨！你好嗎？"
+    "exampleGloss": {
+      "zh": "嗨！你好嗎？",
+      "en": "Hi! How are you?"
+    }
   },
   {
     "id": "buenos-dias",
     "es": "buenos días",
-    "zh": "早安",
+    "gloss": {
+      "zh": "早安",
+      "en": "good morning"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Buenos días, señora Pérez.",
-    "exampleZh": "早安，佩雷斯女士。"
+    "exampleGloss": {
+      "zh": "早安，佩雷斯女士。",
+      "en": "Good morning, Mrs. Pérez."
+    }
   },
   {
     "id": "buenas-tardes",
     "es": "buenas tardes",
-    "zh": "午安",
+    "gloss": {
+      "zh": "午安",
+      "en": "good afternoon"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Buenas tardes, ¿cómo está usted?",
-    "exampleZh": "午安，您好嗎？"
+    "exampleGloss": {
+      "zh": "午安，您好嗎？",
+      "en": "Good afternoon, how are you?"
+    }
   },
   {
     "id": "buenas-noches",
     "es": "buenas noches",
-    "zh": "晚安（見面或道別皆可）",
+    "gloss": {
+      "zh": "晚安（見面或道別皆可）",
+      "en": "good evening; good night"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Buenas noches, hasta mañana.",
-    "exampleZh": "晚安，明天見。"
+    "exampleGloss": {
+      "zh": "晚安，明天見。",
+      "en": "Good night, see you tomorrow."
+    }
   },
   {
     "id": "adios",
     "es": "adiós",
-    "zh": "再見",
+    "gloss": {
+      "zh": "再見",
+      "en": "goodbye"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Adiós, que le vaya bien.",
-    "exampleZh": "再見，祝您一切順利。"
+    "exampleGloss": {
+      "zh": "再見，祝您一切順利。",
+      "en": "Goodbye, all the best to you."
+    }
   },
   {
     "id": "hasta-luego",
     "es": "hasta luego",
-    "zh": "待會見",
+    "gloss": {
+      "zh": "待會見",
+      "en": "see you later"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Hasta luego, ñaño.",
-    "exampleZh": "待會見，老兄。"
+    "exampleGloss": {
+      "zh": "待會見，老兄。",
+      "en": "See you later, buddy."
+    }
   },
   {
     "id": "hasta-manana",
     "es": "hasta mañana",
-    "zh": "明天見",
+    "gloss": {
+      "zh": "明天見",
+      "en": "see you tomorrow"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Hasta mañana en la escuela.",
-    "exampleZh": "明天學校見。"
+    "exampleGloss": {
+      "zh": "明天學校見。",
+      "en": "See you tomorrow at school."
+    }
   },
   {
     "id": "como-estas",
     "es": "¿cómo estás?",
-    "zh": "你好嗎？（親近的人）",
+    "gloss": {
+      "zh": "你好嗎？（親近的人）",
+      "en": "how are you? (informal)"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "¿Cómo estás? Yo estoy bien.",
-    "exampleZh": "你好嗎？我很好。"
+    "exampleGloss": {
+      "zh": "你好嗎？我很好。",
+      "en": "How are you? I'm fine."
+    }
   },
   {
     "id": "como-esta-usted",
     "es": "¿cómo está usted?",
-    "zh": "您好嗎？（禮貌）",
+    "gloss": {
+      "zh": "您好嗎？（禮貌）",
+      "en": "how are you? (formal)"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "¿Cómo está usted, don Carlos?",
-    "exampleZh": "卡洛斯先生，您好嗎？"
+    "exampleGloss": {
+      "zh": "卡洛斯先生，您好嗎？",
+      "en": "How are you, Don Carlos?"
+    }
   },
   {
     "id": "que-tal",
     "es": "¿qué tal?",
-    "zh": "最近如何？",
+    "gloss": {
+      "zh": "最近如何？",
+      "en": "how's it going?"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "¿Qué tal? Todo bien.",
-    "exampleZh": "最近如何？都很好。"
+    "exampleGloss": {
+      "zh": "最近如何？都很好。",
+      "en": "How's it going? All good."
+    }
   },
   {
     "id": "gracias",
     "es": "gracias",
-    "zh": "謝謝",
+    "gloss": {
+      "zh": "謝謝",
+      "en": "thank you"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Gracias por su ayuda.",
-    "exampleZh": "謝謝您的幫忙。"
+    "exampleGloss": {
+      "zh": "謝謝您的幫忙。",
+      "en": "Thank you for your help."
+    }
   },
   {
     "id": "muchas-gracias",
     "es": "muchas gracias",
-    "zh": "非常感謝",
+    "gloss": {
+      "zh": "非常感謝",
+      "en": "thank you very much"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Muchas gracias, muy amable.",
-    "exampleZh": "非常感謝，您人真好。"
+    "exampleGloss": {
+      "zh": "非常感謝，您人真好。",
+      "en": "Thank you very much, that's very kind."
+    }
   },
   {
     "id": "de-nada",
     "es": "de nada",
-    "zh": "不客氣",
+    "gloss": {
+      "zh": "不客氣",
+      "en": "you're welcome"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "—Gracias. —De nada.",
-    "exampleZh": "「謝謝。」「不客氣。」"
+    "exampleGloss": {
+      "zh": "「謝謝。」「不客氣。」",
+      "en": "—Thanks. —You're welcome."
+    }
   },
   {
     "id": "por-favor",
     "es": "por favor",
-    "zh": "請",
+    "gloss": {
+      "zh": "請",
+      "en": "please"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Un café, por favor.",
-    "exampleZh": "請給我一杯咖啡。"
+    "exampleGloss": {
+      "zh": "請給我一杯咖啡。",
+      "en": "A coffee, please."
+    }
   },
   {
     "id": "perdon",
     "es": "perdón",
-    "zh": "不好意思；抱歉",
+    "gloss": {
+      "zh": "不好意思；抱歉",
+      "en": "excuse me; sorry"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Perdón, ¿dónde está el baño?",
-    "exampleZh": "不好意思，洗手間在哪裡？"
+    "exampleGloss": {
+      "zh": "不好意思，洗手間在哪裡？",
+      "en": "Excuse me, where is the bathroom?"
+    }
   },
   {
     "id": "lo-siento",
     "es": "lo siento",
-    "zh": "對不起（表達遺憾）",
+    "gloss": {
+      "zh": "對不起（表達遺憾）",
+      "en": "I'm sorry"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Lo siento, no puedo ir hoy.",
-    "exampleZh": "對不起，我今天不能去。"
+    "exampleGloss": {
+      "zh": "對不起，我今天不能去。",
+      "en": "I'm sorry, I can't go today."
+    }
   },
   {
     "id": "con-permiso",
     "es": "con permiso",
-    "zh": "借過；失陪一下",
+    "gloss": {
+      "zh": "借過；失陪一下",
+      "en": "excuse me (passing by); if you'll excuse me"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "Con permiso, voy a salir.",
-    "exampleZh": "不好意思借過，我要出去。"
+    "exampleGloss": {
+      "zh": "不好意思借過，我要出去。",
+      "en": "Excuse me, I'm going out."
+    }
   },
   {
     "id": "mucho-gusto",
     "es": "mucho gusto",
-    "zh": "幸會",
+    "gloss": {
+      "zh": "幸會",
+      "en": "nice to meet you"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "—Me llamo Ana. —Mucho gusto.",
-    "exampleZh": "「我叫安娜。」「幸會。」"
+    "exampleGloss": {
+      "zh": "「我叫安娜。」「幸會。」",
+      "en": "—My name is Ana. —Nice to meet you."
+    }
   },
   {
     "id": "si",
     "es": "sí",
-    "zh": "是；對",
+    "gloss": {
+      "zh": "是；對",
+      "en": "yes"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "—¿Eres de Taiwán? —Sí.",
-    "exampleZh": "「你是台灣人嗎？」「是。」"
+    "exampleGloss": {
+      "zh": "「你是台灣人嗎？」「是。」",
+      "en": "—Are you from Taiwan? —Yes."
+    }
   },
   {
     "id": "no",
     "es": "no",
-    "zh": "不；不是",
+    "gloss": {
+      "zh": "不；不是",
+      "en": "no; not"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "No, yo no hablo francés.",
-    "exampleZh": "不，我不說法文。"
+    "exampleGloss": {
+      "zh": "不，我不說法文。",
+      "en": "No, I don't speak French."
+    }
   },
   {
     "id": "senor",
     "es": "señor",
-    "zh": "先生",
+    "gloss": {
+      "zh": "先生",
+      "en": "mister; sir"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "El señor Ramírez es mi profesor.",
-    "exampleZh": "拉米雷斯先生是我的老師。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "拉米雷斯先生是我的老師。",
+      "en": "Mr. Ramírez is my teacher."
+    }
   },
   {
     "id": "senora",
     "es": "señora",
-    "zh": "女士；太太",
+    "gloss": {
+      "zh": "女士；太太",
+      "en": "madam; Mrs."
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "saludos",
     "exampleEs": "La señora vive en Quito.",
-    "exampleZh": "那位女士住在基多。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "那位女士住在基多。",
+      "en": "The lady lives in Quito."
+    }
   },
   {
     "id": "como-se-dice",
     "es": "¿cómo se dice…?",
-    "zh": "「…」怎麼說？",
+    "gloss": {
+      "zh": "「…」怎麼說？",
+      "en": "how do you say…?"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "¿Cómo se dice \"book\" en español?",
-    "exampleZh": "「book」的西班牙文怎麼說？"
+    "exampleGloss": {
+      "zh": "「book」的西班牙文怎麼說？",
+      "en": "How do you say \"book\" in Spanish?"
+    }
   },
   {
     "id": "que-significa",
     "es": "¿qué significa…?",
-    "zh": "「…」是什麼意思？",
+    "gloss": {
+      "zh": "「…」是什麼意思？",
+      "en": "what does … mean?"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "¿Qué significa \"chévere\"?",
-    "exampleZh": "「chévere」是什麼意思？"
+    "exampleGloss": {
+      "zh": "「chévere」是什麼意思？",
+      "en": "What does \"chévere\" mean?"
+    }
   },
   {
     "id": "no-entiendo",
     "es": "no entiendo",
-    "zh": "我不懂",
+    "gloss": {
+      "zh": "我不懂",
+      "en": "I don't understand"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "Perdón, no entiendo.",
-    "exampleZh": "不好意思，我不懂。"
+    "exampleGloss": {
+      "zh": "不好意思，我不懂。",
+      "en": "Sorry, I don't understand."
+    }
   },
   {
     "id": "no-se",
     "es": "no sé",
-    "zh": "我不知道",
+    "gloss": {
+      "zh": "我不知道",
+      "en": "I don't know"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "No sé dónde está la calle.",
-    "exampleZh": "我不知道那條街在哪裡。"
+    "exampleGloss": {
+      "zh": "我不知道那條街在哪裡。",
+      "en": "I don't know where the street is."
+    }
   },
   {
     "id": "mas-despacio",
     "es": "más despacio",
-    "zh": "慢一點",
+    "gloss": {
+      "zh": "慢一點",
+      "en": "more slowly"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "Más despacio, por favor.",
-    "exampleZh": "請慢一點。"
+    "exampleGloss": {
+      "zh": "請慢一點。",
+      "en": "More slowly, please."
+    }
   },
   {
     "id": "otra-vez",
     "es": "otra vez",
-    "zh": "再一次",
+    "gloss": {
+      "zh": "再一次",
+      "en": "again; one more time"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "¿Puede decirlo otra vez?",
-    "exampleZh": "您可以再說一次嗎？"
+    "exampleGloss": {
+      "zh": "您可以再說一次嗎？",
+      "en": "Could you say it again?"
+    }
   },
   {
     "id": "como-interrog",
     "es": "¿cómo?",
-    "zh": "什麼？（沒聽清楚時）",
+    "gloss": {
+      "zh": "什麼？（沒聽清楚時）",
+      "en": "sorry? (didn't catch that)"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "—Me llamo Xavier. —¿Cómo?",
-    "exampleZh": "「我叫哈維爾。」「什麼？」"
+    "exampleGloss": {
+      "zh": "「我叫哈維爾。」「什麼？」",
+      "en": "—My name is Xavier. —Sorry?"
+    }
   },
   {
     "id": "claro",
     "es": "claro",
-    "zh": "當然；清楚",
+    "gloss": {
+      "zh": "當然；清楚",
+      "en": "of course; clearly"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "Claro, con mucho gusto.",
-    "exampleZh": "當然，我很樂意。"
+    "exampleGloss": {
+      "zh": "當然，我很樂意。",
+      "en": "Of course, with pleasure."
+    }
   },
   {
     "id": "tal-vez",
     "es": "tal vez",
-    "zh": "也許",
+    "gloss": {
+      "zh": "也許",
+      "en": "maybe"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "Tal vez mañana.",
-    "exampleZh": "也許明天吧。"
+    "exampleGloss": {
+      "zh": "也許明天吧。",
+      "en": "Maybe tomorrow."
+    }
   },
   {
     "id": "tambien",
     "es": "también",
-    "zh": "也",
+    "gloss": {
+      "zh": "也",
+      "en": "also; too"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "clase",
     "exampleEs": "Yo también soy estudiante.",
-    "exampleZh": "我也是學生。"
+    "exampleGloss": {
+      "zh": "我也是學生。",
+      "en": "I'm a student too."
+    }
   },
   {
     "id": "yo",
     "es": "yo",
-    "zh": "我",
+    "gloss": {
+      "zh": "我",
+      "en": "I"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Yo soy de Taipéi.",
-    "exampleZh": "我來自台北。"
+    "exampleGloss": {
+      "zh": "我來自台北。",
+      "en": "I'm from Taipei."
+    }
   },
   {
     "id": "tu-pron",
     "es": "tú",
-    "zh": "你",
+    "gloss": {
+      "zh": "你",
+      "en": "you (informal)"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "¿Tú eres el hermano de Ana?",
-    "exampleZh": "你是安娜的哥哥嗎？"
+    "exampleGloss": {
+      "zh": "你是安娜的哥哥嗎？",
+      "en": "Are you Ana's brother?"
+    }
   },
   {
     "id": "usted",
     "es": "usted",
-    "zh": "您",
+    "gloss": {
+      "zh": "您",
+      "en": "you (formal)"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "¿Usted es el profesor?",
-    "exampleZh": "您是老師嗎？",
+    "exampleGloss": {
+      "zh": "您是老師嗎？",
+      "en": "Are you the teacher?"
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "在基多所在的 Sierra 高地，usted 的使用比多數教材預期得更廣，朋友甚至家人之間也常用。",
+      "note": {
+        "zh": "在基多所在的 Sierra 高地，usted 的使用比多數教材預期得更廣，朋友甚至家人之間也常用。",
+        "en": "In the Sierra highlands around Quito, usted is used far more widely than most textbooks suggest — between friends and even within families."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "el-pron",
     "es": "él",
-    "zh": "他",
+    "gloss": {
+      "zh": "他",
+      "en": "he"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Él vive en Cuenca.",
-    "exampleZh": "他住在昆卡。"
+    "exampleGloss": {
+      "zh": "他住在昆卡。",
+      "en": "He lives in Cuenca."
+    }
   },
   {
     "id": "ella",
     "es": "ella",
-    "zh": "她",
+    "gloss": {
+      "zh": "她",
+      "en": "she"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Ella es mi hermana.",
-    "exampleZh": "她是我姊姊。"
+    "exampleGloss": {
+      "zh": "她是我姊姊。",
+      "en": "She is my sister."
+    }
   },
   {
     "id": "nosotros",
     "es": "nosotros",
-    "zh": "我們",
+    "gloss": {
+      "zh": "我們",
+      "en": "we"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Nosotros somos amigos.",
-    "exampleZh": "我們是朋友。"
+    "exampleGloss": {
+      "zh": "我們是朋友。",
+      "en": "We are friends."
+    }
   },
   {
     "id": "ellos",
     "es": "ellos",
-    "zh": "他們",
+    "gloss": {
+      "zh": "他們",
+      "en": "they"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Ellos hablan español.",
-    "exampleZh": "他們說西班牙文。"
+    "exampleGloss": {
+      "zh": "他們說西班牙文。",
+      "en": "They speak Spanish."
+    }
   },
   {
     "id": "ustedes",
     "es": "ustedes",
-    "zh": "你們；您們",
+    "gloss": {
+      "zh": "你們；您們",
+      "en": "you (plural)"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "¿Ustedes son de Ecuador?",
-    "exampleZh": "你們是厄瓜多人嗎？",
+    "exampleGloss": {
+      "zh": "你們是厄瓜多人嗎？",
+      "en": "Are you all from Ecuador?"
+    },
     "regional": {
       "region": "LatAm",
-      "note": "拉丁美洲的第二人稱複數一律用 ustedes，完全不使用西班牙的 vosotros。",
+      "note": {
+        "zh": "拉丁美洲的第二人稱複數一律用 ustedes，完全不使用西班牙的 vosotros。",
+        "en": "Throughout Latin America the second-person plural is always ustedes; Spain's vosotros is not used at all."
+      },
       "needsVerify": false
     }
   },
   {
     "id": "familia",
     "es": "familia",
-    "zh": "家庭",
+    "gloss": {
+      "zh": "家庭",
+      "en": "family"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Mi familia es pequeña.",
-    "exampleZh": "我的家庭很小。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我的家庭很小。",
+      "en": "My family is small."
+    }
   },
   {
     "id": "madre",
     "es": "madre",
-    "zh": "母親",
+    "gloss": {
+      "zh": "母親",
+      "en": "mother"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Mi madre trabaja en un hospital.",
-    "exampleZh": "我母親在醫院工作。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我母親在醫院工作。",
+      "en": "My mother works at a hospital."
+    }
   },
   {
     "id": "padre",
     "es": "padre",
-    "zh": "父親",
+    "gloss": {
+      "zh": "父親",
+      "en": "father"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Su padre es profesor.",
-    "exampleZh": "他父親是老師。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "他父親是老師。",
+      "en": "His father is a teacher."
+    }
   },
   {
     "id": "mama",
     "es": "mamá",
-    "zh": "媽媽",
+    "gloss": {
+      "zh": "媽媽",
+      "en": "mom"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Mamá, ¿dónde está mi libro?",
-    "exampleZh": "媽，我的書在哪裡？",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "媽，我的書在哪裡？",
+      "en": "Mom, where is my book?"
+    }
   },
   {
     "id": "papa-dad",
     "es": "papá",
-    "zh": "爸爸",
+    "gloss": {
+      "zh": "爸爸",
+      "en": "dad"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "注意重音：papá（爸爸）跟 papa（馬鈴薯）只差一個重音符號，意思完全不同。",
+      "en": "Watch the accent: papá (dad) and papa (potato) differ by one accent mark and mean completely different things."
+    },
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Mi papá tiene cuarenta años.",
-    "exampleZh": "我爸爸四十歲。",
-    "gender": "m",
-    "genderNote": "注意重音：papá（爸爸）跟 papa（馬鈴薯）只差一個重音符號，意思完全不同。"
+    "exampleGloss": {
+      "zh": "我爸爸四十歲。",
+      "en": "My dad is forty years old."
+    }
   },
   {
     "id": "hermano",
     "es": "hermano",
-    "zh": "哥哥；弟弟",
+    "gloss": {
+      "zh": "哥哥；弟弟",
+      "en": "brother"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Tengo un hermano y una hermana.",
-    "exampleZh": "我有一個兄弟和一個姊妹。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我有一個兄弟和一個姊妹。",
+      "en": "I have one brother and one sister."
+    }
   },
   {
     "id": "hermana",
     "es": "hermana",
-    "zh": "姊姊；妹妹",
+    "gloss": {
+      "zh": "姊姊；妹妹",
+      "en": "sister"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Mi hermana estudia en la universidad.",
-    "exampleZh": "我姊姊在大學讀書。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我姊姊在大學讀書。",
+      "en": "My sister studies at the university."
+    }
   },
   {
     "id": "hijo",
     "es": "hijo",
-    "zh": "兒子",
+    "gloss": {
+      "zh": "兒子",
+      "en": "son"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Ellos tienen dos hijos.",
-    "exampleZh": "他們有兩個孩子。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "他們有兩個孩子。",
+      "en": "They have two children."
+    }
   },
   {
     "id": "hija",
     "es": "hija",
-    "zh": "女兒",
+    "gloss": {
+      "zh": "女兒",
+      "en": "daughter"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Su hija se llama Lucía.",
-    "exampleZh": "他女兒叫露西亞。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "他女兒叫露西亞。",
+      "en": "His daughter's name is Lucía."
+    }
   },
   {
     "id": "amigo",
     "es": "amigo",
-    "zh": "朋友（男）",
+    "gloss": {
+      "zh": "朋友（男）",
+      "en": "friend (male)"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Carlos es mi amigo.",
-    "exampleZh": "卡洛斯是我朋友。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "卡洛斯是我朋友。",
+      "en": "Carlos is my friend."
+    }
   },
   {
     "id": "amiga",
     "es": "amiga",
-    "zh": "朋友（女）",
+    "gloss": {
+      "zh": "朋友（女）",
+      "en": "friend (female)"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Ana es una amiga de mi hermana.",
-    "exampleZh": "安娜是我姊姊的朋友。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "安娜是我姊姊的朋友。",
+      "en": "Ana is a friend of my sister's."
+    }
   },
   {
     "id": "hombre",
     "es": "hombre",
-    "zh": "男人",
+    "gloss": {
+      "zh": "男人",
+      "en": "man"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Ese hombre es mi vecino.",
-    "exampleZh": "那個男人是我鄰居。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "那個男人是我鄰居。",
+      "en": "That man is my neighbour."
+    }
   },
   {
     "id": "mujer",
     "es": "mujer",
-    "zh": "女人",
+    "gloss": {
+      "zh": "女人",
+      "en": "woman"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "La mujer del sombrero es mi tía.",
-    "exampleZh": "戴帽子的那位女士是我阿姨。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "戴帽子的那位女士是我阿姨。",
+      "en": "The woman in the hat is my aunt."
+    }
   },
   {
     "id": "nino",
     "es": "niño",
-    "zh": "男孩；小孩",
+    "gloss": {
+      "zh": "男孩；小孩",
+      "en": "boy; child"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "El niño tiene cinco años.",
-    "exampleZh": "那個男孩五歲。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "那個男孩五歲。",
+      "en": "The boy is five years old."
+    }
   },
   {
     "id": "nina",
     "es": "niña",
-    "zh": "女孩",
+    "gloss": {
+      "zh": "女孩",
+      "en": "girl"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "La niña lee un libro.",
-    "exampleZh": "那個女孩在讀一本書。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "那個女孩在讀一本書。",
+      "en": "The girl is reading a book."
+    }
   },
   {
     "id": "estudiante",
     "es": "estudiante",
-    "zh": "學生",
+    "gloss": {
+      "zh": "學生",
+      "en": "student"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "陰陽同形：男生用 el estudiante，女生用 la estudiante，字尾不變。",
+      "en": "Same form for both genders: el estudiante (male), la estudiante (female); the ending doesn't change."
+    },
     "level": "A0",
     "topic": "personas",
     "exampleEs": "Soy estudiante de español.",
-    "exampleZh": "我是西班牙文的學生。",
-    "gender": "m",
-    "genderNote": "陰陽同形：男生用 el estudiante，女生用 la estudiante，字尾不變。"
+    "exampleGloss": {
+      "zh": "我是西班牙文的學生。",
+      "en": "I'm a Spanish student."
+    }
   },
   {
     "id": "profesor",
     "es": "profesor",
-    "zh": "老師（男）",
+    "gloss": {
+      "zh": "老師（男）",
+      "en": "teacher (male)"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "personas",
     "exampleEs": "El profesor es de Quito.",
-    "exampleZh": "那位老師來自基多。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "那位老師來自基多。",
+      "en": "The teacher is from Quito."
+    }
   },
   {
     "id": "cero",
     "es": "cero",
-    "zh": "零",
+    "gloss": {
+      "zh": "零",
+      "en": "zero"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Hay cero problemas.",
-    "exampleZh": "一個問題也沒有。"
+    "exampleGloss": {
+      "zh": "一個問題也沒有。",
+      "en": "There are zero problems."
+    }
   },
   {
     "id": "uno",
     "es": "uno",
-    "zh": "一",
+    "gloss": {
+      "zh": "一",
+      "en": "one"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Tengo un hermano.",
-    "exampleZh": "我有一個兄弟。"
+    "exampleGloss": {
+      "zh": "我有一個兄弟。",
+      "en": "I have one brother."
+    }
   },
   {
     "id": "dos",
     "es": "dos",
-    "zh": "二",
+    "gloss": {
+      "zh": "二",
+      "en": "two"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Quiero dos cafés, por favor.",
-    "exampleZh": "請給我兩杯咖啡。"
+    "exampleGloss": {
+      "zh": "請給我兩杯咖啡。",
+      "en": "I'd like two coffees, please."
+    }
   },
   {
     "id": "tres",
     "es": "tres",
-    "zh": "三",
+    "gloss": {
+      "zh": "三",
+      "en": "three"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "La clase es a las tres.",
-    "exampleZh": "課是三點開始。"
+    "exampleGloss": {
+      "zh": "課是三點開始。",
+      "en": "The class is at three."
+    }
   },
   {
     "id": "cuatro",
     "es": "cuatro",
-    "zh": "四",
+    "gloss": {
+      "zh": "四",
+      "en": "four"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Somos cuatro en mi familia.",
-    "exampleZh": "我家有四個人。"
+    "exampleGloss": {
+      "zh": "我家有四個人。",
+      "en": "There are four of us in my family."
+    }
   },
   {
     "id": "cinco",
     "es": "cinco",
-    "zh": "五",
+    "gloss": {
+      "zh": "五",
+      "en": "five"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "El niño tiene cinco años.",
-    "exampleZh": "那個男孩五歲。"
+    "exampleGloss": {
+      "zh": "那個男孩五歲。",
+      "en": "The boy is five years old."
+    }
   },
   {
     "id": "seis",
     "es": "seis",
-    "zh": "六",
+    "gloss": {
+      "zh": "六",
+      "en": "six"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Trabajo seis días a la semana.",
-    "exampleZh": "我一週工作六天。"
+    "exampleGloss": {
+      "zh": "我一週工作六天。",
+      "en": "I work six days a week."
+    }
   },
   {
     "id": "siete",
     "es": "siete",
-    "zh": "七",
+    "gloss": {
+      "zh": "七",
+      "en": "seven"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "La semana tiene siete días.",
-    "exampleZh": "一週有七天。"
+    "exampleGloss": {
+      "zh": "一週有七天。",
+      "en": "A week has seven days."
+    }
   },
   {
     "id": "ocho",
     "es": "ocho",
-    "zh": "八",
+    "gloss": {
+      "zh": "八",
+      "en": "eight"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Son las ocho de la mañana.",
-    "exampleZh": "現在是早上八點。"
+    "exampleGloss": {
+      "zh": "現在是早上八點。",
+      "en": "It's eight in the morning."
+    }
   },
   {
     "id": "nueve",
     "es": "nueve",
-    "zh": "九",
+    "gloss": {
+      "zh": "九",
+      "en": "nine"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Vivo en el piso nueve.",
-    "exampleZh": "我住在九樓。"
+    "exampleGloss": {
+      "zh": "我住在九樓。",
+      "en": "I live on the ninth floor."
+    }
   },
   {
     "id": "diez",
     "es": "diez",
-    "zh": "十",
+    "gloss": {
+      "zh": "十",
+      "en": "ten"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Necesito diez minutos.",
-    "exampleZh": "我需要十分鐘。"
+    "exampleGloss": {
+      "zh": "我需要十分鐘。",
+      "en": "I need ten minutes."
+    }
   },
   {
     "id": "once",
     "es": "once",
-    "zh": "十一",
+    "gloss": {
+      "zh": "十一",
+      "en": "eleven"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Mi hermana tiene once años.",
-    "exampleZh": "我妹妹十一歲。"
+    "exampleGloss": {
+      "zh": "我妹妹十一歲。",
+      "en": "My sister is eleven years old."
+    }
   },
   {
     "id": "doce",
     "es": "doce",
-    "zh": "十二",
+    "gloss": {
+      "zh": "十二",
+      "en": "twelve"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "El año tiene doce meses.",
-    "exampleZh": "一年有十二個月。"
+    "exampleGloss": {
+      "zh": "一年有十二個月。",
+      "en": "A year has twelve months."
+    }
   },
   {
     "id": "trece",
     "es": "trece",
-    "zh": "十三",
+    "gloss": {
+      "zh": "十三",
+      "en": "thirteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Hay trece estudiantes en la clase.",
-    "exampleZh": "班上有十三個學生。"
+    "exampleGloss": {
+      "zh": "班上有十三個學生。",
+      "en": "There are thirteen students in the class."
+    }
   },
   {
     "id": "catorce",
     "es": "catorce",
-    "zh": "十四",
+    "gloss": {
+      "zh": "十四",
+      "en": "fourteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Es el catorce de febrero.",
-    "exampleZh": "今天是二月十四日。"
+    "exampleGloss": {
+      "zh": "今天是二月十四日。",
+      "en": "It's the fourteenth of February."
+    }
   },
   {
     "id": "quince",
     "es": "quince",
-    "zh": "十五",
+    "gloss": {
+      "zh": "十五",
+      "en": "fifteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Quince dólares, por favor.",
-    "exampleZh": "十五美元，麻煩了。"
+    "exampleGloss": {
+      "zh": "十五美元，麻煩了。",
+      "en": "Fifteen dollars, please."
+    }
   },
   {
     "id": "dieciseis",
     "es": "dieciséis",
-    "zh": "十六",
+    "gloss": {
+      "zh": "十六",
+      "en": "sixteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Hay dieciséis estudiantes aquí.",
-    "exampleZh": "這裡有十六個學生。"
+    "exampleGloss": {
+      "zh": "這裡有十六個學生。",
+      "en": "There are sixteen students here."
+    }
   },
   {
     "id": "diecisiete",
     "es": "diecisiete",
-    "zh": "十七",
+    "gloss": {
+      "zh": "十七",
+      "en": "seventeen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Son las diecisiete horas.",
-    "exampleZh": "現在是十七點。"
+    "exampleGloss": {
+      "zh": "現在是十七點。",
+      "en": "It's five o'clock (17:00)."
+    }
   },
   {
     "id": "dieciocho",
     "es": "dieciocho",
-    "zh": "十八",
+    "gloss": {
+      "zh": "十八",
+      "en": "eighteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Mi hermano tiene dieciocho años.",
-    "exampleZh": "我哥哥十八歲。"
+    "exampleGloss": {
+      "zh": "我哥哥十八歲。",
+      "en": "My brother is eighteen years old."
+    }
   },
   {
     "id": "diecinueve",
     "es": "diecinueve",
-    "zh": "十九",
+    "gloss": {
+      "zh": "十九",
+      "en": "nineteen"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Hay diecinueve libros en la mesa.",
-    "exampleZh": "桌上有十九本書。"
+    "exampleGloss": {
+      "zh": "桌上有十九本書。",
+      "en": "There are nineteen books on the table."
+    }
   },
   {
     "id": "veinte",
     "es": "veinte",
-    "zh": "二十",
+    "gloss": {
+      "zh": "二十",
+      "en": "twenty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Veinte personas viven aquí.",
-    "exampleZh": "二十個人住在這裡。"
+    "exampleGloss": {
+      "zh": "二十個人住在這裡。",
+      "en": "Twenty people live here."
+    }
   },
   {
     "id": "treinta",
     "es": "treinta",
-    "zh": "三十",
+    "gloss": {
+      "zh": "三十",
+      "en": "thirty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "El mes tiene treinta días.",
-    "exampleZh": "這個月有三十天。"
+    "exampleGloss": {
+      "zh": "這個月有三十天。",
+      "en": "The month has thirty days."
+    }
   },
   {
     "id": "cuarenta",
     "es": "cuarenta",
-    "zh": "四十",
+    "gloss": {
+      "zh": "四十",
+      "en": "forty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Mi papá tiene cuarenta años.",
-    "exampleZh": "我爸爸四十歲。"
+    "exampleGloss": {
+      "zh": "我爸爸四十歲。",
+      "en": "My dad is forty years old."
+    }
   },
   {
     "id": "cincuenta",
     "es": "cincuenta",
-    "zh": "五十",
+    "gloss": {
+      "zh": "五十",
+      "en": "fifty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Cincuenta dólares es mucho.",
-    "exampleZh": "五十美元很多。"
+    "exampleGloss": {
+      "zh": "五十美元很多。",
+      "en": "Fifty dollars is a lot."
+    }
   },
   {
     "id": "sesenta",
     "es": "sesenta",
-    "zh": "六十",
+    "gloss": {
+      "zh": "六十",
+      "en": "sixty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "La hora tiene sesenta minutos.",
-    "exampleZh": "一小時有六十分鐘。"
+    "exampleGloss": {
+      "zh": "一小時有六十分鐘。",
+      "en": "An hour has sixty minutes."
+    }
   },
   {
     "id": "setenta",
     "es": "setenta",
-    "zh": "七十",
+    "gloss": {
+      "zh": "七十",
+      "en": "seventy"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Mi abuela tiene setenta años.",
-    "exampleZh": "我奶奶七十歲。"
+    "exampleGloss": {
+      "zh": "我奶奶七十歲。",
+      "en": "My grandmother is seventy years old."
+    }
   },
   {
     "id": "ochenta",
     "es": "ochenta",
-    "zh": "八十",
+    "gloss": {
+      "zh": "八十",
+      "en": "eighty"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Hay ochenta sillas en la sala.",
-    "exampleZh": "大廳裡有八十張椅子。"
+    "exampleGloss": {
+      "zh": "大廳裡有八十張椅子。",
+      "en": "There are eighty chairs in the hall."
+    }
   },
   {
     "id": "noventa",
     "es": "noventa",
-    "zh": "九十",
+    "gloss": {
+      "zh": "九十",
+      "en": "ninety"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Noventa por ciento es suficiente.",
-    "exampleZh": "百分之九十就夠了。"
+    "exampleGloss": {
+      "zh": "百分之九十就夠了。",
+      "en": "Ninety percent is enough."
+    }
   },
   {
     "id": "cien",
     "es": "cien",
-    "zh": "一百",
+    "gloss": {
+      "zh": "一百",
+      "en": "one hundred"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "numeros",
     "exampleEs": "Cien dólares, por favor.",
-    "exampleZh": "一百美元，麻煩了。"
+    "exampleGloss": {
+      "zh": "一百美元，麻煩了。",
+      "en": "One hundred dollars, please."
+    }
   },
   {
     "id": "rojo",
     "es": "rojo",
-    "zh": "紅色的",
+    "gloss": {
+      "zh": "紅色的",
+      "en": "red"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "El carro rojo es de mi papá.",
-    "exampleZh": "那台紅色的車是我爸爸的。"
+    "exampleGloss": {
+      "zh": "那台紅色的車是我爸爸的。",
+      "en": "The red car belongs to my dad."
+    }
   },
   {
     "id": "azul",
     "es": "azul",
-    "zh": "藍色的",
+    "gloss": {
+      "zh": "藍色的",
+      "en": "blue"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "El cielo está azul hoy.",
-    "exampleZh": "今天天空是藍的。"
+    "exampleGloss": {
+      "zh": "今天天空是藍的。",
+      "en": "The sky is blue today."
+    }
   },
   {
     "id": "verde",
     "es": "verde",
-    "zh": "綠色的",
+    "gloss": {
+      "zh": "綠色的",
+      "en": "green"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "Quiero la manzana verde.",
-    "exampleZh": "我要那顆綠蘋果。"
+    "exampleGloss": {
+      "zh": "我要那顆綠蘋果。",
+      "en": "I want the green apple."
+    }
   },
   {
     "id": "amarillo",
     "es": "amarillo",
-    "zh": "黃色的",
+    "gloss": {
+      "zh": "黃色的",
+      "en": "yellow"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "El taxi amarillo está allí.",
-    "exampleZh": "黃色計程車在那邊。"
+    "exampleGloss": {
+      "zh": "黃色計程車在那邊。",
+      "en": "The yellow taxi is over there."
+    }
   },
   {
     "id": "negro",
     "es": "negro",
-    "zh": "黑色的",
+    "gloss": {
+      "zh": "黑色的",
+      "en": "black"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "Tengo un sombrero negro.",
-    "exampleZh": "我有一頂黑帽子。"
+    "exampleGloss": {
+      "zh": "我有一頂黑帽子。",
+      "en": "I have a black hat."
+    }
   },
   {
     "id": "blanco",
     "es": "blanco",
-    "zh": "白色的",
+    "gloss": {
+      "zh": "白色的",
+      "en": "white"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "La casa blanca es muy grande.",
-    "exampleZh": "那棟白房子很大。"
+    "exampleGloss": {
+      "zh": "那棟白房子很大。",
+      "en": "The white house is very big."
+    }
   },
   {
     "id": "naranja",
     "es": "naranja",
-    "zh": "橘色的",
+    "gloss": {
+      "zh": "橘色的",
+      "en": "orange (colour)"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "Su mochila es naranja.",
-    "exampleZh": "他的背包是橘色的。"
+    "exampleGloss": {
+      "zh": "他的背包是橘色的。",
+      "en": "His backpack is orange."
+    }
   },
   {
     "id": "gris",
     "es": "gris",
-    "zh": "灰色的",
+    "gloss": {
+      "zh": "灰色的",
+      "en": "grey"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "Hoy el día está gris.",
-    "exampleZh": "今天天色灰濛濛的。"
+    "exampleGloss": {
+      "zh": "今天天色灰濛濛的。",
+      "en": "It's a grey day today."
+    }
   },
   {
     "id": "rosado",
     "es": "rosado",
-    "zh": "粉紅色的",
+    "gloss": {
+      "zh": "粉紅色的",
+      "en": "pink"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "La niña tiene un vestido rosado.",
-    "exampleZh": "那個女孩有一件粉紅色洋裝。",
+    "exampleGloss": {
+      "zh": "那個女孩有一件粉紅色洋裝。",
+      "en": "The girl has a pink dress."
+    },
     "regional": {
       "region": "LatAm",
-      "note": "拉美普遍用 rosado；西班牙較常說 rosa。",
+      "note": {
+        "zh": "拉美普遍用 rosado；西班牙較常說 rosa。",
+        "en": "Latin America generally says rosado; Spain more often says rosa."
+      },
       "needsVerify": false
     }
   },
   {
     "id": "cafe-color",
     "es": "café",
-    "zh": "咖啡色的；棕色的",
+    "gloss": {
+      "zh": "咖啡色的；棕色的",
+      "en": "brown"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "colores",
     "exampleEs": "Sus ojos son color café.",
-    "exampleZh": "他的眼睛是棕色的。",
+    "exampleGloss": {
+      "zh": "他的眼睛是棕色的。",
+      "en": "His eyes are brown."
+    },
     "regional": {
       "region": "LatAm",
-      "note": "拉美常用 café 表示棕色；西班牙用 marrón。",
+      "note": {
+        "zh": "拉美常用 café 表示棕色；西班牙用 marrón。",
+        "en": "Latin America commonly uses café for brown; Spain uses marrón."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "lunes",
     "es": "lunes",
-    "zh": "星期一",
+    "gloss": {
+      "zh": "星期一",
+      "en": "Monday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El lunes tengo clase de español.",
-    "exampleZh": "星期一我有西班牙文課。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期一我有西班牙文課。",
+      "en": "On Monday I have Spanish class."
+    }
   },
   {
     "id": "martes",
     "es": "martes",
-    "zh": "星期二",
+    "gloss": {
+      "zh": "星期二",
+      "en": "Tuesday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Nos vemos el martes.",
-    "exampleZh": "我們星期二見。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我們星期二見。",
+      "en": "See you on Tuesday."
+    }
   },
   {
     "id": "miercoles",
     "es": "miércoles",
-    "zh": "星期三",
+    "gloss": {
+      "zh": "星期三",
+      "en": "Wednesday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El miércoles no trabajo.",
-    "exampleZh": "星期三我不上班。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期三我不上班。",
+      "en": "I don't work on Wednesday."
+    }
   },
   {
     "id": "jueves",
     "es": "jueves",
-    "zh": "星期四",
+    "gloss": {
+      "zh": "星期四",
+      "en": "Thursday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El jueves voy al mercado.",
-    "exampleZh": "星期四我要去市場。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期四我要去市場。",
+      "en": "On Thursday I'm going to the market."
+    }
   },
   {
     "id": "viernes",
     "es": "viernes",
-    "zh": "星期五",
+    "gloss": {
+      "zh": "星期五",
+      "en": "Friday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El viernes salgo temprano.",
-    "exampleZh": "星期五我早退。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期五我早退。",
+      "en": "On Friday I leave early."
+    }
   },
   {
     "id": "sabado",
     "es": "sábado",
-    "zh": "星期六",
+    "gloss": {
+      "zh": "星期六",
+      "en": "Saturday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El sábado estudio en casa.",
-    "exampleZh": "星期六我在家讀書。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期六我在家讀書。",
+      "en": "On Saturday I study at home."
+    }
   },
   {
     "id": "domingo",
     "es": "domingo",
-    "zh": "星期日",
+    "gloss": {
+      "zh": "星期日",
+      "en": "Sunday"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "El domingo como con mi familia.",
-    "exampleZh": "星期日我跟家人吃飯。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "星期日我跟家人吃飯。",
+      "en": "On Sunday I eat with my family."
+    }
   },
   {
     "id": "hoy",
     "es": "hoy",
-    "zh": "今天",
+    "gloss": {
+      "zh": "今天",
+      "en": "today"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Hoy estoy muy cansado.",
-    "exampleZh": "我今天很累。"
+    "exampleGloss": {
+      "zh": "我今天很累。",
+      "en": "I'm very tired today."
+    }
   },
   {
     "id": "manana-adv",
     "es": "mañana",
-    "zh": "明天",
+    "gloss": {
+      "zh": "明天",
+      "en": "tomorrow"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Mañana voy a Quito.",
-    "exampleZh": "我明天要去基多。"
+    "exampleGloss": {
+      "zh": "我明天要去基多。",
+      "en": "Tomorrow I'm going to Quito."
+    }
   },
   {
     "id": "ayer",
     "es": "ayer",
-    "zh": "昨天",
+    "gloss": {
+      "zh": "昨天",
+      "en": "yesterday"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Ayer no fui al trabajo.",
-    "exampleZh": "我昨天沒去上班。"
+    "exampleGloss": {
+      "zh": "我昨天沒去上班。",
+      "en": "I didn't go to work yesterday."
+    }
   },
   {
     "id": "dia",
     "es": "día",
-    "zh": "日；天",
+    "gloss": {
+      "zh": "日；天",
+      "en": "day"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "字尾是 -a 卻是陽性（el día），是必須背下來的例外。",
+      "en": "Ends in -a but is masculine (el día) — an exception you have to memorise."
+    },
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Buenos días, ¿qué tal el día?",
-    "exampleZh": "早安，今天過得如何？",
-    "gender": "m",
-    "genderNote": "字尾是 -a 卻是陽性（el día），是必須背下來的例外。"
+    "exampleGloss": {
+      "zh": "早安，今天過得如何？",
+      "en": "Good morning, how's your day going?"
+    }
   },
   {
     "id": "semana",
     "es": "semana",
-    "zh": "週；星期",
+    "gloss": {
+      "zh": "週；星期",
+      "en": "week"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "La semana tiene siete días.",
-    "exampleZh": "一週有七天。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "一週有七天。",
+      "en": "A week has seven days."
+    }
   },
   {
     "id": "mes",
     "es": "mes",
-    "zh": "月",
+    "gloss": {
+      "zh": "月",
+      "en": "month"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Este mes tengo mucho trabajo.",
-    "exampleZh": "這個月我工作很多。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "這個月我工作很多。",
+      "en": "I have a lot of work this month."
+    }
   },
   {
     "id": "ano",
     "es": "año",
-    "zh": "年；歲",
+    "gloss": {
+      "zh": "年；歲",
+      "en": "year; year of age"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "務必打出 ñ：año 是「年」，而 ano 是「肛門」，差一個字母意思天差地遠。",
+      "en": "Always type the ñ: año means \"year\", while ano means \"anus\". One letter, very different meaning."
+    },
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "Tengo treinta años.",
-    "exampleZh": "我三十歲。",
-    "gender": "m",
-    "genderNote": "務必打出 ñ：año 是「年」，而 ano 是「肛門」，差一個字母意思天差地遠。"
+    "exampleGloss": {
+      "zh": "我三十歲。",
+      "en": "I'm thirty years old."
+    }
   },
   {
     "id": "hora",
     "es": "hora",
-    "zh": "小時；時間",
+    "gloss": {
+      "zh": "小時；時間",
+      "en": "hour; time"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "tiempo",
     "exampleEs": "¿Qué hora es?",
-    "exampleZh": "現在幾點？",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "現在幾點？",
+      "en": "What time is it?"
+    }
   },
   {
     "id": "agua",
     "es": "agua",
-    "zh": "水",
+    "gloss": {
+      "zh": "水",
+      "en": "water"
+    },
     "pos": "noun",
+    "gender": "f",
+    "genderNote": {
+      "zh": "陰性名詞但單數要配 el（el agua fría），因為字首是重音的 a-。複數恢復 las aguas。",
+      "en": "A feminine noun that takes el in the singular (el agua fría), because it starts with a stressed a-. The plural goes back to las aguas."
+    },
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Un vaso de agua, por favor.",
-    "exampleZh": "請給我一杯水。",
-    "gender": "f",
-    "genderNote": "陰性名詞但單數要配 el（el agua fría），因為字首是重音的 a-。複數恢復 las aguas。"
+    "exampleGloss": {
+      "zh": "請給我一杯水。",
+      "en": "A glass of water, please."
+    }
   },
   {
     "id": "cafe-bebida",
     "es": "café",
-    "zh": "咖啡",
+    "gloss": {
+      "zh": "咖啡",
+      "en": "coffee"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Tomo café todas las mañanas.",
-    "exampleZh": "我每天早上喝咖啡。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我每天早上喝咖啡。",
+      "en": "I drink coffee every morning."
+    }
   },
   {
     "id": "leche",
     "es": "leche",
-    "zh": "牛奶",
+    "gloss": {
+      "zh": "牛奶",
+      "en": "milk"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "¿Quiere café con leche?",
-    "exampleZh": "您要拿鐵嗎？",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "您要拿鐵嗎？",
+      "en": "Would you like coffee with milk?"
+    }
   },
   {
     "id": "jugo",
     "es": "jugo",
-    "zh": "果汁",
+    "gloss": {
+      "zh": "果汁",
+      "en": "juice"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Quiero un jugo de naranja.",
-    "exampleZh": "我要一杯柳橙汁。",
-    "gender": "m",
+    "exampleGloss": {
+      "zh": "我要一杯柳橙汁。",
+      "en": "I want an orange juice."
+    },
     "regional": {
       "region": "LatAm",
-      "note": "拉美說 jugo；西班牙說 zumo。",
+      "note": {
+        "zh": "拉美說 jugo；西班牙說 zumo。",
+        "en": "Latin America says jugo; Spain says zumo."
+      },
       "needsVerify": false
     }
   },
   {
     "id": "pan",
     "es": "pan",
-    "zh": "麵包",
+    "gloss": {
+      "zh": "麵包",
+      "en": "bread"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Compro pan en la tienda.",
-    "exampleZh": "我在店裡買麵包。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我在店裡買麵包。",
+      "en": "I buy bread at the shop."
+    }
   },
   {
     "id": "arroz",
     "es": "arroz",
-    "zh": "米飯",
+    "gloss": {
+      "zh": "米飯",
+      "en": "rice"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "El almuerzo tiene arroz y pollo.",
-    "exampleZh": "午餐有飯和雞肉。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "午餐有飯和雞肉。",
+      "en": "Lunch has rice and chicken."
+    }
   },
   {
     "id": "pollo",
     "es": "pollo",
-    "zh": "雞肉",
+    "gloss": {
+      "zh": "雞肉",
+      "en": "chicken"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "El pollo está muy rico.",
-    "exampleZh": "這雞肉很好吃。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "這雞肉很好吃。",
+      "en": "The chicken is delicious."
+    }
   },
   {
     "id": "carne",
     "es": "carne",
-    "zh": "肉",
+    "gloss": {
+      "zh": "肉",
+      "en": "meat"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "No como carne los lunes.",
-    "exampleZh": "我星期一不吃肉。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我星期一不吃肉。",
+      "en": "I don't eat meat on Mondays."
+    }
   },
   {
     "id": "pescado",
     "es": "pescado",
-    "zh": "魚（食用）",
+    "gloss": {
+      "zh": "魚（食用）",
+      "en": "fish (as food)"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "En la costa el pescado es fresco.",
-    "exampleZh": "在海岸地區魚很新鮮。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "在海岸地區魚很新鮮。",
+      "en": "On the coast the fish is fresh."
+    }
   },
   {
     "id": "huevo",
     "es": "huevo",
-    "zh": "蛋",
+    "gloss": {
+      "zh": "蛋",
+      "en": "egg"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Quiero dos huevos, por favor.",
-    "exampleZh": "請給我兩顆蛋。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "請給我兩顆蛋。",
+      "en": "I'd like two eggs, please."
+    }
   },
   {
     "id": "sopa",
     "es": "sopa",
-    "zh": "湯",
+    "gloss": {
+      "zh": "湯",
+      "en": "soup"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "La sopa está caliente.",
-    "exampleZh": "湯很燙。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "湯很燙。",
+      "en": "The soup is hot."
+    }
   },
   {
     "id": "papa-comida",
     "es": "papa",
-    "zh": "馬鈴薯",
+    "gloss": {
+      "zh": "馬鈴薯",
+      "en": "potato"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "La papa es muy importante en los Andes.",
-    "exampleZh": "馬鈴薯在安地斯地區非常重要。",
-    "gender": "f",
+    "exampleGloss": {
+      "zh": "馬鈴薯在安地斯地區非常重要。",
+      "en": "The potato is very important in the Andes."
+    },
     "regional": {
       "region": "LatAm",
-      "note": "拉美說 papa；西班牙說 patata。注意 papa（馬鈴薯）與 papá（爸爸）只差重音。",
+      "note": {
+        "zh": "拉美說 papa；西班牙說 patata。注意 papa（馬鈴薯）與 papá（爸爸）只差重音。",
+        "en": "Latin America says papa; Spain says patata. Note that papa (potato) and papá (dad) differ only by the accent."
+      },
       "needsVerify": false
     }
   },
   {
     "id": "fruta",
     "es": "fruta",
-    "zh": "水果",
+    "gloss": {
+      "zh": "水果",
+      "en": "fruit"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Como fruta todos los días.",
-    "exampleZh": "我每天吃水果。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我每天吃水果。",
+      "en": "I eat fruit every day."
+    }
   },
   {
     "id": "manzana",
     "es": "manzana",
-    "zh": "蘋果",
+    "gloss": {
+      "zh": "蘋果",
+      "en": "apple"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Una manzana verde, por favor.",
-    "exampleZh": "請給我一顆青蘋果。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "請給我一顆青蘋果。",
+      "en": "A green apple, please."
+    }
   },
   {
     "id": "queso",
     "es": "queso",
-    "zh": "起司",
+    "gloss": {
+      "zh": "起司",
+      "en": "cheese"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "El pan con queso está rico.",
-    "exampleZh": "起司麵包很好吃。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "起司麵包很好吃。",
+      "en": "Bread with cheese is delicious."
+    }
   },
   {
     "id": "sal",
     "es": "sal",
-    "zh": "鹽",
+    "gloss": {
+      "zh": "鹽",
+      "en": "salt"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "La sopa necesita sal.",
-    "exampleZh": "湯需要加鹽。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "湯需要加鹽。",
+      "en": "The soup needs salt."
+    }
   },
   {
     "id": "azucar",
     "es": "azúcar",
-    "zh": "糖",
+    "gloss": {
+      "zh": "糖",
+      "en": "sugar"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "通常用陽性（el azúcar），但陰性 la azúcar 也聽得到，兩者都可接受。",
+      "en": "Usually masculine (el azúcar), though la azúcar is also heard; both are acceptable."
+    },
     "level": "A0",
     "topic": "comida",
     "exampleEs": "¿Café con azúcar?",
-    "exampleZh": "咖啡要加糖嗎？",
-    "gender": "m",
-    "genderNote": "通常用陽性（el azúcar），但陰性 la azúcar 也聽得到，兩者都可接受。"
+    "exampleGloss": {
+      "zh": "咖啡要加糖嗎？",
+      "en": "Coffee with sugar?"
+    }
   },
   {
     "id": "almuerzo",
     "es": "almuerzo",
-    "zh": "午餐",
+    "gloss": {
+      "zh": "午餐",
+      "en": "lunch"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "El almuerzo es a la una.",
-    "exampleZh": "午餐是一點。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "午餐是一點。",
+      "en": "Lunch is at one o'clock."
+    }
   },
   {
     "id": "cena",
     "es": "cena",
-    "zh": "晚餐",
+    "gloss": {
+      "zh": "晚餐",
+      "en": "dinner"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "La cena está lista.",
-    "exampleZh": "晚餐好了。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "晚餐好了。",
+      "en": "Dinner is ready."
+    }
   },
   {
     "id": "guineo",
     "es": "guineo",
-    "zh": "香蕉",
+    "gloss": {
+      "zh": "香蕉",
+      "en": "banana"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "comida",
     "exampleEs": "Quiero un guineo, por favor.",
-    "exampleZh": "請給我一根香蕉。",
-    "gender": "m",
+    "exampleGloss": {
+      "zh": "請給我一根香蕉。",
+      "en": "I'd like a banana, please."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "厄瓜多常用 guineo 指一般食用香蕉，plátano 則多指要煮的大蕉。",
+      "note": {
+        "zh": "厄瓜多常用 guineo 指一般食用香蕉，plátano 則多指要煮的大蕉。",
+        "en": "In Ecuador guineo usually means an ordinary eating banana, while plátano refers to the larger cooking plantain."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "casa",
     "es": "casa",
-    "zh": "家；房子",
+    "gloss": {
+      "zh": "家；房子",
+      "en": "house; home"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Mi casa está cerca del mercado.",
-    "exampleZh": "我家在市場附近。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我家在市場附近。",
+      "en": "My house is near the market."
+    }
   },
   {
     "id": "escuela",
     "es": "escuela",
-    "zh": "學校",
+    "gloss": {
+      "zh": "學校",
+      "en": "school"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Los niños están en la escuela.",
-    "exampleZh": "孩子們在學校。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "孩子們在學校。",
+      "en": "The children are at school."
+    }
   },
   {
     "id": "universidad",
     "es": "universidad",
-    "zh": "大學",
+    "gloss": {
+      "zh": "大學",
+      "en": "university"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Ella estudia en la universidad.",
-    "exampleZh": "她在大學讀書。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "她在大學讀書。",
+      "en": "She studies at the university."
+    }
   },
   {
     "id": "trabajo",
     "es": "trabajo",
-    "zh": "工作；工作地點",
+    "gloss": {
+      "zh": "工作；工作地點",
+      "en": "work; workplace"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Voy al trabajo a las ocho.",
-    "exampleZh": "我八點去上班。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我八點去上班。",
+      "en": "I go to work at eight."
+    }
   },
   {
     "id": "ciudad",
     "es": "ciudad",
-    "zh": "城市",
+    "gloss": {
+      "zh": "城市",
+      "en": "city"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Quito es una ciudad grande.",
-    "exampleZh": "基多是個大城市。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "基多是個大城市。",
+      "en": "Quito is a big city."
+    }
   },
   {
     "id": "pais",
     "es": "país",
-    "zh": "國家",
+    "gloss": {
+      "zh": "國家",
+      "en": "country"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "重音符號在 í 上，把 a 和 i 拆成兩個音節：pa-ís。",
+      "en": "The accent on the í splits a and i into two syllables: pa-ís."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Ecuador es un país pequeño.",
-    "exampleZh": "厄瓜多是個小國家。",
-    "gender": "m",
-    "genderNote": "重音符號在 í 上，把 a 和 i 拆成兩個音節：pa-ís。"
+    "exampleGloss": {
+      "zh": "厄瓜多是個小國家。",
+      "en": "Ecuador is a small country."
+    }
   },
   {
     "id": "calle",
     "es": "calle",
-    "zh": "街道",
+    "gloss": {
+      "zh": "街道",
+      "en": "street"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "La tienda está en esta calle.",
-    "exampleZh": "那家店在這條街上。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "那家店在這條街上。",
+      "en": "The shop is on this street."
+    }
   },
   {
     "id": "tienda",
     "es": "tienda",
-    "zh": "商店",
+    "gloss": {
+      "zh": "商店",
+      "en": "shop; store"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Compro pan en la tienda.",
-    "exampleZh": "我在店裡買麵包。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "我在店裡買麵包。",
+      "en": "I buy bread at the shop."
+    }
   },
   {
     "id": "mercado",
     "es": "mercado",
-    "zh": "市場",
+    "gloss": {
+      "zh": "市場",
+      "en": "market"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "El mercado abre temprano.",
-    "exampleZh": "市場很早開。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "市場很早開。",
+      "en": "The market opens early."
+    }
   },
   {
     "id": "restaurante",
     "es": "restaurante",
-    "zh": "餐廳",
+    "gloss": {
+      "zh": "餐廳",
+      "en": "restaurant"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Hay un restaurante en la esquina.",
-    "exampleZh": "轉角有一家餐廳。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "轉角有一家餐廳。",
+      "en": "There's a restaurant on the corner."
+    }
   },
   {
     "id": "bano",
     "es": "baño",
-    "zh": "洗手間",
+    "gloss": {
+      "zh": "洗手間",
+      "en": "bathroom; restroom"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "¿Dónde está el baño?",
-    "exampleZh": "洗手間在哪裡？",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "洗手間在哪裡？",
+      "en": "Where is the bathroom?"
+    }
   },
   {
     "id": "mesa",
     "es": "mesa",
-    "zh": "桌子",
+    "gloss": {
+      "zh": "桌子",
+      "en": "table"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "El libro está en la mesa.",
-    "exampleZh": "書在桌上。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "書在桌上。",
+      "en": "The book is on the table."
+    }
   },
   {
     "id": "silla",
     "es": "silla",
-    "zh": "椅子",
+    "gloss": {
+      "zh": "椅子",
+      "en": "chair"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Hay cuatro sillas en la cocina.",
-    "exampleZh": "廚房裡有四張椅子。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "廚房裡有四張椅子。",
+      "en": "There are four chairs in the kitchen."
+    }
   },
   {
     "id": "puerta",
     "es": "puerta",
-    "zh": "門",
+    "gloss": {
+      "zh": "門",
+      "en": "door"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "La puerta está abierta.",
-    "exampleZh": "門開著。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "門開著。",
+      "en": "The door is open."
+    }
   },
   {
     "id": "ventana",
     "es": "ventana",
-    "zh": "窗戶",
+    "gloss": {
+      "zh": "窗戶",
+      "en": "window"
+    },
     "pos": "noun",
+    "gender": "f",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "La ventana es grande.",
-    "exampleZh": "那扇窗很大。",
-    "gender": "f"
+    "exampleGloss": {
+      "zh": "那扇窗很大。",
+      "en": "The window is big."
+    }
   },
   {
     "id": "libro",
     "es": "libro",
-    "zh": "書",
+    "gloss": {
+      "zh": "書",
+      "en": "book"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Este libro es de español.",
-    "exampleZh": "這是一本西班牙文的書。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "這是一本西班牙文的書。",
+      "en": "This is a Spanish book."
+    }
   },
   {
     "id": "telefono",
     "es": "teléfono",
-    "zh": "電話；手機",
+    "gloss": {
+      "zh": "電話；手機",
+      "en": "phone"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Mi teléfono está en la mesa.",
-    "exampleZh": "我的手機在桌上。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我的手機在桌上。",
+      "en": "My phone is on the table."
+    }
   },
   {
     "id": "dinero",
     "es": "dinero",
-    "zh": "錢",
+    "gloss": {
+      "zh": "錢",
+      "en": "money"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "No tengo dinero hoy.",
-    "exampleZh": "我今天沒錢。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "我今天沒錢。",
+      "en": "I don't have any money today."
+    }
   },
   {
     "id": "bueno",
     "es": "bueno",
-    "zh": "好的",
+    "gloss": {
+      "zh": "好的",
+      "en": "good"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "El café de Ecuador es muy bueno.",
-    "exampleZh": "厄瓜多的咖啡很好。"
+    "exampleGloss": {
+      "zh": "厄瓜多的咖啡很好。",
+      "en": "Ecuadorian coffee is very good."
+    }
   },
   {
     "id": "malo",
     "es": "malo",
-    "zh": "壞的；不好的",
+    "gloss": {
+      "zh": "壞的；不好的",
+      "en": "bad"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Hoy hace mal tiempo.",
-    "exampleZh": "今天天氣不好。"
+    "exampleGloss": {
+      "zh": "今天天氣不好。",
+      "en": "The weather is bad today."
+    }
   },
   {
     "id": "grande",
     "es": "grande",
-    "zh": "大的",
+    "gloss": {
+      "zh": "大的",
+      "en": "big; large"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Quito es una ciudad grande.",
-    "exampleZh": "基多是個大城市。"
+    "exampleGloss": {
+      "zh": "基多是個大城市。",
+      "en": "Quito is a big city."
+    }
   },
   {
     "id": "pequeno",
     "es": "pequeño",
-    "zh": "小的",
+    "gloss": {
+      "zh": "小的",
+      "en": "small"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Mi casa es pequeña.",
-    "exampleZh": "我家很小。"
+    "exampleGloss": {
+      "zh": "我家很小。",
+      "en": "My house is small."
+    }
   },
   {
     "id": "nuevo",
     "es": "nuevo",
-    "zh": "新的",
+    "gloss": {
+      "zh": "新的",
+      "en": "new"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Tengo un teléfono nuevo.",
-    "exampleZh": "我有一支新手機。"
+    "exampleGloss": {
+      "zh": "我有一支新手機。",
+      "en": "I have a new phone."
+    }
   },
   {
     "id": "viejo",
     "es": "viejo",
-    "zh": "舊的；老的",
+    "gloss": {
+      "zh": "舊的；老的",
+      "en": "old"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Ese libro es muy viejo.",
-    "exampleZh": "那本書很舊。"
+    "exampleGloss": {
+      "zh": "那本書很舊。",
+      "en": "That book is very old."
+    }
   },
   {
     "id": "alto",
     "es": "alto",
-    "zh": "高的",
+    "gloss": {
+      "zh": "高的",
+      "en": "tall; high"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Mi hermano es alto.",
-    "exampleZh": "我哥哥很高。"
+    "exampleGloss": {
+      "zh": "我哥哥很高。",
+      "en": "My brother is tall."
+    }
   },
   {
     "id": "bajo",
     "es": "bajo",
-    "zh": "矮的；低的",
+    "gloss": {
+      "zh": "矮的；低的",
+      "en": "short; low"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "La mesa es muy baja.",
-    "exampleZh": "這張桌子很矮。"
+    "exampleGloss": {
+      "zh": "這張桌子很矮。",
+      "en": "The table is very low."
+    }
   },
   {
     "id": "bonito",
     "es": "bonito",
-    "zh": "漂亮的",
+    "gloss": {
+      "zh": "漂亮的",
+      "en": "pretty; beautiful"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Cuenca es una ciudad bonita.",
-    "exampleZh": "昆卡是個漂亮的城市。"
+    "exampleGloss": {
+      "zh": "昆卡是個漂亮的城市。",
+      "en": "Cuenca is a beautiful city."
+    }
   },
   {
     "id": "feo",
     "es": "feo",
-    "zh": "醜的",
+    "gloss": {
+      "zh": "醜的",
+      "en": "ugly"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "El sombrero es feo.",
-    "exampleZh": "那頂帽子很醜。"
+    "exampleGloss": {
+      "zh": "那頂帽子很醜。",
+      "en": "The hat is ugly."
+    }
   },
   {
     "id": "facil",
     "es": "fácil",
-    "zh": "容易的",
+    "gloss": {
+      "zh": "容易的",
+      "en": "easy"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "El español no es fácil.",
-    "exampleZh": "西班牙文不容易。"
+    "exampleGloss": {
+      "zh": "西班牙文不容易。",
+      "en": "Spanish isn't easy."
+    }
   },
   {
     "id": "dificil",
     "es": "difícil",
-    "zh": "困難的",
+    "gloss": {
+      "zh": "困難的",
+      "en": "difficult"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "La pronunciación es difícil.",
-    "exampleZh": "發音很難。"
+    "exampleGloss": {
+      "zh": "發音很難。",
+      "en": "The pronunciation is difficult."
+    }
   },
   {
     "id": "caro",
     "es": "caro",
-    "zh": "貴的",
+    "gloss": {
+      "zh": "貴的",
+      "en": "expensive"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "El restaurante es caro.",
-    "exampleZh": "那家餐廳很貴。"
+    "exampleGloss": {
+      "zh": "那家餐廳很貴。",
+      "en": "The restaurant is expensive."
+    }
   },
   {
     "id": "barato",
     "es": "barato",
-    "zh": "便宜的",
+    "gloss": {
+      "zh": "便宜的",
+      "en": "cheap"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "La fruta del mercado es barata.",
-    "exampleZh": "市場的水果很便宜。"
+    "exampleGloss": {
+      "zh": "市場的水果很便宜。",
+      "en": "The fruit at the market is cheap."
+    }
   },
   {
     "id": "frio",
     "es": "frío",
-    "zh": "冷的",
+    "gloss": {
+      "zh": "冷的",
+      "en": "cold"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "En Quito hace frío en la noche.",
-    "exampleZh": "基多晚上很冷。"
+    "exampleGloss": {
+      "zh": "基多晚上很冷。",
+      "en": "It's cold in Quito at night."
+    }
   },
   {
     "id": "caliente",
     "es": "caliente",
-    "zh": "熱的（物體）",
+    "gloss": {
+      "zh": "熱的（物體）",
+      "en": "hot (to the touch)"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "El café está caliente.",
-    "exampleZh": "咖啡是燙的。"
+    "exampleGloss": {
+      "zh": "咖啡是燙的。",
+      "en": "The coffee is hot."
+    }
   },
   {
     "id": "cansado",
     "es": "cansado",
-    "zh": "累的",
+    "gloss": {
+      "zh": "累的",
+      "en": "tired"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Estoy muy cansado hoy.",
-    "exampleZh": "我今天很累。"
+    "exampleGloss": {
+      "zh": "我今天很累。",
+      "en": "I'm very tired today."
+    }
   },
   {
     "id": "contento",
     "es": "contento",
-    "zh": "開心的",
+    "gloss": {
+      "zh": "開心的",
+      "en": "happy; pleased"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "adjetivos",
     "exampleEs": "Ella está contenta con su trabajo.",
-    "exampleZh": "她對她的工作很滿意。"
+    "exampleGloss": {
+      "zh": "她對她的工作很滿意。",
+      "en": "She's happy with her job."
+    }
   },
   {
     "id": "chevere",
     "es": "chévere",
-    "zh": "讚；很棒",
+    "gloss": {
+      "zh": "讚；很棒",
+      "en": "cool; great"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "¡Qué chévere tu casa!",
-    "exampleZh": "你家真讚！",
+    "exampleGloss": {
+      "zh": "你家真讚！",
+      "en": "Your place is so cool!"
+    },
     "regional": {
       "region": "LatAm",
-      "note": "厄瓜多、哥倫比亞、委內瑞拉等地常用的口語讚美詞。",
+      "note": {
+        "zh": "厄瓜多、哥倫比亞、委內瑞拉等地常用的口語讚美詞。",
+        "en": "A common colloquial term of approval in Ecuador, Colombia, Venezuela and elsewhere."
+      },
       "needsVerify": false
     }
   },
   {
     "id": "bacan",
     "es": "bacán",
-    "zh": "超讚；很酷",
+    "gloss": {
+      "zh": "超讚；很酷",
+      "en": "awesome; really cool"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "El concierto estuvo bacán.",
-    "exampleZh": "那場演唱會超讚。",
+    "exampleGloss": {
+      "zh": "那場演唱會超讚。",
+      "en": "The concert was awesome."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "厄瓜多年輕人常用，語感比 chévere 更口語。",
+      "note": {
+        "zh": "厄瓜多年輕人常用，語感比 chévere 更口語。",
+        "en": "Common among younger speakers in Ecuador; more colloquial in feel than chévere."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "nano",
     "es": "ñaño",
-    "zh": "兄弟；哥們",
+    "gloss": {
+      "zh": "兄弟；哥們",
+      "en": "brother; buddy"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "Mi ñaño vive en Guayaquil.",
-    "exampleZh": "我兄弟住在瓜亞基爾。",
-    "gender": "m",
+    "exampleGloss": {
+      "zh": "我兄弟住在瓜亞基爾。",
+      "en": "My brother lives in Guayaquil."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "源自 Kichwa 的厄瓜多用詞，既可指親兄弟，也可像「哥們」一樣稱呼好友。陰性為 ñaña。",
+      "note": {
+        "zh": "源自 Kichwa 的厄瓜多用詞，既可指親兄弟，也可像「哥們」一樣稱呼好友。陰性為 ñaña。",
+        "en": "An Ecuadorian term from Kichwa. It can mean an actual brother or be used like \"buddy\" for a close friend. The feminine is ñaña."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "guagua",
     "es": "guagua",
-    "zh": "小孩；嬰兒",
+    "gloss": {
+      "zh": "小孩；嬰兒",
+      "en": "child; baby"
+    },
     "pos": "noun",
+    "gender": "f",
+    "genderNote": {
+      "zh": "來自 Kichwa 的 wawa，安地斯地區常用；在加勒比地區 guagua 卻是「公車」，意思完全不同。",
+      "en": "From the Kichwa wawa, common across the Andes. In the Caribbean, however, guagua means \"bus\" — a completely different word."
+    },
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "La guagua está durmiendo.",
-    "exampleZh": "小寶寶在睡覺。",
-    "gender": "f",
-    "genderNote": "來自 Kichwa 的 wawa，安地斯地區常用；在加勒比地區 guagua 卻是「公車」，意思完全不同。",
+    "exampleGloss": {
+      "zh": "小寶寶在睡覺。",
+      "en": "The baby is sleeping."
+    },
     "regional": {
       "region": "Andes",
-      "note": "Kichwa 借詞（wawa＝小孩），厄瓜多、祕魯、玻利維亞的安地斯地區通用。",
+      "note": {
+        "zh": "Kichwa 借詞（wawa＝小孩），厄瓜多、祕魯、玻利維亞的安地斯地區通用。",
+        "en": "A Kichwa loanword (wawa = child), used across the Andean regions of Ecuador, Peru and Bolivia."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "chuchaqui",
     "es": "chuchaqui",
-    "zh": "宿醉",
+    "gloss": {
+      "zh": "宿醉",
+      "en": "hangover"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "Tengo chuchaqui, no quiero comer.",
-    "exampleZh": "我宿醉，不想吃東西。",
-    "gender": "m",
+    "exampleGloss": {
+      "zh": "我宿醉，不想吃東西。",
+      "en": "I have a hangover, I don't want to eat."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "厄瓜多特有詞，其他西語國家多說 resaca。",
+      "note": {
+        "zh": "厄瓜多特有詞，其他西語國家多說 resaca。",
+        "en": "Specific to Ecuador; most other Spanish-speaking countries say resaca."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "de-ley",
     "es": "de ley",
-    "zh": "一定；肯定",
+    "gloss": {
+      "zh": "一定；肯定",
+      "en": "definitely; for sure"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "De ley que viene mañana.",
-    "exampleZh": "他明天一定會來。",
+    "exampleGloss": {
+      "zh": "他明天一定會來。",
+      "en": "He's definitely coming tomorrow."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "厄瓜多口語，相當於「絕對是」「一定」。",
+      "note": {
+        "zh": "厄瓜多口語，相當於「絕對是」「一定」。",
+        "en": "Ecuadorian colloquial usage, equivalent to \"definitely\" or \"for sure\"."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "ahorita",
     "es": "ahorita",
-    "zh": "等一下；馬上",
+    "gloss": {
+      "zh": "等一下；馬上",
+      "en": "in a moment; right away"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "Ahorita voy, espere un ratito.",
-    "exampleZh": "我馬上來，請稍等一下。",
+    "exampleGloss": {
+      "zh": "我馬上來，請稍等一下。",
+      "en": "I'll be right there, wait a moment."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "語意刻意模糊：可以指「立刻」，也可以指「等一下再說」，實際多久要看語氣與情境。",
+      "note": {
+        "zh": "語意刻意模糊：可以指「立刻」，也可以指「等一下再說」，實際多久要看語氣與情境。",
+        "en": "Deliberately vague: it can mean \"right now\" or \"in a little while\" — how long depends on tone and context."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "un-ratito",
     "es": "un ratito",
-    "zh": "一小會兒",
+    "gloss": {
+      "zh": "一小會兒",
+      "en": "a little while"
+    },
     "pos": "phrase",
     "level": "A0",
     "topic": "ecuador",
     "exampleEs": "Espere un ratito, por favor.",
-    "exampleZh": "請稍等一下下。",
+    "exampleGloss": {
+      "zh": "請稍等一下下。",
+      "en": "Please wait a moment."
+    },
     "regional": {
       "region": "Ecuador",
-      "note": "-ito 指小詞在此不是「小」，而是把語氣變柔和、更有禮貌。",
+      "note": {
+        "zh": "-ito 指小詞在此不是「小」，而是把語氣變柔和、更有禮貌。",
+        "en": "Here the -ito diminutive doesn't mean \"small\"; it softens the tone and makes the request more polite."
+      },
       "needsVerify": true
     }
   },
   {
     "id": "y",
     "es": "y",
-    "zh": "和；而",
+    "gloss": {
+      "zh": "和；而",
+      "en": "and"
+    },
     "pos": "conj",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Mi hermano y yo estudiamos español.",
-    "exampleZh": "我哥哥和我學西班牙文。"
+    "exampleGloss": {
+      "zh": "我哥哥和我學西班牙文。",
+      "en": "My brother and I study Spanish."
+    }
   },
   {
     "id": "o",
     "es": "o",
-    "zh": "或者",
+    "gloss": {
+      "zh": "或者",
+      "en": "or"
+    },
     "pos": "conj",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "¿Café o jugo?",
-    "exampleZh": "咖啡還是果汁？"
+    "exampleGloss": {
+      "zh": "咖啡還是果汁？",
+      "en": "Coffee or juice?"
+    }
   },
   {
     "id": "pero",
     "es": "pero",
-    "zh": "但是",
+    "gloss": {
+      "zh": "但是",
+      "en": "but"
+    },
     "pos": "conj",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Es caro, pero muy bueno.",
-    "exampleZh": "很貴，但是很好。"
+    "exampleGloss": {
+      "zh": "很貴，但是很好。",
+      "en": "It's expensive, but very good."
+    }
   },
   {
     "id": "porque",
     "es": "porque",
-    "zh": "因為",
+    "gloss": {
+      "zh": "因為",
+      "en": "because"
+    },
     "pos": "conj",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "No como carne porque no me gusta.",
-    "exampleZh": "我不吃肉，因為我不喜歡。"
+    "exampleGloss": {
+      "zh": "我不吃肉，因為我不喜歡。",
+      "en": "I don't eat meat because I don't like it."
+    }
   },
   {
     "id": "en",
     "es": "en",
-    "zh": "在（裡面、上面）",
+    "gloss": {
+      "zh": "在（裡面、上面）",
+      "en": "in; on; at"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "El libro está en la mesa.",
-    "exampleZh": "書在桌上。"
+    "exampleGloss": {
+      "zh": "書在桌上。",
+      "en": "The book is on the table."
+    }
   },
   {
     "id": "de",
     "es": "de",
-    "zh": "的；來自",
+    "gloss": {
+      "zh": "的；來自",
+      "en": "of; from"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Soy de Taiwán.",
-    "exampleZh": "我來自台灣。"
+    "exampleGloss": {
+      "zh": "我來自台灣。",
+      "en": "I'm from Taiwan."
+    }
   },
   {
     "id": "con",
     "es": "con",
-    "zh": "和…一起；帶有",
+    "gloss": {
+      "zh": "和…一起；帶有",
+      "en": "with"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Quiero café con leche.",
-    "exampleZh": "我要咖啡加牛奶。"
+    "exampleGloss": {
+      "zh": "我要咖啡加牛奶。",
+      "en": "I want coffee with milk."
+    }
   },
   {
     "id": "sin",
     "es": "sin",
-    "zh": "沒有；不加",
+    "gloss": {
+      "zh": "沒有；不加",
+      "en": "without"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Un café sin azúcar, por favor.",
-    "exampleZh": "請給我一杯不加糖的咖啡。"
+    "exampleGloss": {
+      "zh": "請給我一杯不加糖的咖啡。",
+      "en": "A coffee without sugar, please."
+    }
   },
   {
     "id": "a",
     "es": "a",
-    "zh": "到；向",
+    "gloss": {
+      "zh": "到；向",
+      "en": "to"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Voy a Quito mañana.",
-    "exampleZh": "我明天去基多。"
+    "exampleGloss": {
+      "zh": "我明天去基多。",
+      "en": "I'm going to Quito tomorrow."
+    }
   },
   {
     "id": "para",
     "es": "para",
-    "zh": "為了；給",
+    "gloss": {
+      "zh": "為了；給",
+      "en": "for; in order to"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Este libro es para mi hermana.",
-    "exampleZh": "這本書是給我姊姊的。"
+    "exampleGloss": {
+      "zh": "這本書是給我姊姊的。",
+      "en": "This book is for my sister."
+    }
   },
   {
     "id": "cerca-de",
     "es": "cerca de",
-    "zh": "靠近",
+    "gloss": {
+      "zh": "靠近",
+      "en": "near; close to"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "Mi casa está cerca del mercado.",
-    "exampleZh": "我家在市場附近。"
+    "exampleGloss": {
+      "zh": "我家在市場附近。",
+      "en": "My house is near the market."
+    }
   },
   {
     "id": "lejos-de",
     "es": "lejos de",
-    "zh": "遠離",
+    "gloss": {
+      "zh": "遠離",
+      "en": "far from"
+    },
     "pos": "prep",
     "level": "A0",
     "topic": "conectores",
     "exampleEs": "La universidad está lejos de aquí.",
-    "exampleZh": "大學離這裡很遠。"
+    "exampleGloss": {
+      "zh": "大學離這裡很遠。",
+      "en": "The university is far from here."
+    }
   },
   {
     "id": "que",
     "es": "qué",
-    "zh": "什麼",
+    "gloss": {
+      "zh": "什麼",
+      "en": "what"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Qué es esto?",
-    "exampleZh": "這是什麼？"
+    "exampleGloss": {
+      "zh": "這是什麼？",
+      "en": "What is this?"
+    }
   },
   {
     "id": "quien",
     "es": "quién",
-    "zh": "誰",
+    "gloss": {
+      "zh": "誰",
+      "en": "who"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Quién es ella?",
-    "exampleZh": "她是誰？"
+    "exampleGloss": {
+      "zh": "她是誰？",
+      "en": "Who is she?"
+    }
   },
   {
     "id": "donde",
     "es": "dónde",
-    "zh": "哪裡",
+    "gloss": {
+      "zh": "哪裡",
+      "en": "where"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Dónde está el baño?",
-    "exampleZh": "洗手間在哪裡？"
+    "exampleGloss": {
+      "zh": "洗手間在哪裡？",
+      "en": "Where is the bathroom?"
+    }
   },
   {
     "id": "cuando",
     "es": "cuándo",
-    "zh": "什麼時候",
+    "gloss": {
+      "zh": "什麼時候",
+      "en": "when"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Cuándo vas a Cuenca?",
-    "exampleZh": "你什麼時候去昆卡？"
+    "exampleGloss": {
+      "zh": "你什麼時候去昆卡？",
+      "en": "When are you going to Cuenca?"
+    }
   },
   {
     "id": "como-adv",
     "es": "cómo",
-    "zh": "如何；怎麼樣",
+    "gloss": {
+      "zh": "如何；怎麼樣",
+      "en": "how"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Cómo está usted?",
-    "exampleZh": "您好嗎？"
+    "exampleGloss": {
+      "zh": "您好嗎？",
+      "en": "How are you?"
+    }
   },
   {
     "id": "cuanto",
     "es": "cuánto",
-    "zh": "多少",
+    "gloss": {
+      "zh": "多少",
+      "en": "how much; how many"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Cuánto cuesta?",
-    "exampleZh": "這多少錢？"
+    "exampleGloss": {
+      "zh": "這多少錢？",
+      "en": "How much does it cost?"
+    }
   },
   {
     "id": "cual",
     "es": "cuál",
-    "zh": "哪一個",
+    "gloss": {
+      "zh": "哪一個",
+      "en": "which; what"
+    },
     "pos": "pron",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Cuál es tu nombre?",
-    "exampleZh": "你的名字是哪一個？"
+    "exampleGloss": {
+      "zh": "你的名字是哪一個？",
+      "en": "What is your name?"
+    }
   },
   {
     "id": "por-que",
     "es": "por qué",
-    "zh": "為什麼",
+    "gloss": {
+      "zh": "為什麼",
+      "en": "why"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "preguntas",
     "exampleEs": "¿Por qué estudias español?",
-    "exampleZh": "你為什麼學西班牙文？"
+    "exampleGloss": {
+      "zh": "你為什麼學西班牙文？",
+      "en": "Why are you studying Spanish?"
+    }
   },
   {
     "id": "muy",
     "es": "muy",
-    "zh": "很；非常",
+    "gloss": {
+      "zh": "很；非常",
+      "en": "very"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "El café está muy caliente.",
-    "exampleZh": "咖啡很燙。"
+    "exampleGloss": {
+      "zh": "咖啡很燙。",
+      "en": "The coffee is very hot."
+    }
   },
   {
     "id": "mucho",
     "es": "mucho",
-    "zh": "很多",
+    "gloss": {
+      "zh": "很多",
+      "en": "a lot; much"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Trabajo mucho los lunes.",
-    "exampleZh": "我星期一工作很多。"
+    "exampleGloss": {
+      "zh": "我星期一工作很多。",
+      "en": "I work a lot on Mondays."
+    }
   },
   {
     "id": "poco",
     "es": "poco",
-    "zh": "一點點；很少",
+    "gloss": {
+      "zh": "一點點；很少",
+      "en": "a little; few"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Hablo un poco de español.",
-    "exampleZh": "我說一點西班牙文。"
+    "exampleGloss": {
+      "zh": "我說一點西班牙文。",
+      "en": "I speak a little Spanish."
+    }
   },
   {
     "id": "bien",
     "es": "bien",
-    "zh": "好地；不錯",
+    "gloss": {
+      "zh": "好地；不錯",
+      "en": "well; fine"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Estoy bien, gracias.",
-    "exampleZh": "我很好，謝謝。"
+    "exampleGloss": {
+      "zh": "我很好，謝謝。",
+      "en": "I'm fine, thanks."
+    }
   },
   {
     "id": "mal",
     "es": "mal",
-    "zh": "不好地",
+    "gloss": {
+      "zh": "不好地",
+      "en": "badly; unwell"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Hoy me siento mal.",
-    "exampleZh": "我今天不舒服。"
+    "exampleGloss": {
+      "zh": "我今天不舒服。",
+      "en": "I feel unwell today."
+    }
   },
   {
     "id": "aqui",
     "es": "aquí",
-    "zh": "這裡",
+    "gloss": {
+      "zh": "這裡",
+      "en": "here"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Aquí no hay restaurantes.",
-    "exampleZh": "這裡沒有餐廳。"
+    "exampleGloss": {
+      "zh": "這裡沒有餐廳。",
+      "en": "There are no restaurants here."
+    }
   },
   {
     "id": "alli",
     "es": "allí",
-    "zh": "那裡",
+    "gloss": {
+      "zh": "那裡",
+      "en": "there"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "El mercado está allí.",
-    "exampleZh": "市場在那邊。"
+    "exampleGloss": {
+      "zh": "市場在那邊。",
+      "en": "The market is over there."
+    }
   },
   {
     "id": "ahora",
     "es": "ahora",
-    "zh": "現在",
+    "gloss": {
+      "zh": "現在",
+      "en": "now"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Ahora estudio español.",
-    "exampleZh": "我現在在學西班牙文。"
+    "exampleGloss": {
+      "zh": "我現在在學西班牙文。",
+      "en": "I'm studying Spanish now."
+    }
   },
   {
     "id": "siempre",
     "es": "siempre",
-    "zh": "總是",
+    "gloss": {
+      "zh": "總是",
+      "en": "always"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Siempre bebo café en la mañana.",
-    "exampleZh": "我早上總是喝咖啡。"
+    "exampleGloss": {
+      "zh": "我早上總是喝咖啡。",
+      "en": "I always drink coffee in the morning."
+    }
   },
   {
     "id": "nunca",
     "es": "nunca",
-    "zh": "從不",
+    "gloss": {
+      "zh": "從不",
+      "en": "never"
+    },
     "pos": "adv",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Nunca como pescado.",
-    "exampleZh": "我從不吃魚。"
+    "exampleGloss": {
+      "zh": "我從不吃魚。",
+      "en": "I never eat fish."
+    }
   },
   {
     "id": "este",
     "es": "este",
-    "zh": "這個",
+    "gloss": {
+      "zh": "這個",
+      "en": "this"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Este libro es de español.",
-    "exampleZh": "這本書是西班牙文的。"
+    "exampleGloss": {
+      "zh": "這本書是西班牙文的。",
+      "en": "This book is in Spanish."
+    }
   },
   {
     "id": "ese",
     "es": "ese",
-    "zh": "那個",
+    "gloss": {
+      "zh": "那個",
+      "en": "that"
+    },
     "pos": "adj",
     "level": "A0",
     "topic": "comunes",
     "exampleEs": "Ese hombre es mi profesor.",
-    "exampleZh": "那個男人是我老師。"
+    "exampleGloss": {
+      "zh": "那個男人是我老師。",
+      "en": "That man is my teacher."
+    }
   },
   {
     "id": "perro",
     "es": "perro",
-    "zh": "狗",
+    "gloss": {
+      "zh": "狗",
+      "en": "dog"
+    },
     "pos": "noun",
+    "gender": "m",
     "level": "A0",
     "topic": "animales",
     "exampleEs": "El perro está en la casa.",
-    "exampleZh": "狗在家裡。",
-    "gender": "m"
+    "exampleGloss": {
+      "zh": "狗在家裡。",
+      "en": "The dog is in the house."
+    }
   },
   {
     "id": "gato",
     "es": "gato",
-    "zh": "貓",
+    "gloss": {
+      "zh": "貓",
+      "en": "cat"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "公貓 el gato、母貓 la gata，字尾隨性別變。",
+      "en": "el gato for a male cat, la gata for a female one — the ending follows the animal's sex."
+    },
     "level": "A0",
     "topic": "animales",
     "exampleEs": "Mi gata se llama Luna.",
-    "exampleZh": "我的貓叫露娜。",
-    "gender": "m",
-    "genderNote": "公貓 el gato、母貓 la gata，字尾隨性別變。"
+    "exampleGloss": {
+      "zh": "我的貓叫露娜。",
+      "en": "My cat's name is Luna."
+    }
   },
   {
     "id": "mano",
     "es": "mano",
-    "zh": "手",
+    "gloss": {
+      "zh": "手",
+      "en": "hand"
+    },
     "pos": "noun",
+    "gender": "f",
+    "genderNote": {
+      "zh": "字尾是 -o 卻是陰性（la mano），是最常被考的例外之一。",
+      "en": "Ends in -o but is feminine (la mano) — one of the most commonly tested exceptions."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Tengo un libro en la mano.",
-    "exampleZh": "我手上拿著一本書。",
-    "gender": "f",
-    "genderNote": "字尾是 -o 卻是陰性（la mano），是最常被考的例外之一。"
+    "exampleGloss": {
+      "zh": "我手上拿著一本書。",
+      "en": "I have a book in my hand."
+    }
   },
   {
     "id": "problema",
     "es": "problema",
-    "zh": "問題",
+    "gloss": {
+      "zh": "問題",
+      "en": "problem"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "字尾是 -a 卻是陽性（el problema）。源自希臘文的 -ma 結尾字多為陽性。",
+      "en": "Ends in -a but is masculine (el problema). Nouns of Greek origin ending in -ma are usually masculine."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "No hay problema.",
-    "exampleZh": "沒問題。",
-    "gender": "m",
-    "genderNote": "字尾是 -a 卻是陽性（el problema）。源自希臘文的 -ma 結尾字多為陽性。"
+    "exampleGloss": {
+      "zh": "沒問題。",
+      "en": "No problem."
+    }
   },
   {
     "id": "mapa",
     "es": "mapa",
-    "zh": "地圖",
+    "gloss": {
+      "zh": "地圖",
+      "en": "map"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "字尾 -a 但是陽性（el mapa），跟 problema 同一類例外。",
+      "en": "Ends in -a but is masculine (el mapa), same exception class as problema."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "El mapa está en la mesa.",
-    "exampleZh": "地圖在桌上。",
-    "gender": "m",
-    "genderNote": "字尾 -a 但是陽性（el mapa），跟 problema 同一類例外。"
+    "exampleGloss": {
+      "zh": "地圖在桌上。",
+      "en": "The map is on the table."
+    }
   },
   {
     "id": "luz",
     "es": "luz",
-    "zh": "燈；光",
+    "gloss": {
+      "zh": "燈；光",
+      "en": "light; lamp"
+    },
     "pos": "noun",
+    "gender": "f",
+    "genderNote": {
+      "zh": "複數是 luces：字尾 -z 變複數時要改成 -ces。",
+      "en": "The plural is luces: nouns ending in -z change to -ces in the plural."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "La luz de la cocina está aquí.",
-    "exampleZh": "廚房的燈在這裡。",
-    "gender": "f",
-    "genderNote": "複數是 luces：字尾 -z 變複數時要改成 -ces。"
+    "exampleGloss": {
+      "zh": "廚房的燈在這裡。",
+      "en": "The kitchen light is here."
+    }
   },
   {
     "id": "lapiz",
     "es": "lápiz",
-    "zh": "鉛筆",
+    "gloss": {
+      "zh": "鉛筆",
+      "en": "pencil"
+    },
     "pos": "noun",
+    "gender": "m",
+    "genderNote": {
+      "zh": "複數是 lápices：-z 要改成 -ces，而且重音符號**保留**（lá-pi-ces 重音在倒數第三音節，這類字一律要標）。",
+      "en": "The plural is lápices: -z becomes -ces, and the accent mark is kept (lá-pi-ces is stressed on the third-from-last syllable, which always takes an accent)."
+    },
     "level": "A0",
     "topic": "lugares",
     "exampleEs": "Necesito un lápiz, por favor.",
-    "exampleZh": "我需要一支鉛筆。",
-    "gender": "m",
-    "genderNote": "複數是 lápices：-z 要改成 -ces，而且重音符號**保留**（lá-pi-ces 重音在倒數第三音節，這類字一律要標）。"
+    "exampleGloss": {
+      "zh": "我需要一支鉛筆。",
+      "en": "I need a pencil, please."
+    }
   }
 ]

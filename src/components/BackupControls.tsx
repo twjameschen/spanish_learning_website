@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { Download, Upload, Check, TriangleAlert, ClipboardCopy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useT } from '@/i18n';
 import {
   exportBackup,
   backupFileName,
@@ -17,6 +18,7 @@ type Status =
   | { kind: 'manual'; text: string };
 
 export function BackupControls({ compact = false }: { compact?: boolean }) {
+  const { t } = useT();
   const [status, setStatus] = useState<Status>({ kind: 'idle' });
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -25,17 +27,17 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
       const backup = await exportBackup();
       const count = Object.keys(backup.data).length;
       if (count === 0) {
-        setStatus({ kind: 'error', message: '目前還沒有任何進度可以匯出。' });
+        setStatus({ kind: 'error', message: t('exportEmpty') });
         return;
       }
       const ok = downloadJson(backupFileName(), backup);
       setStatus(
         ok
-          ? { kind: 'ok', message: `已匯出 ${count} 筆資料。` }
+          ? { kind: 'ok', message: t('exportOk', { n: count }) }
           : { kind: 'manual', text: JSON.stringify(backup, null, 2) },
       );
     } catch (e) {
-      setStatus({ kind: 'error', message: e instanceof Error ? e.message : '匯出失敗。' });
+      setStatus({ kind: 'error', message: e instanceof Error ? e.message : t('exportFailed') });
     }
   }
 
@@ -45,10 +47,10 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
       const summary = await importBackup(backup, 'replace');
       setStatus({
         kind: 'ok',
-        message: `已匯入 ${summary.keys} 筆資料（備份時間 ${summary.exportedAt}）。重新整理後生效。`,
+        message: t('importOk', { n: summary.keys, t: summary.exportedAt }),
       });
     } catch (e) {
-      setStatus({ kind: 'error', message: e instanceof Error ? e.message : '匯入失敗。' });
+      setStatus({ kind: 'error', message: e instanceof Error ? e.message : t('importFailed') });
     }
   }
 
@@ -59,19 +61,19 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
           variant="outline"
           size={compact ? 'sm' : 'md'}
           onClick={handleExport}
-          title="把全部學習進度存成一個 JSON 檔"
+          title={t('exportTitle')}
         >
           <Download aria-hidden="true" />
-          匯出進度
+          {t('exportBtn')}
         </Button>
         <Button
           variant="outline"
           size={compact ? 'sm' : 'md'}
           onClick={() => fileRef.current?.click()}
-          title="從先前匯出的 JSON 檔還原進度"
+          title={t('importTitle')}
         >
           <Upload aria-hidden="true" />
-          匯入進度
+          {t('importBtn')}
         </Button>
         <input
           ref={fileRef}
@@ -104,7 +106,7 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
         <div className="space-y-2 rounded-2xl bg-surface-2 p-3">
           <p className="flex items-center gap-1.5 text-sm font-semibold text-body">
             <ClipboardCopy aria-hidden="true" className="size-4" />
-            瀏覽器擋下了自動下載，請手動全選複製以下內容存成 .json 檔：
+            {t('manualCopy')}
           </p>
           <textarea
             readOnly

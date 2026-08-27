@@ -63,7 +63,9 @@ function taughtSpanish(): { where: string; text: string }[] {
         case 'mcq':
           // 干擾項可以是 vosotros（那正是要教學生辨認的錯誤選項），
           // 但**正解**絕不能是 vosotros 形式。
-          add(`${at}.correctOption`, ex.options[ex.answerIndex] ?? '');
+          // 正解的兩種語言都要檢查
+          add(`${at}.correctOption.es`, ex.options[ex.answerIndex]?.zh ?? '');
+          add(`${at}.correctOption.en`, ex.options[ex.answerIndex]?.en ?? '');
           if (ex.promptEs) add(`${at}.promptEs`, ex.promptEs);
           break;
         case 'flashcard':
@@ -157,10 +159,11 @@ describe('拉美變體守則：絕不出現 vosotros', () => {
     }
   });
 
-  it('第二人稱複數的中文標示是「你們＝ustedes」，不會誤導成 vosotros', () => {
+  it('第二人稱複數的兩種語言標示都指向 ustedes，不會誤導成 vosotros', () => {
     const ustedes = allWords.find((w) => w.id === 'ustedes');
     expect(ustedes).toBeDefined();
-    expect(ustedes?.zh).toContain('你們');
+    expect(ustedes?.gloss.zh).toContain('你們');
+    expect(ustedes?.gloss.en.toLowerCase()).toContain('you');
   });
 });
 
@@ -174,37 +177,39 @@ describe('拉美發音變體', () => {
     expect(text).toMatch(/θ|th/);
   });
 
-  it('每一課都寫了 chineseTrap，點出最容易犯的錯', () => {
+  it('每一課都寫了 pitfalls，兩種語言都要有內容', () => {
     for (const lesson of allLessons) {
-      expect(lesson.chineseTrap, `${lesson.id} 缺 chineseTrap`).toBeTruthy();
-      expect(lesson.chineseTrap!.length).toBeGreaterThan(30);
+      expect(lesson.pitfalls, `${lesson.id} 缺 pitfalls`).toBeTruthy();
+      expect(lesson.pitfalls!.zh.length, `${lesson.id} 的中文 pitfalls 太短`).toBeGreaterThan(30);
+      expect(lesson.pitfalls!.en.length, `${lesson.id} 的英文 pitfalls 太短`).toBeGreaterThan(30);
     }
   });
 
   /**
-   * chineseTrap 的口吻守則：直接講西班牙文本身的規則與陷阱，
+   * pitfalls 的口吻守則：直接講西班牙文本身的規則與陷阱，
    * 不拿別的語言的情境來對照。這支測試存在的理由是 Phase 5 還有 29 課要寫，
    * 沒有把關很容易寫著寫著就滑回「A 語言這樣、西班牙文那樣」的比較句式。
    */
-  it('chineseTrap 不以其他語言為參照點', () => {
+  it('pitfalls 不以其他語言為參照點', () => {
     const BANNED = [
       '中文', '國語', '漢字', '華語', '注音', '四聲',
       'ㄅ', 'ㄆ', 'ㄉ', 'ㄊ', 'ㄍ', 'ㄎ', 'ㄏ', 'ㄌ', 'ㄙ',
     ];
     const hits: string[] = [];
     for (const lesson of allLessons) {
-      const text = lesson.chineseTrap ?? '';
+      const text = lesson.pitfalls?.zh ?? '';
       for (const token of BANNED) {
         if (text.includes(token)) hits.push(`  [${lesson.id}] 出現「${token}」`);
       }
     }
-    expect(hits, `chineseTrap 走回了比較句式：\n${hits.join('\n')}`).toEqual([]);
+    expect(hits, `pitfalls 走回了比較句式：\n${hits.join('\n')}`).toEqual([]);
   });
 
-  it('chineseTrap 用 ✗/✓ 對照具體示範錯誤與正確寫法', () => {
+  it('pitfalls 用 ✗/✓ 對照具體示範錯誤與正確寫法', () => {
     // 純敘述的說明對初學者幫助有限，要看得到真正錯在哪
+    // 兩種語言都要有具體的錯誤示範，不能只有一邊做到
     const withoutContrast = allLessons
-      .filter((l) => !/[✗✓]/.test(l.chineseTrap ?? ''))
+      .filter((l) => !/[✗✓]/.test(l.pitfalls?.zh ?? '') || !/[✗✓]/.test(l.pitfalls?.en ?? ''))
       .map((l) => l.id);
     expect(withoutContrast, `這些課缺少 ✗/✓ 對照：${withoutContrast.join(', ')}`).toEqual([]);
   });
@@ -222,7 +227,8 @@ describe('區域用法的誠實標註', () => {
   it('所有 regional 註記都有非空說明', () => {
     for (const w of allWords) {
       if (!w.regional) continue;
-      expect(w.regional.note.trim().length, `${w.id} 的 regional.note 是空的`).toBeGreaterThan(5);
+      expect(w.regional.note.zh.trim().length, `${w.id} 的中文 regional.note 太短`).toBeGreaterThan(5);
+      expect(w.regional.note.en.trim().length, `${w.id} 的英文 regional.note 太短`).toBeGreaterThan(5);
     }
   });
 });

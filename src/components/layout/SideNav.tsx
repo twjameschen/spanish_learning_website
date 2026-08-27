@@ -1,20 +1,24 @@
 import { Home, BookMarked, GraduationCap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { hrefFor, type Route } from '@/lib/router';
+import { useT } from '@/i18n';
+import type { UIKey } from '@/i18n';
 
-const ITEMS: { route: Route; label: string; icon: typeof Home }[] = [
-  { route: { name: 'home' }, label: '首頁', icon: Home },
-  { route: { name: 'vocab' }, label: '單字表', icon: BookMarked },
-  { route: { name: 'lessons' }, label: '課程', icon: GraduationCap },
+const ITEMS: { route: Route; labelKey: UIKey; icon: typeof Home }[] = [
+  { route: { name: 'home' }, labelKey: 'navHome', icon: Home },
+  { route: { name: 'vocab' }, labelKey: 'navVocab', icon: BookMarked },
+  { route: { name: 'lessons' }, labelKey: 'navLessons', icon: GraduationCap },
 ];
 
+const isActive = (route: Route, current: Route): boolean =>
+  route.name === current.name || (route.name === 'lessons' && current.name === 'lesson');
+
 export function SideNav({ current }: { current: Route }) {
+  const { t } = useT();
   return (
     <ul className="sticky top-24 space-y-1.5">
-      {ITEMS.map(({ route, label, icon: Icon }) => {
-        const active =
-          route.name === current.name ||
-          (route.name === 'lessons' && current.name === 'lesson');
+      {ITEMS.map(({ route, labelKey, icon: Icon }) => {
+        const active = isActive(route, current);
         return (
           <li key={route.name}>
             <a
@@ -28,7 +32,7 @@ export function SideNav({ current }: { current: Route }) {
               )}
             >
               <Icon aria-hidden="true" className="size-[18px]" />
-              {label}
+              {t(labelKey)}
             </a>
           </li>
         );
@@ -39,13 +43,12 @@ export function SideNav({ current }: { current: Route }) {
 
 /** 手機版：底部固定列 */
 export function BottomNav({ current }: { current: Route }) {
+  const { t } = useT();
   return (
     <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-canvas/95 backdrop-blur-md lg:hidden">
       <ul className="mx-auto flex max-w-lg">
-        {ITEMS.map(({ route, label, icon: Icon }) => {
-          const active =
-            route.name === current.name ||
-            (route.name === 'lessons' && current.name === 'lesson');
+        {ITEMS.map(({ route, labelKey, icon: Icon }) => {
+          const active = isActive(route, current);
           return (
             <li key={route.name} className="flex-1">
               <a
@@ -57,7 +60,7 @@ export function BottomNav({ current }: { current: Route }) {
                 )}
               >
                 <Icon aria-hidden="true" className="size-5" />
-                {label}
+                {t(labelKey)}
               </a>
             </li>
           );

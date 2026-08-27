@@ -1,10 +1,19 @@
 [
   {
     "city": "taipei",
-    "nameZh": "台北",
+    "name": {
+      "zh": "台北",
+      "en": "Taipei"
+    },
     "nameEs": "Taipéi",
-    "country": "台灣",
-    "blurb": "出發前的準備。先把發音、重音、以及拉美特有的 seseo 與 yeísmo 弄對，再學會開口打招呼和數數字。",
+    "country": {
+      "zh": "台灣",
+      "en": "Taiwan"
+    },
+    "blurb": {
+      "zh": "出發前的準備。先把發音、重音、以及拉美特有的 seseo 與 yeísmo 弄對，再學會開口打招呼和數數字。",
+      "en": "Preparation before departure. Get pronunciation, stress and the Latin American seseo and yeísmo right first, then learn to greet people and count."
+    },
     "lessonIds": [
       "a0-alfabeto",
       "a0-sonidos",
@@ -16,10 +25,19 @@
   },
   {
     "city": "miami",
-    "nameZh": "邁阿密",
+    "name": {
+      "zh": "邁阿密",
+      "en": "Miami"
+    },
     "nameEs": "Miami",
-    "country": "美國",
-    "blurb": "轉機的空檔。處理中文母語者最不習慣的四件事：名詞有性別、名詞前面要冠詞、複數會傳染、動詞隨人稱變形。",
+    "country": {
+      "zh": "美國",
+      "en": "United States"
+    },
+    "blurb": {
+      "zh": "轉機的空檔。處理中文母語者最不習慣的四件事：名詞有性別、名詞前面要冠詞、複數會傳染、動詞隨人稱變形。",
+      "en": "A layover. Four things that need the most adjusting: nouns have gender, nouns take articles, plurals spread across the phrase, and verbs change with the subject."
+    },
     "lessonIds": [
       "a0-genero",
       "a0-articulos",
@@ -31,26 +49,53 @@
   },
   {
     "city": "quito",
-    "nameZh": "基多",
+    "name": {
+      "zh": "基多",
+      "en": "Quito"
+    },
     "nameEs": "Quito",
-    "country": "厄瓜多",
-    "blurb": "抵達海拔 2850 公尺的首都。現在式、15 個高頻不規則動詞、gustar 型動詞，以及 Sierra 高地特有的禮貌等級。",
+    "country": {
+      "zh": "厄瓜多",
+      "en": "Ecuador"
+    },
+    "blurb": {
+      "zh": "抵達海拔 2850 公尺的首都。現在式、15 個高頻不規則動詞、gustar 型動詞，以及 Sierra 高地特有的禮貌等級。",
+      "en": "Arriving in the capital at 2,850 metres. The present tense, 15 high-frequency irregular verbs, gustar-type verbs, and the politeness levels particular to the Sierra highlands."
+    },
     "lessonIds": []
   },
   {
     "city": "cuenca",
-    "nameZh": "昆卡",
+    "name": {
+      "zh": "昆卡",
+      "en": "Cuenca"
+    },
     "nameEs": "Cuenca",
-    "country": "厄瓜多",
-    "blurb": "安地斯山谷中的殖民古城。學會講過去的事：簡單過去式、未完成過去式，以及兩者最難的對比。",
+    "country": {
+      "zh": "厄瓜多",
+      "en": "Ecuador"
+    },
+    "blurb": {
+      "zh": "安地斯山谷中的殖民古城。學會講過去的事：簡單過去式、未完成過去式，以及兩者最難的對比。",
+      "en": "A colonial city in an Andean valley. Learning to talk about the past: the preterite, the imperfect, and the difficult contrast between them."
+    },
     "lessonIds": []
   },
   {
     "city": "galapagos",
-    "nameZh": "加拉巴哥",
+    "name": {
+      "zh": "加拉巴哥",
+      "en": "Galápagos"
+    },
     "nameEs": "Galápagos",
-    "country": "厄瓜多",
-    "blurb": "旅程的終點。虛擬式三章、條件句、se 的被動與無人稱 —— 開始表達態度、假設與願望。",
+    "country": {
+      "zh": "厄瓜多",
+      "en": "Ecuador"
+    },
+    "blurb": {
+      "zh": "旅程的終點。虛擬式三章、條件句、se 的被動與無人稱 —— 開始表達態度、假設與願望。",
+      "en": "The end of the journey. Three chapters on the subjunctive, conditional sentences, and passive and impersonal se — starting to express attitude, hypothesis and wishes."
+    },
     "lessonIds": []
   }
 ]

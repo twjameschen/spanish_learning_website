@@ -39,17 +39,21 @@ describe('內容通過 zod schema', () => {
     }
   });
 
-  it('每個單字都有非空的中西文例句', () => {
+  it('每個單字都有西文例句，且中英翻譯都不缺', () => {
     for (const w of allWords) {
       expect(w.exampleEs.trim().length, `${w.id} 缺西文例句`).toBeGreaterThan(0);
-      expect(w.exampleZh.trim().length, `${w.id} 缺中文例句`).toBeGreaterThan(0);
+      expect(w.exampleGloss.zh.trim().length, `${w.id} 缺例句中譯`).toBeGreaterThan(0);
+      expect(w.exampleGloss.en.trim().length, `${w.id} 缺例句英譯`).toBeGreaterThan(0);
+      expect(w.gloss.zh.trim().length, `${w.id} 缺中文字義`).toBeGreaterThan(0);
+      expect(w.gloss.en.trim().length, `${w.id} 缺英文字義`).toBeGreaterThan(0);
     }
   });
 
   it('每一題都有答錯時的解釋，不能只說「錯了」', () => {
     for (const lesson of allLessons) {
       for (const ex of lesson.exercises) {
-        expect(ex.explain.trim().length, `${lesson.id}/${ex.id} 缺 explain`).toBeGreaterThan(10);
+        expect(ex.explain.zh.trim().length, `${lesson.id}/${ex.id} 缺中文 explain`).toBeGreaterThan(10);
+        expect(ex.explain.en.trim().length, `${lesson.id}/${ex.id} 缺英文 explain`).toBeGreaterThan(10);
       }
     }
   });
@@ -59,37 +63,43 @@ describe('內容通過 zod schema', () => {
       for (const ex of lesson.exercises) {
         if (ex.type !== 'mcq') continue;
         expect(ex.optionExplains).toHaveLength(4);
-        for (const t of ex.optionExplains) expect(t.trim().length).toBeGreaterThan(0);
+        for (const t of ex.optionExplains) {
+          expect(t.zh.trim().length).toBeGreaterThan(0);
+          expect(t.en.trim().length).toBeGreaterThan(0);
+        }
       }
     }
   });
 
   it('schema 會擋掉沒有性別的名詞', () => {
     expect(() => wordSchema.parse({
-      id: 'x', es: 'mesa', zh: '桌子', pos: 'noun', level: 'A0', topic: 't',
-      exampleEs: 'a', exampleZh: 'b',
+      id: 'x', es: 'mesa', gloss: { zh: '桌子', en: 'table' }, pos: 'noun',
+      level: 'A0', topic: 't', exampleEs: 'a', exampleGloss: { zh: 'b', en: 'c' },
     })).toThrow();
   });
 
   it('schema 會擋掉 id 格式錯誤', () => {
     expect(() => wordSchema.parse({
-      id: 'Bad_ID', es: 'x', zh: 'x', pos: 'adv', level: 'A0', topic: 't',
-      exampleEs: 'a', exampleZh: 'b',
+      id: 'Bad_ID', es: 'x', gloss: { zh: 'x', en: 'x' }, pos: 'adv',
+      level: 'A0', topic: 't', exampleEs: 'a', exampleGloss: { zh: 'b', en: 'c' },
     })).toThrow();
   });
 
   it('schema 會擋掉缺少現在式變化的動詞', () => {
     expect(() => verbSchema.parse({
-      id: 'x', es: 'hablar', zh: '說', pos: 'verb', level: 'A0', topic: 'verbos',
-      exampleEs: 'a', exampleZh: 'b', infinitive: 'hablar', irregular: false,
+      id: 'x', es: 'hablar', gloss: { zh: '說', en: 'to speak' }, pos: 'verb',
+      level: 'A0', topic: 'verbos', exampleEs: 'a', exampleGloss: { zh: 'b', en: 'c' },
+      infinitive: 'hablar', irregular: false,
       participio: 'hablado', gerundio: 'hablando', conjugations: {},
     })).toThrow();
   });
 
   it('schema 會擋掉沒有題目的課程', () => {
     expect(() => grammarLessonSchema.parse({
-      id: 'x', level: 'A0', city: 'taipei', order: 1, title: 't', intro: 'i',
-      rules: [{ rule: 'r', examples: [{ es: 'a', zh: 'b' }] }],
+      id: 'x', level: 'A0', city: 'taipei', order: 1,
+      title: { zh: 't', en: 't' }, intro: { zh: 'i', en: 'i' },
+      rules: [{ rule: { zh: 'r', en: 'r' },
+                examples: [{ es: 'a', gloss: { zh: 'b', en: 'c' } }] }],
       exercises: [], prerequisites: [], vocabIds: [], usesOnlyTaughtGrammar: true,
     })).toThrow();
   });

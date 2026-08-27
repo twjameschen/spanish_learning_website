@@ -2,12 +2,18 @@
   {
     "id": "ser",
     "es": "ser",
-    "zh": "是（本質、身分、來源）",
+    "gloss": {
+      "zh": "是（本質、身分、來源）",
+      "en": "to be (essence, identity, origin)"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Yo soy de Taiwán y ella es de Ecuador.",
-    "exampleZh": "我是台灣人，她是厄瓜多人。",
+    "exampleGloss": {
+      "zh": "我是台灣人，她是厄瓜多人。",
+      "en": "I'm from Taiwan and she's from Ecuador."
+    },
     "infinitive": "ser",
     "irregular": true,
     "reflexive": false,
@@ -26,12 +32,18 @@
   {
     "id": "estar",
     "es": "estar",
-    "zh": "是；在（狀態、位置）",
+    "gloss": {
+      "zh": "是；在（狀態、位置）",
+      "en": "to be (state, location)"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "El café está caliente y yo estoy cansado.",
-    "exampleZh": "咖啡是燙的，而我很累。",
+    "exampleGloss": {
+      "zh": "咖啡是燙的，而我很累。",
+      "en": "The coffee is hot and I'm tired."
+    },
     "infinitive": "estar",
     "irregular": true,
     "reflexive": false,
@@ -50,12 +62,18 @@
   {
     "id": "tener",
     "es": "tener",
-    "zh": "有；擁有",
+    "gloss": {
+      "zh": "有；擁有",
+      "en": "to have"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Tengo dos hermanos y ellos tienen una hija.",
-    "exampleZh": "我有兩個兄弟，他們有一個女兒。",
+    "exampleGloss": {
+      "zh": "我有兩個兄弟，他們有一個女兒。",
+      "en": "I have two brothers and they have a daughter."
+    },
     "infinitive": "tener",
     "irregular": true,
     "reflexive": false,
@@ -74,12 +92,18 @@
   {
     "id": "haber",
     "es": "haber",
-    "zh": "有（存在）；（完成式助動詞）",
+    "gloss": {
+      "zh": "有（存在）；（完成式助動詞）",
+      "en": "there to be (existence); to have (auxiliary)"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Hay un mercado en esta calle.",
-    "exampleZh": "這條街上有一個市場。",
+    "exampleGloss": {
+      "zh": "這條街上有一個市場。",
+      "en": "There's a market on this street."
+    },
     "infinitive": "haber",
     "irregular": true,
     "reflexive": false,
@@ -98,12 +122,18 @@
   {
     "id": "ir",
     "es": "ir",
-    "zh": "去",
+    "gloss": {
+      "zh": "去",
+      "en": "to go"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Mañana voy a Quito y ellos van a Cuenca.",
-    "exampleZh": "我明天去基多，他們去昆卡。",
+    "exampleGloss": {
+      "zh": "我明天去基多，他們去昆卡。",
+      "en": "Tomorrow I'm going to Quito and they're going to Cuenca."
+    },
     "infinitive": "ir",
     "irregular": true,
     "reflexive": false,
@@ -122,12 +152,18 @@
   {
     "id": "querer",
     "es": "querer",
-    "zh": "想要；愛",
+    "gloss": {
+      "zh": "想要；愛",
+      "en": "to want; to love"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Quiero un café y ella quiere un jugo.",
-    "exampleZh": "我想要一杯咖啡，她想要一杯果汁。",
+    "exampleGloss": {
+      "zh": "我想要一杯咖啡，她想要一杯果汁。",
+      "en": "I want a coffee and she wants a juice."
+    },
     "infinitive": "querer",
     "irregular": true,
     "reflexive": false,
@@ -146,12 +182,18 @@
   {
     "id": "hablar",
     "es": "hablar",
-    "zh": "說（語言）；講話",
+    "gloss": {
+      "zh": "說（語言）；講話",
+      "en": "to speak; to talk"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Hablo chino y un poco de español.",
-    "exampleZh": "我說中文和一點西班牙文。",
+    "exampleGloss": {
+      "zh": "我說中文和一點西班牙文。",
+      "en": "I speak Chinese and a little Spanish."
+    },
     "infinitive": "hablar",
     "irregular": false,
     "reflexive": false,
@@ -170,12 +212,18 @@
   {
     "id": "estudiar",
     "es": "estudiar",
-    "zh": "讀書；學習",
+    "gloss": {
+      "zh": "讀書；學習",
+      "en": "to study"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Estudio español todos los días.",
-    "exampleZh": "我每天學西班牙文。",
+    "exampleGloss": {
+      "zh": "我每天學西班牙文。",
+      "en": "I study Spanish every day."
+    },
     "infinitive": "estudiar",
     "irregular": false,
     "reflexive": false,
@@ -194,12 +242,18 @@
   {
     "id": "trabajar",
     "es": "trabajar",
-    "zh": "工作",
+    "gloss": {
+      "zh": "工作",
+      "en": "to work"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Mi madre trabaja en un hospital.",
-    "exampleZh": "我母親在醫院工作。",
+    "exampleGloss": {
+      "zh": "我母親在醫院工作。",
+      "en": "My mother works at a hospital."
+    },
     "infinitive": "trabajar",
     "irregular": false,
     "reflexive": false,
@@ -218,12 +272,18 @@
   {
     "id": "necesitar",
     "es": "necesitar",
-    "zh": "需要",
+    "gloss": {
+      "zh": "需要",
+      "en": "to need"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Necesito diez minutos, por favor.",
-    "exampleZh": "我需要十分鐘，麻煩了。",
+    "exampleGloss": {
+      "zh": "我需要十分鐘，麻煩了。",
+      "en": "I need ten minutes, please."
+    },
     "infinitive": "necesitar",
     "irregular": false,
     "reflexive": false,
@@ -242,12 +302,18 @@
   {
     "id": "comprar",
     "es": "comprar",
-    "zh": "買",
+    "gloss": {
+      "zh": "買",
+      "en": "to buy"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Compramos fruta en el mercado.",
-    "exampleZh": "我們在市場買水果。",
+    "exampleGloss": {
+      "zh": "我們在市場買水果。",
+      "en": "We buy fruit at the market."
+    },
     "infinitive": "comprar",
     "irregular": false,
     "reflexive": false,
@@ -266,12 +332,18 @@
   {
     "id": "llamarse",
     "es": "llamarse",
-    "zh": "名叫（反身動詞）",
+    "gloss": {
+      "zh": "名叫（反身動詞）",
+      "en": "to be called (reflexive)"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Me llamo Ana. ¿Cómo se llama usted?",
-    "exampleZh": "我叫安娜。請問您叫什麼名字？",
+    "exampleGloss": {
+      "zh": "我叫安娜。請問您叫什麼名字？",
+      "en": "My name is Ana. What's your name?"
+    },
     "infinitive": "llamarse",
     "irregular": false,
     "reflexive": true,
@@ -290,12 +362,18 @@
   {
     "id": "comer",
     "es": "comer",
-    "zh": "吃",
+    "gloss": {
+      "zh": "吃",
+      "en": "to eat"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Como arroz con pollo en el almuerzo.",
-    "exampleZh": "我午餐吃雞肉飯。",
+    "exampleGloss": {
+      "zh": "我午餐吃雞肉飯。",
+      "en": "I eat chicken and rice for lunch."
+    },
     "infinitive": "comer",
     "irregular": false,
     "reflexive": false,
@@ -314,12 +392,18 @@
   {
     "id": "beber",
     "es": "beber",
-    "zh": "喝",
+    "gloss": {
+      "zh": "喝",
+      "en": "to drink"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Bebo agua, no bebo café en la noche.",
-    "exampleZh": "我喝水，晚上不喝咖啡。",
+    "exampleGloss": {
+      "zh": "我喝水，晚上不喝咖啡。",
+      "en": "I drink water; I don't drink coffee at night."
+    },
     "infinitive": "beber",
     "irregular": false,
     "reflexive": false,
@@ -338,12 +422,18 @@
   {
     "id": "aprender",
     "es": "aprender",
-    "zh": "學會；學習",
+    "gloss": {
+      "zh": "學會；學習",
+      "en": "to learn"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Aprendemos español en la universidad.",
-    "exampleZh": "我們在大學學西班牙文。",
+    "exampleGloss": {
+      "zh": "我們在大學學西班牙文。",
+      "en": "We learn Spanish at the university."
+    },
     "infinitive": "aprender",
     "irregular": false,
     "reflexive": false,
@@ -362,12 +452,18 @@
   {
     "id": "leer",
     "es": "leer",
-    "zh": "讀；閱讀",
+    "gloss": {
+      "zh": "讀；閱讀",
+      "en": "to read"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Leo un libro en español.",
-    "exampleZh": "我在讀一本西班牙文的書。",
+    "exampleGloss": {
+      "zh": "我在讀一本西班牙文的書。",
+      "en": "I'm reading a book in Spanish."
+    },
     "infinitive": "leer",
     "irregular": true,
     "reflexive": false,
@@ -386,12 +482,18 @@
   {
     "id": "vivir",
     "es": "vivir",
-    "zh": "住；生活",
+    "gloss": {
+      "zh": "住；生活",
+      "en": "to live"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Vivo en Taipéi y mi ñaño vive en Quito.",
-    "exampleZh": "我住台北，我兄弟住基多。",
+    "exampleGloss": {
+      "zh": "我住台北，我兄弟住基多。",
+      "en": "I live in Taipei and my brother lives in Quito."
+    },
     "infinitive": "vivir",
     "irregular": false,
     "reflexive": false,
@@ -410,12 +512,18 @@
   {
     "id": "escribir",
     "es": "escribir",
-    "zh": "寫",
+    "gloss": {
+      "zh": "寫",
+      "en": "to write"
+    },
     "pos": "verb",
     "level": "A0",
     "topic": "verbos",
     "exampleEs": "Escribo mi nombre aquí.",
-    "exampleZh": "我把名字寫在這裡。",
+    "exampleGloss": {
+      "zh": "我把名字寫在這裡。",
+      "en": "I write my name here."
+    },
     "infinitive": "escribir",
     "irregular": true,
     "reflexive": false,

@@ -7,6 +7,29 @@ import { z } from 'zod';
  */
 
 /* ------------------------------------------------------------------ *
+ * 語言與在地化
+ * ------------------------------------------------------------------ */
+
+export const LOCALES = ['zh', 'en'] as const;
+export const localeSchema = z.enum(LOCALES);
+export type Locale = z.infer<typeof localeSchema>;
+
+/**
+ * 所有給人看的文字都走這個型別，兩種語言都必填。
+ * 刻意不允許只填一邊 —— 缺一邊就代表切到那個語言時會開天窗，
+ * 與其在執行期 fallback 回另一種語言（使用者會看到一半中文一半英文），
+ * 不如在驗證階段就擋下來。
+ */
+export const localizedSchema = z.object({
+  zh: z.string().min(1),
+  en: z.string().min(1),
+}).strict();
+export type Localized = z.infer<typeof localizedSchema>;
+
+/** 依目前語言取字 */
+export const pick = (value: Localized, locale: Locale): string => value[locale];
+
+/* ------------------------------------------------------------------ *
  * 基礎列舉
  * ------------------------------------------------------------------ */
 
@@ -34,13 +57,19 @@ export const PERSONS = [
 export const personSchema = z.enum(PERSONS);
 export type Person = z.infer<typeof personSchema>;
 
-export const PERSON_LABEL: Record<Person, { es: string; zh: string }> = {
-  yo: { es: 'yo', zh: '我' },
-  tu: { es: 'tú', zh: '你' },
-  el_ella_usted: { es: 'él / ella / usted', zh: '他／她／您' },
-  nosotros: { es: 'nosotros / nosotras', zh: '我們' },
+export const PERSON_LABEL: Record<Person, { es: string; label: Localized }> = {
+  yo: { es: 'yo', label: { zh: '我', en: 'I' } },
+  tu: { es: 'tú', label: { zh: '你', en: 'you (informal)' } },
+  el_ella_usted: {
+    es: 'él / ella / usted',
+    label: { zh: '他／她／您', en: 'he / she / you (formal)' },
+  },
+  nosotros: { es: 'nosotros / nosotras', label: { zh: '我們', en: 'we' } },
   // 注意：「你們」在拉美一律是 ustedes，不是 vosotros。
-  ellos_ustedes: { es: 'ellos / ellas / ustedes', zh: '他們／她們／你們' },
+  ellos_ustedes: {
+    es: 'ellos / ellas / ustedes',
+    label: { zh: '他們／她們／你們', en: 'they / you all' },
+  },
 };
 
 /** 簡單時態（單一動詞形，不含 haber + 分詞這類複合時態） */
@@ -56,14 +85,26 @@ export const SIMPLE_TENSES = [
 export const tenseSchema = z.enum(SIMPLE_TENSES);
 export type Tense = z.infer<typeof tenseSchema>;
 
-export const TENSE_LABEL: Record<Tense, { es: string; zh: string }> = {
-  presente: { es: 'presente', zh: '現在式' },
-  preteritoIndefinido: { es: 'pretérito indefinido', zh: '簡單過去式' },
-  imperfecto: { es: 'pretérito imperfecto', zh: '未完成過去式' },
-  futuro: { es: 'futuro simple', zh: '未來式' },
-  condicional: { es: 'condicional simple', zh: '條件式' },
-  presenteSubjuntivo: { es: 'presente de subjuntivo', zh: '現在虛擬式' },
-  imperfectoSubjuntivo: { es: 'imperfecto de subjuntivo', zh: '過去虛擬式' },
+export const TENSE_LABEL: Record<Tense, { es: string; label: Localized }> = {
+  presente: { es: 'presente', label: { zh: '現在式', en: 'present' } },
+  preteritoIndefinido: {
+    es: 'pretérito indefinido',
+    label: { zh: '簡單過去式', en: 'preterite' },
+  },
+  imperfecto: {
+    es: 'pretérito imperfecto',
+    label: { zh: '未完成過去式', en: 'imperfect' },
+  },
+  futuro: { es: 'futuro simple', label: { zh: '未來式', en: 'future' } },
+  condicional: { es: 'condicional simple', label: { zh: '條件式', en: 'conditional' } },
+  presenteSubjuntivo: {
+    es: 'presente de subjuntivo',
+    label: { zh: '現在虛擬式', en: 'present subjunctive' },
+  },
+  imperfectoSubjuntivo: {
+    es: 'imperfecto de subjuntivo',
+    label: { zh: '過去虛擬式', en: 'imperfect subjunctive' },
+  },
 };
 
 /** 完整的一組人稱變化 —— 五個都必填，缺一不可 */
@@ -85,7 +126,7 @@ export const REGIONS = ['Ecuador', 'Andes', 'LatAm', 'Quito', 'Costa'] as const;
 
 export const regionalSchema = z.object({
   region: z.enum(REGIONS),
-  note: z.string().min(1),
+  note: localizedSchema,
   /** 不是百分之百確定的一律 true，UI 上顯示「待母語者確認」 */
   needsVerify: z.boolean(),
 });
@@ -99,16 +140,19 @@ const idSchema = z.string().regex(/^[a-z0-9-]+$/, 'id 只能用小寫字母、�
 
 const wordBaseSchema = z.object({
   id: idSchema,
+  /** 西班牙文本身，不隨介面語言改變 */
   es: z.string().min(1),
-  zh: z.string().min(1),
+  /** 字義（雙語） */
+  gloss: localizedSchema,
   pos: posSchema,
   gender: genderSchema.optional(),
-  /** 陰陽同形時說明，例如 el/la estudiante */
-  genderNote: z.string().min(1).optional(),
+  /** 陰陽同形或例外時的說明，例如 el/la estudiante */
+  genderNote: localizedSchema.optional(),
   level: levelSchema,
   topic: z.string().min(1),
   exampleEs: z.string().min(1),
-  exampleZh: z.string().min(1),
+  /** 例句翻譯（雙語） */
+  exampleGloss: localizedSchema,
   regional: regionalSchema.optional(),
 });
 
@@ -185,8 +229,8 @@ export type Difficulty = z.infer<typeof difficultySchema>;
 
 const exerciseBase = {
   id: idSchema,
-  /** 答錯時顯示的中文解釋。規格要求「不是只說錯了」，所以必填非空。 */
-  explain: z.string().min(1),
+  /** 答錯時顯示的解釋（雙語）。規格要求「不是只說錯了」，所以必填非空。 */
+  explain: localizedSchema,
   difficulty: difficultySchema.default('medium'),
 };
 
@@ -200,15 +244,20 @@ export const flashcardExerciseSchema = z.object({
 export const mcqExerciseSchema = z.object({
   ...exerciseBase,
   type: z.literal('mcq'),
-  promptZh: z.string().min(1),
+  prompt: localizedSchema,
   promptEs: z.string().min(1).optional(),
-  options: z.array(z.string().min(1)).length(4),
+  /**
+   * 選項也要雙語。有些題目的選項是西班牙文形式（兩版內容相同），
+   * 但有一半的題目選項是概念敘述（「因為位置一律用 estar」），
+   * 那種切到英文時必須跟著換，否則會中英夾雜。
+   */
+  options: z.array(localizedSchema).length(4),
   answerIndex: z.number().int().min(0).max(3),
   /**
    * 每個選項各自的說明 —— 解釋綁在選項而非題目上，
    * 才能針對使用者「選錯的那一個」回答為什麼不對。
    */
-  optionExplains: z.array(z.string().min(1)).length(4),
+  optionExplains: z.array(localizedSchema).length(4),
 });
 
 export const conjugationExerciseSchema = z.object({
@@ -223,7 +272,8 @@ export const conjugationExerciseSchema = z.object({
 export const translateExerciseSchema = z.object({
   ...exerciseBase,
   type: z.literal('translate'),
-  zh: z.string().min(1),
+  /** 要翻成西班牙文的題目（雙語） */
+  prompt: localizedSchema,
   /** 可接受的多種答法（比對時會忽略大小寫與重音差異） */
   accept: z.array(z.string().min(1)).min(1),
   /** 標準答案，帶正確重音，答對後顯示給使用者對照 */
@@ -233,7 +283,7 @@ export const translateExerciseSchema = z.object({
 export const wordOrderExerciseSchema = z.object({
   ...exerciseBase,
   type: z.literal('wordOrder'),
-  zh: z.string().min(1),
+  prompt: localizedSchema,
   /** 提供的字塊，執行期會打亂順序 */
   tokens: z.array(z.string().min(1)).min(2),
   answer: z.array(z.string().min(1)).min(2),
@@ -244,7 +294,7 @@ export const listeningExerciseSchema = z.object({
   type: z.literal('listening'),
   /** 要用 speechSynthesis 唸出來的西班牙文 */
   es: z.string().min(1),
-  zh: z.string().min(1),
+  gloss: localizedSchema,
   accept: z.array(z.string().min(1)).min(1),
 });
 
@@ -269,14 +319,14 @@ export const exerciseSchema = z.discriminatedUnion('type', [
 export type Exercise = z.infer<typeof exerciseSchema>;
 export type ExerciseType = Exercise['type'];
 
-export const EXERCISE_TYPE_LABEL: Record<ExerciseType, string> = {
-  flashcard: '閃卡',
-  mcq: '四選一',
-  conjugation: '動詞變位',
-  translate: '中翻西',
-  wordOrder: '語序重組',
-  listening: '聽力',
-  genderSort: '陰陽性分類',
+export const EXERCISE_TYPE_LABEL: Record<ExerciseType, Localized> = {
+  flashcard: { zh: '閃卡', en: 'Flashcard' },
+  mcq: { zh: '四選一', en: 'Multiple choice' },
+  conjugation: { zh: '動詞變位', en: 'Conjugation' },
+  translate: { zh: '翻譯', en: 'Translate' },
+  wordOrder: { zh: '語序重組', en: 'Word order' },
+  listening: { zh: '聽力', en: 'Listening' },
+  genderSort: { zh: '陰陽性分類', en: 'Gender sort' },
 };
 
 /* ------------------------------------------------------------------ *
@@ -288,12 +338,12 @@ export const citySchema = z.enum(CITIES);
 export type City = z.infer<typeof citySchema>;
 
 export const ruleSchema = z.object({
-  rule: z.string().min(1),
+  rule: localizedSchema,
   examples: z.array(z.object({
     es: z.string().min(1),
-    zh: z.string().min(1),
+    gloss: localizedSchema,
     /** 選填的補充說明，例如指出這句的重音落點 */
-    note: z.string().min(1).optional(),
+    note: localizedSchema.optional(),
   })).min(1),
 });
 export type Rule = z.infer<typeof ruleSchema>;
@@ -302,7 +352,7 @@ export type Rule = z.infer<typeof ruleSchema>;
 export const pronunciationNoteSchema = z.object({
   letter: z.string().min(1),
   ipa: z.string().min(1),
-  zh: z.string().min(1),
+  note: localizedSchema,
   examples: z.array(z.string().min(1)).min(1),
 });
 
@@ -311,11 +361,15 @@ export const grammarLessonSchema = z.object({
   level: levelSchema,
   city: citySchema,
   order: z.number().int().min(1),
-  title: z.string().min(1),
-  intro: z.string().min(1),
+  title: localizedSchema,
+  intro: localizedSchema,
   rules: z.array(ruleSchema).min(1),
-  /** 中文母語者常犯的錯，明講。規格 §6 的核心資產。 */
-  chineseTrap: z.string().min(1).optional(),
+  /**
+   * 最容易犯的錯，直接點破。規格 §6 的核心資產。
+   * 原本叫 chineseTrap，內容改寫成不拿其他語言作參照後改名為 pitfalls —— 
+   * 現在它對任何母語的學習者都成立。
+   */
+  pitfalls: localizedSchema.optional(),
   pronunciation: z.array(pronunciationNoteSchema).optional(),
   regional: regionalSchema.optional(),
   exercises: z.array(exerciseSchema).min(1),
@@ -337,10 +391,10 @@ export type GrammarLesson = z.infer<typeof grammarLessonSchema>;
 
 export const journeyStopSchema = z.object({
   city: citySchema,
-  nameZh: z.string().min(1),
+  name: localizedSchema,
   nameEs: z.string().min(1),
-  country: z.string().min(1),
-  blurb: z.string().min(1),
+  country: localizedSchema,
+  blurb: localizedSchema,
   /**
    * 允許為空：基多以後的城市要等 Phase 5 的 A1–B1 內容才有課程，
    * 但地圖從一開始就要能畫出完整五站（後面的顯示為未解鎖）。

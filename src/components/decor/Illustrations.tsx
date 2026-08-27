@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useT } from '@/i18n';
 
 /**
  * 空狀態／載入狀態插畫。全部自己畫 inline SVG，不外連圖片（離線要求）。
@@ -7,8 +8,14 @@ import { cn } from '@/lib/utils';
 
 /** 載入中：轉動的羅盤 */
 export function CompassLoading({ className }: { className?: string }) {
+  const { locale } = useT();
   return (
-    <svg viewBox="0 0 96 96" role="img" aria-label="載入中" className={cn('size-24', className)}>
+    <svg
+      viewBox="0 0 96 96"
+      role="img"
+      aria-label={locale === 'zh' ? '載入中' : 'Loading'}
+      className={cn('size-24', className)}
+    >
       <circle cx="48" cy="48" r="38" className="fill-accent-100 dark:fill-ink-800" />
       <circle
         cx="48"
@@ -46,8 +53,14 @@ export function CompassLoading({ className }: { className?: string }) {
 
 /** 空狀態：一頂草帽 + 一片葉子，語氣輕鬆 */
 export function EmptyHat({ className }: { className?: string }) {
+  const { locale } = useT();
   return (
-    <svg viewBox="0 0 140 110" role="img" aria-label="沒有東西" className={cn('h-28', className)}>
+    <svg
+      viewBox="0 0 140 110"
+      role="img"
+      aria-label={locale === 'zh' ? '沒有東西' : 'Nothing here'}
+      className={cn('h-28', className)}
+    >
       <ellipse cx="70" cy="92" rx="46" ry="7" className="fill-ink-200/60 dark:fill-ink-700/50" />
       <path
         d="M18 74 Q70 96 122 74 Q118 66 70 68 Q22 66 18 74 Z"
@@ -69,8 +82,14 @@ export function EmptyHat({ className }: { className?: string }) {
 
 /** 錯誤／找不到：斷掉的路標 */
 export function BrokenSignpost({ className }: { className?: string }) {
+  const { locale } = useT();
   return (
-    <svg viewBox="0 0 120 120" role="img" aria-label="出了點問題" className={cn('h-28', className)}>
+    <svg
+      viewBox="0 0 120 120"
+      role="img"
+      aria-label={locale === 'zh' ? '出了點問題' : 'Something went wrong'}
+      className={cn('h-28', className)}
+    >
       <ellipse cx="60" cy="106" rx="34" ry="6" className="fill-ink-200/60 dark:fill-ink-700/50" />
       <rect x="55" y="42" width="10" height="62" rx="4" className="fill-ink-400" />
       <g transform="rotate(-8 60 52)">

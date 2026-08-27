@@ -1,15 +1,16 @@
 import type { ReactNode } from 'react';
-import { Moon, Sun, MonitorSmartphone, Mountain } from 'lucide-react';
+import { Moon, Sun, MonitorSmartphone, Mountain, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { PageDecor } from '@/components/decor/Patterns';
 import { StorageBanner } from './StorageBanner';
 import { useTheme } from '@/hooks/useTheme';
+import { useT } from '@/i18n';
 
 const THEME_META = {
-  light: { icon: Sun, label: '淺色' },
-  dark: { icon: Moon, label: '深色' },
-  system: { icon: MonitorSmartphone, label: '跟隨系統' },
+  light: { icon: Sun, labelKey: 'themeLight' },
+  dark: { icon: Moon, labelKey: 'themeDark' },
+  system: { icon: MonitorSmartphone, labelKey: 'themeSystem' },
 } as const;
 
 /**
@@ -40,8 +41,10 @@ export function AppShell({
   aside?: ReactNode;
 }) {
   const { theme, cycleTheme } = useTheme();
+  const { t, locale, toggleLocale } = useT();
   const meta = THEME_META[theme];
   const ThemeIcon = meta.icon;
+  const themeLabel = t(meta.labelKey);
 
   return (
     <div className="min-h-dvh">
@@ -56,19 +59,31 @@ export function AppShell({
             </span>
             <div className="leading-tight">
               <p className="text-base font-extrabold tracking-tight text-body">
-                Camino a Quito
+                {t('appName')}
               </p>
-              <p className="text-[11px] font-semibold text-muted">西班牙文之路 · 拉美變體</p>
+              <p className="text-[11px] font-semibold text-muted">{t('appTagline')}</p>
             </div>
           </div>
 
           <div className="ml-auto flex items-center gap-2">
+            {/* 一個開關切全部：介面與解說語言一起換 */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLocale}
+              aria-label={`${t('langToggle')}（${t('langCurrent')}）`}
+              title={t('langToggle')}
+              className="gap-1.5 font-extrabold"
+            >
+              <Languages aria-hidden="true" />
+              {locale === 'zh' ? '中' : 'EN'}
+            </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={cycleTheme}
-              aria-label={`切換主題（目前：${meta.label}）`}
-              title={`主題：${meta.label}`}
+              aria-label={`${t('themeToggle')}（${t('themeCurrent')}: ${themeLabel}）`}
+              title={themeLabel}
             >
               <ThemeIcon aria-hidden="true" />
             </Button>

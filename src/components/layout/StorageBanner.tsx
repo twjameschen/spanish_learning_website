@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { TriangleAlert } from 'lucide-react';
 import { useStorageTier } from '@/hooks/useStorageTier';
 import { BackupControls } from '@/components/BackupControls';
+import { useT } from '@/i18n';
 
 /**
  * memory 層警示條。
@@ -9,18 +10,16 @@ import { BackupControls } from '@/components/BackupControls';
  * 只有在 IndexedDB 與 localStorage **實測都寫不進去**時才顯示，
  * 常見原因是無痕模式、瀏覽器停用網站資料、配額用盡，或 Firefox 在 file:// 下擋 IndexedDB。
  * （實測 Chrome/Edge 在 file:// 下兩者都可用，所以雙擊開啟通常不會看到這條。）
- *
- * 這件事必須明講，而不是讓使用者練了一小時才發現白費。
  */
 export function StorageBanner() {
   const tier = useStorageTier();
+  const { t } = useT();
   const ephemeral = tier === 'memory';
 
   useEffect(() => {
     if (!ephemeral) return;
     const onBeforeUnload = (e: BeforeUnloadEvent) => {
       e.preventDefault();
-      // 現代瀏覽器只認 preventDefault / returnValue，訊息內容不會顯示
       e.returnValue = '';
     };
     window.addEventListener('beforeunload', onBeforeUnload);
@@ -43,19 +42,12 @@ export function StorageBanner() {
             className="mt-0.5 size-5 shrink-0 text-accent-700 dark:text-accent-300"
           />
           <span>
-            <strong className="font-extrabold">這個瀏覽器不讓本頁儲存資料，進度不會自動保存。</strong>
-            {' '}常見原因是無痕／隱私模式、瀏覽器停用了網站資料，或儲存配額已滿。
-            離開前請按「匯出進度」，下次再用「匯入進度」接回來。
+            <strong className="font-extrabold">{t('bannerTitle')}</strong>{' '}
+            {t('bannerBody')}
             {isFile ? (
               <>
                 <br />
-                你是直接開啟本機檔案（
-                <code className="rounded bg-black/10 px-1 font-mono text-xs">file://</code>
-                ）。改用{' '}
-                <code className="rounded bg-black/10 px-1 font-mono text-xs">
-                  python -m http.server 8000
-                </code>{' '}
-                開啟通常就能正常保存（見 README）。
+                {t('bannerFile')}
               </>
             ) : null}
           </span>
