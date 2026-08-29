@@ -4,8 +4,15 @@ import { zustandStorage } from '@/lib/storage';
 import type { Locale } from '@/content/schema';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
-/** 每日目標（分鐘） */
-export type DailyGoal = 10 | 20 | 30;
+/**
+ * 每日目標（分鐘）。
+ *
+ * 這裡的「分鐘」是 dailyStats.seconds，也就是**實際作答的思考時間**加總，
+ * 不是開著分頁的時間。A0 全部 99 題就算每題想 15 秒也只有約 25 分鐘，
+ * 所以目標值必須小 —— 20 分鐘的日目標等於要求一天做完 8 成的課程，
+ * 連續天數會永遠開不了張。5 分鐘約等於 20 題、兩課，才是能天天達成的習慣。
+ */
+export type DailyGoal = 5 | 10 | 15;
 
 interface SettingsState {
   theme: ThemeMode;
@@ -33,7 +40,7 @@ export const useSettingsStore = create<SettingsState>()(
     (set) => ({
       theme: 'system',
       locale: 'zh',
-      dailyGoal: 20,
+      dailyGoal: 5,
       speechEnabled: true,
       showNeedsVerify: true,
       hydrated: false,

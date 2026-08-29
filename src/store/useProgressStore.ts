@@ -8,6 +8,7 @@ import {
   type StoredCard, type CardKey, type Card,
 } from '@/lib/fsrs';
 import type { ExerciseType } from '@/content/schema';
+import { advanceStreak, initialStreak, type StreakState } from '@/lib/streak';
 
 /**
  * 學習進度。
@@ -51,13 +52,26 @@ export interface LessonProgress {
 
 const MAX_RECENT_LOG = 2000;
 
+/**
+ * 單題最多能記多少秒到「今天練習時間」。
+ *
+ * ms 是「題目出現 → 送出答案」的實際間隔，沒有上限：使用者中途離開座位，
+ * 一題就能記進去半小時，每日目標瞬間達成、儀表板的平均作答時間也被帶歪。
+ * 一題想超過兩分鐘實務上就是離開了，不是在想，所以在這裡截斷。
+ * 只截斷計入每日統計的部分，recentLog 仍存原始 ms（分析時看得到離開的痕跡）。
+ */
+const MAX_ANSWER_SECONDS = 120;
+
 interface ProgressState {
   cards: Record<string, StoredCard>;
   dailyStats: Record<string, DailyStat>;
   recentLog: AnswerRecord[];
   lessons: Record<string, LessonProgress>;
-  /** 累計 XP。等級與 combo 的計算在 Phase 4 接上。 */
+  /** 累計 XP */
   totalXp: number;
+  streak: StreakState;
+  /** 已看過（慶祝過）的成就 id，避免重複跳慶祝 */
+  seenAchievements: string[];
   hydrated: boolean;
 
   recordAnswer: (input: {
@@ -70,6 +84,9 @@ interface ProgressState {
     xp?: number;
   }) => void;
   completeLesson: (lessonId: string, accuracy: number) => void;
+  /** 依今天是否達成每日目標推進連續天數。每次開站與每次作答後呼叫。 */
+  syncStreak: (metGoal: boolean) => void;
+  markAchievementsSeen: (ids: string[]) => void;
   reset: () => void;
 }
 
@@ -83,6 +100,8 @@ export const useProgressStore = create<ProgressState>()(
       recentLog: [],
       lessons: {},
       totalXp: 0,
+      streak: initialStreak(),
+      seenAchievements: [],
       hydrated: false,
 
       recordAnswer: ({ key, exerciseType, correct, ms, lessonId, hesitant, xp = 0 }) => {
@@ -112,7 +131,7 @@ export const useProgressStore = create<ProgressState>()(
             [day]: {
               answered: prevDay.answered + 1,
               correct: prevDay.correct + (correct ? 1 : 0),
-              seconds: prevDay.seconds + Math.round(ms / 1000),
+              seconds: prevDay.seconds + Math.min(MAX_ANSWER_SECONDS, Math.round(ms / 1000)),
               xp: prevDay.xp + xp,
             },
           },
@@ -137,7 +156,32 @@ export const useProgressStore = create<ProgressState>()(
         });
       },
 
-      reset: () => set({ cards: {}, dailyStats: {}, recentLog: [], lessons: {}, totalXp: 0 }),
+      syncStreak: (metGoal) => {
+        const state = get();
+        const { state: next } = advanceStreak(state.streak, localDayKey(), metGoal);
+        // 只有真的變了才 set，避免每次開站都寫一次儲存層
+        if (
+          next.current !== state.streak.current ||
+          next.freezes !== state.streak.freezes ||
+          next.lastActiveDay !== state.streak.lastActiveDay ||
+          next.lastFreezeGrantWeek !== state.streak.lastFreezeGrantWeek
+        ) {
+          set({ streak: next });
+        }
+      },
+
+      markAchievementsSeen: (ids) => {
+        const state = get();
+        const merged = new Set([...state.seenAchievements, ...ids]);
+        if (merged.size !== state.seenAchievements.length) {
+          set({ seenAchievements: [...merged] });
+        }
+      },
+
+      reset: () => set({
+        cards: {}, dailyStats: {}, recentLog: [], lessons: {}, totalXp: 0,
+        streak: initialStreak(), seenAchievements: [],
+      }),
     }),
     {
       name: PROGRESS_KEY,

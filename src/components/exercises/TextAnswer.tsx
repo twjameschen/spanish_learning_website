@@ -74,7 +74,7 @@ function TextInputCore({
           spellCheck={false}
           aria-label={placeholder}
         />
-        <Button onClick={submit} disabled={answered || !value.trim()}>
+        <Button onClick={submit} disabled={answered || !value.trim()} aria-label={t('submitAnswer')}>
           <CornerDownLeft aria-hidden="true" />
         </Button>
       </div>

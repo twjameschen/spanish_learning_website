@@ -1,15 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
-import { BookMarked, GraduationCap, Sparkles, Camera, MapPin, ArrowRight, CalendarCheck } from 'lucide-react';
+import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { BackupControls } from '@/components/BackupControls';
+import { StreakCard } from '@/components/StreakCard';
+import { JourneyMap } from '@/components/journey/JourneyMap';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { SunMotif } from '@/components/decor/Patterns';
 import { useStorageTier } from '@/hooks/useStorageTier';
 import { takeSnapshot, listSnapshots, type SnapshotMeta } from '@/lib/snapshot';
 import { useProgressStore, dueTodayCount } from '@/store/useProgressStore';
 import { levelProgress } from '@/lib/xp';
+import { evaluateAchievements } from '@/lib/achievements';
+import { buildAchievementSnapshot } from '@/lib/snapshotProgress';
 import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
@@ -26,13 +30,21 @@ const TIER_TEXT: Record<
 };
 
 export function HomePage() {
-  const { t, L } = useT();
+  const { t } = useT();
   const tier = useStorageTier();
   const [snapshots, setSnapshots] = useState<SnapshotMeta[]>([]);
   const cards = useProgressStore((s) => s.cards);
   const totalXp = useProgressStore((s) => s.totalXp);
+  const lessonProgress = useProgressStore((s) => s.lessons);
   const dueCount = useMemo(() => dueTodayCount(), [cards]);
   const level = levelProgress(totalXp);
+
+  const achievements = useMemo(
+    () => evaluateAchievements(buildAchievementSnapshot()),
+    [cards, lessonProgress, totalXp],
+  );
+  const unlockedCount = achievements.filter((a) => a.unlocked).length;
+  const totalAchievements = achievements.length;
 
   useEffect(() => {
     let alive = true;
@@ -52,7 +64,7 @@ export function HomePage() {
         <div className="relative space-y-3">
           <Badge variant="accent" className="bg-white/25 text-white">
             <Sparkles aria-hidden="true" />
-            Phase 2 · A0
+            Phase 4 · A0
           </Badge>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             {t('heroTitle')}
@@ -63,9 +75,9 @@ export function HomePage() {
           <div className="max-w-sm pt-2">
             <div className="mb-1.5 flex items-baseline justify-between text-xs font-bold text-white/90">
               <span>{t('progress')}</span>
-              <span>Phase 2 / 7</span>
+              <span>Phase 4 / 7</span>
             </div>
-            <Progress value={(2 / 7) * 100} className="bg-white/25" />
+            <Progress value={(4 / 7) * 100} className="bg-white/25" />
           </div>
         </div>
       </section>
@@ -87,22 +99,26 @@ export function HomePage() {
         </a>
       ) : null}
 
-      {/* 等級進度 */}
-      {totalXp > 0 ? (
-        <Card>
-          <CardContent className="space-y-2 pt-5">
-            <div className="flex items-baseline justify-between text-sm">
-              <span className="font-extrabold text-body">Lv. {level.level}</span>
-              <span className="font-semibold text-muted">
-                {level.intoLevel} / {level.levelSpan} XP
-              </span>
-            </div>
-            <Progress value={level.ratio * 100} />
-          </CardContent>
-        </Card>
-      ) : null}
+      {/* 連續天數與等級：連續天數一律顯示（第 0 天也要看得到目標），等級有 XP 才顯示。
+          還沒有 XP 時等級卡不存在，streak 卡就整列鋪滿，避免右半邊空一塊。 */}
+      <div className={totalXp > 0 ? 'grid gap-4 sm:grid-cols-2' : 'grid gap-4'}>
+        <StreakCard />
+        {totalXp > 0 ? (
+          <Card>
+            <CardContent className="space-y-2 pt-5">
+              <div className="flex items-baseline justify-between text-sm">
+                <span className="font-extrabold text-body">Lv. {level.level}</span>
+                <span className="font-semibold text-muted">
+                  {level.intoLevel} / {level.levelSpan} XP
+                </span>
+              </div>
+              <Progress value={level.ratio * 100} />
+            </CardContent>
+          </Card>
+        ) : null}
+      </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <a href={hrefFor({ name: 'vocab' })} className="group">
           <Card className="h-full transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift">
             <CardHeader>
@@ -134,37 +150,32 @@ export function HomePage() {
             </CardHeader>
           </Card>
         </a>
+
+        <a href={hrefFor({ name: 'achievements' })} className="group sm:col-span-2 lg:col-span-1">
+          <Card className="h-full transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift">
+            <CardHeader>
+              <div className="flex items-center gap-2.5">
+                <span className="grid size-10 place-items-center rounded-2xl bg-accent-400 text-ink-900">
+                  <Trophy aria-hidden="true" className="size-5" />
+                </span>
+                <CardTitle>{t('achievementsTitle')}</CardTitle>
+                <ArrowRight aria-hidden="true" className="ml-auto size-4 text-muted transition-transform group-hover:translate-x-1" />
+              </div>
+              <CardDescription>
+                {t('achievementsProgress', { done: unlockedCount, total: totalAchievements })}
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </a>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('journeyTitle')}</CardTitle>
+          <CardTitle>{t('journeyMapTitle')}</CardTitle>
           <CardDescription>{t('journeyDesc', { n: openStops.length })}</CardDescription>
         </CardHeader>
         <CardContent>
-          <ol className="space-y-2">
-            {journey.map((stop) => {
-              const open = stop.lessonIds.length > 0;
-              return (
-                <li
-                  key={stop.city}
-                  className="flex items-center gap-3 rounded-2xl bg-surface-2 px-4 py-3"
-                >
-                  <MapPin
-                    aria-hidden="true"
-                    className={open ? 'size-4 shrink-0 text-primary-500' : 'size-4 shrink-0 text-muted/50'}
-                  />
-                  <span className={open ? 'font-bold text-body' : 'font-bold text-muted/70'}>
-                    {L(stop.name)}
-                  </span>
-                  <span lang="es" className="text-sm text-muted">{stop.nameEs}</span>
-                  <span className="ml-auto text-xs font-semibold text-muted">
-                    {open ? t('lessonsCount', { n: stop.lessonIds.length }) : t('notOpenYet')}
-                  </span>
-                </li>
-              );
-            })}
-          </ol>
+          <JourneyMap />
         </CardContent>
       </Card>
 

@@ -89,7 +89,7 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
           spellCheck={false}
           aria-label={t('typeWhatYouHear')}
         />
-        <Button onClick={submit} disabled={answered || !value.trim()}>
+        <Button onClick={submit} disabled={answered || !value.trim()} aria-label={t('submitAnswer')}>
           <CornerDownLeft aria-hidden="true" />
         </Button>
       </div>

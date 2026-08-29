@@ -1,14 +1,16 @@
-import { Home, BookMarked, GraduationCap, CalendarCheck } from 'lucide-react';
+import { Home, BookMarked, GraduationCap, CalendarCheck, Trophy } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { hrefFor, type Route } from '@/lib/router';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
 
-const ITEMS: { route: Route; labelKey: UIKey; icon: typeof Home }[] = [
+/** shortKey 只有手機底部列會用；沒給就沿用 labelKey */
+const ITEMS: { route: Route; labelKey: UIKey; shortKey?: UIKey; icon: typeof Home }[] = [
   { route: { name: 'home' }, labelKey: 'navHome', icon: Home },
-  { route: { name: 'vocab' }, labelKey: 'navVocab', icon: BookMarked },
+  { route: { name: 'vocab' }, labelKey: 'navVocab', shortKey: 'navVocabShort', icon: BookMarked },
   { route: { name: 'lessons' }, labelKey: 'navLessons', icon: GraduationCap },
   { route: { name: 'review' }, labelKey: 'navReview', icon: CalendarCheck },
+  { route: { name: 'achievements' }, labelKey: 'navAchievements', shortKey: 'navAchievementsShort', icon: Trophy },
 ];
 
 const isActive = (route: Route, current: Route): boolean =>
@@ -49,7 +51,7 @@ export function BottomNav({ current }: { current: Route }) {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-canvas/95 backdrop-blur-md lg:hidden">
       <ul className="mx-auto flex max-w-lg">
-        {ITEMS.map(({ route, labelKey, icon: Icon }) => {
+        {ITEMS.map(({ route, labelKey, shortKey, icon: Icon }) => {
           const active = isActive(route, current);
           return (
             <li key={route.name} className="flex-1">
@@ -57,12 +59,12 @@ export function BottomNav({ current }: { current: Route }) {
                 href={hrefFor(route)}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition-colors',
+                  'flex flex-col items-center gap-0.5 px-1 py-2.5 text-[11px] font-bold transition-colors',
                   active ? 'text-primary-600' : 'text-muted',
                 )}
               >
                 <Icon aria-hidden="true" className="size-5" />
-                {t(labelKey)}
+                <span className="max-w-full truncate">{t(shortKey ?? labelKey)}</span>
               </a>
             </li>
           );

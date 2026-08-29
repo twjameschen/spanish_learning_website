@@ -180,6 +180,8 @@ export const UI = {
   nextQuestion: { zh: '下一題', en: 'Next' },
   finish: { zh: '完成', en: 'Finish' },
   check: { zh: '檢查', en: 'Check' },
+  // 送出鍵只有圖示，需要可讀出來的名字（螢幕閱讀器否則只會唸「按鈕」）
+  submitAnswer: { zh: '送出答案', en: 'Submit answer' },
   clear: { zh: '清空', en: 'Clear' },
   comboCount: { zh: '連對 {n}', en: '{n} in a row' },
   correctAnswer: { zh: '正確答案', en: 'Correct answer' },
@@ -240,6 +242,28 @@ export const UI = {
   dueToday: { zh: '今天要複習 {n} 張', en: '{n} cards due today' },
   navReview: { zh: '複習', en: 'Review' },
   mastery: { zh: '掌握度', en: 'Mastery' },
+
+  // ---- 遊戲化 ----
+  achievementsTitle: { zh: '成就', en: 'Achievements' },
+  achievementsProgress: { zh: '已解鎖 {done} / {total}', en: '{done} of {total} unlocked' },
+  navAchievements: { zh: '成就', en: 'Achievements' },
+  // 手機底部列只有五分之一個螢幕寬，長字會擠爆或折行，另給短標
+  navVocabShort: { zh: '單字', en: 'Words' },
+  navAchievementsShort: { zh: '成就', en: 'Awards' },
+  streakDays: { zh: '連續 {n} 天', en: '{n}-day streak' },
+  streakNone: { zh: '還沒開始連續紀錄', en: 'No streak yet' },
+  freezesLeft: { zh: '{n} 張補簽卡', en: '{n} streak freezes' },
+  freezeExplain: {
+    zh: '每週會拿到一張補簽卡，漏一天時自動用掉，連續紀錄不會斷。',
+    en: 'You get one streak freeze a week. Miss a day and it is spent automatically, keeping your streak alive.',
+  },
+  levelUp: { zh: '升級了！', en: 'Level up!' },
+  levelUpTo: { zh: '達到等級 {n}', en: 'You reached level {n}' },
+  achievementUnlocked: { zh: '解鎖成就', en: 'Achievement unlocked' },
+  dailyGoalMet: { zh: '今天的目標達成了', en: "Today's goal is done" },
+  dailyGoalProgress: { zh: '今天 {done} / {goal} 分鐘', en: '{done} of {goal} min today' },
+  journeyMapTitle: { zh: '旅程地圖', en: 'Journey map' },
+  nice: { zh: '好', en: 'Nice' },
 } as const satisfies Record<string, Localized>;
 
 export type UIKey = keyof typeof UI;

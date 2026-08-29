@@ -14,6 +14,7 @@ import { GenderSort } from './GenderSort';
 import type { ExerciseOutcome } from './types';
 import { xpForAnswer } from '@/lib/xp';
 import { useProgressStore, wordKey, exerciseKey } from '@/store/useProgressStore';
+import { useSessionStore } from '@/store/useSessionStore';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
 import type { Exercise } from '@/content/schema';
@@ -50,6 +51,7 @@ export function ExercisePlayer({
 }) {
   const { t, L } = useT();
   const recordAnswer = useProgressStore((s) => s.recordAnswer);
+  const setAnswering = useSessionStore((s) => s.setAnswering);
 
   const [index, setIndex] = useState(0);
   const [outcome, setOutcome] = useState<ExerciseOutcome | null>(null);
@@ -71,6 +73,12 @@ export function ExercisePlayer({
   useEffect(() => {
     if (outcome) nextRef.current?.focus();
   }, [outcome]);
+
+  // 作答期間先壓住慶祝視窗，免得蓋掉答題回饋；離開這一頁也要記得放開
+  useEffect(() => {
+    setAnswering(!finished);
+  }, [finished, setAnswering]);
+  useEffect(() => () => setAnswering(false), [setAnswering]);
 
   const handleAnswer = useCallback(
     (result: ExerciseOutcome) => {
