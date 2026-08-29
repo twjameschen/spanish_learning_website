@@ -62,7 +62,21 @@
       "zh": "抵達海拔 2850 公尺的首都。現在式、15 個高頻不規則動詞、gustar 型動詞，以及 Sierra 高地特有的禮貌等級。",
       "en": "Arriving in the capital at 2,850 metres. The present tense, 15 high-frequency irregular verbs, gustar-type verbs, and the politeness levels particular to the Sierra highlands."
     },
-    "lessonIds": []
+    "lessonIds": [
+      "a1-presente-regular",
+      "a1-presente-irregular",
+      "a1-cambio-raiz",
+      "a1-gustar",
+      "a1-reflexivos",
+      "a1-ir-a",
+      "a1-progresivo",
+      "a1-objeto-directo",
+      "a1-objeto-indirecto",
+      "a1-posesivos",
+      "a1-comparativos",
+      "a1-imperativo",
+      "a1-cortesia-sierra"
+    ]
   },
   {
     "city": "cuenca",

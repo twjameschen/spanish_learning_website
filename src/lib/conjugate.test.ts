@@ -250,3 +250,16 @@ describe('分詞與副動詞的母音字根', () => {
     expect(gerundio('vivir')).toBe('viviendo');
   });
 });
+
+describe('反身動詞的命令式不由引擎產生', () => {
+  it('丟出可讀的錯誤，而不是靜靜產出錯的形式', () => {
+    // 正確答案是 levántate / levántese / levantémonos / levántense，
+    // 引擎只會拼出 se levanta 這種錯形式，所以擋在這裡
+    expect(() => conjugateImperative('levantarse')).toThrow(/反身動詞/);
+    expect(() => conjugateImperative('ducharse')).toThrow(/手寫/);
+  });
+
+  it('非反身動詞照常產生', () => {
+    expect(conjugateImperative('hablar').tu).toBe('habla');
+  });
+});

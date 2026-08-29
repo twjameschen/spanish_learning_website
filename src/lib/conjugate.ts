@@ -145,8 +145,21 @@ export function conjugateAll(raw: string): Record<Tense, PersonSet> {
  * 肯定命令式。
  * tú 用現在式第三人稱單數；usted / nosotros / ustedes 用現在虛擬式對應人稱。
  * 沒有 yo —— 命令式本來就不能對自己下令。
+ *
+ * **反身動詞不由這裡產生**，會直接丟錯。
+ * 原因是肯定命令式要把代名詞黏到動詞後面，而且黏上去之後音節變多、
+ * 重音位置會偏掉，必須補寫重音符號：levantarse → levánta**te**、
+ * nosotros 還要吃掉 -mos 的 s：levantemos + nos → levantémo**nos**。
+ * 這需要正確的音節切分，寫錯會教出錯的命令式，
+ * 所以寧可在這裡擋下來、由 JSON 手寫，也不要靜靜產出一個看起來合理的錯形式。
  */
 export function conjugateImperative(raw: string): ImperativeSet {
+  const { reflexive } = parseVerb(raw);
+  if (reflexive) {
+    throw new Error(
+      `反身動詞的命令式要黏代名詞並調整重音，引擎不產生，請在 JSON 手寫：${raw}`,
+    );
+  }
   const presente = conjugateTense(raw, 'presente');
   const subj = conjugateTense(raw, 'presenteSubjuntivo');
   return {

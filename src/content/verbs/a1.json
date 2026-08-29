@@ -3190,5 +3190,629 @@
       "nosotros": "gustemos",
       "ellos_ustedes": "gusten"
     }
+  },
+  {
+    "id": "levantarse",
+    "es": "levantarse",
+    "gloss": {
+      "zh": "起床；起身",
+      "en": "to get up"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me levanto a las seis.",
+    "exampleGloss": {
+      "zh": "我六點起床。",
+      "en": "I get up at six."
+    },
+    "infinitive": "levantarse",
+    "irregular": false,
+    "reflexive": true,
+    "participio": "levantado",
+    "gerundio": "levantando",
+    "conjugations": {
+      "presente": {
+        "yo": "me levanto",
+        "tu": "te levantas",
+        "el_ella_usted": "se levanta",
+        "nosotros": "nos levantamos",
+        "ellos_ustedes": "se levantan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me levanté",
+        "tu": "te levantaste",
+        "el_ella_usted": "se levantó",
+        "nosotros": "nos levantamos",
+        "ellos_ustedes": "se levantaron"
+      },
+      "imperfecto": {
+        "yo": "me levantaba",
+        "tu": "te levantabas",
+        "el_ella_usted": "se levantaba",
+        "nosotros": "nos levantábamos",
+        "ellos_ustedes": "se levantaban"
+      },
+      "futuro": {
+        "yo": "me levantaré",
+        "tu": "te levantarás",
+        "el_ella_usted": "se levantará",
+        "nosotros": "nos levantaremos",
+        "ellos_ustedes": "se levantarán"
+      },
+      "condicional": {
+        "yo": "me levantaría",
+        "tu": "te levantarías",
+        "el_ella_usted": "se levantaría",
+        "nosotros": "nos levantaríamos",
+        "ellos_ustedes": "se levantarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me levante",
+        "tu": "te levantes",
+        "el_ella_usted": "se levante",
+        "nosotros": "nos levantemos",
+        "ellos_ustedes": "se levanten"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me levantara",
+        "tu": "te levantaras",
+        "el_ella_usted": "se levantara",
+        "nosotros": "nos levantáramos",
+        "ellos_ustedes": "se levantaran"
+      }
+    },
+    "imperativo": {
+      "tu": "levántate",
+      "el_ella_usted": "levántese",
+      "nosotros": "levantémonos",
+      "ellos_ustedes": "levántense"
+    }
+  },
+  {
+    "id": "ducharse",
+    "es": "ducharse",
+    "gloss": {
+      "zh": "洗澡",
+      "en": "to shower"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me ducho antes de salir.",
+    "exampleGloss": {
+      "zh": "我出門前洗澡。",
+      "en": "I shower before going out."
+    },
+    "infinitive": "ducharse",
+    "irregular": false,
+    "reflexive": true,
+    "participio": "duchado",
+    "gerundio": "duchando",
+    "conjugations": {
+      "presente": {
+        "yo": "me ducho",
+        "tu": "te duchas",
+        "el_ella_usted": "se ducha",
+        "nosotros": "nos duchamos",
+        "ellos_ustedes": "se duchan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me duché",
+        "tu": "te duchaste",
+        "el_ella_usted": "se duchó",
+        "nosotros": "nos duchamos",
+        "ellos_ustedes": "se ducharon"
+      },
+      "imperfecto": {
+        "yo": "me duchaba",
+        "tu": "te duchabas",
+        "el_ella_usted": "se duchaba",
+        "nosotros": "nos duchábamos",
+        "ellos_ustedes": "se duchaban"
+      },
+      "futuro": {
+        "yo": "me ducharé",
+        "tu": "te ducharás",
+        "el_ella_usted": "se duchará",
+        "nosotros": "nos ducharemos",
+        "ellos_ustedes": "se ducharán"
+      },
+      "condicional": {
+        "yo": "me ducharía",
+        "tu": "te ducharías",
+        "el_ella_usted": "se ducharía",
+        "nosotros": "nos ducharíamos",
+        "ellos_ustedes": "se ducharían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me duche",
+        "tu": "te duches",
+        "el_ella_usted": "se duche",
+        "nosotros": "nos duchemos",
+        "ellos_ustedes": "se duchen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me duchara",
+        "tu": "te ducharas",
+        "el_ella_usted": "se duchara",
+        "nosotros": "nos ducháramos",
+        "ellos_ustedes": "se ducharan"
+      }
+    },
+    "imperativo": {
+      "tu": "dúchate",
+      "el_ella_usted": "dúchese",
+      "nosotros": "duchémonos",
+      "ellos_ustedes": "dúchense"
+    }
+  },
+  {
+    "id": "lavarse",
+    "es": "lavarse",
+    "gloss": {
+      "zh": "洗（自己的某部位）",
+      "en": "to wash (oneself)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me lavo las manos antes de comer.",
+    "exampleGloss": {
+      "zh": "我吃飯前洗手。",
+      "en": "I wash my hands before eating."
+    },
+    "infinitive": "lavarse",
+    "irregular": false,
+    "reflexive": true,
+    "participio": "lavado",
+    "gerundio": "lavando",
+    "conjugations": {
+      "presente": {
+        "yo": "me lavo",
+        "tu": "te lavas",
+        "el_ella_usted": "se lava",
+        "nosotros": "nos lavamos",
+        "ellos_ustedes": "se lavan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me lavé",
+        "tu": "te lavaste",
+        "el_ella_usted": "se lavó",
+        "nosotros": "nos lavamos",
+        "ellos_ustedes": "se lavaron"
+      },
+      "imperfecto": {
+        "yo": "me lavaba",
+        "tu": "te lavabas",
+        "el_ella_usted": "se lavaba",
+        "nosotros": "nos lavábamos",
+        "ellos_ustedes": "se lavaban"
+      },
+      "futuro": {
+        "yo": "me lavaré",
+        "tu": "te lavarás",
+        "el_ella_usted": "se lavará",
+        "nosotros": "nos lavaremos",
+        "ellos_ustedes": "se lavarán"
+      },
+      "condicional": {
+        "yo": "me lavaría",
+        "tu": "te lavarías",
+        "el_ella_usted": "se lavaría",
+        "nosotros": "nos lavaríamos",
+        "ellos_ustedes": "se lavarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me lave",
+        "tu": "te laves",
+        "el_ella_usted": "se lave",
+        "nosotros": "nos lavemos",
+        "ellos_ustedes": "se laven"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me lavara",
+        "tu": "te lavaras",
+        "el_ella_usted": "se lavara",
+        "nosotros": "nos laváramos",
+        "ellos_ustedes": "se lavaran"
+      }
+    },
+    "imperativo": {
+      "tu": "lávate",
+      "el_ella_usted": "lávese",
+      "nosotros": "lavémonos",
+      "ellos_ustedes": "lávense"
+    }
+  },
+  {
+    "id": "quedarse",
+    "es": "quedarse",
+    "gloss": {
+      "zh": "留下；待著",
+      "en": "to stay"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me quedo en casa hoy.",
+    "exampleGloss": {
+      "zh": "我今天待在家。",
+      "en": "I'm staying home today."
+    },
+    "infinitive": "quedarse",
+    "irregular": false,
+    "reflexive": true,
+    "participio": "quedado",
+    "gerundio": "quedando",
+    "conjugations": {
+      "presente": {
+        "yo": "me quedo",
+        "tu": "te quedas",
+        "el_ella_usted": "se queda",
+        "nosotros": "nos quedamos",
+        "ellos_ustedes": "se quedan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me quedé",
+        "tu": "te quedaste",
+        "el_ella_usted": "se quedó",
+        "nosotros": "nos quedamos",
+        "ellos_ustedes": "se quedaron"
+      },
+      "imperfecto": {
+        "yo": "me quedaba",
+        "tu": "te quedabas",
+        "el_ella_usted": "se quedaba",
+        "nosotros": "nos quedábamos",
+        "ellos_ustedes": "se quedaban"
+      },
+      "futuro": {
+        "yo": "me quedaré",
+        "tu": "te quedarás",
+        "el_ella_usted": "se quedará",
+        "nosotros": "nos quedaremos",
+        "ellos_ustedes": "se quedarán"
+      },
+      "condicional": {
+        "yo": "me quedaría",
+        "tu": "te quedarías",
+        "el_ella_usted": "se quedaría",
+        "nosotros": "nos quedaríamos",
+        "ellos_ustedes": "se quedarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me quede",
+        "tu": "te quedes",
+        "el_ella_usted": "se quede",
+        "nosotros": "nos quedemos",
+        "ellos_ustedes": "se queden"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me quedara",
+        "tu": "te quedaras",
+        "el_ella_usted": "se quedara",
+        "nosotros": "nos quedáramos",
+        "ellos_ustedes": "se quedaran"
+      }
+    },
+    "imperativo": {
+      "tu": "quédate",
+      "el_ella_usted": "quédese",
+      "nosotros": "quedémonos",
+      "ellos_ustedes": "quédense"
+    }
+  },
+  {
+    "id": "despertarse",
+    "es": "despertarse",
+    "gloss": {
+      "zh": "醒來",
+      "en": "to wake up"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me despierto muy temprano.",
+    "exampleGloss": {
+      "zh": "我很早就醒了。",
+      "en": "I wake up very early."
+    },
+    "infinitive": "despertarse",
+    "irregular": true,
+    "reflexive": true,
+    "participio": "despertado",
+    "gerundio": "despertando",
+    "conjugations": {
+      "presente": {
+        "yo": "me despierto",
+        "tu": "te despiertas",
+        "el_ella_usted": "se despierta",
+        "nosotros": "nos despertamos",
+        "ellos_ustedes": "se despiertan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me desperté",
+        "tu": "te despertaste",
+        "el_ella_usted": "se despertó",
+        "nosotros": "nos despertamos",
+        "ellos_ustedes": "se despertaron"
+      },
+      "imperfecto": {
+        "yo": "me despertaba",
+        "tu": "te despertabas",
+        "el_ella_usted": "se despertaba",
+        "nosotros": "nos despertábamos",
+        "ellos_ustedes": "se despertaban"
+      },
+      "futuro": {
+        "yo": "me despertaré",
+        "tu": "te despertarás",
+        "el_ella_usted": "se despertará",
+        "nosotros": "nos despertaremos",
+        "ellos_ustedes": "se despertarán"
+      },
+      "condicional": {
+        "yo": "me despertaría",
+        "tu": "te despertarías",
+        "el_ella_usted": "se despertaría",
+        "nosotros": "nos despertaríamos",
+        "ellos_ustedes": "se despertarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me despierte",
+        "tu": "te despiertes",
+        "el_ella_usted": "se despierte",
+        "nosotros": "nos despertemos",
+        "ellos_ustedes": "se despierten"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me despertara",
+        "tu": "te despertaras",
+        "el_ella_usted": "se despertara",
+        "nosotros": "nos despertáramos",
+        "ellos_ustedes": "se despertaran"
+      }
+    },
+    "imperativo": {
+      "tu": "despiértate",
+      "el_ella_usted": "despiértese",
+      "nosotros": "despertémonos",
+      "ellos_ustedes": "despiértense"
+    }
+  },
+  {
+    "id": "acostarse",
+    "es": "acostarse",
+    "gloss": {
+      "zh": "上床睡覺",
+      "en": "to go to bed"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me acuesto a las once.",
+    "exampleGloss": {
+      "zh": "我十一點上床。",
+      "en": "I go to bed at eleven."
+    },
+    "infinitive": "acostarse",
+    "irregular": true,
+    "reflexive": true,
+    "participio": "acostado",
+    "gerundio": "acostando",
+    "conjugations": {
+      "presente": {
+        "yo": "me acuesto",
+        "tu": "te acuestas",
+        "el_ella_usted": "se acuesta",
+        "nosotros": "nos acostamos",
+        "ellos_ustedes": "se acuestan"
+      },
+      "preteritoIndefinido": {
+        "yo": "me acosté",
+        "tu": "te acostaste",
+        "el_ella_usted": "se acostó",
+        "nosotros": "nos acostamos",
+        "ellos_ustedes": "se acostaron"
+      },
+      "imperfecto": {
+        "yo": "me acostaba",
+        "tu": "te acostabas",
+        "el_ella_usted": "se acostaba",
+        "nosotros": "nos acostábamos",
+        "ellos_ustedes": "se acostaban"
+      },
+      "futuro": {
+        "yo": "me acostaré",
+        "tu": "te acostarás",
+        "el_ella_usted": "se acostará",
+        "nosotros": "nos acostaremos",
+        "ellos_ustedes": "se acostarán"
+      },
+      "condicional": {
+        "yo": "me acostaría",
+        "tu": "te acostarías",
+        "el_ella_usted": "se acostaría",
+        "nosotros": "nos acostaríamos",
+        "ellos_ustedes": "se acostarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me acueste",
+        "tu": "te acuestes",
+        "el_ella_usted": "se acueste",
+        "nosotros": "nos acostemos",
+        "ellos_ustedes": "se acuesten"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me acostara",
+        "tu": "te acostaras",
+        "el_ella_usted": "se acostara",
+        "nosotros": "nos acostáramos",
+        "ellos_ustedes": "se acostaran"
+      }
+    },
+    "imperativo": {
+      "tu": "acuéstate",
+      "el_ella_usted": "acuéstese",
+      "nosotros": "acostémonos",
+      "ellos_ustedes": "acuéstense"
+    }
+  },
+  {
+    "id": "vestirse",
+    "es": "vestirse",
+    "gloss": {
+      "zh": "穿衣服",
+      "en": "to get dressed"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me visto rápido en la mañana.",
+    "exampleGloss": {
+      "zh": "我早上很快穿好衣服。",
+      "en": "I get dressed quickly in the morning."
+    },
+    "infinitive": "vestirse",
+    "irregular": true,
+    "reflexive": true,
+    "participio": "vestido",
+    "gerundio": "vistiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "me visto",
+        "tu": "te vistes",
+        "el_ella_usted": "se viste",
+        "nosotros": "nos vestimos",
+        "ellos_ustedes": "se visten"
+      },
+      "preteritoIndefinido": {
+        "yo": "me vestí",
+        "tu": "te vestiste",
+        "el_ella_usted": "se vistió",
+        "nosotros": "nos vestimos",
+        "ellos_ustedes": "se vistieron"
+      },
+      "imperfecto": {
+        "yo": "me vestía",
+        "tu": "te vestías",
+        "el_ella_usted": "se vestía",
+        "nosotros": "nos vestíamos",
+        "ellos_ustedes": "se vestían"
+      },
+      "futuro": {
+        "yo": "me vestiré",
+        "tu": "te vestirás",
+        "el_ella_usted": "se vestirá",
+        "nosotros": "nos vestiremos",
+        "ellos_ustedes": "se vestirán"
+      },
+      "condicional": {
+        "yo": "me vestiría",
+        "tu": "te vestirías",
+        "el_ella_usted": "se vestiría",
+        "nosotros": "nos vestiríamos",
+        "ellos_ustedes": "se vestirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me vista",
+        "tu": "te vistas",
+        "el_ella_usted": "se vista",
+        "nosotros": "nos vistamos",
+        "ellos_ustedes": "se vistan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me vistiera",
+        "tu": "te vistieras",
+        "el_ella_usted": "se vistiera",
+        "nosotros": "nos vistiéramos",
+        "ellos_ustedes": "se vistieran"
+      }
+    },
+    "imperativo": {
+      "tu": "vístete",
+      "el_ella_usted": "vístase",
+      "nosotros": "vistámonos",
+      "ellos_ustedes": "vístanse"
+    }
+  },
+  {
+    "id": "sentirse",
+    "es": "sentirse",
+    "gloss": {
+      "zh": "覺得（身體或情緒）",
+      "en": "to feel (a way)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me siento mejor hoy.",
+    "exampleGloss": {
+      "zh": "我今天覺得好一點了。",
+      "en": "I feel better today."
+    },
+    "infinitive": "sentirse",
+    "irregular": true,
+    "reflexive": true,
+    "participio": "sentido",
+    "gerundio": "sintiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "me siento",
+        "tu": "te sientes",
+        "el_ella_usted": "se siente",
+        "nosotros": "nos sentimos",
+        "ellos_ustedes": "se sienten"
+      },
+      "preteritoIndefinido": {
+        "yo": "me sentí",
+        "tu": "te sentiste",
+        "el_ella_usted": "se sintió",
+        "nosotros": "nos sentimos",
+        "ellos_ustedes": "se sintieron"
+      },
+      "imperfecto": {
+        "yo": "me sentía",
+        "tu": "te sentías",
+        "el_ella_usted": "se sentía",
+        "nosotros": "nos sentíamos",
+        "ellos_ustedes": "se sentían"
+      },
+      "futuro": {
+        "yo": "me sentiré",
+        "tu": "te sentirás",
+        "el_ella_usted": "se sentirá",
+        "nosotros": "nos sentiremos",
+        "ellos_ustedes": "se sentirán"
+      },
+      "condicional": {
+        "yo": "me sentiría",
+        "tu": "te sentirías",
+        "el_ella_usted": "se sentiría",
+        "nosotros": "nos sentiríamos",
+        "ellos_ustedes": "se sentirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me sienta",
+        "tu": "te sientas",
+        "el_ella_usted": "se sienta",
+        "nosotros": "nos sintamos",
+        "ellos_ustedes": "se sientan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me sintiera",
+        "tu": "te sintieras",
+        "el_ella_usted": "se sintiera",
+        "nosotros": "nos sintiéramos",
+        "ellos_ustedes": "se sintieran"
+      }
+    },
+    "imperativo": {
+      "tu": "siéntete",
+      "el_ella_usted": "siéntase",
+      "nosotros": "sintámonos",
+      "ellos_ustedes": "siéntanse"
+    }
   }
 ]
