@@ -694,5 +694,2501 @@
       "nosotros": "salgamos",
       "ellos_ustedes": "salgan"
     }
+  },
+  {
+    "id": "caminar",
+    "es": "caminar",
+    "gloss": {
+      "zh": "走路",
+      "en": "to walk"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Caminamos por el centro histórico.",
+    "exampleGloss": {
+      "zh": "我們在歷史城區走走。",
+      "en": "We walk through the historic centre."
+    },
+    "infinitive": "caminar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "caminado",
+    "gerundio": "caminando",
+    "conjugations": {
+      "presente": {
+        "yo": "camino",
+        "tu": "caminas",
+        "el_ella_usted": "camina",
+        "nosotros": "caminamos",
+        "ellos_ustedes": "caminan"
+      },
+      "preteritoIndefinido": {
+        "yo": "caminé",
+        "tu": "caminaste",
+        "el_ella_usted": "caminó",
+        "nosotros": "caminamos",
+        "ellos_ustedes": "caminaron"
+      },
+      "imperfecto": {
+        "yo": "caminaba",
+        "tu": "caminabas",
+        "el_ella_usted": "caminaba",
+        "nosotros": "caminábamos",
+        "ellos_ustedes": "caminaban"
+      },
+      "futuro": {
+        "yo": "caminaré",
+        "tu": "caminarás",
+        "el_ella_usted": "caminará",
+        "nosotros": "caminaremos",
+        "ellos_ustedes": "caminarán"
+      },
+      "condicional": {
+        "yo": "caminaría",
+        "tu": "caminarías",
+        "el_ella_usted": "caminaría",
+        "nosotros": "caminaríamos",
+        "ellos_ustedes": "caminarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "camine",
+        "tu": "camines",
+        "el_ella_usted": "camine",
+        "nosotros": "caminemos",
+        "ellos_ustedes": "caminen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "caminara",
+        "tu": "caminaras",
+        "el_ella_usted": "caminara",
+        "nosotros": "camináramos",
+        "ellos_ustedes": "caminaran"
+      }
+    },
+    "imperativo": {
+      "tu": "camina",
+      "el_ella_usted": "camine",
+      "nosotros": "caminemos",
+      "ellos_ustedes": "caminen"
+    }
+  },
+  {
+    "id": "cocinar",
+    "es": "cocinar",
+    "gloss": {
+      "zh": "煮；做菜",
+      "en": "to cook"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Mi mamá cocina muy bien.",
+    "exampleGloss": {
+      "zh": "我媽媽很會做菜。",
+      "en": "My mum cooks really well."
+    },
+    "infinitive": "cocinar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "cocinado",
+    "gerundio": "cocinando",
+    "conjugations": {
+      "presente": {
+        "yo": "cocino",
+        "tu": "cocinas",
+        "el_ella_usted": "cocina",
+        "nosotros": "cocinamos",
+        "ellos_ustedes": "cocinan"
+      },
+      "preteritoIndefinido": {
+        "yo": "cociné",
+        "tu": "cocinaste",
+        "el_ella_usted": "cocinó",
+        "nosotros": "cocinamos",
+        "ellos_ustedes": "cocinaron"
+      },
+      "imperfecto": {
+        "yo": "cocinaba",
+        "tu": "cocinabas",
+        "el_ella_usted": "cocinaba",
+        "nosotros": "cocinábamos",
+        "ellos_ustedes": "cocinaban"
+      },
+      "futuro": {
+        "yo": "cocinaré",
+        "tu": "cocinarás",
+        "el_ella_usted": "cocinará",
+        "nosotros": "cocinaremos",
+        "ellos_ustedes": "cocinarán"
+      },
+      "condicional": {
+        "yo": "cocinaría",
+        "tu": "cocinarías",
+        "el_ella_usted": "cocinaría",
+        "nosotros": "cocinaríamos",
+        "ellos_ustedes": "cocinarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "cocine",
+        "tu": "cocines",
+        "el_ella_usted": "cocine",
+        "nosotros": "cocinemos",
+        "ellos_ustedes": "cocinen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "cocinara",
+        "tu": "cocinaras",
+        "el_ella_usted": "cocinara",
+        "nosotros": "cocináramos",
+        "ellos_ustedes": "cocinaran"
+      }
+    },
+    "imperativo": {
+      "tu": "cocina",
+      "el_ella_usted": "cocine",
+      "nosotros": "cocinemos",
+      "ellos_ustedes": "cocinen"
+    }
+  },
+  {
+    "id": "escuchar",
+    "es": "escuchar",
+    "gloss": {
+      "zh": "聽",
+      "en": "to listen to"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Escucho música en el bus.",
+    "exampleGloss": {
+      "zh": "我在公車上聽音樂。",
+      "en": "I listen to music on the bus."
+    },
+    "infinitive": "escuchar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "escuchado",
+    "gerundio": "escuchando",
+    "conjugations": {
+      "presente": {
+        "yo": "escucho",
+        "tu": "escuchas",
+        "el_ella_usted": "escucha",
+        "nosotros": "escuchamos",
+        "ellos_ustedes": "escuchan"
+      },
+      "preteritoIndefinido": {
+        "yo": "escuché",
+        "tu": "escuchaste",
+        "el_ella_usted": "escuchó",
+        "nosotros": "escuchamos",
+        "ellos_ustedes": "escucharon"
+      },
+      "imperfecto": {
+        "yo": "escuchaba",
+        "tu": "escuchabas",
+        "el_ella_usted": "escuchaba",
+        "nosotros": "escuchábamos",
+        "ellos_ustedes": "escuchaban"
+      },
+      "futuro": {
+        "yo": "escucharé",
+        "tu": "escucharás",
+        "el_ella_usted": "escuchará",
+        "nosotros": "escucharemos",
+        "ellos_ustedes": "escucharán"
+      },
+      "condicional": {
+        "yo": "escucharía",
+        "tu": "escucharías",
+        "el_ella_usted": "escucharía",
+        "nosotros": "escucharíamos",
+        "ellos_ustedes": "escucharían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "escuche",
+        "tu": "escuches",
+        "el_ella_usted": "escuche",
+        "nosotros": "escuchemos",
+        "ellos_ustedes": "escuchen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "escuchara",
+        "tu": "escucharas",
+        "el_ella_usted": "escuchara",
+        "nosotros": "escucháramos",
+        "ellos_ustedes": "escucharan"
+      }
+    },
+    "imperativo": {
+      "tu": "escucha",
+      "el_ella_usted": "escuche",
+      "nosotros": "escuchemos",
+      "ellos_ustedes": "escuchen"
+    }
+  },
+  {
+    "id": "esperar",
+    "es": "esperar",
+    "gloss": {
+      "zh": "等；希望",
+      "en": "to wait; to hope"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Espero el bus en la esquina.",
+    "exampleGloss": {
+      "zh": "我在轉角等公車。",
+      "en": "I wait for the bus on the corner."
+    },
+    "infinitive": "esperar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "esperado",
+    "gerundio": "esperando",
+    "conjugations": {
+      "presente": {
+        "yo": "espero",
+        "tu": "esperas",
+        "el_ella_usted": "espera",
+        "nosotros": "esperamos",
+        "ellos_ustedes": "esperan"
+      },
+      "preteritoIndefinido": {
+        "yo": "esperé",
+        "tu": "esperaste",
+        "el_ella_usted": "esperó",
+        "nosotros": "esperamos",
+        "ellos_ustedes": "esperaron"
+      },
+      "imperfecto": {
+        "yo": "esperaba",
+        "tu": "esperabas",
+        "el_ella_usted": "esperaba",
+        "nosotros": "esperábamos",
+        "ellos_ustedes": "esperaban"
+      },
+      "futuro": {
+        "yo": "esperaré",
+        "tu": "esperarás",
+        "el_ella_usted": "esperará",
+        "nosotros": "esperaremos",
+        "ellos_ustedes": "esperarán"
+      },
+      "condicional": {
+        "yo": "esperaría",
+        "tu": "esperarías",
+        "el_ella_usted": "esperaría",
+        "nosotros": "esperaríamos",
+        "ellos_ustedes": "esperarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "espere",
+        "tu": "esperes",
+        "el_ella_usted": "espere",
+        "nosotros": "esperemos",
+        "ellos_ustedes": "esperen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "esperara",
+        "tu": "esperaras",
+        "el_ella_usted": "esperara",
+        "nosotros": "esperáramos",
+        "ellos_ustedes": "esperaran"
+      }
+    },
+    "imperativo": {
+      "tu": "espera",
+      "el_ella_usted": "espere",
+      "nosotros": "esperemos",
+      "ellos_ustedes": "esperen"
+    }
+  },
+  {
+    "id": "llegar",
+    "es": "llegar",
+    "gloss": {
+      "zh": "到達",
+      "en": "to arrive"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "El vuelo llega a las seis.",
+    "exampleGloss": {
+      "zh": "班機六點到。",
+      "en": "The flight arrives at six."
+    },
+    "infinitive": "llegar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "llegado",
+    "gerundio": "llegando",
+    "conjugations": {
+      "presente": {
+        "yo": "llego",
+        "tu": "llegas",
+        "el_ella_usted": "llega",
+        "nosotros": "llegamos",
+        "ellos_ustedes": "llegan"
+      },
+      "preteritoIndefinido": {
+        "yo": "llegué",
+        "tu": "llegaste",
+        "el_ella_usted": "llegó",
+        "nosotros": "llegamos",
+        "ellos_ustedes": "llegaron"
+      },
+      "imperfecto": {
+        "yo": "llegaba",
+        "tu": "llegabas",
+        "el_ella_usted": "llegaba",
+        "nosotros": "llegábamos",
+        "ellos_ustedes": "llegaban"
+      },
+      "futuro": {
+        "yo": "llegaré",
+        "tu": "llegarás",
+        "el_ella_usted": "llegará",
+        "nosotros": "llegaremos",
+        "ellos_ustedes": "llegarán"
+      },
+      "condicional": {
+        "yo": "llegaría",
+        "tu": "llegarías",
+        "el_ella_usted": "llegaría",
+        "nosotros": "llegaríamos",
+        "ellos_ustedes": "llegarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "llegue",
+        "tu": "llegues",
+        "el_ella_usted": "llegue",
+        "nosotros": "lleguemos",
+        "ellos_ustedes": "lleguen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "llegara",
+        "tu": "llegaras",
+        "el_ella_usted": "llegara",
+        "nosotros": "llegáramos",
+        "ellos_ustedes": "llegaran"
+      }
+    },
+    "imperativo": {
+      "tu": "llega",
+      "el_ella_usted": "llegue",
+      "nosotros": "lleguemos",
+      "ellos_ustedes": "lleguen"
+    }
+  },
+  {
+    "id": "llevar",
+    "es": "llevar",
+    "gloss": {
+      "zh": "帶；穿；載",
+      "en": "to carry; to wear; to take"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Llevo una chompa porque hace frío.",
+    "exampleGloss": {
+      "zh": "我穿了一件外套，因為很冷。",
+      "en": "I'm wearing a jacket because it's cold."
+    },
+    "infinitive": "llevar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "llevado",
+    "gerundio": "llevando",
+    "conjugations": {
+      "presente": {
+        "yo": "llevo",
+        "tu": "llevas",
+        "el_ella_usted": "lleva",
+        "nosotros": "llevamos",
+        "ellos_ustedes": "llevan"
+      },
+      "preteritoIndefinido": {
+        "yo": "llevé",
+        "tu": "llevaste",
+        "el_ella_usted": "llevó",
+        "nosotros": "llevamos",
+        "ellos_ustedes": "llevaron"
+      },
+      "imperfecto": {
+        "yo": "llevaba",
+        "tu": "llevabas",
+        "el_ella_usted": "llevaba",
+        "nosotros": "llevábamos",
+        "ellos_ustedes": "llevaban"
+      },
+      "futuro": {
+        "yo": "llevaré",
+        "tu": "llevarás",
+        "el_ella_usted": "llevará",
+        "nosotros": "llevaremos",
+        "ellos_ustedes": "llevarán"
+      },
+      "condicional": {
+        "yo": "llevaría",
+        "tu": "llevarías",
+        "el_ella_usted": "llevaría",
+        "nosotros": "llevaríamos",
+        "ellos_ustedes": "llevarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "lleve",
+        "tu": "lleves",
+        "el_ella_usted": "lleve",
+        "nosotros": "llevemos",
+        "ellos_ustedes": "lleven"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "llevara",
+        "tu": "llevaras",
+        "el_ella_usted": "llevara",
+        "nosotros": "lleváramos",
+        "ellos_ustedes": "llevaran"
+      }
+    },
+    "imperativo": {
+      "tu": "lleva",
+      "el_ella_usted": "lleve",
+      "nosotros": "llevemos",
+      "ellos_ustedes": "lleven"
+    }
+  },
+  {
+    "id": "mirar",
+    "es": "mirar",
+    "gloss": {
+      "zh": "看；注視",
+      "en": "to look at; to watch"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Miramos el mapa antes de salir.",
+    "exampleGloss": {
+      "zh": "我們出發前看了地圖。",
+      "en": "We look at the map before leaving."
+    },
+    "infinitive": "mirar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "mirado",
+    "gerundio": "mirando",
+    "conjugations": {
+      "presente": {
+        "yo": "miro",
+        "tu": "miras",
+        "el_ella_usted": "mira",
+        "nosotros": "miramos",
+        "ellos_ustedes": "miran"
+      },
+      "preteritoIndefinido": {
+        "yo": "miré",
+        "tu": "miraste",
+        "el_ella_usted": "miró",
+        "nosotros": "miramos",
+        "ellos_ustedes": "miraron"
+      },
+      "imperfecto": {
+        "yo": "miraba",
+        "tu": "mirabas",
+        "el_ella_usted": "miraba",
+        "nosotros": "mirábamos",
+        "ellos_ustedes": "miraban"
+      },
+      "futuro": {
+        "yo": "miraré",
+        "tu": "mirarás",
+        "el_ella_usted": "mirará",
+        "nosotros": "miraremos",
+        "ellos_ustedes": "mirarán"
+      },
+      "condicional": {
+        "yo": "miraría",
+        "tu": "mirarías",
+        "el_ella_usted": "miraría",
+        "nosotros": "miraríamos",
+        "ellos_ustedes": "mirarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "mire",
+        "tu": "mires",
+        "el_ella_usted": "mire",
+        "nosotros": "miremos",
+        "ellos_ustedes": "miren"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "mirara",
+        "tu": "miraras",
+        "el_ella_usted": "mirara",
+        "nosotros": "miráramos",
+        "ellos_ustedes": "miraran"
+      }
+    },
+    "imperativo": {
+      "tu": "mira",
+      "el_ella_usted": "mire",
+      "nosotros": "miremos",
+      "ellos_ustedes": "miren"
+    }
+  },
+  {
+    "id": "pagar",
+    "es": "pagar",
+    "gloss": {
+      "zh": "付錢",
+      "en": "to pay"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Puedo pagar con tarjeta?",
+    "exampleGloss": {
+      "zh": "我可以刷卡嗎？",
+      "en": "Can I pay by card?"
+    },
+    "infinitive": "pagar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "pagado",
+    "gerundio": "pagando",
+    "conjugations": {
+      "presente": {
+        "yo": "pago",
+        "tu": "pagas",
+        "el_ella_usted": "paga",
+        "nosotros": "pagamos",
+        "ellos_ustedes": "pagan"
+      },
+      "preteritoIndefinido": {
+        "yo": "pagué",
+        "tu": "pagaste",
+        "el_ella_usted": "pagó",
+        "nosotros": "pagamos",
+        "ellos_ustedes": "pagaron"
+      },
+      "imperfecto": {
+        "yo": "pagaba",
+        "tu": "pagabas",
+        "el_ella_usted": "pagaba",
+        "nosotros": "pagábamos",
+        "ellos_ustedes": "pagaban"
+      },
+      "futuro": {
+        "yo": "pagaré",
+        "tu": "pagarás",
+        "el_ella_usted": "pagará",
+        "nosotros": "pagaremos",
+        "ellos_ustedes": "pagarán"
+      },
+      "condicional": {
+        "yo": "pagaría",
+        "tu": "pagarías",
+        "el_ella_usted": "pagaría",
+        "nosotros": "pagaríamos",
+        "ellos_ustedes": "pagarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "pague",
+        "tu": "pagues",
+        "el_ella_usted": "pague",
+        "nosotros": "paguemos",
+        "ellos_ustedes": "paguen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pagara",
+        "tu": "pagaras",
+        "el_ella_usted": "pagara",
+        "nosotros": "pagáramos",
+        "ellos_ustedes": "pagaran"
+      }
+    },
+    "imperativo": {
+      "tu": "paga",
+      "el_ella_usted": "pague",
+      "nosotros": "paguemos",
+      "ellos_ustedes": "paguen"
+    }
+  },
+  {
+    "id": "tomar",
+    "es": "tomar",
+    "gloss": {
+      "zh": "拿；喝；搭乘",
+      "en": "to take; to drink; to catch (transport)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Tomo el bus todos los días.",
+    "exampleGloss": {
+      "zh": "我每天搭公車。",
+      "en": "I take the bus every day."
+    },
+    "infinitive": "tomar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "tomado",
+    "gerundio": "tomando",
+    "conjugations": {
+      "presente": {
+        "yo": "tomo",
+        "tu": "tomas",
+        "el_ella_usted": "toma",
+        "nosotros": "tomamos",
+        "ellos_ustedes": "toman"
+      },
+      "preteritoIndefinido": {
+        "yo": "tomé",
+        "tu": "tomaste",
+        "el_ella_usted": "tomó",
+        "nosotros": "tomamos",
+        "ellos_ustedes": "tomaron"
+      },
+      "imperfecto": {
+        "yo": "tomaba",
+        "tu": "tomabas",
+        "el_ella_usted": "tomaba",
+        "nosotros": "tomábamos",
+        "ellos_ustedes": "tomaban"
+      },
+      "futuro": {
+        "yo": "tomaré",
+        "tu": "tomarás",
+        "el_ella_usted": "tomará",
+        "nosotros": "tomaremos",
+        "ellos_ustedes": "tomarán"
+      },
+      "condicional": {
+        "yo": "tomaría",
+        "tu": "tomarías",
+        "el_ella_usted": "tomaría",
+        "nosotros": "tomaríamos",
+        "ellos_ustedes": "tomarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "tome",
+        "tu": "tomes",
+        "el_ella_usted": "tome",
+        "nosotros": "tomemos",
+        "ellos_ustedes": "tomen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "tomara",
+        "tu": "tomaras",
+        "el_ella_usted": "tomara",
+        "nosotros": "tomáramos",
+        "ellos_ustedes": "tomaran"
+      }
+    },
+    "imperativo": {
+      "tu": "toma",
+      "el_ella_usted": "tome",
+      "nosotros": "tomemos",
+      "ellos_ustedes": "tomen"
+    }
+  },
+  {
+    "id": "viajar",
+    "es": "viajar",
+    "gloss": {
+      "zh": "旅行",
+      "en": "to travel"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Viajamos a Cuenca en bus.",
+    "exampleGloss": {
+      "zh": "我們搭公車去昆卡。",
+      "en": "We travel to Cuenca by bus."
+    },
+    "infinitive": "viajar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "viajado",
+    "gerundio": "viajando",
+    "conjugations": {
+      "presente": {
+        "yo": "viajo",
+        "tu": "viajas",
+        "el_ella_usted": "viaja",
+        "nosotros": "viajamos",
+        "ellos_ustedes": "viajan"
+      },
+      "preteritoIndefinido": {
+        "yo": "viajé",
+        "tu": "viajaste",
+        "el_ella_usted": "viajó",
+        "nosotros": "viajamos",
+        "ellos_ustedes": "viajaron"
+      },
+      "imperfecto": {
+        "yo": "viajaba",
+        "tu": "viajabas",
+        "el_ella_usted": "viajaba",
+        "nosotros": "viajábamos",
+        "ellos_ustedes": "viajaban"
+      },
+      "futuro": {
+        "yo": "viajaré",
+        "tu": "viajarás",
+        "el_ella_usted": "viajará",
+        "nosotros": "viajaremos",
+        "ellos_ustedes": "viajarán"
+      },
+      "condicional": {
+        "yo": "viajaría",
+        "tu": "viajarías",
+        "el_ella_usted": "viajaría",
+        "nosotros": "viajaríamos",
+        "ellos_ustedes": "viajarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "viaje",
+        "tu": "viajes",
+        "el_ella_usted": "viaje",
+        "nosotros": "viajemos",
+        "ellos_ustedes": "viajen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "viajara",
+        "tu": "viajaras",
+        "el_ella_usted": "viajara",
+        "nosotros": "viajáramos",
+        "ellos_ustedes": "viajaran"
+      }
+    },
+    "imperativo": {
+      "tu": "viaja",
+      "el_ella_usted": "viaje",
+      "nosotros": "viajemos",
+      "ellos_ustedes": "viajen"
+    }
+  },
+  {
+    "id": "ayudar",
+    "es": "ayudar",
+    "gloss": {
+      "zh": "幫忙",
+      "en": "to help"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Me puede ayudar, por favor?",
+    "exampleGloss": {
+      "zh": "您可以幫我嗎？",
+      "en": "Could you help me, please?"
+    },
+    "infinitive": "ayudar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "ayudado",
+    "gerundio": "ayudando",
+    "conjugations": {
+      "presente": {
+        "yo": "ayudo",
+        "tu": "ayudas",
+        "el_ella_usted": "ayuda",
+        "nosotros": "ayudamos",
+        "ellos_ustedes": "ayudan"
+      },
+      "preteritoIndefinido": {
+        "yo": "ayudé",
+        "tu": "ayudaste",
+        "el_ella_usted": "ayudó",
+        "nosotros": "ayudamos",
+        "ellos_ustedes": "ayudaron"
+      },
+      "imperfecto": {
+        "yo": "ayudaba",
+        "tu": "ayudabas",
+        "el_ella_usted": "ayudaba",
+        "nosotros": "ayudábamos",
+        "ellos_ustedes": "ayudaban"
+      },
+      "futuro": {
+        "yo": "ayudaré",
+        "tu": "ayudarás",
+        "el_ella_usted": "ayudará",
+        "nosotros": "ayudaremos",
+        "ellos_ustedes": "ayudarán"
+      },
+      "condicional": {
+        "yo": "ayudaría",
+        "tu": "ayudarías",
+        "el_ella_usted": "ayudaría",
+        "nosotros": "ayudaríamos",
+        "ellos_ustedes": "ayudarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "ayude",
+        "tu": "ayudes",
+        "el_ella_usted": "ayude",
+        "nosotros": "ayudemos",
+        "ellos_ustedes": "ayuden"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "ayudara",
+        "tu": "ayudaras",
+        "el_ella_usted": "ayudara",
+        "nosotros": "ayudáramos",
+        "ellos_ustedes": "ayudaran"
+      }
+    },
+    "imperativo": {
+      "tu": "ayuda",
+      "el_ella_usted": "ayude",
+      "nosotros": "ayudemos",
+      "ellos_ustedes": "ayuden"
+    }
+  },
+  {
+    "id": "buscar",
+    "es": "buscar",
+    "gloss": {
+      "zh": "找；尋找",
+      "en": "to look for"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Busco la parada del bus.",
+    "exampleGloss": {
+      "zh": "我在找公車站。",
+      "en": "I'm looking for the bus stop."
+    },
+    "infinitive": "buscar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "buscado",
+    "gerundio": "buscando",
+    "conjugations": {
+      "presente": {
+        "yo": "busco",
+        "tu": "buscas",
+        "el_ella_usted": "busca",
+        "nosotros": "buscamos",
+        "ellos_ustedes": "buscan"
+      },
+      "preteritoIndefinido": {
+        "yo": "busqué",
+        "tu": "buscaste",
+        "el_ella_usted": "buscó",
+        "nosotros": "buscamos",
+        "ellos_ustedes": "buscaron"
+      },
+      "imperfecto": {
+        "yo": "buscaba",
+        "tu": "buscabas",
+        "el_ella_usted": "buscaba",
+        "nosotros": "buscábamos",
+        "ellos_ustedes": "buscaban"
+      },
+      "futuro": {
+        "yo": "buscaré",
+        "tu": "buscarás",
+        "el_ella_usted": "buscará",
+        "nosotros": "buscaremos",
+        "ellos_ustedes": "buscarán"
+      },
+      "condicional": {
+        "yo": "buscaría",
+        "tu": "buscarías",
+        "el_ella_usted": "buscaría",
+        "nosotros": "buscaríamos",
+        "ellos_ustedes": "buscarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "busque",
+        "tu": "busques",
+        "el_ella_usted": "busque",
+        "nosotros": "busquemos",
+        "ellos_ustedes": "busquen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "buscara",
+        "tu": "buscaras",
+        "el_ella_usted": "buscara",
+        "nosotros": "buscáramos",
+        "ellos_ustedes": "buscaran"
+      }
+    },
+    "imperativo": {
+      "tu": "busca",
+      "el_ella_usted": "busque",
+      "nosotros": "busquemos",
+      "ellos_ustedes": "busquen"
+    }
+  },
+  {
+    "id": "descansar",
+    "es": "descansar",
+    "gloss": {
+      "zh": "休息",
+      "en": "to rest"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Descanso un rato después del almuerzo.",
+    "exampleGloss": {
+      "zh": "午餐後我休息一下。",
+      "en": "I rest for a while after lunch."
+    },
+    "infinitive": "descansar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "descansado",
+    "gerundio": "descansando",
+    "conjugations": {
+      "presente": {
+        "yo": "descanso",
+        "tu": "descansas",
+        "el_ella_usted": "descansa",
+        "nosotros": "descansamos",
+        "ellos_ustedes": "descansan"
+      },
+      "preteritoIndefinido": {
+        "yo": "descansé",
+        "tu": "descansaste",
+        "el_ella_usted": "descansó",
+        "nosotros": "descansamos",
+        "ellos_ustedes": "descansaron"
+      },
+      "imperfecto": {
+        "yo": "descansaba",
+        "tu": "descansabas",
+        "el_ella_usted": "descansaba",
+        "nosotros": "descansábamos",
+        "ellos_ustedes": "descansaban"
+      },
+      "futuro": {
+        "yo": "descansaré",
+        "tu": "descansarás",
+        "el_ella_usted": "descansará",
+        "nosotros": "descansaremos",
+        "ellos_ustedes": "descansarán"
+      },
+      "condicional": {
+        "yo": "descansaría",
+        "tu": "descansarías",
+        "el_ella_usted": "descansaría",
+        "nosotros": "descansaríamos",
+        "ellos_ustedes": "descansarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "descanse",
+        "tu": "descanses",
+        "el_ella_usted": "descanse",
+        "nosotros": "descansemos",
+        "ellos_ustedes": "descansen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "descansara",
+        "tu": "descansaras",
+        "el_ella_usted": "descansara",
+        "nosotros": "descansáramos",
+        "ellos_ustedes": "descansaran"
+      }
+    },
+    "imperativo": {
+      "tu": "descansa",
+      "el_ella_usted": "descanse",
+      "nosotros": "descansemos",
+      "ellos_ustedes": "descansen"
+    }
+  },
+  {
+    "id": "pasar",
+    "es": "pasar",
+    "gloss": {
+      "zh": "經過；發生；度過",
+      "en": "to pass; to happen; to spend (time)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Qué pasa?",
+    "exampleGloss": {
+      "zh": "怎麼了？",
+      "en": "What's going on?"
+    },
+    "infinitive": "pasar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "pasado",
+    "gerundio": "pasando",
+    "conjugations": {
+      "presente": {
+        "yo": "paso",
+        "tu": "pasas",
+        "el_ella_usted": "pasa",
+        "nosotros": "pasamos",
+        "ellos_ustedes": "pasan"
+      },
+      "preteritoIndefinido": {
+        "yo": "pasé",
+        "tu": "pasaste",
+        "el_ella_usted": "pasó",
+        "nosotros": "pasamos",
+        "ellos_ustedes": "pasaron"
+      },
+      "imperfecto": {
+        "yo": "pasaba",
+        "tu": "pasabas",
+        "el_ella_usted": "pasaba",
+        "nosotros": "pasábamos",
+        "ellos_ustedes": "pasaban"
+      },
+      "futuro": {
+        "yo": "pasaré",
+        "tu": "pasarás",
+        "el_ella_usted": "pasará",
+        "nosotros": "pasaremos",
+        "ellos_ustedes": "pasarán"
+      },
+      "condicional": {
+        "yo": "pasaría",
+        "tu": "pasarías",
+        "el_ella_usted": "pasaría",
+        "nosotros": "pasaríamos",
+        "ellos_ustedes": "pasarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "pase",
+        "tu": "pases",
+        "el_ella_usted": "pase",
+        "nosotros": "pasemos",
+        "ellos_ustedes": "pasen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pasara",
+        "tu": "pasaras",
+        "el_ella_usted": "pasara",
+        "nosotros": "pasáramos",
+        "ellos_ustedes": "pasaran"
+      }
+    },
+    "imperativo": {
+      "tu": "pasa",
+      "el_ella_usted": "pase",
+      "nosotros": "pasemos",
+      "ellos_ustedes": "pasen"
+    }
+  },
+  {
+    "id": "correr",
+    "es": "correr",
+    "gloss": {
+      "zh": "跑",
+      "en": "to run"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Corro en el parque los sábados.",
+    "exampleGloss": {
+      "zh": "我週六在公園跑步。",
+      "en": "I run in the park on Saturdays."
+    },
+    "infinitive": "correr",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "corrido",
+    "gerundio": "corriendo",
+    "conjugations": {
+      "presente": {
+        "yo": "corro",
+        "tu": "corres",
+        "el_ella_usted": "corre",
+        "nosotros": "corremos",
+        "ellos_ustedes": "corren"
+      },
+      "preteritoIndefinido": {
+        "yo": "corrí",
+        "tu": "corriste",
+        "el_ella_usted": "corrió",
+        "nosotros": "corrimos",
+        "ellos_ustedes": "corrieron"
+      },
+      "imperfecto": {
+        "yo": "corría",
+        "tu": "corrías",
+        "el_ella_usted": "corría",
+        "nosotros": "corríamos",
+        "ellos_ustedes": "corrían"
+      },
+      "futuro": {
+        "yo": "correré",
+        "tu": "correrás",
+        "el_ella_usted": "correrá",
+        "nosotros": "correremos",
+        "ellos_ustedes": "correrán"
+      },
+      "condicional": {
+        "yo": "correría",
+        "tu": "correrías",
+        "el_ella_usted": "correría",
+        "nosotros": "correríamos",
+        "ellos_ustedes": "correrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "corra",
+        "tu": "corras",
+        "el_ella_usted": "corra",
+        "nosotros": "corramos",
+        "ellos_ustedes": "corran"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "corriera",
+        "tu": "corrieras",
+        "el_ella_usted": "corriera",
+        "nosotros": "corriéramos",
+        "ellos_ustedes": "corrieran"
+      }
+    },
+    "imperativo": {
+      "tu": "corre",
+      "el_ella_usted": "corra",
+      "nosotros": "corramos",
+      "ellos_ustedes": "corran"
+    }
+  },
+  {
+    "id": "vender",
+    "es": "vender",
+    "gloss": {
+      "zh": "賣",
+      "en": "to sell"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "En el mercado venden frutas muy frescas.",
+    "exampleGloss": {
+      "zh": "市場裡賣很新鮮的水果。",
+      "en": "They sell very fresh fruit at the market."
+    },
+    "infinitive": "vender",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "vendido",
+    "gerundio": "vendiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "vendo",
+        "tu": "vendes",
+        "el_ella_usted": "vende",
+        "nosotros": "vendemos",
+        "ellos_ustedes": "venden"
+      },
+      "preteritoIndefinido": {
+        "yo": "vendí",
+        "tu": "vendiste",
+        "el_ella_usted": "vendió",
+        "nosotros": "vendimos",
+        "ellos_ustedes": "vendieron"
+      },
+      "imperfecto": {
+        "yo": "vendía",
+        "tu": "vendías",
+        "el_ella_usted": "vendía",
+        "nosotros": "vendíamos",
+        "ellos_ustedes": "vendían"
+      },
+      "futuro": {
+        "yo": "venderé",
+        "tu": "venderás",
+        "el_ella_usted": "venderá",
+        "nosotros": "venderemos",
+        "ellos_ustedes": "venderán"
+      },
+      "condicional": {
+        "yo": "vendería",
+        "tu": "venderías",
+        "el_ella_usted": "vendería",
+        "nosotros": "venderíamos",
+        "ellos_ustedes": "venderían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "venda",
+        "tu": "vendas",
+        "el_ella_usted": "venda",
+        "nosotros": "vendamos",
+        "ellos_ustedes": "vendan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "vendiera",
+        "tu": "vendieras",
+        "el_ella_usted": "vendiera",
+        "nosotros": "vendiéramos",
+        "ellos_ustedes": "vendieran"
+      }
+    },
+    "imperativo": {
+      "tu": "vende",
+      "el_ella_usted": "venda",
+      "nosotros": "vendamos",
+      "ellos_ustedes": "vendan"
+    }
+  },
+  {
+    "id": "recibir",
+    "es": "recibir",
+    "gloss": {
+      "zh": "收到",
+      "en": "to receive"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Recibo un mensaje de mi hermana.",
+    "exampleGloss": {
+      "zh": "我收到姐姐的訊息。",
+      "en": "I get a message from my sister."
+    },
+    "infinitive": "recibir",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "recibido",
+    "gerundio": "recibiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "recibo",
+        "tu": "recibes",
+        "el_ella_usted": "recibe",
+        "nosotros": "recibimos",
+        "ellos_ustedes": "reciben"
+      },
+      "preteritoIndefinido": {
+        "yo": "recibí",
+        "tu": "recibiste",
+        "el_ella_usted": "recibió",
+        "nosotros": "recibimos",
+        "ellos_ustedes": "recibieron"
+      },
+      "imperfecto": {
+        "yo": "recibía",
+        "tu": "recibías",
+        "el_ella_usted": "recibía",
+        "nosotros": "recibíamos",
+        "ellos_ustedes": "recibían"
+      },
+      "futuro": {
+        "yo": "recibiré",
+        "tu": "recibirás",
+        "el_ella_usted": "recibirá",
+        "nosotros": "recibiremos",
+        "ellos_ustedes": "recibirán"
+      },
+      "condicional": {
+        "yo": "recibiría",
+        "tu": "recibirías",
+        "el_ella_usted": "recibiría",
+        "nosotros": "recibiríamos",
+        "ellos_ustedes": "recibirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "reciba",
+        "tu": "recibas",
+        "el_ella_usted": "reciba",
+        "nosotros": "recibamos",
+        "ellos_ustedes": "reciban"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "recibiera",
+        "tu": "recibieras",
+        "el_ella_usted": "recibiera",
+        "nosotros": "recibiéramos",
+        "ellos_ustedes": "recibieran"
+      }
+    },
+    "imperativo": {
+      "tu": "recibe",
+      "el_ella_usted": "reciba",
+      "nosotros": "recibamos",
+      "ellos_ustedes": "reciban"
+    }
+  },
+  {
+    "id": "subir",
+    "es": "subir",
+    "gloss": {
+      "zh": "上去；上車；上升",
+      "en": "to go up; to get on"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Subimos al teleférico del Pichincha.",
+    "exampleGloss": {
+      "zh": "我們搭皮欽查山的纜車上山。",
+      "en": "We go up on the Pichincha cable car."
+    },
+    "infinitive": "subir",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "subido",
+    "gerundio": "subiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "subo",
+        "tu": "subes",
+        "el_ella_usted": "sube",
+        "nosotros": "subimos",
+        "ellos_ustedes": "suben"
+      },
+      "preteritoIndefinido": {
+        "yo": "subí",
+        "tu": "subiste",
+        "el_ella_usted": "subió",
+        "nosotros": "subimos",
+        "ellos_ustedes": "subieron"
+      },
+      "imperfecto": {
+        "yo": "subía",
+        "tu": "subías",
+        "el_ella_usted": "subía",
+        "nosotros": "subíamos",
+        "ellos_ustedes": "subían"
+      },
+      "futuro": {
+        "yo": "subiré",
+        "tu": "subirás",
+        "el_ella_usted": "subirá",
+        "nosotros": "subiremos",
+        "ellos_ustedes": "subirán"
+      },
+      "condicional": {
+        "yo": "subiría",
+        "tu": "subirías",
+        "el_ella_usted": "subiría",
+        "nosotros": "subiríamos",
+        "ellos_ustedes": "subirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "suba",
+        "tu": "subas",
+        "el_ella_usted": "suba",
+        "nosotros": "subamos",
+        "ellos_ustedes": "suban"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "subiera",
+        "tu": "subieras",
+        "el_ella_usted": "subiera",
+        "nosotros": "subiéramos",
+        "ellos_ustedes": "subieran"
+      }
+    },
+    "imperativo": {
+      "tu": "sube",
+      "el_ella_usted": "suba",
+      "nosotros": "subamos",
+      "ellos_ustedes": "suban"
+    }
+  },
+  {
+    "id": "creer",
+    "es": "creer",
+    "gloss": {
+      "zh": "相信；認為",
+      "en": "to believe; to think"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Creo que hoy va a llover.",
+    "exampleGloss": {
+      "zh": "我覺得今天會下雨。",
+      "en": "I think it’s going to rain today."
+    },
+    "infinitive": "creer",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "creído",
+    "gerundio": "creyendo",
+    "conjugations": {
+      "presente": {
+        "yo": "creo",
+        "tu": "crees",
+        "el_ella_usted": "cree",
+        "nosotros": "creemos",
+        "ellos_ustedes": "creen"
+      },
+      "preteritoIndefinido": {
+        "yo": "creí",
+        "tu": "creíste",
+        "el_ella_usted": "creyó",
+        "nosotros": "creímos",
+        "ellos_ustedes": "creyeron"
+      },
+      "imperfecto": {
+        "yo": "creía",
+        "tu": "creías",
+        "el_ella_usted": "creía",
+        "nosotros": "creíamos",
+        "ellos_ustedes": "creían"
+      },
+      "futuro": {
+        "yo": "creeré",
+        "tu": "creerás",
+        "el_ella_usted": "creerá",
+        "nosotros": "creeremos",
+        "ellos_ustedes": "creerán"
+      },
+      "condicional": {
+        "yo": "creería",
+        "tu": "creerías",
+        "el_ella_usted": "creería",
+        "nosotros": "creeríamos",
+        "ellos_ustedes": "creerían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "crea",
+        "tu": "creas",
+        "el_ella_usted": "crea",
+        "nosotros": "creamos",
+        "ellos_ustedes": "crean"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "creyera",
+        "tu": "creyeras",
+        "el_ella_usted": "creyera",
+        "nosotros": "creyéramos",
+        "ellos_ustedes": "creyeran"
+      }
+    },
+    "imperativo": {
+      "tu": "cree",
+      "el_ella_usted": "crea",
+      "nosotros": "creamos",
+      "ellos_ustedes": "crean"
+    }
+  },
+  {
+    "id": "abrir",
+    "es": "abrir",
+    "gloss": {
+      "zh": "開；打開",
+      "en": "to open"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿A qué hora abren el museo?",
+    "exampleGloss": {
+      "zh": "博物館幾點開？",
+      "en": "What time do they open the museum?"
+    },
+    "infinitive": "abrir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "abierto",
+    "gerundio": "abriendo",
+    "conjugations": {
+      "presente": {
+        "yo": "abro",
+        "tu": "abres",
+        "el_ella_usted": "abre",
+        "nosotros": "abrimos",
+        "ellos_ustedes": "abren"
+      },
+      "preteritoIndefinido": {
+        "yo": "abrí",
+        "tu": "abriste",
+        "el_ella_usted": "abrió",
+        "nosotros": "abrimos",
+        "ellos_ustedes": "abrieron"
+      },
+      "imperfecto": {
+        "yo": "abría",
+        "tu": "abrías",
+        "el_ella_usted": "abría",
+        "nosotros": "abríamos",
+        "ellos_ustedes": "abrían"
+      },
+      "futuro": {
+        "yo": "abriré",
+        "tu": "abrirás",
+        "el_ella_usted": "abrirá",
+        "nosotros": "abriremos",
+        "ellos_ustedes": "abrirán"
+      },
+      "condicional": {
+        "yo": "abriría",
+        "tu": "abrirías",
+        "el_ella_usted": "abriría",
+        "nosotros": "abriríamos",
+        "ellos_ustedes": "abrirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "abra",
+        "tu": "abras",
+        "el_ella_usted": "abra",
+        "nosotros": "abramos",
+        "ellos_ustedes": "abran"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "abriera",
+        "tu": "abrieras",
+        "el_ella_usted": "abriera",
+        "nosotros": "abriéramos",
+        "ellos_ustedes": "abrieran"
+      }
+    },
+    "imperativo": {
+      "tu": "abre",
+      "el_ella_usted": "abra",
+      "nosotros": "abramos",
+      "ellos_ustedes": "abran"
+    }
+  },
+  {
+    "id": "empezar",
+    "es": "empezar",
+    "gloss": {
+      "zh": "開始",
+      "en": "to begin; to start"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "La clase empieza a las nueve.",
+    "exampleGloss": {
+      "zh": "課九點開始。",
+      "en": "The class starts at nine."
+    },
+    "infinitive": "empezar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "empezado",
+    "gerundio": "empezando",
+    "conjugations": {
+      "presente": {
+        "yo": "empiezo",
+        "tu": "empiezas",
+        "el_ella_usted": "empieza",
+        "nosotros": "empezamos",
+        "ellos_ustedes": "empiezan"
+      },
+      "preteritoIndefinido": {
+        "yo": "empecé",
+        "tu": "empezaste",
+        "el_ella_usted": "empezó",
+        "nosotros": "empezamos",
+        "ellos_ustedes": "empezaron"
+      },
+      "imperfecto": {
+        "yo": "empezaba",
+        "tu": "empezabas",
+        "el_ella_usted": "empezaba",
+        "nosotros": "empezábamos",
+        "ellos_ustedes": "empezaban"
+      },
+      "futuro": {
+        "yo": "empezaré",
+        "tu": "empezarás",
+        "el_ella_usted": "empezará",
+        "nosotros": "empezaremos",
+        "ellos_ustedes": "empezarán"
+      },
+      "condicional": {
+        "yo": "empezaría",
+        "tu": "empezarías",
+        "el_ella_usted": "empezaría",
+        "nosotros": "empezaríamos",
+        "ellos_ustedes": "empezarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "empiece",
+        "tu": "empieces",
+        "el_ella_usted": "empiece",
+        "nosotros": "empecemos",
+        "ellos_ustedes": "empiecen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "empezara",
+        "tu": "empezaras",
+        "el_ella_usted": "empezara",
+        "nosotros": "empezáramos",
+        "ellos_ustedes": "empezaran"
+      }
+    },
+    "imperativo": {
+      "tu": "empieza",
+      "el_ella_usted": "empiece",
+      "nosotros": "empecemos",
+      "ellos_ustedes": "empiecen"
+    }
+  },
+  {
+    "id": "entender",
+    "es": "entender",
+    "gloss": {
+      "zh": "懂；理解",
+      "en": "to understand"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "No entiendo la pregunta.",
+    "exampleGloss": {
+      "zh": "我不懂這個問題。",
+      "en": "I don't understand the question."
+    },
+    "infinitive": "entender",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "entendido",
+    "gerundio": "entendiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "entiendo",
+        "tu": "entiendes",
+        "el_ella_usted": "entiende",
+        "nosotros": "entendemos",
+        "ellos_ustedes": "entienden"
+      },
+      "preteritoIndefinido": {
+        "yo": "entendí",
+        "tu": "entendiste",
+        "el_ella_usted": "entendió",
+        "nosotros": "entendimos",
+        "ellos_ustedes": "entendieron"
+      },
+      "imperfecto": {
+        "yo": "entendía",
+        "tu": "entendías",
+        "el_ella_usted": "entendía",
+        "nosotros": "entendíamos",
+        "ellos_ustedes": "entendían"
+      },
+      "futuro": {
+        "yo": "entenderé",
+        "tu": "entenderás",
+        "el_ella_usted": "entenderá",
+        "nosotros": "entenderemos",
+        "ellos_ustedes": "entenderán"
+      },
+      "condicional": {
+        "yo": "entendería",
+        "tu": "entenderías",
+        "el_ella_usted": "entendería",
+        "nosotros": "entenderíamos",
+        "ellos_ustedes": "entenderían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "entienda",
+        "tu": "entiendas",
+        "el_ella_usted": "entienda",
+        "nosotros": "entendamos",
+        "ellos_ustedes": "entiendan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "entendiera",
+        "tu": "entendieras",
+        "el_ella_usted": "entendiera",
+        "nosotros": "entendiéramos",
+        "ellos_ustedes": "entendieran"
+      }
+    },
+    "imperativo": {
+      "tu": "entiende",
+      "el_ella_usted": "entienda",
+      "nosotros": "entendamos",
+      "ellos_ustedes": "entiendan"
+    }
+  },
+  {
+    "id": "pensar",
+    "es": "pensar",
+    "gloss": {
+      "zh": "想；思考",
+      "en": "to think"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Pienso viajar en marzo.",
+    "exampleGloss": {
+      "zh": "我打算三月去旅行。",
+      "en": "I'm thinking of travelling in March."
+    },
+    "infinitive": "pensar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "pensado",
+    "gerundio": "pensando",
+    "conjugations": {
+      "presente": {
+        "yo": "pienso",
+        "tu": "piensas",
+        "el_ella_usted": "piensa",
+        "nosotros": "pensamos",
+        "ellos_ustedes": "piensan"
+      },
+      "preteritoIndefinido": {
+        "yo": "pensé",
+        "tu": "pensaste",
+        "el_ella_usted": "pensó",
+        "nosotros": "pensamos",
+        "ellos_ustedes": "pensaron"
+      },
+      "imperfecto": {
+        "yo": "pensaba",
+        "tu": "pensabas",
+        "el_ella_usted": "pensaba",
+        "nosotros": "pensábamos",
+        "ellos_ustedes": "pensaban"
+      },
+      "futuro": {
+        "yo": "pensaré",
+        "tu": "pensarás",
+        "el_ella_usted": "pensará",
+        "nosotros": "pensaremos",
+        "ellos_ustedes": "pensarán"
+      },
+      "condicional": {
+        "yo": "pensaría",
+        "tu": "pensarías",
+        "el_ella_usted": "pensaría",
+        "nosotros": "pensaríamos",
+        "ellos_ustedes": "pensarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "piense",
+        "tu": "pienses",
+        "el_ella_usted": "piense",
+        "nosotros": "pensemos",
+        "ellos_ustedes": "piensen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pensara",
+        "tu": "pensaras",
+        "el_ella_usted": "pensara",
+        "nosotros": "pensáramos",
+        "ellos_ustedes": "pensaran"
+      }
+    },
+    "imperativo": {
+      "tu": "piensa",
+      "el_ella_usted": "piense",
+      "nosotros": "pensemos",
+      "ellos_ustedes": "piensen"
+    }
+  },
+  {
+    "id": "volver",
+    "es": "volver",
+    "gloss": {
+      "zh": "回來；返回",
+      "en": "to come back; to return"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Vuelvo a casa a las siete.",
+    "exampleGloss": {
+      "zh": "我七點回家。",
+      "en": "I get back home at seven."
+    },
+    "infinitive": "volver",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "vuelto",
+    "gerundio": "volviendo",
+    "conjugations": {
+      "presente": {
+        "yo": "vuelvo",
+        "tu": "vuelves",
+        "el_ella_usted": "vuelve",
+        "nosotros": "volvemos",
+        "ellos_ustedes": "vuelven"
+      },
+      "preteritoIndefinido": {
+        "yo": "volví",
+        "tu": "volviste",
+        "el_ella_usted": "volvió",
+        "nosotros": "volvimos",
+        "ellos_ustedes": "volvieron"
+      },
+      "imperfecto": {
+        "yo": "volvía",
+        "tu": "volvías",
+        "el_ella_usted": "volvía",
+        "nosotros": "volvíamos",
+        "ellos_ustedes": "volvían"
+      },
+      "futuro": {
+        "yo": "volveré",
+        "tu": "volverás",
+        "el_ella_usted": "volverá",
+        "nosotros": "volveremos",
+        "ellos_ustedes": "volverán"
+      },
+      "condicional": {
+        "yo": "volvería",
+        "tu": "volverías",
+        "el_ella_usted": "volvería",
+        "nosotros": "volveríamos",
+        "ellos_ustedes": "volverían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "vuelva",
+        "tu": "vuelvas",
+        "el_ella_usted": "vuelva",
+        "nosotros": "volvamos",
+        "ellos_ustedes": "vuelvan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "volviera",
+        "tu": "volvieras",
+        "el_ella_usted": "volviera",
+        "nosotros": "volviéramos",
+        "ellos_ustedes": "volvieran"
+      }
+    },
+    "imperativo": {
+      "tu": "vuelve",
+      "el_ella_usted": "vuelva",
+      "nosotros": "volvamos",
+      "ellos_ustedes": "vuelvan"
+    }
+  },
+  {
+    "id": "encontrar",
+    "es": "encontrar",
+    "gloss": {
+      "zh": "找到；遇到",
+      "en": "to find; to come across"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "No encuentro mis llaves.",
+    "exampleGloss": {
+      "zh": "我找不到我的鑰匙。",
+      "en": "I can't find my keys."
+    },
+    "infinitive": "encontrar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "encontrado",
+    "gerundio": "encontrando",
+    "conjugations": {
+      "presente": {
+        "yo": "encuentro",
+        "tu": "encuentras",
+        "el_ella_usted": "encuentra",
+        "nosotros": "encontramos",
+        "ellos_ustedes": "encuentran"
+      },
+      "preteritoIndefinido": {
+        "yo": "encontré",
+        "tu": "encontraste",
+        "el_ella_usted": "encontró",
+        "nosotros": "encontramos",
+        "ellos_ustedes": "encontraron"
+      },
+      "imperfecto": {
+        "yo": "encontraba",
+        "tu": "encontrabas",
+        "el_ella_usted": "encontraba",
+        "nosotros": "encontrábamos",
+        "ellos_ustedes": "encontraban"
+      },
+      "futuro": {
+        "yo": "encontraré",
+        "tu": "encontrarás",
+        "el_ella_usted": "encontrará",
+        "nosotros": "encontraremos",
+        "ellos_ustedes": "encontrarán"
+      },
+      "condicional": {
+        "yo": "encontraría",
+        "tu": "encontrarías",
+        "el_ella_usted": "encontraría",
+        "nosotros": "encontraríamos",
+        "ellos_ustedes": "encontrarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "encuentre",
+        "tu": "encuentres",
+        "el_ella_usted": "encuentre",
+        "nosotros": "encontremos",
+        "ellos_ustedes": "encuentren"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "encontrara",
+        "tu": "encontraras",
+        "el_ella_usted": "encontrara",
+        "nosotros": "encontráramos",
+        "ellos_ustedes": "encontraran"
+      }
+    },
+    "imperativo": {
+      "tu": "encuentra",
+      "el_ella_usted": "encuentre",
+      "nosotros": "encontremos",
+      "ellos_ustedes": "encuentren"
+    }
+  },
+  {
+    "id": "dormir",
+    "es": "dormir",
+    "gloss": {
+      "zh": "睡覺",
+      "en": "to sleep"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Duermo ocho horas cada noche.",
+    "exampleGloss": {
+      "zh": "我每晚睡八小時。",
+      "en": "I sleep eight hours every night."
+    },
+    "infinitive": "dormir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "dormido",
+    "gerundio": "durmiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "duermo",
+        "tu": "duermes",
+        "el_ella_usted": "duerme",
+        "nosotros": "dormimos",
+        "ellos_ustedes": "duermen"
+      },
+      "preteritoIndefinido": {
+        "yo": "dormí",
+        "tu": "dormiste",
+        "el_ella_usted": "durmió",
+        "nosotros": "dormimos",
+        "ellos_ustedes": "durmieron"
+      },
+      "imperfecto": {
+        "yo": "dormía",
+        "tu": "dormías",
+        "el_ella_usted": "dormía",
+        "nosotros": "dormíamos",
+        "ellos_ustedes": "dormían"
+      },
+      "futuro": {
+        "yo": "dormiré",
+        "tu": "dormirás",
+        "el_ella_usted": "dormirá",
+        "nosotros": "dormiremos",
+        "ellos_ustedes": "dormirán"
+      },
+      "condicional": {
+        "yo": "dormiría",
+        "tu": "dormirías",
+        "el_ella_usted": "dormiría",
+        "nosotros": "dormiríamos",
+        "ellos_ustedes": "dormirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "duerma",
+        "tu": "duermas",
+        "el_ella_usted": "duerma",
+        "nosotros": "durmamos",
+        "ellos_ustedes": "duerman"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "durmiera",
+        "tu": "durmieras",
+        "el_ella_usted": "durmiera",
+        "nosotros": "durmiéramos",
+        "ellos_ustedes": "durmieran"
+      }
+    },
+    "imperativo": {
+      "tu": "duerme",
+      "el_ella_usted": "duerma",
+      "nosotros": "durmamos",
+      "ellos_ustedes": "duerman"
+    }
+  },
+  {
+    "id": "jugar",
+    "es": "jugar",
+    "gloss": {
+      "zh": "玩；打（球）",
+      "en": "to play (a game or sport)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Los niños juegan en el parque.",
+    "exampleGloss": {
+      "zh": "孩子們在公園玩。",
+      "en": "The children play in the park."
+    },
+    "infinitive": "jugar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "jugado",
+    "gerundio": "jugando",
+    "conjugations": {
+      "presente": {
+        "yo": "juego",
+        "tu": "juegas",
+        "el_ella_usted": "juega",
+        "nosotros": "jugamos",
+        "ellos_ustedes": "juegan"
+      },
+      "preteritoIndefinido": {
+        "yo": "jugué",
+        "tu": "jugaste",
+        "el_ella_usted": "jugó",
+        "nosotros": "jugamos",
+        "ellos_ustedes": "jugaron"
+      },
+      "imperfecto": {
+        "yo": "jugaba",
+        "tu": "jugabas",
+        "el_ella_usted": "jugaba",
+        "nosotros": "jugábamos",
+        "ellos_ustedes": "jugaban"
+      },
+      "futuro": {
+        "yo": "jugaré",
+        "tu": "jugarás",
+        "el_ella_usted": "jugará",
+        "nosotros": "jugaremos",
+        "ellos_ustedes": "jugarán"
+      },
+      "condicional": {
+        "yo": "jugaría",
+        "tu": "jugarías",
+        "el_ella_usted": "jugaría",
+        "nosotros": "jugaríamos",
+        "ellos_ustedes": "jugarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "juegue",
+        "tu": "juegues",
+        "el_ella_usted": "juegue",
+        "nosotros": "juguemos",
+        "ellos_ustedes": "jueguen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "jugara",
+        "tu": "jugaras",
+        "el_ella_usted": "jugara",
+        "nosotros": "jugáramos",
+        "ellos_ustedes": "jugaran"
+      }
+    },
+    "imperativo": {
+      "tu": "juega",
+      "el_ella_usted": "juegue",
+      "nosotros": "juguemos",
+      "ellos_ustedes": "jueguen"
+    }
+  },
+  {
+    "id": "pedir",
+    "es": "pedir",
+    "gloss": {
+      "zh": "要求；點（餐）",
+      "en": "to ask for; to order"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Pido un jugo de mora.",
+    "exampleGloss": {
+      "zh": "我點一杯黑莓汁。",
+      "en": "I'll order a blackberry juice."
+    },
+    "infinitive": "pedir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "pedido",
+    "gerundio": "pidiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "pido",
+        "tu": "pides",
+        "el_ella_usted": "pide",
+        "nosotros": "pedimos",
+        "ellos_ustedes": "piden"
+      },
+      "preteritoIndefinido": {
+        "yo": "pedí",
+        "tu": "pediste",
+        "el_ella_usted": "pidió",
+        "nosotros": "pedimos",
+        "ellos_ustedes": "pidieron"
+      },
+      "imperfecto": {
+        "yo": "pedía",
+        "tu": "pedías",
+        "el_ella_usted": "pedía",
+        "nosotros": "pedíamos",
+        "ellos_ustedes": "pedían"
+      },
+      "futuro": {
+        "yo": "pediré",
+        "tu": "pedirás",
+        "el_ella_usted": "pedirá",
+        "nosotros": "pediremos",
+        "ellos_ustedes": "pedirán"
+      },
+      "condicional": {
+        "yo": "pediría",
+        "tu": "pedirías",
+        "el_ella_usted": "pediría",
+        "nosotros": "pediríamos",
+        "ellos_ustedes": "pedirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "pida",
+        "tu": "pidas",
+        "el_ella_usted": "pida",
+        "nosotros": "pidamos",
+        "ellos_ustedes": "pidan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pidiera",
+        "tu": "pidieras",
+        "el_ella_usted": "pidiera",
+        "nosotros": "pidiéramos",
+        "ellos_ustedes": "pidieran"
+      }
+    },
+    "imperativo": {
+      "tu": "pide",
+      "el_ella_usted": "pida",
+      "nosotros": "pidamos",
+      "ellos_ustedes": "pidan"
+    }
+  },
+  {
+    "id": "servir",
+    "es": "servir",
+    "gloss": {
+      "zh": "供應；服務；有用",
+      "en": "to serve; to be useful"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Aquí sirven el almuerzo desde el mediodía.",
+    "exampleGloss": {
+      "zh": "這裡從中午開始供應午餐。",
+      "en": "They serve lunch here from midday."
+    },
+    "infinitive": "servir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "servido",
+    "gerundio": "sirviendo",
+    "conjugations": {
+      "presente": {
+        "yo": "sirvo",
+        "tu": "sirves",
+        "el_ella_usted": "sirve",
+        "nosotros": "servimos",
+        "ellos_ustedes": "sirven"
+      },
+      "preteritoIndefinido": {
+        "yo": "serví",
+        "tu": "serviste",
+        "el_ella_usted": "sirvió",
+        "nosotros": "servimos",
+        "ellos_ustedes": "sirvieron"
+      },
+      "imperfecto": {
+        "yo": "servía",
+        "tu": "servías",
+        "el_ella_usted": "servía",
+        "nosotros": "servíamos",
+        "ellos_ustedes": "servían"
+      },
+      "futuro": {
+        "yo": "serviré",
+        "tu": "servirás",
+        "el_ella_usted": "servirá",
+        "nosotros": "serviremos",
+        "ellos_ustedes": "servirán"
+      },
+      "condicional": {
+        "yo": "serviría",
+        "tu": "servirías",
+        "el_ella_usted": "serviría",
+        "nosotros": "serviríamos",
+        "ellos_ustedes": "servirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "sirva",
+        "tu": "sirvas",
+        "el_ella_usted": "sirva",
+        "nosotros": "sirvamos",
+        "ellos_ustedes": "sirvan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "sirviera",
+        "tu": "sirvieras",
+        "el_ella_usted": "sirviera",
+        "nosotros": "sirviéramos",
+        "ellos_ustedes": "sirvieran"
+      }
+    },
+    "imperativo": {
+      "tu": "sirve",
+      "el_ella_usted": "sirva",
+      "nosotros": "sirvamos",
+      "ellos_ustedes": "sirvan"
+    }
+  },
+  {
+    "id": "seguir",
+    "es": "seguir",
+    "gloss": {
+      "zh": "跟隨；繼續",
+      "en": "to follow; to keep on"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Siga derecho dos cuadras.",
+    "exampleGloss": {
+      "zh": "直走兩個街區。",
+      "en": "Keep straight on for two blocks."
+    },
+    "infinitive": "seguir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "seguido",
+    "gerundio": "siguiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "sigo",
+        "tu": "sigues",
+        "el_ella_usted": "sigue",
+        "nosotros": "seguimos",
+        "ellos_ustedes": "siguen"
+      },
+      "preteritoIndefinido": {
+        "yo": "seguí",
+        "tu": "seguiste",
+        "el_ella_usted": "siguió",
+        "nosotros": "seguimos",
+        "ellos_ustedes": "siguieron"
+      },
+      "imperfecto": {
+        "yo": "seguía",
+        "tu": "seguías",
+        "el_ella_usted": "seguía",
+        "nosotros": "seguíamos",
+        "ellos_ustedes": "seguían"
+      },
+      "futuro": {
+        "yo": "seguiré",
+        "tu": "seguirás",
+        "el_ella_usted": "seguirá",
+        "nosotros": "seguiremos",
+        "ellos_ustedes": "seguirán"
+      },
+      "condicional": {
+        "yo": "seguiría",
+        "tu": "seguirías",
+        "el_ella_usted": "seguiría",
+        "nosotros": "seguiríamos",
+        "ellos_ustedes": "seguirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "siga",
+        "tu": "sigas",
+        "el_ella_usted": "siga",
+        "nosotros": "sigamos",
+        "ellos_ustedes": "sigan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "siguiera",
+        "tu": "siguieras",
+        "el_ella_usted": "siguiera",
+        "nosotros": "siguiéramos",
+        "ellos_ustedes": "siguieran"
+      }
+    },
+    "imperativo": {
+      "tu": "sigue",
+      "el_ella_usted": "siga",
+      "nosotros": "sigamos",
+      "ellos_ustedes": "sigan"
+    }
+  },
+  {
+    "id": "conocer",
+    "es": "conocer",
+    "gloss": {
+      "zh": "認識；去過（某地）",
+      "en": "to know (a person or place); to be familiar with"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Conoces Quito?",
+    "exampleGloss": {
+      "zh": "你去過基多嗎？",
+      "en": "Have you been to Quito?"
+    },
+    "infinitive": "conocer",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "conocido",
+    "gerundio": "conociendo",
+    "conjugations": {
+      "presente": {
+        "yo": "conozco",
+        "tu": "conoces",
+        "el_ella_usted": "conoce",
+        "nosotros": "conocemos",
+        "ellos_ustedes": "conocen"
+      },
+      "preteritoIndefinido": {
+        "yo": "conocí",
+        "tu": "conociste",
+        "el_ella_usted": "conoció",
+        "nosotros": "conocimos",
+        "ellos_ustedes": "conocieron"
+      },
+      "imperfecto": {
+        "yo": "conocía",
+        "tu": "conocías",
+        "el_ella_usted": "conocía",
+        "nosotros": "conocíamos",
+        "ellos_ustedes": "conocían"
+      },
+      "futuro": {
+        "yo": "conoceré",
+        "tu": "conocerás",
+        "el_ella_usted": "conocerá",
+        "nosotros": "conoceremos",
+        "ellos_ustedes": "conocerán"
+      },
+      "condicional": {
+        "yo": "conocería",
+        "tu": "conocerías",
+        "el_ella_usted": "conocería",
+        "nosotros": "conoceríamos",
+        "ellos_ustedes": "conocerían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "conozca",
+        "tu": "conozcas",
+        "el_ella_usted": "conozca",
+        "nosotros": "conozcamos",
+        "ellos_ustedes": "conozcan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "conociera",
+        "tu": "conocieras",
+        "el_ella_usted": "conociera",
+        "nosotros": "conociéramos",
+        "ellos_ustedes": "conocieran"
+      }
+    },
+    "imperativo": {
+      "tu": "conoce",
+      "el_ella_usted": "conozca",
+      "nosotros": "conozcamos",
+      "ellos_ustedes": "conozcan"
+    }
+  },
+  {
+    "id": "gustar",
+    "es": "gustar",
+    "gloss": {
+      "zh": "（某物）使人喜歡",
+      "en": "to be pleasing to (used for \"to like\")"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Me gusta el jugo de mora.",
+    "exampleGloss": {
+      "zh": "我喜歡黑莓汁。",
+      "en": "I like blackberry juice."
+    },
+    "infinitive": "gustar",
+    "irregular": false,
+    "reflexive": false,
+    "participio": "gustado",
+    "gerundio": "gustando",
+    "conjugations": {
+      "presente": {
+        "yo": "gusto",
+        "tu": "gustas",
+        "el_ella_usted": "gusta",
+        "nosotros": "gustamos",
+        "ellos_ustedes": "gustan"
+      },
+      "preteritoIndefinido": {
+        "yo": "gusté",
+        "tu": "gustaste",
+        "el_ella_usted": "gustó",
+        "nosotros": "gustamos",
+        "ellos_ustedes": "gustaron"
+      },
+      "imperfecto": {
+        "yo": "gustaba",
+        "tu": "gustabas",
+        "el_ella_usted": "gustaba",
+        "nosotros": "gustábamos",
+        "ellos_ustedes": "gustaban"
+      },
+      "futuro": {
+        "yo": "gustaré",
+        "tu": "gustarás",
+        "el_ella_usted": "gustará",
+        "nosotros": "gustaremos",
+        "ellos_ustedes": "gustarán"
+      },
+      "condicional": {
+        "yo": "gustaría",
+        "tu": "gustarías",
+        "el_ella_usted": "gustaría",
+        "nosotros": "gustaríamos",
+        "ellos_ustedes": "gustarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "guste",
+        "tu": "gustes",
+        "el_ella_usted": "guste",
+        "nosotros": "gustemos",
+        "ellos_ustedes": "gusten"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "gustara",
+        "tu": "gustaras",
+        "el_ella_usted": "gustara",
+        "nosotros": "gustáramos",
+        "ellos_ustedes": "gustaran"
+      }
+    },
+    "imperativo": {
+      "tu": "gusta",
+      "el_ella_usted": "guste",
+      "nosotros": "gustemos",
+      "ellos_ustedes": "gusten"
+    }
   }
 ]

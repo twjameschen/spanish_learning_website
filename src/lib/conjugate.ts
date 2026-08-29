@@ -69,7 +69,9 @@ export interface ParsedVerb {
 export function parseVerb(raw: string): ParsedVerb {
   const reflexive = raw.endsWith('se');
   const infinitive = reflexive ? raw.slice(0, -2) : raw;
-  const suffix = infinitive.slice(-2);
+  // -ír 也是合法字尾（oír、reír、freír）。重音符號屬於不定式的拼法，
+  // 分類時要當成 -ir 看，否則這些動詞會被判成無效。
+  const suffix = infinitive.slice(-2).replace('í', 'i');
   if (suffix !== 'ar' && suffix !== 'er' && suffix !== 'ir') {
     throw new Error(`不是有效的西班牙文不定式：${raw}`);
   }
@@ -155,17 +157,29 @@ export function conjugateImperative(raw: string): ImperativeSet {
   };
 }
 
+/**
+ * 字根是否以強母音（a／e／o）結尾 —— 這種字根接 -i 會形成**遏止**，
+ * 需要重音符號拆開：creer → creído、traer → traído、oír → oído。
+ * 字根以 i／u 結尾則是雙母音，不加重音：construir → construido。
+ * gu／qu 的 u 不發音，不算母音結尾：seguir → seguido、distinguir → distinguiendo。
+ */
+const endsInStrongVowel = (stem: string): boolean =>
+  /[aeoáéó]$/.test(stem) && !/[gq]u$/.test(stem);
+
+/** 字根母音結尾時 -iendo 會變 -yendo：leer → leyendo。同樣要排除 gu／qu。 */
+const endsInVowelForY = (stem: string): boolean =>
+  /[aeiouáéíóú]$/.test(stem) && !/[gq]u$/.test(stem);
+
 export function participio(raw: string): string {
   const { stem, cls } = parseVerb(raw);
-  return `${stem}${cls === 'ar' ? 'ado' : 'ido'}`;
+  if (cls === 'ar') return `${stem}ado`;
+  return endsInStrongVowel(stem) ? `${stem}ído` : `${stem}ido`;
 }
 
 export function gerundio(raw: string): string {
   const { stem, cls } = parseVerb(raw);
   if (cls === 'ar') return `${stem}ando`;
-  // 母音結尾的字根：leer → leyendo
-  if (/[aeiouáéíóú]$/.test(stem)) return `${stem}yendo`;
-  return `${stem}iendo`;
+  return endsInVowelForY(stem) ? `${stem}yendo` : `${stem}iendo`;
 }
 
 /**

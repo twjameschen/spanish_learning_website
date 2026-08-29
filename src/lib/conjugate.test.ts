@@ -210,3 +210,43 @@ describe('合併手寫的不規則形式', () => {
     expect(merged.imperfecto.yo).toBe('tenía');
   });
 });
+
+describe('分詞與副動詞的母音字根', () => {
+  // 字根以強母音結尾 → 遏止，-ído 要加重音
+  it.each([
+    ['creer', 'creído', 'creyendo'],
+    ['leer', 'leído', 'leyendo'],
+    ['traer', 'traído', 'trayendo'],
+    ['caer', 'caído', 'cayendo'],
+    ['oír', 'oído', 'oyendo'],
+  ])('%s → %s / %s', (inf, part, ger) => {
+    expect(participio(inf)).toBe(part);
+    expect(gerundio(inf)).toBe(ger);
+  });
+
+  // 字根以 i／u 結尾是雙母音，不加重音
+  it.each([
+    ['construir', 'construido', 'construyendo'],
+    ['huir', 'huido', 'huyendo'],
+  ])('%s → %s / %s（雙母音，不加重音）', (inf, part, ger) => {
+    expect(participio(inf)).toBe(part);
+    expect(gerundio(inf)).toBe(ger);
+  });
+
+  // gu／qu 的 u 不發音，不算母音結尾
+  it.each([
+    ['seguir', 'seguido', 'siguiendo'],
+    ['distinguir', 'distinguido', 'distinguiendo'],
+  ])('%s 的 gu 不觸發母音規則', (inf, part, ger) => {
+    expect(participio(inf)).toBe(part);
+    // seguir 的 e→i 是字根變化，引擎只負責不要寫成 seguyendo
+    expect(gerundio(inf)).toBe(inf === 'seguir' ? 'seguiendo' : ger);
+  });
+
+  it('一般子音字根不受影響', () => {
+    expect(participio('comer')).toBe('comido');
+    expect(participio('hablar')).toBe('hablado');
+    expect(gerundio('comer')).toBe('comiendo');
+    expect(gerundio('vivir')).toBe('viviendo');
+  });
+});

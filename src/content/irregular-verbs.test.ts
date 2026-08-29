@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { getVerb, allVerbs } from './index';
 import { PERSONS, SIMPLE_TENSES, type Person, type Tense } from './schema';
+import { conjugateAll, participio, gerundio } from '@/lib/conjugate';
 
 /**
  * 15 個高頻不規則動詞的變位表。
@@ -174,6 +175,75 @@ describe('命令式', () => {
   it('命令式沒有 yo 形式（schema 層面就不允許）', () => {
     for (const verb of allVerbs) {
       expect(Object.keys(verb.imperativo ?? {})).not.toContain('yo');
+    }
+  });
+});
+
+describe('資料與引擎的一致性', () => {
+  it('標記為規則的動詞，每一格都要與引擎產出相同', () => {
+    const drift: string[] = [];
+    for (const verb of allVerbs) {
+      if (verb.irregular) continue;
+      // infinitive 欄位本身就含反身的 -se（llamarse），不要再加一次
+      const engine = conjugateAll(verb.infinitive);
+      for (const tense of SIMPLE_TENSES) {
+        const stored = verb.conjugations[tense];
+        if (!stored) continue;
+        for (const person of PERSONS) {
+          if (stored[person] !== engine[tense][person]) {
+            drift.push(`${verb.id} ${tense} ${person}: 資料 ${stored[person]} ≠ 引擎 ${engine[tense][person]}`);
+          }
+        }
+      }
+      if (verb.participio !== participio(verb.infinitive)) {
+        drift.push(`${verb.id} 分詞：資料 ${verb.participio} ≠ 引擎 ${participio(verb.infinitive)}`);
+      }
+      if (verb.gerundio !== gerundio(verb.infinitive)) {
+        drift.push(`${verb.id} 副動詞：資料 ${verb.gerundio} ≠ 引擎 ${gerundio(verb.infinitive)}`);
+      }
+    }
+    expect(drift).toEqual([]);
+  });
+
+  /**
+   * 「不規則」在這裡是**教學上的分類**，不等於「引擎產不出來」。
+   * leer / creer 的 leyó、leíste 傳統上都列為不規則動詞，學習者確實會被嚇到，
+   * 所以資料標 irregular: true 是對的；只是引擎把它當正字法規則處理，因此產得出來。
+   * 這份白名單就是這類動詞 —— 其餘標了 irregular 的必須真的有一格與引擎不同，
+   * 否則就是標錯，學習者會被告知一個其實規則的動詞是特例。
+   */
+  const ORTHOGRAPHIC_ONLY = new Set(['leer', 'creer']);
+
+  it('標記為不規則的動詞，要嘛真的有一格跟引擎不一樣，要嘛在正字法白名單裡', () => {
+    const mislabelled: string[] = [];
+    for (const verb of allVerbs) {
+      if (!verb.irregular || ORTHOGRAPHIC_ONLY.has(verb.id)) continue;
+      const engine = conjugateAll(verb.infinitive);
+      const differs =
+        SIMPLE_TENSES.some((t) => {
+          const stored = verb.conjugations[t];
+          return stored && PERSONS.some((p) => stored[p] !== engine[t][p]);
+        }) ||
+        verb.participio !== participio(verb.infinitive) ||
+        verb.gerundio !== gerundio(verb.infinitive);
+      if (!differs) mislabelled.push(verb.id);
+    }
+    expect(mislabelled).toEqual([]);
+  });
+
+  it('白名單裡的動詞確實是「引擎產得出來」的那一類', () => {
+    // 白名單不能拿來掩護真正的資料錯誤：這些動詞每一格都必須與引擎相符
+    for (const id of ORTHOGRAPHIC_ONLY) {
+      const verb = allVerbs.find((v) => v.id === id);
+      if (!verb) continue;
+      const engine = conjugateAll(verb.infinitive);
+      for (const tense of SIMPLE_TENSES) {
+        const stored = verb.conjugations[tense];
+        if (!stored) continue;
+        for (const person of PERSONS) {
+          expect(stored[person], `${id} ${tense} ${person}`).toBe(engine[tense][person]);
+        }
+      }
     }
   });
 });
