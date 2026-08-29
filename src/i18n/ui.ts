@@ -41,8 +41,8 @@ export const UI = {
 
   // 卡片
   vocabCardDesc: {
-    zh: '{n} 個 A0 單字，全部附例句與翻譯。名詞一律標 el / la。',
-    en: '{n} A0 words, each with an example sentence and translation. Every noun is tagged el / la.',
+    zh: 'A0 到 B1 共 {n} 個字，全部附例句與翻譯。名詞一律標 el / la。',
+    en: '{n} words from A0 to B1, each with an example sentence and translation. Every noun is tagged el / la.',
   },
   lessonsCardDesc: {
     zh: '{l} 課、{e} 題。每一課都點出最容易犯的錯。',
@@ -109,8 +109,8 @@ export const UI = {
   // 單字表
   vocabTitle: { zh: '單字表', en: 'Vocabulary' },
   vocabSubtitle: {
-    zh: 'A0 共 {n} 個字。名詞一律標上 el / la —— 請養成連冠詞一起記的習慣。',
-    en: '{n} words at A0. Every noun is tagged el / la — make a habit of learning the article with the word.',
+    zh: 'A0 到 B1 共 {n} 個字。名詞一律標上 el / la —— 請養成連冠詞一起記的習慣。',
+    en: '{n} words from A0 to B1. Every noun is tagged el / la — make a habit of learning the article with the word.',
   },
   searchPlaceholder: {
     zh: '搜尋西班牙文或中文（可忽略重音，打 cafe 也找得到 café）',
@@ -133,8 +133,8 @@ export const UI = {
   // 課程
   lessonsTitle: { zh: '課程', en: 'Lessons' },
   lessonsSubtitle: {
-    zh: '目前開放 A0 共 {n} 課。基多之後的城市要等 A1–B1 內容完成。',
-    en: '{n} A0 lessons are open. The cities past Quito arrive with the A1–B1 content.',
+    zh: 'A0 到 B1 共 {n} 課，五座城市全部開放。照順序走，每一課都有前一課當基礎。',
+    en: '{n} lessons from A0 to B1, with all five cities open. Work through them in order — each one builds on the last.',
   },
   lessonNo: { zh: '第 {n} 課', en: 'Lesson {n}' },
   rulesAndExercises: { zh: '{r} 條規則 · {e} 題', en: '{r} rules · {e} exercises' },

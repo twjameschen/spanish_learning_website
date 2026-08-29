@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Markish } from '@/components/Markish';
+import { Markish, Inline } from '@/components/Markish';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
 import { AndeanBand } from '@/components/decor/Patterns';
@@ -142,7 +142,9 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
       case 'mcq':
         return (
           <div className="space-y-1.5">
-            <p className="text-sm font-semibold text-body">{L(ex.prompt)}</p>
+            <p className="text-sm font-semibold text-body">
+              <Inline text={L(ex.prompt)} />
+            </p>
             <ol className="space-y-1">
               {ex.options.map((opt, i) => (
                 <li
@@ -178,7 +180,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
       case 'translate':
         return (
           <p className="text-sm text-body">
-            {L(ex.prompt)} →{' '}
+            <Inline text={L(ex.prompt)} /> →{' '}
             <span lang="es" className="font-bold text-success-700 dark:text-success-200">
               {ex.canonical}
             </span>
@@ -187,7 +189,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
       case 'wordOrder':
         return (
           <p className="text-sm text-body">
-            {L(ex.prompt)} →{' '}
+            <Inline text={L(ex.prompt)} /> →{' '}
             <span lang="es" className="font-bold">{ex.answer.join(' ')}</span>
           </p>
         );

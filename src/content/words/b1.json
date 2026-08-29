@@ -1,0 +1,983 @@
+[
+  {
+    "id": "opinion",
+    "es": "opinión",
+    "gloss": {
+      "zh": "意見",
+      "en": "opinion"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "En mi opinión, vale la pena.",
+    "exampleGloss": {
+      "zh": "我覺得值得。",
+      "en": "In my opinion, it’s worth it."
+    }
+  },
+  {
+    "id": "duda",
+    "es": "duda",
+    "gloss": {
+      "zh": "懷疑；疑問",
+      "en": "doubt"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "No hay duda de que funciona.",
+    "exampleGloss": {
+      "zh": "毫無疑問這行得通。",
+      "en": "There’s no doubt it works."
+    }
+  },
+  {
+    "id": "deseo",
+    "es": "deseo",
+    "gloss": {
+      "zh": "願望",
+      "en": "wish"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Su deseo es viajar por Sudamérica.",
+    "exampleGloss": {
+      "zh": "他的願望是遊遍南美。",
+      "en": "Their wish is to travel around South America."
+    }
+  },
+  {
+    "id": "esperanza",
+    "es": "esperanza",
+    "gloss": {
+      "zh": "希望",
+      "en": "hope"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Todavía tengo esperanza.",
+    "exampleGloss": {
+      "zh": "我還抱著希望。",
+      "en": "I still have hope."
+    }
+  },
+  {
+    "id": "consejo",
+    "es": "consejo",
+    "gloss": {
+      "zh": "建議",
+      "en": "advice"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Le pedí un consejo al guía.",
+    "exampleGloss": {
+      "zh": "我向導遊請教了意見。",
+      "en": "I asked the guide for advice."
+    }
+  },
+  {
+    "id": "acuerdo",
+    "es": "acuerdo",
+    "gloss": {
+      "zh": "同意；協議",
+      "en": "agreement"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Estoy de acuerdo contigo.",
+    "exampleGloss": {
+      "zh": "我同意你。",
+      "en": "I agree with you."
+    }
+  },
+  {
+    "id": "lastima",
+    "es": "lástima",
+    "gloss": {
+      "zh": "可惜",
+      "en": "a pity; a shame"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Es una lástima que esté cerrado.",
+    "exampleGloss": {
+      "zh": "關門了真可惜。",
+      "en": "It’s a shame it’s closed."
+    }
+  },
+  {
+    "id": "sorpresa",
+    "es": "sorpresa",
+    "gloss": {
+      "zh": "驚喜；意外",
+      "en": "surprise"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Fue una sorpresa agradable.",
+    "exampleGloss": {
+      "zh": "那是個驚喜。",
+      "en": "It was a pleasant surprise."
+    }
+  },
+  {
+    "id": "miedo-b1",
+    "es": "temor",
+    "gloss": {
+      "zh": "擔憂；恐懼",
+      "en": "fear; concern"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Tengo temor de que llueva.",
+    "exampleGloss": {
+      "zh": "我怕會下雨。",
+      "en": "I’m worried it might rain."
+    }
+  },
+  {
+    "id": "necesidad",
+    "es": "necesidad",
+    "gloss": {
+      "zh": "需要",
+      "en": "need"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "No hay necesidad de correr.",
+    "exampleGloss": {
+      "zh": "沒必要趕。",
+      "en": "There’s no need to rush."
+    }
+  },
+  {
+    "id": "medio-ambiente",
+    "es": "medio ambiente",
+    "gloss": {
+      "zh": "環境",
+      "en": "the environment"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Hay que cuidar el medio ambiente.",
+    "exampleGloss": {
+      "zh": "必須愛護環境。",
+      "en": "We must look after the environment."
+    }
+  },
+  {
+    "id": "naturaleza",
+    "es": "naturaleza",
+    "gloss": {
+      "zh": "大自然",
+      "en": "nature"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "La naturaleza aquí está muy protegida.",
+    "exampleGloss": {
+      "zh": "這裡的自然環境保護得很好。",
+      "en": "Nature here is very well protected."
+    }
+  },
+  {
+    "id": "especie",
+    "es": "especie",
+    "gloss": {
+      "zh": "物種",
+      "en": "species"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Muchas especies solo viven aquí.",
+    "exampleGloss": {
+      "zh": "很多物種只在這裡才有。",
+      "en": "Many species live only here."
+    }
+  },
+  {
+    "id": "isla",
+    "es": "isla",
+    "gloss": {
+      "zh": "島",
+      "en": "island"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Cada isla tiene animales distintos.",
+    "exampleGloss": {
+      "zh": "每座島的動物都不一樣。",
+      "en": "Each island has different animals."
+    }
+  },
+  {
+    "id": "costa-b1",
+    "es": "arrecife",
+    "gloss": {
+      "zh": "珊瑚礁",
+      "en": "reef"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "El arrecife está en peligro.",
+    "exampleGloss": {
+      "zh": "珊瑚礁面臨危險。",
+      "en": "The reef is in danger."
+    }
+  },
+  {
+    "id": "basura",
+    "es": "basura",
+    "gloss": {
+      "zh": "垃圾",
+      "en": "rubbish; trash"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "No dejen basura en la playa.",
+    "exampleGloss": {
+      "zh": "請別把垃圾留在海灘上。",
+      "en": "Don’t leave rubbish on the beach."
+    }
+  },
+  {
+    "id": "contaminacion",
+    "es": "contaminación",
+    "gloss": {
+      "zh": "污染",
+      "en": "pollution"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "La contaminación afecta a los animales.",
+    "exampleGloss": {
+      "zh": "污染影響到動物。",
+      "en": "Pollution affects the animals."
+    }
+  },
+  {
+    "id": "proteccion",
+    "es": "protección",
+    "gloss": {
+      "zh": "保護",
+      "en": "protection"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "La protección del parque es estricta.",
+    "exampleGloss": {
+      "zh": "公園的保護規定很嚴。",
+      "en": "Protection of the park is strict."
+    }
+  },
+  {
+    "id": "parque-nacional",
+    "es": "parque nacional",
+    "gloss": {
+      "zh": "國家公園",
+      "en": "national park"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "El parque nacional cubre casi toda la isla.",
+    "exampleGloss": {
+      "zh": "國家公園幾乎涵蓋整座島。",
+      "en": "The national park covers almost the whole island."
+    }
+  },
+  {
+    "id": "peligro",
+    "es": "peligro",
+    "gloss": {
+      "zh": "危險",
+      "en": "danger"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Algunas especies están en peligro.",
+    "exampleGloss": {
+      "zh": "有些物種瀕臨危險。",
+      "en": "Some species are in danger."
+    }
+  },
+  {
+    "id": "regla-b1",
+    "es": "norma",
+    "gloss": {
+      "zh": "規定",
+      "en": "rule; regulation"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Las normas del parque son claras.",
+    "exampleGloss": {
+      "zh": "公園的規定很明確。",
+      "en": "The park’s rules are clear."
+    }
+  },
+  {
+    "id": "permiso",
+    "es": "permiso",
+    "gloss": {
+      "zh": "許可",
+      "en": "permit; permission"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Se necesita permiso para acampar.",
+    "exampleGloss": {
+      "zh": "露營需要許可。",
+      "en": "You need a permit to camp."
+    }
+  },
+  {
+    "id": "visitante",
+    "es": "visitante",
+    "gloss": {
+      "zh": "訪客",
+      "en": "visitor"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "Los visitantes deben ir con un guía.",
+    "exampleGloss": {
+      "zh": "訪客必須有導遊陪同。",
+      "en": "Visitors must go with a guide."
+    }
+  },
+  {
+    "id": "recurso",
+    "es": "recurso",
+    "gloss": {
+      "zh": "資源",
+      "en": "resource"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "medioambiente",
+    "exampleEs": "El agua es un recurso limitado aquí.",
+    "exampleGloss": {
+      "zh": "水在這裡是有限的資源。",
+      "en": "Water is a limited resource here."
+    }
+  },
+  {
+    "id": "sociedad",
+    "es": "sociedad",
+    "gloss": {
+      "zh": "社會",
+      "en": "society"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La sociedad cambió mucho en veinte años.",
+    "exampleGloss": {
+      "zh": "社會在二十年間變了很多。",
+      "en": "Society changed a lot in twenty years."
+    }
+  },
+  {
+    "id": "gobierno",
+    "es": "gobierno",
+    "gloss": {
+      "zh": "政府",
+      "en": "government"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "El gobierno aprobó la ley.",
+    "exampleGloss": {
+      "zh": "政府通過了那條法律。",
+      "en": "The government passed the law."
+    }
+  },
+  {
+    "id": "ley",
+    "es": "ley",
+    "gloss": {
+      "zh": "法律",
+      "en": "law"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La ley protege a los animales.",
+    "exampleGloss": {
+      "zh": "法律保護動物。",
+      "en": "The law protects the animals."
+    }
+  },
+  {
+    "id": "derecho",
+    "es": "derecho",
+    "gloss": {
+      "zh": "權利",
+      "en": "right (entitlement)"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "Todos tienen derecho a la educación.",
+    "exampleGloss": {
+      "zh": "每個人都有受教育的權利。",
+      "en": "Everyone has the right to education."
+    }
+  },
+  {
+    "id": "educacion",
+    "es": "educación",
+    "gloss": {
+      "zh": "教育",
+      "en": "education"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La educación es gratuita aquí.",
+    "exampleGloss": {
+      "zh": "這裡的教育是免費的。",
+      "en": "Education is free here."
+    }
+  },
+  {
+    "id": "economia",
+    "es": "economía",
+    "gloss": {
+      "zh": "經濟",
+      "en": "economy"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La economía depende del turismo.",
+    "exampleGloss": {
+      "zh": "經濟靠觀光業。",
+      "en": "The economy depends on tourism."
+    }
+  },
+  {
+    "id": "turismo",
+    "es": "turismo",
+    "gloss": {
+      "zh": "觀光業",
+      "en": "tourism"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "El turismo creció mucho.",
+    "exampleGloss": {
+      "zh": "觀光業成長很多。",
+      "en": "Tourism grew a lot."
+    }
+  },
+  {
+    "id": "desarrollo",
+    "es": "desarrollo",
+    "gloss": {
+      "zh": "發展",
+      "en": "development"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "El desarrollo tiene que ser sostenible.",
+    "exampleGloss": {
+      "zh": "發展必須是永續的。",
+      "en": "Development has to be sustainable."
+    }
+  },
+  {
+    "id": "cambio-b1",
+    "es": "cambio climático",
+    "gloss": {
+      "zh": "氣候變遷",
+      "en": "climate change"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "El cambio climático afecta al páramo.",
+    "exampleGloss": {
+      "zh": "氣候變遷影響高山草原。",
+      "en": "Climate change affects the páramo."
+    }
+  },
+  {
+    "id": "poblacion",
+    "es": "población",
+    "gloss": {
+      "zh": "人口",
+      "en": "population"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La población de la isla es pequeña.",
+    "exampleGloss": {
+      "zh": "島上人口很少。",
+      "en": "The island’s population is small."
+    }
+  },
+  {
+    "id": "cultura",
+    "es": "cultura",
+    "gloss": {
+      "zh": "文化",
+      "en": "culture"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "La cultura andina es muy rica.",
+    "exampleGloss": {
+      "zh": "安地斯文化非常豐富。",
+      "en": "Andean culture is very rich."
+    }
+  },
+  {
+    "id": "tradicion",
+    "es": "tradicion",
+    "gloss": {
+      "zh": "傳統",
+      "en": "tradition"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "Es una tradición de la Sierra.",
+    "exampleGloss": {
+      "zh": "這是高地的傳統。",
+      "en": "It’s a highland tradition."
+    }
+  },
+  {
+    "id": "costumbre",
+    "es": "costumbre",
+    "gloss": {
+      "zh": "習俗；習慣",
+      "en": "custom; habit"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "Aquí es costumbre saludar a todos.",
+    "exampleGloss": {
+      "zh": "這裡的習慣是跟每個人打招呼。",
+      "en": "Here it’s customary to greet everyone."
+    }
+  },
+  {
+    "id": "oportunidad",
+    "es": "oportunidad",
+    "gloss": {
+      "zh": "機會",
+      "en": "opportunity"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "Es una buena oportunidad para practicar.",
+    "exampleGloss": {
+      "zh": "這是練習的好機會。",
+      "en": "It’s a good opportunity to practise."
+    }
+  },
+  {
+    "id": "exito",
+    "es": "éxito",
+    "gloss": {
+      "zh": "成功",
+      "en": "success"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "El proyecto tuvo mucho éxito.",
+    "exampleGloss": {
+      "zh": "那個專案很成功。",
+      "en": "The project was very successful."
+    }
+  },
+  {
+    "id": "esfuerzo",
+    "es": "esfuerzo",
+    "gloss": {
+      "zh": "努力",
+      "en": "effort"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "B1",
+    "topic": "sociedad",
+    "exampleEs": "Aprender un idioma requiere esfuerzo.",
+    "exampleGloss": {
+      "zh": "學語言需要努力。",
+      "en": "Learning a language takes effort."
+    }
+  },
+  {
+    "id": "probable",
+    "es": "probable",
+    "gloss": {
+      "zh": "可能的",
+      "en": "likely"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Es probable que llueva mañana.",
+    "exampleGloss": {
+      "zh": "明天可能會下雨。",
+      "en": "It’s likely to rain tomorrow."
+    }
+  },
+  {
+    "id": "imposible",
+    "es": "imposible",
+    "gloss": {
+      "zh": "不可能的",
+      "en": "impossible"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Es imposible llegar en una hora.",
+    "exampleGloss": {
+      "zh": "一小時內到是不可能的。",
+      "en": "It’s impossible to get there in an hour."
+    }
+  },
+  {
+    "id": "cierto",
+    "es": "cierto",
+    "gloss": {
+      "zh": "確實的；某個",
+      "en": "true; certain"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Es cierto que el clima cambió.",
+    "exampleGloss": {
+      "zh": "氣候確實變了。",
+      "en": "It’s true that the climate changed."
+    }
+  },
+  {
+    "id": "evidente",
+    "es": "evidente",
+    "gloss": {
+      "zh": "明顯的",
+      "en": "obvious"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Es evidente que necesita ayuda.",
+    "exampleGloss": {
+      "zh": "很明顯他需要幫助。",
+      "en": "It’s obvious he needs help."
+    }
+  },
+  {
+    "id": "util",
+    "es": "útil",
+    "gloss": {
+      "zh": "有用的",
+      "en": "useful"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Este consejo es muy útil.",
+    "exampleGloss": {
+      "zh": "這個建議很有用。",
+      "en": "This advice is very useful."
+    }
+  },
+  {
+    "id": "justo",
+    "es": "justo",
+    "gloss": {
+      "zh": "公平的；剛好",
+      "en": "fair; exactly"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "No me parece justo.",
+    "exampleGloss": {
+      "zh": "我覺得不公平。",
+      "en": "It doesn’t seem fair to me."
+    }
+  },
+  {
+    "id": "raro",
+    "es": "raro",
+    "gloss": {
+      "zh": "奇怪的；罕見的",
+      "en": "strange; rare"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Es raro que no haya llegado.",
+    "exampleGloss": {
+      "zh": "他還沒到，很奇怪。",
+      "en": "It’s odd that he hasn’t arrived."
+    }
+  },
+  {
+    "id": "sostenible",
+    "es": "sostenible",
+    "gloss": {
+      "zh": "永續的",
+      "en": "sustainable"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Buscan un turismo sostenible.",
+    "exampleGloss": {
+      "zh": "他們在追求永續觀光。",
+      "en": "They’re aiming for sustainable tourism."
+    }
+  },
+  {
+    "id": "estricto",
+    "es": "estricto",
+    "gloss": {
+      "zh": "嚴格的",
+      "en": "strict"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "Las normas son estrictas.",
+    "exampleGloss": {
+      "zh": "規定很嚴格。",
+      "en": "The rules are strict."
+    }
+  },
+  {
+    "id": "suficiente",
+    "es": "suficiente",
+    "gloss": {
+      "zh": "足夠的",
+      "en": "enough; sufficient"
+    },
+    "pos": "adj",
+    "level": "B1",
+    "topic": "adjetivos",
+    "exampleEs": "No tenemos tiempo suficiente.",
+    "exampleGloss": {
+      "zh": "我們時間不夠。",
+      "en": "We don’t have enough time."
+    }
+  },
+  {
+    "id": "siquiera",
+    "es": "siquiera",
+    "gloss": {
+      "zh": "甚至（否定句）",
+      "en": "even (in negatives)"
+    },
+    "pos": "adv",
+    "level": "B1",
+    "topic": "comunes",
+    "exampleEs": "Ni siquiera lo intentó.",
+    "exampleGloss": {
+      "zh": "他甚至沒試過。",
+      "en": "He didn’t even try."
+    }
+  },
+  {
+    "id": "acaso",
+    "es": "acaso",
+    "gloss": {
+      "zh": "或許；難道",
+      "en": "perhaps; by any chance"
+    },
+    "pos": "adv",
+    "level": "B1",
+    "topic": "comunes",
+    "exampleEs": "¿Acaso no lo sabías?",
+    "exampleGloss": {
+      "zh": "難道你不知道嗎？",
+      "en": "Didn’t you know, by any chance?"
+    }
+  },
+  {
+    "id": "apenas",
+    "es": "apenas",
+    "gloss": {
+      "zh": "幾乎不；一……就",
+      "en": "hardly; as soon as"
+    },
+    "pos": "adv",
+    "level": "B1",
+    "topic": "comunes",
+    "exampleEs": "Apenas llegamos, empezó a llover.",
+    "exampleGloss": {
+      "zh": "我們一到就開始下雨。",
+      "en": "As soon as we arrived, it started raining."
+    }
+  },
+  {
+    "id": "sobre-todo",
+    "es": "sobre todo",
+    "gloss": {
+      "zh": "尤其",
+      "en": "above all; especially"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "comunes",
+    "exampleEs": "Me gusta la Sierra, sobre todo Cuenca.",
+    "exampleGloss": {
+      "zh": "我喜歡高地，尤其是昆卡。",
+      "en": "I like the highlands, especially Cuenca."
+    }
+  },
+  {
+    "id": "en-cuanto",
+    "es": "en cuanto",
+    "gloss": {
+      "zh": "一……就",
+      "en": "as soon as"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "conectores",
+    "exampleEs": "En cuanto llegue, te aviso.",
+    "exampleGloss": {
+      "zh": "我一到就通知你。",
+      "en": "As soon as I arrive, I’ll let you know."
+    }
+  },
+  {
+    "id": "antes-de-que",
+    "es": "antes de que",
+    "gloss": {
+      "zh": "在……之前",
+      "en": "before (that)"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "conectores",
+    "exampleEs": "Salgamos antes de que llueva.",
+    "exampleGloss": {
+      "zh": "趁還沒下雨我們走吧。",
+      "en": "Let’s leave before it rains."
+    }
+  },
+  {
+    "id": "para-que",
+    "es": "para que",
+    "gloss": {
+      "zh": "為了讓",
+      "en": "so that"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "conectores",
+    "exampleEs": "Hablo despacio para que me entiendas.",
+    "exampleGloss": {
+      "zh": "我講慢一點好讓你聽懂。",
+      "en": "I speak slowly so that you understand me."
+    }
+  },
+  {
+    "id": "a-menos-que",
+    "es": "a menos que",
+    "gloss": {
+      "zh": "除非",
+      "en": "unless"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "conectores",
+    "exampleEs": "No iremos a menos que mejore el clima.",
+    "exampleGloss": {
+      "zh": "除非天氣變好，否則我們不去。",
+      "en": "We won’t go unless the weather improves."
+    }
+  },
+  {
+    "id": "ojala",
+    "es": "ojalá",
+    "gloss": {
+      "zh": "但願",
+      "en": "I hope; hopefully"
+    },
+    "pos": "phrase",
+    "level": "B1",
+    "topic": "opinion",
+    "exampleEs": "Ojalá haga buen tiempo.",
+    "exampleGloss": {
+      "zh": "但願天氣好。",
+      "en": "Hopefully the weather will be good."
+    }
+  }
+]

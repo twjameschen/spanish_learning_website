@@ -1,10 +1,18 @@
 import type { ReactNode } from 'react';
 import { Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Inline } from '@/components/Markish';
 
-/** 題目的提示文字（中／英，隨語言切換） */
+/**
+ * 題目的提示文字（中／英，隨語言切換）。
+ * 傳字串時會過一次行內格式，題目裡的 **粗體** 才不會露出星號。
+ */
 export function Prompt({ children }: { children: ReactNode }) {
-  return <p className="text-lg font-bold leading-relaxed text-body">{children}</p>;
+  return (
+    <p className="text-lg font-bold leading-relaxed text-body">
+      {typeof children === 'string' ? <Inline text={children} /> : children}
+    </p>
+  );
 }
 
 /** 要唸／要看的西班牙文，放大顯示 */

@@ -64,7 +64,7 @@ export function HomePage() {
         <div className="relative space-y-3">
           <Badge variant="accent" className="bg-white/25 text-white">
             <Sparkles aria-hidden="true" />
-            Phase 4 · A0
+            A0 – B1
           </Badge>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             {t('heroTitle')}
@@ -75,9 +75,9 @@ export function HomePage() {
           <div className="max-w-sm pt-2">
             <div className="mb-1.5 flex items-baseline justify-between text-xs font-bold text-white/90">
               <span>{t('progress')}</span>
-              <span>Phase 4 / 7</span>
+              <span>Phase 5 / 7</span>
             </div>
-            <Progress value={(4 / 7) * 100} className="bg-white/25" />
+            <Progress value={(5 / 7) * 100} className="bg-white/25" />
           </div>
         </div>
       </section>

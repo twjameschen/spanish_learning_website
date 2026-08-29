@@ -1,0 +1,3060 @@
+[
+  {
+    "id": "b1-subjuntivo-forma",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 1,
+    "title": {
+      "zh": "現在虛擬式：形式，以及意志與情感",
+      "en": "The present subjunctive: forms, wishes and feelings"
+    },
+    "intro": {
+      "zh": "虛擬式不是新時態，是一種**語氣**。到目前為止學的都是直陳式 —— 陳述事實。虛擬式用來講**還不是事實**的東西：希望、要求、情緒反應、懷疑。\n\n形式很好記：**拿現在式的 yo 形，去掉 -o，換上相反的母音**。-ar 動詞換 e，-er／-ir 動詞換 a。\n\n虛擬式幾乎都出現在 **que 引導的從句**裡，而且主句和從句的主詞要**不同**。",
+      "en": "The subjunctive isn’t a new tense — it’s a **mood**. Everything so far has been the indicative, which states facts. The subjunctive is for what **isn’t a fact yet**: wishes, requests, emotional reactions, doubt.\n\nThe forms are easy to build: **take the yo form of the present, drop the -o, and put on the opposite vowel.** -ar verbs switch to e; -er/-ir verbs switch to a.\n\nThe subjunctive nearly always appears in a **clause introduced by que**, and the two clauses need **different subjects**."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**作法：現在式 yo 形 → 去掉 -o → 換相反母音。**",
+          "en": "**How to build it: present yo form → drop the -o → switch the vowel.**"
+        },
+        "examples": [
+          {
+            "es": "hablo → hable, hables, hable, hablemos, hablen",
+            "gloss": {
+              "zh": "hablar 的現在虛擬式",
+              "en": "the present subjunctive of hablar"
+            },
+            "note": {
+              "zh": "-ar 換成 e",
+              "en": "-ar switches to e"
+            }
+          },
+          {
+            "es": "como → coma, comas, coma, comamos, coman",
+            "gloss": {
+              "zh": "comer 的現在虛擬式",
+              "en": "the present subjunctive of comer"
+            },
+            "note": {
+              "zh": "-er 換成 a",
+              "en": "-er switches to a"
+            }
+          },
+          {
+            "es": "tengo → tenga, tengas, tenga, tengamos, tengan",
+            "gloss": {
+              "zh": "tener 的現在虛擬式",
+              "en": "the present subjunctive of tener"
+            },
+            "note": {
+              "zh": "yo 形的不規則會一路帶過去",
+              "en": "The yo-form irregularity carries all the way through."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**六個動詞的虛擬式推不出來**，要單獨背：ser、ir、saber、dar、haber、estar。",
+          "en": "**Six verbs can’t be derived** and must be memorised: ser, ir, saber, dar, haber, estar."
+        },
+        "examples": [
+          {
+            "es": "ser → sea, seas, sea, seamos, sean",
+            "gloss": {
+              "zh": "ser",
+              "en": "ser"
+            }
+          },
+          {
+            "es": "ir → vaya, vayas, vaya, vayamos, vayan",
+            "gloss": {
+              "zh": "ir",
+              "en": "ir"
+            }
+          },
+          {
+            "es": "saber → sepa, sepas, sepa, sepamos, sepan",
+            "gloss": {
+              "zh": "saber",
+              "en": "saber"
+            }
+          },
+          {
+            "es": "dar → dé, des, dé, demos, den",
+            "gloss": {
+              "zh": "dar",
+              "en": "dar"
+            }
+          },
+          {
+            "es": "haber → haya, hayas, haya, hayamos, hayan",
+            "gloss": {
+              "zh": "haber",
+              "en": "haber"
+            }
+          },
+          {
+            "es": "estar → esté, estés, esté, estemos, estén",
+            "gloss": {
+              "zh": "estar",
+              "en": "estar"
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**意志與要求**：希望、要求、建議、命令別人做某事。",
+          "en": "**Wishes and requests**: wanting, asking, advising or telling someone to do something."
+        },
+        "examples": [
+          {
+            "es": "Quiero que vengas mañana.",
+            "gloss": {
+              "zh": "我希望你明天來。",
+              "en": "I want you to come tomorrow."
+            }
+          },
+          {
+            "es": "Le pido que espere un momento.",
+            "gloss": {
+              "zh": "我請您稍等一下。",
+              "en": "I’m asking you to wait a moment."
+            }
+          },
+          {
+            "es": "Le aconsejo que reserve antes.",
+            "gloss": {
+              "zh": "我建議您先訂位。",
+              "en": "I advise you to book in advance."
+            }
+          },
+          {
+            "es": "El parque exige que vayas con guía.",
+            "gloss": {
+              "zh": "公園規定必須有導遊陪同。",
+              "en": "The park requires you to go with a guide."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**情感反應**：高興、遺憾、驚訝、擔心。",
+          "en": "**Emotional reactions**: being glad, sorry, surprised or worried."
+        },
+        "examples": [
+          {
+            "es": "Me alegra que estés aquí.",
+            "gloss": {
+              "zh": "你在這裡我很高興。",
+              "en": "I’m glad you’re here."
+            }
+          },
+          {
+            "es": "Siento que no puedas venir.",
+            "gloss": {
+              "zh": "很遺憾你不能來。",
+              "en": "I’m sorry you can’t come."
+            }
+          },
+          {
+            "es": "Es una lástima que esté cerrado.",
+            "gloss": {
+              "zh": "關門了真可惜。",
+              "en": "It’s a shame it’s closed."
+            }
+          },
+          {
+            "es": "Ojalá haga buen tiempo.",
+            "gloss": {
+              "zh": "但願天氣好。",
+              "en": "Hopefully the weather will be good."
+            },
+            "note": {
+              "zh": "ojalá 後面永遠接虛擬式",
+              "en": "ojalá is always followed by the subjunctive."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**兩個子句的主詞必須不同**。主詞相同的時候，直接用不定式，不用 que。",
+          "en": "The **two clauses need different subjects**. When the subject is the same, use an infinitive and skip que."
+        },
+        "examples": [
+          {
+            "es": "Quiero ir a Galápagos.",
+            "gloss": {
+              "zh": "我想去加拉巴哥。",
+              "en": "I want to go to the Galápagos."
+            },
+            "note": {
+              "zh": "主詞都是我 → 用不定式",
+              "en": "Same subject throughout → infinitive."
+            }
+          },
+          {
+            "es": "Quiero que vayas a Galápagos.",
+            "gloss": {
+              "zh": "我希望你去加拉巴哥。",
+              "en": "I want you to go to the Galápagos."
+            },
+            "note": {
+              "zh": "兩個主詞不同 → 用 que + 虛擬式",
+              "en": "Different subjects → que + subjunctive."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是**主詞相同還用 que**：\n\n- ✗ Quiero que yo vaya. → ✓ **Quiero ir**.\n- ✗ Espero que yo pueda ir. → ✓ **Espero poder ir**.\n\n> 自我檢查：兩邊的主詞是同一個人嗎？是的話就用不定式，不要 que，也不要虛擬式。\n\n第二個是**在 que 後面用了直陳式**：\n\n- ✗ Quiero que vienes mañana. → ✓ Quiero que **vengas** mañana.\n- ✗ Le pido que espera. → ✓ Le pido que **espere**.\n\n表達意志、要求、情感的動詞後面，que 子句一律用虛擬式。\n\n第三個是**忘了 yo 形的不規則會帶過去**：\n\n- tengo → ✓ **tenga**（不是 ✗ tena）\n- salgo → ✓ **salga**（不是 ✗ sala）\n- conozco → ✓ **conozca**（不是 ✗ conoza）\n\n虛擬式的字根就是 yo 形去掉 -o 的那一段，yo 形怎麼奇怪，虛擬式就跟著奇怪。\n\n第四個是**六個特例硬推**：\n\n- ✗ ser 的 yo 是 soy，所以 ✗ soya → ✓ **sea**\n- ✗ ir 的 yo 是 voy，所以 ✗ voya → ✓ **vaya**\n\n> 記憶策略：先把「現在式 yo 形」記牢，虛擬式就自動有了。六個特例（ser、ir、saber、dar、haber、estar）另外背 —— 剛好就是那幾個最常用的。",
+      "en": "The most common mistake is **using que when the subject is the same**:\n\n- ✗ Quiero que yo vaya. → ✓ **Quiero ir**.\n- ✗ Espero que yo pueda ir. → ✓ **Espero poder ir**.\n\n> Self-check: is it the same person on both sides? Then use an infinitive — no que, no subjunctive.\n\nSecond, **using the indicative after que**:\n\n- ✗ Quiero que vienes mañana. → ✓ Quiero que **vengas** mañana.\n- ✗ Le pido que espera. → ✓ Le pido que **espere**.\n\nAfter verbs of wanting, asking and feeling, the que clause always takes the subjunctive.\n\nThird, **forgetting that yo-form irregularities carry over**:\n\n- tengo → ✓ **tenga** (not ✗ tena)\n- salgo → ✓ **salga** (not ✗ sala)\n- conozco → ✓ **conozca** (not ✗ conoza)\n\nThe subjunctive stem *is* the yo form minus its -o. However odd the yo form is, the subjunctive is odd in the same way.\n\nFourth, **trying to derive the six exceptions**:\n\n- ser’s yo is soy, but not ✗ soya → ✓ **sea**\n- ir’s yo is voy, but not ✗ voya → ✓ **vaya**\n\n> A strategy: get the present yo form solid and the subjunctive comes free. Memorise the six exceptions (ser, ir, saber, dar, haber, estar) separately — which happen to be the six you use most."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1sf-1",
+        "type": "conjugation",
+        "difficulty": "easy",
+        "explain": {
+          "zh": "-ar 動詞的虛擬式換成 e：habl- + e。",
+          "en": "-ar verbs switch to e in the subjunctive: habl- + e."
+        },
+        "verbId": "hablar",
+        "person": "yo",
+        "tense": "presenteSubjuntivo",
+        "answer": "hable"
+      },
+      {
+        "id": "ex-b1sf-2",
+        "type": "conjugation",
+        "difficulty": "easy",
+        "explain": {
+          "zh": "-er 動詞的虛擬式換成 a：com- + a。",
+          "en": "-er verbs switch to a in the subjunctive: com- + a."
+        },
+        "verbId": "comer",
+        "person": "tu",
+        "tense": "presenteSubjuntivo",
+        "answer": "comas"
+      },
+      {
+        "id": "ex-b1sf-3",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "tener 的 yo 是 tengo，虛擬式字根就是 teng-。",
+          "en": "The yo form of tener is tengo, so the subjunctive stem is teng-."
+        },
+        "verbId": "tener",
+        "person": "tu",
+        "tense": "presenteSubjuntivo",
+        "answer": "tengas"
+      },
+      {
+        "id": "ex-b1sf-4",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "ir 的虛擬式是六個特例之一：vaya。",
+          "en": "The subjunctive of ir is one of the six exceptions: vaya."
+        },
+        "verbId": "ir",
+        "person": "tu",
+        "tense": "presenteSubjuntivo",
+        "answer": "vayas"
+      },
+      {
+        "id": "ex-b1sf-5",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "ser 的虛擬式是 sea，推不出來。",
+          "en": "The subjunctive of ser is sea; it can’t be derived."
+        },
+        "verbId": "ser",
+        "person": "el_ella_usted",
+        "tense": "presenteSubjuntivo",
+        "answer": "sea"
+      },
+      {
+        "id": "ex-b1sf-6",
+        "type": "conjugation",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "conocer 的 yo 是 conozco，虛擬式字根是 conozc-。",
+          "en": "The yo form of conocer is conozco, so the subjunctive stem is conozc-."
+        },
+        "verbId": "conocer",
+        "person": "yo",
+        "tense": "presenteSubjuntivo",
+        "answer": "conozca"
+      },
+      {
+        "id": "ex-b1sf-7",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "兩邊主詞不同，要用 que + 虛擬式。",
+          "en": "Different subjects on each side call for que + subjunctive."
+        },
+        "prompt": {
+          "zh": "「我希望你明天來。」該用哪個？",
+          "en": "Which fits “I want you to come tomorrow”?"
+        },
+        "options": [
+          {
+            "zh": "Quiero que vienes mañana.",
+            "en": "Quiero que vienes mañana."
+          },
+          {
+            "zh": "Quiero que vengas mañana.",
+            "en": "Quiero que vengas mañana."
+          },
+          {
+            "zh": "Quiero venir mañana.",
+            "en": "Quiero venir mañana."
+          },
+          {
+            "zh": "Quiero que venir mañana.",
+            "en": "Quiero que venir mañana."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "que 後面要用虛擬式，vienes 是直陳式。",
+            "en": "The que clause needs the subjunctive; vienes is indicative."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "這句意思是「我想來」，主詞變成我了。",
+            "en": "That means “I want to come” — the subject has changed."
+          },
+          {
+            "zh": "que 後面要接變位動詞，不是不定式。",
+            "en": "que is followed by a conjugated verb, not an infinitive."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sf-8",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "主詞相同的時候用不定式，不加 que。",
+          "en": "With the same subject, use an infinitive and no que."
+        },
+        "prompt": {
+          "zh": "「我想去加拉巴哥。」該用哪個？",
+          "en": "Which fits “I want to go to the Galápagos”?"
+        },
+        "options": [
+          {
+            "zh": "Quiero que vaya a Galápagos.",
+            "en": "Quiero que vaya a Galápagos."
+          },
+          {
+            "zh": "Quiero ir a Galápagos.",
+            "en": "Quiero ir a Galápagos."
+          },
+          {
+            "zh": "Quiero que yo vaya a Galápagos.",
+            "en": "Quiero que yo vaya a Galápagos."
+          },
+          {
+            "zh": "Quiero que voy a Galápagos.",
+            "en": "Quiero que voy a Galápagos."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "主詞相同時不用 que 結構。",
+            "en": "With the same subject the que structure isn’t used."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "主詞相同，硬加 que 反而不自然。",
+            "en": "Same subject — forcing que in is unnatural."
+          },
+          {
+            "zh": "que 後面不用直陳式，而且主詞也相同。",
+            "en": "The que clause doesn’t take the indicative, and the subject is the same anyway."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sf-9",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "ojalá 後面永遠接虛擬式；hacer 的虛擬式是 haga。",
+          "en": "ojalá is always followed by the subjunctive, and the subjunctive of hacer is haga."
+        },
+        "prompt": {
+          "zh": "把「但願天氣好。」翻成西班牙文",
+          "en": "Translate into Spanish: “Hopefully the weather will be good.”"
+        },
+        "accept": [
+          "Ojalá haga buen tiempo",
+          "Ojala haga buen tiempo"
+        ],
+        "canonical": "Ojalá haga buen tiempo."
+      },
+      {
+        "id": "ex-b1sf-10",
+        "type": "wordOrder",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "aconsejar 表達建議，que 後面用虛擬式 reserve。",
+          "en": "aconsejar expresses advice, so the que clause takes the subjunctive reserve."
+        },
+        "prompt": {
+          "zh": "排成「我建議您先訂位。」",
+          "en": "Arrange: “I advise you to book in advance.”"
+        },
+        "tokens": [
+          "aconsejo",
+          "antes",
+          "Le",
+          "que",
+          "reserve"
+        ],
+        "answer": [
+          "Le",
+          "aconsejo",
+          "que",
+          "reserve",
+          "antes"
+        ]
+      }
+    ],
+    "prerequisites": [
+      "a2-relativos"
+    ],
+    "vocabIds": [
+      "querer",
+      "pedir",
+      "aconsejar",
+      "sugerir",
+      "exigir",
+      "sentir",
+      "ser",
+      "ir",
+      "saber",
+      "dar",
+      "haber",
+      "estar",
+      "ojala",
+      "lastima",
+      "deseo",
+      "esperanza",
+      "consejo"
+    ],
+    "usesOnlyTaughtGrammar": true
+  },
+  {
+    "id": "b1-subjuntivo-duda",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 2,
+    "title": {
+      "zh": "虛擬式：懷疑、否定與評價",
+      "en": "The subjunctive: doubt, denial and judgement"
+    },
+    "intro": {
+      "zh": "第二組觸發虛擬式的情境：**你不確定，或你不承認那是事實**。\n\n三種：\n\n- **懷疑**：dudar que、no creer que、no estar seguro de que\n- **否定事實**：no es verdad que、negar que\n- **非人稱的評價**：es importante que、es posible que、es raro que\n\n關鍵對比：**肯定的 creo que 用直陳式，否定的 no creo que 用虛擬式**。同一個動詞，加不加 no 決定了語氣。",
+      "en": "The second family of subjunctive triggers: **you’re not sure, or you don’t accept it as fact**.\n\nThree kinds:\n\n- **doubt**: dudar que, no creer que, no estar seguro de que\n- **denying a fact**: no es verdad que, negar que\n- **impersonal judgements**: es importante que, es posible que, es raro que\n\nThe key contrast: **affirmative creo que takes the indicative, negative no creo que takes the subjunctive.** Same verb — the no decides the mood."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**懷疑用虛擬式，確信用直陳式。**",
+          "en": "**Doubt takes the subjunctive; confidence takes the indicative.**"
+        },
+        "examples": [
+          {
+            "es": "Dudo que llegue a tiempo.",
+            "gloss": {
+              "zh": "我懷疑他能準時到。",
+              "en": "I doubt he’ll arrive on time."
+            },
+            "note": {
+              "zh": "虛擬式",
+              "en": "subjunctive"
+            }
+          },
+          {
+            "es": "Creo que llega a tiempo.",
+            "gloss": {
+              "zh": "我覺得他會準時到。",
+              "en": "I think he’ll arrive on time."
+            },
+            "note": {
+              "zh": "直陳式",
+              "en": "indicative"
+            }
+          },
+          {
+            "es": "No creo que llegue a tiempo.",
+            "gloss": {
+              "zh": "我不覺得他會準時到。",
+              "en": "I don’t think he’ll arrive on time."
+            },
+            "note": {
+              "zh": "加了 no 就變虛擬式",
+              "en": "The no flips it to the subjunctive."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**否定一件事是事實**時用虛擬式；肯定它是事實時用直陳式。",
+          "en": "Use the subjunctive when **denying that something is a fact**, the indicative when asserting it."
+        },
+        "examples": [
+          {
+            "es": "Es verdad que el clima cambió.",
+            "gloss": {
+              "zh": "氣候確實變了。",
+              "en": "It’s true the climate has changed."
+            },
+            "note": {
+              "zh": "直陳式",
+              "en": "indicative"
+            }
+          },
+          {
+            "es": "No es verdad que el clima cambie tan rápido.",
+            "gloss": {
+              "zh": "氣候並沒有變那麼快。",
+              "en": "It isn’t true that the climate changes that fast."
+            },
+            "note": {
+              "zh": "虛擬式",
+              "en": "subjunctive"
+            }
+          },
+          {
+            "es": "No es cierto que esté cerrado.",
+            "gloss": {
+              "zh": "它並沒有關門。",
+              "en": "It isn’t true that it’s closed."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**非人稱的評價**（es + 形容詞 + que）大多用虛擬式。",
+          "en": "Most **impersonal judgements** (es + adjective + que) take the subjunctive."
+        },
+        "examples": [
+          {
+            "es": "Es importante que cuidemos el parque.",
+            "gloss": {
+              "zh": "我們愛護這座公園很重要。",
+              "en": "It’s important that we look after the park."
+            }
+          },
+          {
+            "es": "Es posible que llueva mañana.",
+            "gloss": {
+              "zh": "明天可能會下雨。",
+              "en": "It may rain tomorrow."
+            }
+          },
+          {
+            "es": "Es raro que no haya llegado.",
+            "gloss": {
+              "zh": "他還沒到，很奇怪。",
+              "en": "It’s odd that he hasn’t arrived."
+            }
+          },
+          {
+            "es": "Es necesario que lleves permiso.",
+            "gloss": {
+              "zh": "你必須帶著許可。",
+              "en": "It’s necessary that you carry a permit."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**表示確定的非人稱說法用直陳式**：es verdad que、es evidente que、está claro que。",
+          "en": "Impersonal expressions of **certainty take the indicative**: es verdad que, es evidente que, está claro que."
+        },
+        "examples": [
+          {
+            "es": "Es evidente que necesita ayuda.",
+            "gloss": {
+              "zh": "很明顯他需要幫助。",
+              "en": "It’s obvious he needs help."
+            }
+          },
+          {
+            "es": "Está claro que funciona.",
+            "gloss": {
+              "zh": "這顯然有效。",
+              "en": "It clearly works."
+            }
+          },
+          {
+            "es": "Es cierto que el turismo creció.",
+            "gloss": {
+              "zh": "觀光業確實成長了。",
+              "en": "It’s true that tourism grew."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "疑問句的 ¿Crees que…? 兩種都可以，選哪個看你自己信不信。",
+          "en": "In questions, ¿Crees que…? allows both, depending on how much you believe it yourself."
+        },
+        "examples": [
+          {
+            "es": "¿Crees que viene?",
+            "gloss": {
+              "zh": "你覺得他會來嗎？",
+              "en": "Do you think he’s coming?"
+            },
+            "note": {
+              "zh": "中性提問",
+              "en": "A neutral question."
+            }
+          },
+          {
+            "es": "¿Crees que venga?",
+            "gloss": {
+              "zh": "你覺得他有可能來嗎？",
+              "en": "Do you think he might come?"
+            },
+            "note": {
+              "zh": "提問者自己也懷疑",
+              "en": "The asker is doubtful too."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是**忽略 no 會翻轉語氣**：\n\n- Creo que **viene**.（直陳式，我相信）\n- No creo que **venga**.（虛擬式，我不相信）\n\n> 自我檢查：主句是不是在**否定**或**懷疑**？是的話，que 後面用虛擬式。\n\n第二個是**把確定的說法也用虛擬式**：\n\n- ✗ Es evidente que necesite ayuda. → ✓ Es evidente que **necesita** ayuda.\n- ✗ Es verdad que cambie. → ✓ Es verdad que **cambió**.\n\nes evidente、es verdad、está claro 這幾個是在**斷言事實**，用直陳式。判準是：這句話在說「這是真的」還是「這不一定」？\n\n第三個是**忘了 es posible 和 es probable 都用虛擬式**：\n\n- ✗ Es posible que llueve. → ✓ Es posible que **llueva**.\n\n只要話裡還有「可能、也許」的空間，就是虛擬式。\n\n第四個是**非人稱說法後面主詞相同時還加 que**：\n\n- ✗ Es importante que yo cuide el parque.（可以，但囉唆）\n- ✓ **Es importante cuidar** el parque.（沒有指定是誰，用不定式更自然）\n\n> 記憶策略：把主句想成一個開關 —— 講「我確定這是事實」的動詞（creer、es verdad、es evidente）開直陳式；講「我不確定、我不承認、我在評價」的（dudar、no creer、es posible、es importante）開虛擬式。",
+      "en": "The most common mistake is **missing that no flips the mood**:\n\n- Creo que **viene**. (indicative — I believe it)\n- No creo que **venga**. (subjunctive — I don’t)\n\n> Self-check: is the main clause **denying** or **doubting**? Then the que clause takes the subjunctive.\n\nSecond, **using the subjunctive after expressions of certainty**:\n\n- ✗ Es evidente que necesite ayuda. → ✓ Es evidente que **necesita** ayuda.\n- ✗ Es verdad que cambie. → ✓ Es verdad que **cambió**.\n\nes evidente, es verdad and está claro **assert a fact**, so they take the indicative. The test: is this sentence saying “this is true”, or “this may or may not be”?\n\nThird, **forgetting that es posible and es probable take the subjunctive**:\n\n- ✗ Es posible que llueve. → ✓ Es posible que **llueva**.\n\nAs long as there’s room for “maybe”, it’s the subjunctive.\n\nFourth, **adding que after an impersonal expression when no subject is specified**:\n\n- ✗ Es importante que yo cuide el parque. (possible, but roundabout)\n- ✓ **Es importante cuidar** el parque. (no specific subject — an infinitive is more natural)\n\n> A strategy: treat the main clause as a switch. Verbs that say “I’m sure this is a fact” (creer, es verdad, es evidente) switch on the indicative; those that say “I’m unsure, I deny it, I’m judging it” (dudar, no creer, es posible, es importante) switch on the subjunctive."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1sd-1",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "no creer 表示懷疑，que 後面用虛擬式。",
+          "en": "no creer expresses doubt, so the que clause takes the subjunctive."
+        },
+        "prompt": {
+          "zh": "「我不覺得他會準時到。」該用哪個？",
+          "en": "Which fits “I don’t think he’ll arrive on time”?"
+        },
+        "options": [
+          {
+            "zh": "No creo que llega a tiempo.",
+            "en": "No creo que llega a tiempo."
+          },
+          {
+            "zh": "No creo que llegue a tiempo.",
+            "en": "No creo que llegue a tiempo."
+          },
+          {
+            "zh": "No creo que llegar a tiempo.",
+            "en": "No creo que llegar a tiempo."
+          },
+          {
+            "zh": "No creo llega a tiempo.",
+            "en": "No creo llega a tiempo."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "否定的 no creo 後面要用虛擬式。",
+            "en": "After the negative no creo the clause takes the subjunctive."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "que 後面要接變位動詞。",
+            "en": "que is followed by a conjugated verb."
+          },
+          {
+            "zh": "少了 que。",
+            "en": "que is missing."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sd-2",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "creer 是肯定的斷言，用直陳式。",
+          "en": "Affirmative creer asserts a belief, so it takes the indicative."
+        },
+        "prompt": {
+          "zh": "「我覺得他會準時到。」該用哪個？",
+          "en": "Which fits “I think he’ll arrive on time”?"
+        },
+        "options": [
+          {
+            "zh": "Creo que llegue a tiempo.",
+            "en": "Creo que llegue a tiempo."
+          },
+          {
+            "zh": "Creo que llega a tiempo.",
+            "en": "Creo que llega a tiempo."
+          },
+          {
+            "zh": "Creo que llegar a tiempo.",
+            "en": "Creo que llegar a tiempo."
+          },
+          {
+            "zh": "Creo llegue a tiempo.",
+            "en": "Creo llegue a tiempo."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "肯定的 creo 後面用直陳式。",
+            "en": "Affirmative creo takes the indicative."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "que 後面要接變位動詞。",
+            "en": "que is followed by a conjugated verb."
+          },
+          {
+            "zh": "少了 que，而且語氣也不對。",
+            "en": "que is missing, and the mood is wrong too."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sd-3",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "es evidente 是斷言事實，用直陳式。",
+          "en": "es evidente asserts a fact, so it takes the indicative."
+        },
+        "prompt": {
+          "zh": "「很明顯他需要幫助。」該用哪個？",
+          "en": "Which fits “It’s obvious he needs help”?"
+        },
+        "options": [
+          {
+            "zh": "Es evidente que necesite ayuda.",
+            "en": "Es evidente que necesite ayuda."
+          },
+          {
+            "zh": "Es evidente que necesita ayuda.",
+            "en": "Es evidente que necesita ayuda."
+          },
+          {
+            "zh": "Es evidente necesitar ayuda.",
+            "en": "Es evidente necesitar ayuda."
+          },
+          {
+            "zh": "Es evidente que necesitar ayuda.",
+            "en": "Es evidente que necesitar ayuda."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "es evidente 斷言事實，用直陳式。",
+            "en": "es evidente asserts a fact and takes the indicative."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "少了 que，主詞也不見了。",
+            "en": "que is missing, and so is the subject."
+          },
+          {
+            "zh": "que 後面要接變位動詞。",
+            "en": "que is followed by a conjugated verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sd-4",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "es posible 留有不確定的空間，用虛擬式。",
+          "en": "es posible leaves room for uncertainty, so it takes the subjunctive."
+        },
+        "prompt": {
+          "zh": "「明天可能會下雨。」該用哪個？",
+          "en": "Which fits “It may rain tomorrow”?"
+        },
+        "options": [
+          {
+            "zh": "Es posible que llueve mañana.",
+            "en": "Es posible que llueve mañana."
+          },
+          {
+            "zh": "Es posible que llueva mañana.",
+            "en": "Es posible que llueva mañana."
+          },
+          {
+            "zh": "Es posible que lloverá mañana.",
+            "en": "Es posible que lloverá mañana."
+          },
+          {
+            "zh": "Es posible llueve mañana.",
+            "en": "Es posible llueve mañana."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "es posible 後面要用虛擬式。",
+            "en": "es posible is followed by the subjunctive."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "未來式在這裡不能取代虛擬式。",
+            "en": "The future can’t stand in for the subjunctive here."
+          },
+          {
+            "zh": "少了 que。",
+            "en": "que is missing."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sd-5",
+        "type": "conjugation",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "llegar 的虛擬式是 llegue（-gar 動詞加 u 保住發音）。",
+          "en": "The subjunctive of llegar is llegue — -gar verbs add a u to keep the sound."
+        },
+        "verbId": "llegar",
+        "person": "el_ella_usted",
+        "tense": "presenteSubjuntivo",
+        "answer": "llegue"
+      },
+      {
+        "id": "ex-b1sd-6",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "estar 是六個特例之一，虛擬式是 esté，有重音符號。",
+          "en": "estar is one of the six exceptions; its subjunctive esté carries an accent."
+        },
+        "verbId": "estar",
+        "person": "el_ella_usted",
+        "tense": "presenteSubjuntivo",
+        "answer": "esté"
+      },
+      {
+        "id": "ex-b1sd-7",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "dudar 表示懷疑，que 後面用虛擬式。",
+          "en": "dudar expresses doubt, so the que clause takes the subjunctive."
+        },
+        "prompt": {
+          "zh": "把「我懷疑他能準時到。」翻成西班牙文",
+          "en": "Translate into Spanish: “I doubt he’ll arrive on time.”"
+        },
+        "accept": [
+          "Dudo que llegue a tiempo"
+        ],
+        "canonical": "Dudo que llegue a tiempo."
+      },
+      {
+        "id": "ex-b1sd-8",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "es importante 是評價，用虛擬式；cuidar 的 nosotros 虛擬式是 cuidemos。",
+          "en": "es importante is a judgement, so it takes the subjunctive; the nosotros subjunctive of cuidar is cuidemos."
+        },
+        "prompt": {
+          "zh": "把「我們愛護這座公園很重要。」翻成西班牙文",
+          "en": "Translate into Spanish: “It’s important that we look after the park.”"
+        },
+        "accept": [
+          "Es importante que cuidemos el parque"
+        ],
+        "canonical": "Es importante que cuidemos el parque."
+      },
+      {
+        "id": "ex-b1sd-9",
+        "type": "wordOrder",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "no es cierto 否定事實，用虛擬式 esté。",
+          "en": "no es cierto denies a fact, so it takes the subjunctive esté."
+        },
+        "prompt": {
+          "zh": "排成「它並沒有關門。」",
+          "en": "Arrange: “It isn’t true that it’s closed.”"
+        },
+        "tokens": [
+          "cerrado",
+          "cierto",
+          "es",
+          "esté",
+          "No",
+          "que"
+        ],
+        "answer": [
+          "No",
+          "es",
+          "cierto",
+          "que",
+          "esté",
+          "cerrado"
+        ]
+      },
+      {
+        "id": "ex-b1sd-10",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "主句是斷言還是懷疑，決定了 que 後面的語氣。",
+          "en": "Whether the main clause asserts or doubts decides the mood after que."
+        },
+        "prompt": {
+          "zh": "下面哪一組配對是**對的**？",
+          "en": "Which pairing is **correct**?"
+        },
+        "options": [
+          {
+            "zh": "es verdad que + 虛擬式；no es verdad que + 直陳式",
+            "en": "es verdad que + subjunctive; no es verdad que + indicative"
+          },
+          {
+            "zh": "es verdad que + 直陳式；no es verdad que + 虛擬式",
+            "en": "es verdad que + indicative; no es verdad que + subjunctive"
+          },
+          {
+            "zh": "兩個都用直陳式。",
+            "en": "Both take the indicative."
+          },
+          {
+            "zh": "兩個都用虛擬式。",
+            "en": "Both take the subjunctive."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "順序反了。",
+            "en": "The two are the wrong way round."
+          },
+          {
+            "zh": "正確。斷言用直陳式，否定用虛擬式。",
+            "en": "Correct: asserting takes the indicative, denying takes the subjunctive."
+          },
+          {
+            "zh": "否定的那一句要用虛擬式。",
+            "en": "The negative one takes the subjunctive."
+          },
+          {
+            "zh": "肯定的那一句要用直陳式。",
+            "en": "The affirmative one takes the indicative."
+          }
+        ]
+      }
+    ],
+    "prerequisites": [
+      "b1-subjuntivo-forma"
+    ],
+    "vocabIds": [
+      "dudar",
+      "creer",
+      "llegar",
+      "estar",
+      "cuidar",
+      "duda",
+      "opinion",
+      "cierto",
+      "evidente",
+      "probable",
+      "posible",
+      "necesario",
+      "importante",
+      "raro",
+      "parque-nacional"
+    ],
+    "usesOnlyTaughtGrammar": true
+  },
+  {
+    "id": "b1-subjuntivo-conectores",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 3,
+    "title": {
+      "zh": "虛擬式：連接詞決定語氣",
+      "en": "The subjunctive after conjunctions"
+    },
+    "intro": {
+      "zh": "第三組觸發情境不是靠動詞，而是靠**連接詞**。\n\n分成兩類：\n\n- **永遠接虛擬式**：para que、antes de que、a menos que、sin que\n- **看情況**：cuando、en cuanto、hasta que、aunque —— 講**還沒發生的事**用虛擬式，講**已經發生或習慣**用直陳式\n\n第二類是這一課的重點：同一個連接詞，兩種語氣，兩種意思。",
+      "en": "The third family of triggers isn’t a verb — it’s the **conjunction** itself.\n\nTwo groups:\n\n- **always subjunctive**: para que, antes de que, a menos que, sin que\n- **it depends**: cuando, en cuanto, hasta que, aunque — subjunctive for **what hasn’t happened yet**, indicative for **what has happened or happens habitually**\n\nThat second group is the heart of this lesson: one conjunction, two moods, two meanings."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**永遠接虛擬式的連接詞**：para que、antes de que、a menos que、sin que。",
+          "en": "**Conjunctions that always take the subjunctive**: para que, antes de que, a menos que, sin que."
+        },
+        "examples": [
+          {
+            "es": "Hablo despacio para que me entiendas.",
+            "gloss": {
+              "zh": "我講慢一點好讓你聽懂。",
+              "en": "I speak slowly so that you understand me."
+            }
+          },
+          {
+            "es": "Salgamos antes de que llueva.",
+            "gloss": {
+              "zh": "趁還沒下雨我們走吧。",
+              "en": "Let’s leave before it rains."
+            }
+          },
+          {
+            "es": "No iremos a menos que mejore el clima.",
+            "gloss": {
+              "zh": "除非天氣變好，否則我們不去。",
+              "en": "We won’t go unless the weather improves."
+            }
+          },
+          {
+            "es": "Entró sin que nadie lo viera.",
+            "gloss": {
+              "zh": "他進來時沒人看見。",
+              "en": "He came in without anyone seeing him."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**cuando**：講未來用虛擬式，講習慣或過去用直陳式。",
+          "en": "**cuando**: subjunctive for the future, indicative for habits or the past."
+        },
+        "examples": [
+          {
+            "es": "Cuando llegue, te aviso.",
+            "gloss": {
+              "zh": "我到了就通知你。",
+              "en": "When I arrive, I’ll let you know."
+            },
+            "note": {
+              "zh": "還沒到 → 虛擬式",
+              "en": "Hasn’t happened yet → subjunctive."
+            }
+          },
+          {
+            "es": "Cuando llego, siempre tomo café.",
+            "gloss": {
+              "zh": "我一到就會喝咖啡。",
+              "en": "When I arrive, I always have coffee."
+            },
+            "note": {
+              "zh": "習慣 → 直陳式",
+              "en": "A habit → indicative."
+            }
+          },
+          {
+            "es": "Cuando llegué, ya estaba cerrado.",
+            "gloss": {
+              "zh": "我到的時候已經關了。",
+              "en": "When I arrived, it was already closed."
+            },
+            "note": {
+              "zh": "過去 → 直陳式",
+              "en": "The past → indicative."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**en cuanto、hasta que** 也是同一個判準。",
+          "en": "**en cuanto and hasta que** follow the same test."
+        },
+        "examples": [
+          {
+            "es": "En cuanto llegue, te aviso.",
+            "gloss": {
+              "zh": "我一到就通知你。",
+              "en": "As soon as I arrive, I’ll let you know."
+            },
+            "note": {
+              "zh": "未來 → 虛擬式",
+              "en": "Future → subjunctive."
+            }
+          },
+          {
+            "es": "En cuanto llegué, me llamó.",
+            "gloss": {
+              "zh": "我一到他就打給我了。",
+              "en": "As soon as I arrived, he called me."
+            },
+            "note": {
+              "zh": "過去 → 直陳式",
+              "en": "Past → indicative."
+            }
+          },
+          {
+            "es": "Espera hasta que llegue el bus.",
+            "gloss": {
+              "zh": "等到公車來。",
+              "en": "Wait until the bus comes."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**aunque**：講已知的事實用直陳式，講假設或未確定的用虛擬式。",
+          "en": "**aunque**: indicative for a known fact, subjunctive for a hypothetical or unconfirmed one."
+        },
+        "examples": [
+          {
+            "es": "Aunque llueve, voy a salir.",
+            "gloss": {
+              "zh": "雖然現在在下雨，我還是要出門。",
+              "en": "Even though it’s raining, I’m going out."
+            },
+            "note": {
+              "zh": "確實在下雨 → 直陳式",
+              "en": "It is actually raining → indicative."
+            }
+          },
+          {
+            "es": "Aunque llueva, voy a salir.",
+            "gloss": {
+              "zh": "就算下雨我也要出門。",
+              "en": "Even if it rains, I’m going out."
+            },
+            "note": {
+              "zh": "還不知道會不會下 → 虛擬式",
+              "en": "Not known whether it will → subjunctive."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**para que 的兩個主詞必須不同**；相同的話用 para + 不定式。",
+          "en": "**para que needs two different subjects**; with the same subject, use para + infinitive."
+        },
+        "examples": [
+          {
+            "es": "Estudio para viajar.",
+            "gloss": {
+              "zh": "我學西班牙文是為了旅行。",
+              "en": "I study in order to travel."
+            },
+            "note": {
+              "zh": "主詞都是我",
+              "en": "Same subject throughout."
+            }
+          },
+          {
+            "es": "Hablo despacio para que me entiendas.",
+            "gloss": {
+              "zh": "我講慢一點好讓你聽懂。",
+              "en": "I speak slowly so that you understand me."
+            },
+            "note": {
+              "zh": "兩個主詞不同",
+              "en": "Two different subjects."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是 **cuando 講未來時用了直陳式**：\n\n- ✗ Cuando llego, te aviso.（意思變成「我每次到都會通知你」）\n- ✓ Cuando **llegue**, te aviso.（我到了就通知你，還沒到）\n\n> 自我檢查：這件事**發生了沒有**？還沒發生就用虛擬式；已經發生、或每次都這樣，就用直陳式。\n\n第二個是**在 para que 兩邊主詞相同時還用 que**：\n\n- ✗ Estudio para que yo viaje. → ✓ **Estudio para viajar**.\n\npara que 是給「我做某事，讓**別人**達成某結果」用的。主詞相同就用 para + 不定式。\n\n第三個是**忘了 antes de que 永遠接虛擬式**：\n\n- ✗ Salgamos antes de que llueve. → ✓ Salgamos antes de que **llueva**.\n\n這個連接詞本身就帶著「還沒發生」的意思，所以沒有例外。\n\n第四個是**分不出 aunque 的兩種用法**：\n\n- Aunque **llueve**（我知道現在在下雨）\n- Aunque **llueva**（我不知道會不會下，但無所謂）\n\n這個差別在講話時很實用 —— 用直陳式代表你確認了那件事，用虛擬式代表你在讓步。\n\n> 記憶策略：把 cuando、en cuanto、hasta que、aunque 想成一個問句 —— 「這件事已經是事實了嗎？」是 → 直陳式；還沒 → 虛擬式。para que、antes de que、a menos que、sin que 則不用問，永遠是虛擬式。",
+      "en": "The most common mistake is **using the indicative after cuando for the future**:\n\n- ✗ Cuando llego, te aviso. (this says “every time I arrive, I let you know”)\n- ✓ Cuando **llegue**, te aviso. (I’ll let you know when I get there — I haven’t yet)\n\n> Self-check: **has it happened?** Not yet → subjunctive. Already happened, or happens every time → indicative.\n\nSecond, **using para que when both subjects are the same**:\n\n- ✗ Estudio para que yo viaje. → ✓ **Estudio para viajar**.\n\npara que is for “I do something so that **someone else** achieves a result”. Same subject means para + infinitive.\n\nThird, **forgetting that antes de que is always subjunctive**:\n\n- ✗ Salgamos antes de que llueve. → ✓ Salgamos antes de que **llueva**.\n\nThe conjunction itself carries “hasn’t happened yet”, so there are no exceptions.\n\nFourth, **missing the two readings of aunque**:\n\n- Aunque **llueve** (I know it’s raining right now)\n- Aunque **llueva** (I don’t know whether it will, and it doesn’t matter)\n\nThat distinction is genuinely useful in conversation — the indicative signals you’ve confirmed it, the subjunctive signals you’re conceding a possibility.\n\n> A strategy: treat cuando, en cuanto, hasta que and aunque as a question — “is this already a fact?” Yes → indicative; not yet → subjunctive. With para que, antes de que, a menos que and sin que there’s nothing to ask: always subjunctive."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1sc-1",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "講還沒發生的未來，cuando 後面用虛擬式。",
+          "en": "For a future that hasn’t happened yet, cuando takes the subjunctive."
+        },
+        "prompt": {
+          "zh": "「我到了就通知你。」（還沒到）該用哪個？",
+          "en": "Which fits “When I arrive, I’ll let you know” (not yet arrived)?"
+        },
+        "options": [
+          {
+            "zh": "Cuando llego, te aviso.",
+            "en": "Cuando llego, te aviso."
+          },
+          {
+            "zh": "Cuando llegue, te aviso.",
+            "en": "Cuando llegue, te aviso."
+          },
+          {
+            "zh": "Cuando llegaré, te aviso.",
+            "en": "Cuando llegaré, te aviso."
+          },
+          {
+            "zh": "Cuando llegar, te aviso.",
+            "en": "Cuando llegar, te aviso."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "這句的意思變成「我每次到都通知你」。",
+            "en": "That reads as “every time I arrive, I let you know”."
+          },
+          {
+            "zh": "正確。未來用虛擬式。",
+            "en": "Correct: the future takes the subjunctive."
+          },
+          {
+            "zh": "cuando 後面不用未來式。",
+            "en": "cuando isn’t followed by the future tense."
+          },
+          {
+            "zh": "連接詞後面要接變位動詞。",
+            "en": "A conjunction is followed by a conjugated verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sc-2",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "講習慣時 cuando 後面用直陳式。",
+          "en": "For a habit, cuando takes the indicative."
+        },
+        "prompt": {
+          "zh": "「我一到就會喝咖啡。」（每次都這樣）該用哪個？",
+          "en": "Which fits “When I arrive, I always have coffee” (every time)?"
+        },
+        "options": [
+          {
+            "zh": "Cuando llegue, siempre tomo café.",
+            "en": "Cuando llegue, siempre tomo café."
+          },
+          {
+            "zh": "Cuando llego, siempre tomo café.",
+            "en": "Cuando llego, siempre tomo café."
+          },
+          {
+            "zh": "Cuando llegara, siempre tomo café.",
+            "en": "Cuando llegara, siempre tomo café."
+          },
+          {
+            "zh": "Cuando llegar, siempre tomo café.",
+            "en": "Cuando llegar, siempre tomo café."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "習慣不用虛擬式。",
+            "en": "Habits don’t take the subjunctive."
+          },
+          {
+            "zh": "正確。習慣用直陳式。",
+            "en": "Correct: habits take the indicative."
+          },
+          {
+            "zh": "這是過去虛擬式，跟習慣不搭。",
+            "en": "That’s the past subjunctive, which doesn’t fit a habit."
+          },
+          {
+            "zh": "連接詞後面要接變位動詞。",
+            "en": "A conjunction is followed by a conjugated verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sc-3",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "antes de que 永遠接虛擬式，沒有例外。",
+          "en": "antes de que always takes the subjunctive, without exception."
+        },
+        "prompt": {
+          "zh": "「趁還沒下雨我們走吧。」該用哪個？",
+          "en": "Which fits “Let’s leave before it rains”?"
+        },
+        "options": [
+          {
+            "zh": "Salgamos antes de que llueve.",
+            "en": "Salgamos antes de que llueve."
+          },
+          {
+            "zh": "Salgamos antes de que llueva.",
+            "en": "Salgamos antes de que llueva."
+          },
+          {
+            "zh": "Salgamos antes de que lloverá.",
+            "en": "Salgamos antes de que lloverá."
+          },
+          {
+            "zh": "Salgamos antes de llueve.",
+            "en": "Salgamos antes de llueve."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "antes de que 後面一定是虛擬式。",
+            "en": "antes de que is always followed by the subjunctive."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "未來式不能取代虛擬式。",
+            "en": "The future can’t stand in for the subjunctive."
+          },
+          {
+            "zh": "少了 que，結構不完整。",
+            "en": "que is missing, so the structure is incomplete."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sc-4",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "兩個主詞相同時用 para + 不定式，不用 para que。",
+          "en": "With the same subject, use para + infinitive rather than para que."
+        },
+        "prompt": {
+          "zh": "「我學西班牙文是為了旅行。」該用哪個？",
+          "en": "Which fits “I study Spanish in order to travel”?"
+        },
+        "options": [
+          {
+            "zh": "Estudio español para que yo viaje.",
+            "en": "Estudio español para que yo viaje."
+          },
+          {
+            "zh": "Estudio español para viajar.",
+            "en": "Estudio español para viajar."
+          },
+          {
+            "zh": "Estudio español para que viajo.",
+            "en": "Estudio español para que viajo."
+          },
+          {
+            "zh": "Estudio español para que viajar.",
+            "en": "Estudio español para que viajar."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "主詞相同時不用 para que。",
+            "en": "para que isn’t used when the subject is the same."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "para que 後面不用直陳式。",
+            "en": "para que isn’t followed by the indicative."
+          },
+          {
+            "zh": "que 後面要接變位動詞。",
+            "en": "que is followed by a conjugated verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sc-5",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "aunque + 虛擬式表示「就算……（還不確定）」。",
+          "en": "aunque + subjunctive means “even if” — the outcome isn’t confirmed."
+        },
+        "prompt": {
+          "zh": "「就算下雨我也要出門。」（還不知道會不會下）該用哪個？",
+          "en": "Which fits “Even if it rains, I’m going out” (not known whether it will)?"
+        },
+        "options": [
+          {
+            "zh": "Aunque llueve, voy a salir.",
+            "en": "Aunque llueve, voy a salir."
+          },
+          {
+            "zh": "Aunque llueva, voy a salir.",
+            "en": "Aunque llueva, voy a salir."
+          },
+          {
+            "zh": "Aunque lloverá, voy a salir.",
+            "en": "Aunque lloverá, voy a salir."
+          },
+          {
+            "zh": "Aunque llovió, voy a salir.",
+            "en": "Aunque llovió, voy a salir."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "直陳式表示你已經確認在下雨了。",
+            "en": "The indicative says you’ve confirmed it is raining."
+          },
+          {
+            "zh": "正確。還不確定用虛擬式。",
+            "en": "Correct: unconfirmed takes the subjunctive."
+          },
+          {
+            "zh": "aunque 後面不用未來式。",
+            "en": "aunque isn’t followed by the future."
+          },
+          {
+            "zh": "這是過去式，時間對不上。",
+            "en": "That’s the past tense; the timing doesn’t fit."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1sc-6",
+        "type": "conjugation",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "entender 的虛擬式字根有 e → ie：entiendas。",
+          "en": "The subjunctive of entender keeps the e → ie change: entiendas."
+        },
+        "verbId": "entender",
+        "person": "tu",
+        "tense": "presenteSubjuntivo",
+        "answer": "entiendas"
+      },
+      {
+        "id": "ex-b1sc-7",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "mejorar 是規則動詞，虛擬式是 mejore。",
+          "en": "mejorar is regular, so its subjunctive is mejore."
+        },
+        "verbId": "mejorar",
+        "person": "el_ella_usted",
+        "tense": "presenteSubjuntivo",
+        "answer": "mejore"
+      },
+      {
+        "id": "ex-b1sc-8",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "para que 後面用虛擬式，兩個主詞不同。",
+          "en": "para que takes the subjunctive, with two different subjects."
+        },
+        "prompt": {
+          "zh": "把「我講慢一點好讓你聽懂。」翻成西班牙文",
+          "en": "Translate into Spanish: “I speak slowly so that you understand me.”"
+        },
+        "accept": [
+          "Hablo despacio para que me entiendas"
+        ],
+        "canonical": "Hablo despacio para que me entiendas."
+      },
+      {
+        "id": "ex-b1sc-9",
+        "type": "wordOrder",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "a menos que 永遠接虛擬式。",
+          "en": "a menos que always takes the subjunctive."
+        },
+        "prompt": {
+          "zh": "排成「除非天氣變好，否則我們不去。」",
+          "en": "Arrange: “We won’t go unless the weather improves.”"
+        },
+        "tokens": [
+          "a",
+          "clima",
+          "el",
+          "iremos",
+          "mejore",
+          "menos",
+          "No",
+          "que"
+        ],
+        "answer": [
+          "No",
+          "iremos",
+          "a",
+          "menos",
+          "que",
+          "mejore",
+          "el",
+          "clima"
+        ]
+      },
+      {
+        "id": "ex-b1sc-10",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "判準是「這件事已經是事實了嗎」。",
+          "en": "The test is “is this already a fact?”"
+        },
+        "prompt": {
+          "zh": "「我到的時候已經關了。」（已經發生）該用哪個？",
+          "en": "Which fits “When I arrived, it was already closed” (already happened)?"
+        },
+        "options": [
+          {
+            "zh": "Cuando llegue, ya estaba cerrado.",
+            "en": "Cuando llegue, ya estaba cerrado."
+          },
+          {
+            "zh": "Cuando llegué, ya estaba cerrado.",
+            "en": "Cuando llegué, ya estaba cerrado."
+          },
+          {
+            "zh": "Cuando llegara, ya estaba cerrado.",
+            "en": "Cuando llegara, ya estaba cerrado."
+          },
+          {
+            "zh": "Cuando llegar, ya estaba cerrado.",
+            "en": "Cuando llegar, ya estaba cerrado."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "這是虛擬式，用在還沒發生的事。",
+            "en": "That’s the subjunctive, for things that haven’t happened."
+          },
+          {
+            "zh": "正確。已經發生用直陳式的簡單過去式。",
+            "en": "Correct: something that has happened takes the indicative preterite."
+          },
+          {
+            "zh": "過去虛擬式在這裡不合。",
+            "en": "The past subjunctive doesn’t fit here."
+          },
+          {
+            "zh": "連接詞後面要接變位動詞。",
+            "en": "A conjunction is followed by a conjugated verb."
+          }
+        ]
+      }
+    ],
+    "prerequisites": [
+      "b1-subjuntivo-duda"
+    ],
+    "vocabIds": [
+      "para-que",
+      "antes-de-que",
+      "a-menos-que",
+      "en-cuanto",
+      "aunque",
+      "cuando-conj",
+      "entender",
+      "mejorar",
+      "clima",
+      "despacio",
+      "apenas"
+    ],
+    "usesOnlyTaughtGrammar": true
+  },
+  {
+    "id": "b1-imperfecto-subjuntivo",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 4,
+    "title": {
+      "zh": "過去虛擬式：從簡單過去式推出來",
+      "en": "The past subjunctive: built from the preterite"
+    },
+    "intro": {
+      "zh": "過去虛擬式的作法比現在虛擬式更機械，**每一個動詞都適用，沒有例外**：\n\n1. 拿簡單過去式的 **ellos** 形\n2. 去掉 **-ron**\n3. 接上 **-ra / -ras / -ra / -ramos / -ran**\n\nnosotros 那一格要補重音符號。\n\n因為第一步就是簡單過去式，所有的不規則（tuvieron、dijeron、fueron）自動被帶進來 —— 不用另外背一套。",
+      "en": "The past subjunctive is even more mechanical than the present one, and it works for **every verb without exception**:\n\n1. take the **ellos** form of the preterite\n2. drop the **-ron**\n3. add **-ra / -ras / -ra / -ramos / -ran**\n\nThe nosotros form takes a written accent.\n\nBecause step one is the preterite, every irregularity (tuvieron, dijeron, fueron) comes along automatically — there’s no second set to learn."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**三步驟，沒有例外。**",
+          "en": "**Three steps, no exceptions.**"
+        },
+        "examples": [
+          {
+            "es": "hablaron → habla- → hablara, hablaras, hablara, habláramos, hablaran",
+            "gloss": {
+              "zh": "hablar 的過去虛擬式",
+              "en": "the past subjunctive of hablar"
+            }
+          },
+          {
+            "es": "tuvieron → tuvie- → tuviera, tuvieras, tuviera, tuviéramos, tuvieran",
+            "gloss": {
+              "zh": "tener 的過去虛擬式",
+              "en": "the past subjunctive of tener"
+            },
+            "note": {
+              "zh": "不規則自動跟過來",
+              "en": "The irregularity comes along by itself."
+            }
+          },
+          {
+            "es": "fueron → fue- → fuera, fueras, fuera, fuéramos, fueran",
+            "gloss": {
+              "zh": "ser 與 ir 的過去虛擬式",
+              "en": "the past subjunctive of ser and ir"
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**主句是過去式時，從句就用過去虛擬式。**",
+          "en": "**When the main clause is past, the subordinate clause takes the past subjunctive.**"
+        },
+        "examples": [
+          {
+            "es": "Quería que vinieras.",
+            "gloss": {
+              "zh": "我那時希望你來。",
+              "en": "I wanted you to come."
+            }
+          },
+          {
+            "es": "Me pidió que esperara.",
+            "gloss": {
+              "zh": "他要我等。",
+              "en": "He asked me to wait."
+            }
+          },
+          {
+            "es": "Era importante que llegáramos temprano.",
+            "gloss": {
+              "zh": "我們早點到很重要。",
+              "en": "It was important that we arrive early."
+            }
+          },
+          {
+            "es": "No creía que fuera posible.",
+            "gloss": {
+              "zh": "我當時不覺得那有可能。",
+              "en": "I didn’t think it was possible."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**假設與願望**：講跟事實相反的情況。",
+          "en": "**Hypotheticals and wishes**: describing what isn’t the case."
+        },
+        "examples": [
+          {
+            "es": "Si tuviera tiempo, iría a Galápagos.",
+            "gloss": {
+              "zh": "如果我有時間，我會去加拉巴哥。",
+              "en": "If I had time, I’d go to the Galápagos."
+            },
+            "note": {
+              "zh": "但我沒有時間",
+              "en": "But I don’t have time."
+            }
+          },
+          {
+            "es": "Ojalá pudiera ayudarte.",
+            "gloss": {
+              "zh": "真希望我能幫你。",
+              "en": "I wish I could help you."
+            }
+          },
+          {
+            "es": "Como si fuera fácil.",
+            "gloss": {
+              "zh": "好像很簡單似的。",
+              "en": "As if it were easy."
+            },
+            "note": {
+              "zh": "como si 後面永遠接過去虛擬式",
+              "en": "como si is always followed by the past subjunctive."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**最客氣的請求**用 quisiera，比 querría 還柔和。",
+          "en": "The **most polite request** uses quisiera — even softer than querría."
+        },
+        "examples": [
+          {
+            "es": "Quisiera reservar una habitación.",
+            "gloss": {
+              "zh": "我想訂一間房。",
+              "en": "I’d like to book a room."
+            }
+          },
+          {
+            "es": "Quisiera hacer una pregunta.",
+            "gloss": {
+              "zh": "我想請教一個問題。",
+              "en": "I’d like to ask a question."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "另有一套 **-se** 字尾（hablase、tuviese），意思完全一樣。拉美口語較少用，但讀得到。",
+          "en": "There is a second set of endings in **-se** (hablase, tuviese) with exactly the same meaning. Less common in Latin American speech, but you will read it."
+        },
+        "examples": [
+          {
+            "es": "Si tuviera tiempo… = Si tuviese tiempo…",
+            "gloss": {
+              "zh": "兩種寫法意思一樣",
+              "en": "Both forms mean the same thing."
+            },
+            "note": {
+              "zh": "拉美日常較常用 -ra",
+              "en": "Everyday Latin American usage prefers -ra."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是**從不定式推**，而不是從簡單過去式推：\n\n- ✗ tener → tenera → ✓ tuvieron → **tuviera**\n- ✗ decir → decira → ✓ dijeron → **dijera**\n\n> 自我檢查：起點永遠是**簡單過去式的 ellos 形**，不是不定式。先把 ellos 形想出來，剩下的就只是去掉 -ron。\n\n第二個是 **nosotros 漏掉重音符號**：\n\n- ✗ hablaramos → ✓ **habláramos**\n- ✗ tuvieramos → ✓ **tuviéramos**\n\n這一格是倒數第三音節重音，一定要標。\n\n第三個是**主句過去、從句卻用現在虛擬式**：\n\n- ✗ Quería que vengas. → ✓ Quería que **vinieras**.\n- ✗ Me pidió que espere. → ✓ Me pidió que **esperara**.\n\n主句的時態會把從句一起往回拉。\n\n第四個是**在 si 條件句用錯**：\n\n- ✗ Si tengo tiempo, iría.（時態不搭）\n- ✓ Si **tuviera** tiempo, **iría**.（假設 + 條件式）\n\n這一組搭配下一課會完整處理。\n\n> 記憶策略：這個時態是整個西班牙文裡最好推的 —— 只要簡單過去式的 ellos 形記得住，就沒有第二件事要記。反過來說，ellos 形記不牢的動詞，這裡就會卡住。",
+      "en": "The most common mistake is **deriving it from the infinitive** instead of the preterite:\n\n- ✗ tener → tenera → ✓ tuvieron → **tuviera**\n- ✗ decir → decira → ✓ dijeron → **dijera**\n\n> Self-check: the starting point is always the **ellos form of the preterite**, never the infinitive. Get that form first; the rest is just dropping -ron.\n\nSecond, **the missing accent on nosotros**:\n\n- ✗ hablaramos → ✓ **habláramos**\n- ✗ tuvieramos → ✓ **tuviéramos**\n\nThat form is stressed on the third-from-last syllable, so the accent is required.\n\nThird, **a past main clause with a present subjunctive**:\n\n- ✗ Quería que vengas. → ✓ Quería que **vinieras**.\n- ✗ Me pidió que espere. → ✓ Me pidió que **esperara**.\n\nThe main clause pulls the subordinate clause back with it.\n\nFourth, **mismatching in si clauses**:\n\n- ✗ Si tengo tiempo, iría. (the tenses don’t pair)\n- ✓ Si **tuviera** tiempo, **iría**. (past subjunctive + conditional)\n\nThat pairing is covered fully in the next lesson.\n\n> A strategy: this is the most derivable tense in Spanish — if you know the ellos preterite, there is nothing else to memorise. The flip side is that any verb whose ellos form you’re shaky on will trip you up here."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1ps-1",
+        "type": "conjugation",
+        "difficulty": "easy",
+        "explain": {
+          "zh": "hablaron 去掉 -ron 加 -ra：hablara。",
+          "en": "hablaron minus -ron plus -ra: hablara."
+        },
+        "verbId": "hablar",
+        "person": "yo",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "hablara"
+      },
+      {
+        "id": "ex-b1ps-2",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "nosotros 那格要補重音符號：habláramos。",
+          "en": "The nosotros form takes a written accent: habláramos."
+        },
+        "verbId": "hablar",
+        "person": "nosotros",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "habláramos"
+      },
+      {
+        "id": "ex-b1ps-3",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "tener 的 ellos 是 tuvieron，所以是 tuviera。",
+          "en": "The ellos form of tener is tuvieron, giving tuviera."
+        },
+        "verbId": "tener",
+        "person": "yo",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "tuviera"
+      },
+      {
+        "id": "ex-b1ps-4",
+        "type": "conjugation",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "decir 的 ellos 是 dijeron，所以是 dijera。",
+          "en": "The ellos form of decir is dijeron, giving dijera."
+        },
+        "verbId": "decir",
+        "person": "el_ella_usted",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "dijera"
+      },
+      {
+        "id": "ex-b1ps-5",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "ser 與 ir 的 ellos 都是 fueron，所以都是 fuera。",
+          "en": "Both ser and ir have fueron, giving fuera."
+        },
+        "verbId": "ser",
+        "person": "yo",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "fuera"
+      },
+      {
+        "id": "ex-b1ps-6",
+        "type": "conjugation",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "venir 的 ellos 是 vinieron，所以是 vinieras。",
+          "en": "The ellos form of venir is vinieron, giving vinieras."
+        },
+        "verbId": "venir",
+        "person": "tu",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "vinieras"
+      },
+      {
+        "id": "ex-b1ps-7",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "主句是過去式，從句要用過去虛擬式。",
+          "en": "A past main clause pulls the subordinate clause into the past subjunctive."
+        },
+        "prompt": {
+          "zh": "「我那時希望你來。」該用哪個？",
+          "en": "Which fits “I wanted you to come”?"
+        },
+        "options": [
+          {
+            "zh": "Quería que vengas.",
+            "en": "Quería que vengas."
+          },
+          {
+            "zh": "Quería que vinieras.",
+            "en": "Quería que vinieras."
+          },
+          {
+            "zh": "Quería que viniste.",
+            "en": "Quería que viniste."
+          },
+          {
+            "zh": "Quería que venir.",
+            "en": "Quería que venir."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "主句是過去式，從句不能用現在虛擬式。",
+            "en": "With a past main clause the present subjunctive doesn’t fit."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "que 後面要用虛擬式，viniste 是直陳式。",
+            "en": "The que clause needs the subjunctive; viniste is indicative."
+          },
+          {
+            "zh": "que 後面要接變位動詞。",
+            "en": "que is followed by a conjugated verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1ps-8",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "過去虛擬式從簡單過去式的 ellos 形推，不是從不定式。",
+          "en": "The past subjunctive derives from the ellos preterite, not from the infinitive."
+        },
+        "prompt": {
+          "zh": "decir 的過去虛擬式 yo 形是？",
+          "en": "What is the yo past subjunctive of decir?"
+        },
+        "options": [
+          {
+            "zh": "decira",
+            "en": "decira"
+          },
+          {
+            "zh": "dijera",
+            "en": "dijera"
+          },
+          {
+            "zh": "diciera",
+            "en": "diciera"
+          },
+          {
+            "zh": "dijiera",
+            "en": "dijiera"
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "這是從不定式推的，方法錯了。",
+            "en": "That derives from the infinitive — the wrong method."
+          },
+          {
+            "zh": "正確。dijeron → dije- → dijera。",
+            "en": "Correct: dijeron → dije- → dijera."
+          },
+          {
+            "zh": "字根錯了。",
+            "en": "Wrong stem."
+          },
+          {
+            "zh": "j 字根不接 -ie。",
+            "en": "A j-stem doesn’t take -ie."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1ps-9",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "quisiera 是最客氣的請求說法。",
+          "en": "quisiera is the most polite way to make a request."
+        },
+        "prompt": {
+          "zh": "把「我想訂一間房。」翻成西班牙文（最客氣的說法）",
+          "en": "Translate into Spanish, as politely as possible: “I’d like to book a room.”"
+        },
+        "accept": [
+          "Quisiera reservar una habitación",
+          "Quisiera reservar una habitacion"
+        ],
+        "canonical": "Quisiera reservar una habitación."
+      },
+      {
+        "id": "ex-b1ps-10",
+        "type": "wordOrder",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "como si 後面永遠接過去虛擬式。",
+          "en": "como si is always followed by the past subjunctive."
+        },
+        "prompt": {
+          "zh": "排成「好像很簡單似的。」",
+          "en": "Arrange: “As if it were easy.”"
+        },
+        "tokens": [
+          "Como",
+          "fuera",
+          "fácil",
+          "si"
+        ],
+        "answer": [
+          "Como",
+          "si",
+          "fuera",
+          "fácil"
+        ]
+      }
+    ],
+    "prerequisites": [
+      "b1-subjuntivo-conectores"
+    ],
+    "vocabIds": [
+      "tener",
+      "decir",
+      "ser",
+      "ir",
+      "venir",
+      "querer",
+      "poder",
+      "habitacion",
+      "reserva",
+      "oportunidad"
+    ],
+    "usesOnlyTaughtGrammar": true
+  },
+  {
+    "id": "b1-si-condicionales",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 5,
+    "title": {
+      "zh": "si 條件句：三種搭配，各講一件事",
+      "en": "si clauses: three pairings, three meanings"
+    },
+    "intro": {
+      "zh": "si（如果）引導的條件句有三種標準搭配，每一種講的事情不同。搭配是**固定的**，不能自由組合。\n\n| 類型 | si 子句 | 主句 |\n|---|---|---|\n| 有可能發生 | 現在式 | 現在式／未來式／命令式 |\n| 跟事實相反（現在） | 過去虛擬式 | 條件式 |\n| 跟事實相反（過去） | 過去完成虛擬式 | 條件完成式 |\n\n最重要的一條規則：**si 後面永遠不用現在虛擬式**。這是初學者最常踩的地雷。",
+      "en": "A si (“if”) clause comes in three standard pairings, each saying something different. The pairings are **fixed** — you can’t mix and match.\n\n| Type | si clause | main clause |\n|---|---|---|\n| Possible | present | present / future / imperative |\n| Contrary to fact (now) | past subjunctive | conditional |\n| Contrary to fact (past) | past perfect subjunctive | conditional perfect |\n\nThe single most important rule: **si is never followed by the present subjunctive.** That’s the classic trap."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**有可能發生**：si + 現在式，主句用現在式、未來式或命令式。",
+          "en": "**Possible**: si + present, with the main clause in the present, future or imperative."
+        },
+        "examples": [
+          {
+            "es": "Si llueve, no salimos.",
+            "gloss": {
+              "zh": "如果下雨，我們就不出門。",
+              "en": "If it rains, we don’t go out."
+            }
+          },
+          {
+            "es": "Si tengo tiempo, iré a Galápagos.",
+            "gloss": {
+              "zh": "如果我有時間，我會去加拉巴哥。",
+              "en": "If I have time, I’ll go to the Galápagos."
+            }
+          },
+          {
+            "es": "Si ves al guía, dile que esperamos.",
+            "gloss": {
+              "zh": "如果你看到導遊，跟他說我們在等。",
+              "en": "If you see the guide, tell him we’re waiting."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**跟現在的事實相反**：si + 過去虛擬式，主句用條件式。",
+          "en": "**Contrary to fact now**: si + past subjunctive, with the main clause in the conditional."
+        },
+        "examples": [
+          {
+            "es": "Si tuviera tiempo, iría a Galápagos.",
+            "gloss": {
+              "zh": "如果我有時間，我就會去加拉巴哥。",
+              "en": "If I had time, I’d go to the Galápagos."
+            },
+            "note": {
+              "zh": "但我沒有時間",
+              "en": "But I don’t have time."
+            }
+          },
+          {
+            "es": "Si fuera más barato, lo compraría.",
+            "gloss": {
+              "zh": "如果便宜一點我就買了。",
+              "en": "If it were cheaper, I’d buy it."
+            }
+          },
+          {
+            "es": "Si pudiera, te ayudaría.",
+            "gloss": {
+              "zh": "如果我可以，我會幫你。",
+              "en": "If I could, I’d help you."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**跟過去的事實相反**：si + 過去完成虛擬式（hubiera + 分詞），主句用條件完成式（habría + 分詞）。",
+          "en": "**Contrary to fact in the past**: si + past perfect subjunctive (hubiera + participle), main clause in the conditional perfect (habría + participle)."
+        },
+        "examples": [
+          {
+            "es": "Si hubiera sabido, te habría avisado.",
+            "gloss": {
+              "zh": "早知道我就通知你了。",
+              "en": "If I had known, I would have told you."
+            }
+          },
+          {
+            "es": "Si hubiéramos salido antes, no habríamos perdido el bus.",
+            "gloss": {
+              "zh": "如果我們早點出門，就不會錯過公車了。",
+              "en": "If we had left earlier, we wouldn’t have missed the bus."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**si 子句與主句可以對調**，意思不變。放前面時要加逗號。",
+          "en": "The **si clause and the main clause can swap places** with no change in meaning. A comma is used when the si clause comes first."
+        },
+        "examples": [
+          {
+            "es": "Si tuviera tiempo, iría.",
+            "gloss": {
+              "zh": "如果我有時間，我就會去。",
+              "en": "If I had time, I’d go."
+            }
+          },
+          {
+            "es": "Iría si tuviera tiempo.",
+            "gloss": {
+              "zh": "我有時間就會去。",
+              "en": "I’d go if I had time."
+            },
+            "note": {
+              "zh": "放後面就不用逗號",
+              "en": "No comma when it comes second."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**si 後面永遠不用現在虛擬式。**這是唯一絕對的禁令。",
+          "en": "**si is never followed by the present subjunctive.** This is the one absolute prohibition."
+        },
+        "examples": [
+          {
+            "es": "Si tengo tiempo…",
+            "gloss": {
+              "zh": "如果我有時間……",
+              "en": "If I have time…"
+            },
+            "note": {
+              "zh": "現在式，可以",
+              "en": "Present — fine."
+            }
+          },
+          {
+            "es": "Si tuviera tiempo…",
+            "gloss": {
+              "zh": "如果我有時間（但沒有）……",
+              "en": "If I had time…"
+            },
+            "note": {
+              "zh": "過去虛擬式，可以",
+              "en": "Past subjunctive — fine."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是 **si 後面用了現在虛擬式**：\n\n- ✗ Si tenga tiempo, iré. → ✓ Si **tengo** tiempo, iré.\n\n> 自我檢查：si 後面只會出現三種東西 —— 現在式、過去虛擬式、過去完成虛擬式。看到 si 後面接現在虛擬式，一律是錯的。\n\n第二個是**搭配混用**：\n\n- ✗ Si tuviera tiempo, voy. → ✓ Si tuviera tiempo, **iría**.\n- ✗ Si tengo tiempo, iría. → ✓ Si tengo tiempo, **iré**.\n\n過去虛擬式配條件式，現在式配未來式。兩兩成對，不能交叉。\n\n第三個是**兩邊都用條件式**：\n\n- ✗ Si tendría tiempo, iría. → ✓ Si **tuviera** tiempo, iría.\n\n條件式只出現在主句，不出現在 si 子句裡。\n\n第四個是**講過去的假設時用錯層次**：\n\n- ✗ Si supiera, te habría avisado.（意思變成「如果我現在知道」）\n- ✓ Si **hubiera sabido**, te habría avisado.（早知道的話）\n\n> 記憶策略：三種搭配各記成一組固定的句型 —— **現在式 → 未來式**、**過去虛擬式 → 條件式**、**hubiera + 分詞 → habría + 分詞**。看到左邊就寫右邊，不要臨場推。",
+      "en": "The most common mistake is **the present subjunctive after si**:\n\n- ✗ Si tenga tiempo, iré. → ✓ Si **tengo** tiempo, iré.\n\n> Self-check: only three things ever follow si — the present, the past subjunctive, and the past perfect subjunctive. A present subjunctive after si is always wrong.\n\nSecond, **mixing the pairings**:\n\n- ✗ Si tuviera tiempo, voy. → ✓ Si tuviera tiempo, **iría**.\n- ✗ Si tengo tiempo, iría. → ✓ Si tengo tiempo, **iré**.\n\nPast subjunctive goes with the conditional; the present goes with the future. They pair up and don’t cross over.\n\nThird, **the conditional on both sides**:\n\n- ✗ Si tendría tiempo, iría. → ✓ Si **tuviera** tiempo, iría.\n\nThe conditional belongs in the main clause only, never inside the si clause.\n\nFourth, **the wrong layer for a past hypothetical**:\n\n- ✗ Si supiera, te habría avisado. (this reads as “if I knew now”)\n- ✓ Si **hubiera sabido**, te habría avisado. (had I known at the time)\n\n> A strategy: learn each pairing as one fixed template — **present → future**, **past subjunctive → conditional**, **hubiera + participle → habría + participle**. See the left side, write the right side; don’t work it out on the spot."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1si-1",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "si 後面永遠不用現在虛擬式。",
+          "en": "si is never followed by the present subjunctive."
+        },
+        "prompt": {
+          "zh": "哪一句是對的？",
+          "en": "Which sentence is correct?"
+        },
+        "options": [
+          {
+            "zh": "Si tenga tiempo, iré a Galápagos.",
+            "en": "Si tenga tiempo, iré a Galápagos."
+          },
+          {
+            "zh": "Si tengo tiempo, iré a Galápagos.",
+            "en": "Si tengo tiempo, iré a Galápagos."
+          },
+          {
+            "zh": "Si tendría tiempo, iré a Galápagos.",
+            "en": "Si tendría tiempo, iré a Galápagos."
+          },
+          {
+            "zh": "Si tuviera tiempo, iré a Galápagos.",
+            "en": "Si tuviera tiempo, iré a Galápagos."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "si 後面不用現在虛擬式。",
+            "en": "si isn’t followed by the present subjunctive."
+          },
+          {
+            "zh": "正確。現在式配未來式。",
+            "en": "Correct: present with future."
+          },
+          {
+            "zh": "條件式不出現在 si 子句裡。",
+            "en": "The conditional doesn’t belong inside the si clause."
+          },
+          {
+            "zh": "過去虛擬式要配條件式 iría，不是未來式。",
+            "en": "The past subjunctive pairs with the conditional iría, not the future."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1si-2",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "過去虛擬式配條件式，這是講跟現在事實相反的情況。",
+          "en": "Past subjunctive with conditional — the pairing for something contrary to present fact."
+        },
+        "prompt": {
+          "zh": "「如果我有時間，我就會去加拉巴哥。」（但我沒時間）該用哪個？",
+          "en": "Which fits “If I had time, I’d go to the Galápagos” (but I don’t)?"
+        },
+        "options": [
+          {
+            "zh": "Si tengo tiempo, iría a Galápagos.",
+            "en": "Si tengo tiempo, iría a Galápagos."
+          },
+          {
+            "zh": "Si tuviera tiempo, iría a Galápagos.",
+            "en": "Si tuviera tiempo, iría a Galápagos."
+          },
+          {
+            "zh": "Si tuviera tiempo, voy a Galápagos.",
+            "en": "Si tuviera tiempo, voy a Galápagos."
+          },
+          {
+            "zh": "Si tendría tiempo, iría a Galápagos.",
+            "en": "Si tendría tiempo, iría a Galápagos."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "現在式要配未來式，而且意思也不是「相反於事實」。",
+            "en": "The present pairs with the future, and it wouldn’t be contrary to fact."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "主句要用條件式。",
+            "en": "The main clause needs the conditional."
+          },
+          {
+            "zh": "si 子句不能用條件式。",
+            "en": "The si clause can’t take the conditional."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1si-3",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "講過去的假設要用 hubiera + 分詞 配 habría + 分詞。",
+          "en": "A past hypothetical needs hubiera + participle with habría + participle."
+        },
+        "prompt": {
+          "zh": "「早知道我就通知你了。」該用哪個？",
+          "en": "Which fits “If I had known, I would have told you”?"
+        },
+        "options": [
+          {
+            "zh": "Si supiera, te habría avisado.",
+            "en": "Si supiera, te habría avisado."
+          },
+          {
+            "zh": "Si hubiera sabido, te habría avisado.",
+            "en": "Si hubiera sabido, te habría avisado."
+          },
+          {
+            "zh": "Si sabía, te habría avisado.",
+            "en": "Si sabía, te habría avisado."
+          },
+          {
+            "zh": "Si hubiera sabido, te avisaría.",
+            "en": "Si hubiera sabido, te avisaría."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "這句意思變成「如果我現在知道」。",
+            "en": "That reads as “if I knew now”."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "直陳式在這個搭配裡不成立。",
+            "en": "The indicative doesn’t work in this pairing."
+          },
+          {
+            "zh": "主句要用條件完成式 habría avisado。",
+            "en": "The main clause needs the conditional perfect habría avisado."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1si-4",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "條件式只出現在主句，不出現在 si 子句裡。",
+          "en": "The conditional appears only in the main clause, never inside the si clause."
+        },
+        "prompt": {
+          "zh": "哪一句**錯了**？",
+          "en": "Which sentence is **wrong**?"
+        },
+        "options": [
+          {
+            "zh": "Si pudiera, te ayudaría.",
+            "en": "Si pudiera, te ayudaría."
+          },
+          {
+            "zh": "Te ayudaría si pudiera.",
+            "en": "Te ayudaría si pudiera."
+          },
+          {
+            "zh": "Si podría, te ayudaría.",
+            "en": "Si podría, te ayudaría."
+          },
+          {
+            "zh": "Si puedo, te ayudo.",
+            "en": "Si puedo, te ayudo."
+          }
+        ],
+        "answerIndex": 2,
+        "optionExplains": [
+          {
+            "zh": "正確的搭配。",
+            "en": "A correct pairing."
+          },
+          {
+            "zh": "正確，只是子句放後面。",
+            "en": "Correct — just with the clause second."
+          },
+          {
+            "zh": "正確答案。si 子句不能用條件式。",
+            "en": "This is the one: the si clause can’t take the conditional."
+          },
+          {
+            "zh": "正確的搭配。",
+            "en": "A correct pairing."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1si-5",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "poder 的過去虛擬式從 pudieron 推出：pudiera。",
+          "en": "The past subjunctive of poder derives from pudieron: pudiera."
+        },
+        "verbId": "poder",
+        "person": "yo",
+        "tense": "imperfectoSubjuntivo",
+        "answer": "pudiera"
+      },
+      {
+        "id": "ex-b1si-6",
+        "type": "conjugation",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "ir 的條件式是 iría。",
+          "en": "The conditional of ir is iría."
+        },
+        "verbId": "ir",
+        "person": "yo",
+        "tense": "condicional",
+        "answer": "iría"
+      },
+      {
+        "id": "ex-b1si-7",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "這是跟現在事實相反的假設：si 子句用過去虛擬式 fuera，主句用條件式 compraría。",
+          "en": "This is contrary to present fact: the si clause takes the past subjunctive fuera and the main clause the conditional compraría."
+        },
+        "prompt": {
+          "zh": "把「如果便宜一點我就買了。」翻成西班牙文",
+          "en": "Translate into Spanish: “If it were cheaper, I’d buy it.”"
+        },
+        "accept": [
+          "Si fuera más barato, lo compraría",
+          "Si fuera mas barato, lo compraria"
+        ],
+        "canonical": "Si fuera más barato, lo compraría."
+      },
+      {
+        "id": "ex-b1si-8",
+        "type": "translate",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "這是有可能發生的情況：si 子句用現在式 llueve，主句也用現在式。",
+          "en": "This is a real possibility: the si clause takes the present llueve, and so does the main clause."
+        },
+        "prompt": {
+          "zh": "把「如果下雨，我們就不出門。」翻成西班牙文",
+          "en": "Translate into Spanish: “If it rains, we don’t go out.”"
+        },
+        "accept": [
+          "Si llueve, no salimos",
+          "Si llueve no salimos"
+        ],
+        "canonical": "Si llueve, no salimos."
+      },
+      {
+        "id": "ex-b1si-9",
+        "type": "wordOrder",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "si 子句放後面就不用逗號。",
+          "en": "With the si clause second, no comma is needed."
+        },
+        "prompt": {
+          "zh": "排成「我有時間就會去。」",
+          "en": "Arrange: “I’d go if I had time.”"
+        },
+        "tokens": [
+          "Iría",
+          "si",
+          "tiempo",
+          "tuviera"
+        ],
+        "answer": [
+          "Iría",
+          "si",
+          "tuviera",
+          "tiempo"
+        ]
+      },
+      {
+        "id": "ex-b1si-10",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "三種搭配是固定的，不能交叉組合。",
+          "en": "The three pairings are fixed and can’t be crossed."
+        },
+        "prompt": {
+          "zh": "哪一組搭配是**正確**的？",
+          "en": "Which pairing is **correct**?"
+        },
+        "options": [
+          {
+            "zh": "si + 現在式 → 條件式",
+            "en": "si + present → conditional"
+          },
+          {
+            "zh": "si + 過去虛擬式 → 條件式",
+            "en": "si + past subjunctive → conditional"
+          },
+          {
+            "zh": "si + 現在虛擬式 → 未來式",
+            "en": "si + present subjunctive → future"
+          },
+          {
+            "zh": "si + 條件式 → 條件式",
+            "en": "si + conditional → conditional"
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "現在式要配未來式或現在式。",
+            "en": "The present pairs with the future or the present."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "si 後面永遠不用現在虛擬式。",
+            "en": "si is never followed by the present subjunctive."
+          },
+          {
+            "zh": "si 子句不能用條件式。",
+            "en": "The si clause can’t take the conditional."
+          }
+        ]
+      }
+    ],
+    "prerequisites": [
+      "b1-imperfecto-subjuntivo"
+    ],
+    "vocabIds": [
+      "poder",
+      "ir",
+      "ser",
+      "tener",
+      "saber",
+      "barato",
+      "lluvia",
+      "guia",
+      "oportunidad",
+      "esperanza"
+    ],
+    "usesOnlyTaughtGrammar": true
+  },
+  {
+    "id": "b1-se-pasiva",
+    "level": "B1",
+    "city": "galapagos",
+    "order": 6,
+    "title": {
+      "zh": "se 的被動與無人稱：不說是誰做的",
+      "en": "Passive and impersonal se: leaving the doer out"
+    },
+    "intro": {
+      "zh": "西班牙文有被動語態（ser + 分詞），但日常裡**很少用**。要表達「不特別說是誰做的」，最自然的是 **se**。\n\n兩種：\n\n- **被動的 se**：se + 動詞第三人稱 + 東西。動詞跟著**東西**變單複數。\n- **無人稱的 se**：se + 動詞第三人稱**單數**，講「一般人怎麼樣」。\n\n這是招牌、告示、說明書上最常見的結構，在加拉巴哥的國家公園裡到處看得到。",
+      "en": "Spanish has a passive voice (ser + participle), but it is **rarely used** in everyday language. To say something without naming who did it, the natural choice is **se**.\n\nTwo kinds:\n\n- **passive se**: se + third-person verb + thing. The verb agrees with **the thing**.\n- **impersonal se**: se + third-person **singular**, describing what people in general do.\n\nThis is the structure you see on signs, notices and instructions everywhere — including all over the Galápagos national park."
+    },
+    "rules": [
+      {
+        "rule": {
+          "zh": "**被動的 se**：動詞跟著後面的東西變單複數。",
+          "en": "**Passive se**: the verb agrees in number with the thing that follows."
+        },
+        "examples": [
+          {
+            "es": "Se habla español.",
+            "gloss": {
+              "zh": "這裡講西班牙文。",
+              "en": "Spanish is spoken here."
+            },
+            "note": {
+              "zh": "單數",
+              "en": "singular"
+            }
+          },
+          {
+            "es": "Se hablan tres idiomas.",
+            "gloss": {
+              "zh": "這裡講三種語言。",
+              "en": "Three languages are spoken here."
+            },
+            "note": {
+              "zh": "複數",
+              "en": "plural"
+            }
+          },
+          {
+            "es": "Se vende artesanía.",
+            "gloss": {
+              "zh": "售手工藝品。",
+              "en": "Handicrafts sold."
+            }
+          },
+          {
+            "es": "Se venden entradas aquí.",
+            "gloss": {
+              "zh": "這裡售票。",
+              "en": "Tickets sold here."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**無人稱的 se**：一律第三人稱**單數**，講「一般人怎麼做」。",
+          "en": "**Impersonal se**: always third-person **singular**, describing what people generally do."
+        },
+        "examples": [
+          {
+            "es": "Aquí se come muy bien.",
+            "gloss": {
+              "zh": "這裡吃得很好。",
+              "en": "The food here is very good."
+            }
+          },
+          {
+            "es": "¿Cómo se dice esto en español?",
+            "gloss": {
+              "zh": "這個西班牙文怎麼說？",
+              "en": "How do you say this in Spanish?"
+            }
+          },
+          {
+            "es": "Se necesita permiso para acampar.",
+            "gloss": {
+              "zh": "露營需要許可。",
+              "en": "A permit is needed to camp."
+            }
+          },
+          {
+            "es": "No se puede entrar sin guía.",
+            "gloss": {
+              "zh": "沒有導遊不能進去。",
+              "en": "You can’t go in without a guide."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**告示與規定**幾乎都用這個結構。",
+          "en": "**Signs and regulations** almost always use this structure."
+        },
+        "examples": [
+          {
+            "es": "Se prohíbe dejar basura.",
+            "gloss": {
+              "zh": "禁止留下垃圾。",
+              "en": "Leaving rubbish is prohibited."
+            }
+          },
+          {
+            "es": "No se permite tocar a los animales.",
+            "gloss": {
+              "zh": "禁止觸摸動物。",
+              "en": "Touching the animals isn’t allowed."
+            }
+          },
+          {
+            "es": "Se ruega no usar flash.",
+            "gloss": {
+              "zh": "請勿使用閃光燈。",
+              "en": "Please do not use flash."
+            }
+          },
+          {
+            "es": "Se recomienda llevar agua.",
+            "gloss": {
+              "zh": "建議攜帶飲水。",
+              "en": "It is recommended that you carry water."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "被動語態（ser + 分詞）**只出現在正式書面語**，口語裡幾乎不用。",
+          "en": "The true passive (ser + participle) **appears only in formal writing**; it is almost never spoken."
+        },
+        "examples": [
+          {
+            "es": "El parque fue creado en 1959.",
+            "gloss": {
+              "zh": "這座公園於 1959 年設立。",
+              "en": "The park was created in 1959."
+            },
+            "note": {
+              "zh": "正式書面語",
+              "en": "Formal written style."
+            }
+          },
+          {
+            "es": "Se creó el parque en 1959.",
+            "gloss": {
+              "zh": "公園是 1959 年設立的。",
+              "en": "The park was set up in 1959."
+            },
+            "note": {
+              "zh": "一般說法",
+              "en": "The ordinary way to say it."
+            }
+          }
+        ]
+      },
+      {
+        "rule": {
+          "zh": "**受詞是人**的時候，一律用單數並加 a，避免產生歧義。",
+          "en": "When the object is a **person**, use the singular and add a, to avoid ambiguity."
+        },
+        "examples": [
+          {
+            "es": "Se ayuda a los visitantes.",
+            "gloss": {
+              "zh": "會協助訪客。",
+              "en": "Visitors are helped."
+            },
+            "note": {
+              "zh": "不是 ✗ se ayudan los visitantes",
+              "en": "Not ✗ se ayudan los visitantes."
+            }
+          },
+          {
+            "es": "Se busca a los responsables.",
+            "gloss": {
+              "zh": "正在尋找負責人。",
+              "en": "The people responsible are being sought."
+            }
+          }
+        ]
+      }
+    ],
+    "pitfalls": {
+      "zh": "最容易犯的錯是**被動的 se 沒有跟著東西變單複數**：\n\n- ✗ Se vende entradas. → ✓ Se **venden** entradas.\n- ✗ Se hablan español. → ✓ Se **habla** español.\n\n> 自我檢查：先找出 se 後面那個東西，它是單數就用單數動詞，複數就用複數動詞。\n\n第二個是**無人稱的 se 用了複數**：\n\n- ✗ Aquí se comen muy bien. → ✓ Aquí se **come** muy bien.\n\n無人稱沒有主詞可以配合，永遠是第三人稱單數。判準：se 後面**沒有**一個具體的東西當主詞 → 用單數。\n\n第三個是**在 se 結構裡加了主詞**：\n\n- ✗ Se habla la gente español. → ✓ **Se habla** español.（或 La gente habla español.）\n\nse 結構的重點就是不講是誰，加了主詞就矛盾了。\n\n第四個是**受詞是人卻用了複數**：\n\n- ✗ Se ayudan los visitantes.（意思會變成「訪客互相幫忙」）\n- ✓ Se **ayuda a** los visitantes.（有人協助訪客）\n\n差別很實際：少了 a 而且用複數，句子會被讀成互相動作。\n\n> 實務提醒：在加拉巴哥的步道與國家公園裡，se prohíbe、se permite、se recomienda 這三個是最常出現在告示牌上的。看懂它們就看懂了大部分的規定。",
+      "en": "The most common mistake is **the passive se not agreeing in number**:\n\n- ✗ Se vende entradas. → ✓ Se **venden** entradas.\n- ✗ Se hablan español. → ✓ Se **habla** español.\n\n> Self-check: find the thing after se. Singular thing, singular verb; plural thing, plural verb.\n\nSecond, **a plural verb with impersonal se**:\n\n- ✗ Aquí se comen muy bien. → ✓ Aquí se **come** muy bien.\n\nThe impersonal has no subject to agree with, so it is always third-person singular. The test: if there is **no** specific thing after se acting as subject, use the singular.\n\nThird, **adding a subject to a se construction**:\n\n- ✗ Se habla la gente español. → ✓ **Se habla** español. (or La gente habla español.)\n\nThe whole point of se is not naming the doer; adding one contradicts it.\n\nFourth, **a plural verb when the object is a person**:\n\n- ✗ Se ayudan los visitantes. (this reads as “the visitors help each other”)\n- ✓ Se **ayuda a** los visitantes. (visitors are helped)\n\nThe difference is practical: drop the a and use a plural, and the sentence turns reciprocal.\n\n> A practical note: on Galápagos trails and in the national park, se prohíbe, se permite and se recomienda are the three you’ll meet most on signs. Read those and you’ve read most of the rules."
+    },
+    "exercises": [
+      {
+        "id": "ex-b1se-1",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "被動的 se 要跟著後面的東西變單複數。entradas 是複數。",
+          "en": "Passive se agrees with the thing that follows, and entradas is plural."
+        },
+        "prompt": {
+          "zh": "「這裡售票。」該用哪個？",
+          "en": "Which fits “Tickets sold here”?"
+        },
+        "options": [
+          {
+            "zh": "Se vende entradas aquí.",
+            "en": "Se vende entradas aquí."
+          },
+          {
+            "zh": "Se venden entradas aquí.",
+            "en": "Se venden entradas aquí."
+          },
+          {
+            "zh": "Se vendo entradas aquí.",
+            "en": "Se vendo entradas aquí."
+          },
+          {
+            "zh": "Vende se entradas aquí.",
+            "en": "Vende se entradas aquí."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "entradas 是複數，動詞要用複數。",
+            "en": "entradas is plural, so the verb must be too."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "se 結構用第三人稱，不用第一人稱。",
+            "en": "The se construction uses the third person, not the first."
+          },
+          {
+            "zh": "se 要放在動詞前面。",
+            "en": "se goes before the verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1se-2",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "無人稱的 se 永遠用第三人稱單數。",
+          "en": "Impersonal se is always third-person singular."
+        },
+        "prompt": {
+          "zh": "「這裡吃得很好。」該用哪個？",
+          "en": "Which fits “The food here is very good”?"
+        },
+        "options": [
+          {
+            "zh": "Aquí se comen muy bien.",
+            "en": "Aquí se comen muy bien."
+          },
+          {
+            "zh": "Aquí se come muy bien.",
+            "en": "Aquí se come muy bien."
+          },
+          {
+            "zh": "Aquí se comemos muy bien.",
+            "en": "Aquí se comemos muy bien."
+          },
+          {
+            "zh": "Aquí comen se muy bien.",
+            "en": "Aquí comen se muy bien."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "無人稱沒有主詞可配合，用單數。",
+            "en": "The impersonal has no subject to agree with, so it takes the singular."
+          },
+          {
+            "zh": "正確。",
+            "en": "Correct."
+          },
+          {
+            "zh": "se 結構不用第一人稱。",
+            "en": "The se construction doesn’t use the first person."
+          },
+          {
+            "zh": "se 要放在動詞前面。",
+            "en": "se goes before the verb."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1se-3",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "受詞是人時用單數並加 a，否則句子會被讀成互相動作。",
+          "en": "With a person as object, use the singular and add a, or the sentence turns reciprocal."
+        },
+        "prompt": {
+          "zh": "「會協助訪客。」該用哪個？",
+          "en": "Which fits “Visitors are helped”?"
+        },
+        "options": [
+          {
+            "zh": "Se ayudan los visitantes.",
+            "en": "Se ayudan los visitantes."
+          },
+          {
+            "zh": "Se ayuda a los visitantes.",
+            "en": "Se ayuda a los visitantes."
+          },
+          {
+            "zh": "Se ayudan a los visitantes.",
+            "en": "Se ayudan a los visitantes."
+          },
+          {
+            "zh": "Se ayuda los visitantes.",
+            "en": "Se ayuda los visitantes."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "這句會被讀成「訪客互相幫忙」。",
+            "en": "That reads as “the visitors help each other”."
+          },
+          {
+            "zh": "正確。單數 + a。",
+            "en": "Correct: singular plus a."
+          },
+          {
+            "zh": "受詞是人時要用單數。",
+            "en": "With a person as object the verb stays singular."
+          },
+          {
+            "zh": "少了 a。",
+            "en": "The a is missing."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1se-4",
+        "type": "mcq",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "se 結構的重點就是不講是誰做的，不能再加主詞。",
+          "en": "The point of the se construction is not naming the doer, so a subject can’t be added."
+        },
+        "prompt": {
+          "zh": "哪一句**錯了**？",
+          "en": "Which sentence is **wrong**?"
+        },
+        "options": [
+          {
+            "zh": "Se habla español.",
+            "en": "Se habla español."
+          },
+          {
+            "zh": "La gente habla español.",
+            "en": "La gente habla español."
+          },
+          {
+            "zh": "Se habla la gente español.",
+            "en": "Se habla la gente español."
+          },
+          {
+            "zh": "Aquí se habla español.",
+            "en": "Aquí se habla español."
+          }
+        ],
+        "answerIndex": 2,
+        "optionExplains": [
+          {
+            "zh": "正確的 se 結構。",
+            "en": "A correct se construction."
+          },
+          {
+            "zh": "正確，有明確主詞的一般句子。",
+            "en": "Correct — an ordinary sentence with a stated subject."
+          },
+          {
+            "zh": "正確答案。se 結構不能再加主詞。",
+            "en": "This is the one: a se construction can’t take a subject."
+          },
+          {
+            "zh": "正確，加了地點副詞。",
+            "en": "Correct, with a place adverb added."
+          }
+        ]
+      },
+      {
+        "id": "ex-b1se-5",
+        "type": "translate",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "被動的 se，animales 是複數但這裡受詞是動物（生物），用 se permite + 不定式。",
+          "en": "With se permite plus an infinitive, the verb stays singular regardless of what follows."
+        },
+        "prompt": {
+          "zh": "把「禁止觸摸動物。」翻成西班牙文",
+          "en": "Translate into Spanish: “Touching the animals isn’t allowed.”"
+        },
+        "accept": [
+          "No se permite tocar a los animales",
+          "No se permite tocar los animales"
+        ],
+        "canonical": "No se permite tocar a los animales."
+      },
+      {
+        "id": "ex-b1se-6",
+        "type": "translate",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "無人稱的 se + 單數動詞。",
+          "en": "Impersonal se with a singular verb."
+        },
+        "prompt": {
+          "zh": "把「露營需要許可。」翻成西班牙文",
+          "en": "Translate into Spanish: “A permit is needed to camp.”"
+        },
+        "accept": [
+          "Se necesita permiso para acampar"
+        ],
+        "canonical": "Se necesita permiso para acampar."
+      },
+      {
+        "id": "ex-b1se-7",
+        "type": "wordOrder",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "無人稱的 se 用單數動詞 dice。",
+          "en": "Impersonal se takes the singular verb dice."
+        },
+        "prompt": {
+          "zh": "排成「這個西班牙文怎麼說？」",
+          "en": "Arrange: “How do you say this in Spanish?”"
+        },
+        "tokens": [
+          "dice",
+          "en",
+          "español?",
+          "esto",
+          "se",
+          "¿Cómo"
+        ],
+        "answer": [
+          "¿Cómo",
+          "se",
+          "dice",
+          "esto",
+          "en",
+          "español?"
+        ]
+      },
+      {
+        "id": "ex-b1se-8",
+        "type": "mcq",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "日常口語幾乎不用 ser + 分詞的被動語態，se 結構才是自然的說法。",
+          "en": "The ser + participle passive is almost never spoken; the se construction is the natural choice."
+        },
+        "prompt": {
+          "zh": "想說「公園是 1959 年設立的」，日常口語最自然的是？",
+          "en": "To say “The park was set up in 1959”, what sounds most natural in speech?"
+        },
+        "options": [
+          {
+            "zh": "El parque fue creado en 1959.",
+            "en": "El parque fue creado en 1959."
+          },
+          {
+            "zh": "Se creó el parque en 1959.",
+            "en": "Se creó el parque en 1959."
+          },
+          {
+            "zh": "El parque se fue creado en 1959.",
+            "en": "El parque se fue creado en 1959."
+          },
+          {
+            "zh": "El parque creó en 1959.",
+            "en": "El parque creó en 1959."
+          }
+        ],
+        "answerIndex": 1,
+        "optionExplains": [
+          {
+            "zh": "文法正確，但這是正式書面語的口吻。",
+            "en": "Grammatically correct, but this is formal written style."
+          },
+          {
+            "zh": "正確。口語用 se 結構。",
+            "en": "Correct: speech uses the se construction."
+          },
+          {
+            "zh": "se 和 ser 被動不能混用。",
+            "en": "se and the ser passive can’t be combined."
+          },
+          {
+            "zh": "少了 se，意思變成公園自己創造了什麼。",
+            "en": "Without se it reads as the park creating something."
+          }
+        ]
+      }
+    ],
+    "prerequisites": [
+      "b1-si-condicionales"
+    ],
+    "vocabIds": [
+      "se-pron",
+      "permitir",
+      "proteger",
+      "cuidar",
+      "necesitar",
+      "permiso",
+      "basura",
+      "visitante",
+      "regla-b1",
+      "parque-nacional",
+      "animal",
+      "especie",
+      "artesania",
+      "idioma"
+    ],
+    "usesOnlyTaughtGrammar": true
+  }
+]

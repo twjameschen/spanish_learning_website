@@ -40,6 +40,15 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
   return out;
 }
 
+/**
+ * 只做行內格式（**粗體**、`程式碼`），不產生區塊元素。
+ * 題目提示這種「一行字但想強調某個詞」的地方用這個，
+ * 不要用 Markish —— 那會包一層 <p> 進去，把外面的排版打亂。
+ */
+export function Inline({ text }: { text: string }) {
+  return <>{inline(text, 'i')}</>;
+}
+
 export function Markish({ text }: { text: string }) {
   const blocks: ReactNode[] = [];
   const lines = text.split('\n');
@@ -83,6 +92,51 @@ export function Markish({ text }: { text: string }) {
         >
           {inline(body.join(' '), `q${key}`)}
         </blockquote>,
+      );
+      continue;
+    }
+
+    // | 管線分隔的表格：第二列是 |---|---| 的分隔線
+    // 課文用它排「哪種情況配哪個時態」這類對照，純段落排不出對齊
+    if (line.trimStart().startsWith('|') && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1] ?? '')) {
+      const cells = (row: string) =>
+        row.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+      const head = cells(line);
+      i += 2; // 跳過標題列與分隔線
+      const rows: string[][] = [];
+      while (i < lines.length && (lines[i] ?? '').trimStart().startsWith('|')) {
+        rows.push(cells(lines[i] ?? ''));
+        i += 1;
+      }
+      blocks.push(
+        // 窄畫面放不下時讓表格自己橫向捲動，不要把整頁撐寬
+        <div key={`k${key++}`} className="-mx-1 overflow-x-auto px-1">
+          <table className="w-full min-w-[26rem] border-collapse text-[15px]">
+            <thead>
+              <tr>
+                {head.map((h, n) => (
+                  <th
+                    key={n}
+                    className="border-b-2 border-line px-3 py-2 text-left font-extrabold text-body"
+                  >
+                    {inline(h, `th${key}-${n}`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, rn) => (
+                <tr key={rn} className="align-top">
+                  {row.map((c, cn) => (
+                    <td key={cn} className="border-b border-line/60 px-3 py-2 leading-relaxed">
+                      {inline(c, `td${key}-${rn}-${cn}`)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>,
       );
       continue;
     }

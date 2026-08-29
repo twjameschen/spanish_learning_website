@@ -7,12 +7,15 @@ import {
 import rawWordsA0 from './words/a0.json';
 import rawWordsA1 from './words/a1.json';
 import rawWordsA2 from './words/a2.json';
+import rawWordsB1 from './words/b1.json';
 import rawVerbsA0 from './verbs/a0.json';
 import rawVerbsA1 from './verbs/a1.json';
 import rawVerbsA2 from './verbs/a2.json';
+import rawVerbsB1 from './verbs/b1.json';
 import rawLessonsA0 from './lessons/a0.json';
 import rawLessonsA1 from './lessons/a1.json';
 import rawLessonsA2 from './lessons/a2.json';
+import rawLessonsB1 from './lessons/b1.json';
 import rawJourney from './journey.json';
 
 /**
@@ -41,9 +44,11 @@ function parseOrThrow<T>(
 export const wordsA0: Word[] = parseOrThrow(wordArraySchema, rawWordsA0, 'words/a0.json');
 export const wordsA1: Word[] = parseOrThrow(wordArraySchema, rawWordsA1, 'words/a1.json');
 export const wordsA2: Word[] = parseOrThrow(wordArraySchema, rawWordsA2, 'words/a2.json');
+export const wordsB1: Word[] = parseOrThrow(wordArraySchema, rawWordsB1, 'words/b1.json');
 export const verbsA0: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA0, 'verbs/a0.json');
 export const verbsA1: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA1, 'verbs/a1.json');
 export const verbsA2: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA2, 'verbs/a2.json');
+export const verbsB1: Verb[] = parseOrThrow(verbArraySchema, rawVerbsB1, 'verbs/b1.json');
 export const lessonsA0: GrammarLesson[] = parseOrThrow(
   lessonArraySchema, rawLessonsA0, 'lessons/a0.json',
 );
@@ -53,12 +58,20 @@ export const lessonsA1: GrammarLesson[] = parseOrThrow(
 export const lessonsA2: GrammarLesson[] = parseOrThrow(
   lessonArraySchema, rawLessonsA2, 'lessons/a2.json',
 );
+export const lessonsB1: GrammarLesson[] = parseOrThrow(
+  lessonArraySchema, rawLessonsB1, 'lessons/b1.json',
+);
 export const journey: JourneyStop[] = parseOrThrow(journeySchema, rawJourney, 'journey.json');
 
 /** 所有單字（含動詞）。動詞也是 Word 的子型別，可以混在一起查。 */
-export const allWords: Word[] = [...wordsA0, ...wordsA1, ...wordsA2, ...verbsA0, ...verbsA1, ...verbsA2];
-export const allVerbs: Verb[] = [...verbsA0, ...verbsA1, ...verbsA2];
-export const allLessons: GrammarLesson[] = [...lessonsA0, ...lessonsA1, ...lessonsA2];
+export const allWords: Word[] = [
+  ...wordsA0, ...wordsA1, ...wordsA2, ...wordsB1,
+  ...verbsA0, ...verbsA1, ...verbsA2, ...verbsB1,
+];
+export const allVerbs: Verb[] = [...verbsA0, ...verbsA1, ...verbsA2, ...verbsB1];
+export const allLessons: GrammarLesson[] = [
+  ...lessonsA0, ...lessonsA1, ...lessonsA2, ...lessonsB1,
+];
 
 const wordIndex = new Map<string, Word>(allWords.map((w) => [w.id, w]));
 const verbIndex = new Map<string, Verb>(allVerbs.map((v) => [v.id, v]));
@@ -106,6 +119,9 @@ export const TOPIC_LABEL: Record<string, Localized> = {
   emociones: { zh: '情緒與個性', en: 'Feelings & character' },
   estudio: { zh: '學習與溝通', en: 'Study & communication' },
   compras: { zh: '購物與金錢', en: 'Shopping & money' },
+  opinion: { zh: '意見與態度', en: 'Opinions & attitudes' },
+  medioambiente: { zh: '環境與保育', en: 'Environment & conservation' },
+  sociedad: { zh: '社會與制度', en: 'Society & institutions' },
 };
 
 export const topicLabel = (topic: string): Localized =>

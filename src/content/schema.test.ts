@@ -187,3 +187,77 @@ describe('名詞性別的字尾規則', () => {
     expect(missing).toEqual([]);
   });
 });
+
+describe('內容裡的 markdown 語法都要渲染得出來', () => {
+  /**
+   * 課文與題目用的是自寫的極簡 markdown（Markish）。
+   * 它只支援 **粗體**、`程式碼`、- 清單、> 引言、``` 區塊、| 表格。
+   * 內容裡若出現它不認得的語法，畫面上就會直接露出符號給學習者看 ——
+   * 實測就發生過題目顯示成「哪一句**錯了**？」。
+   */
+  const SUPPORTED_BLOCK = /^\s*(\||>|[-•]\s|```)/;
+
+  it('沒有用到不支援的 markdown 標題語法', () => {
+    const bad: string[] = [];
+    for (const lesson of allLessons) {
+      const texts = [lesson.intro.zh, lesson.intro.en,
+                     lesson.pitfalls?.zh ?? '', lesson.pitfalls?.en ?? ''];
+      for (const t of texts) {
+        for (const line of t.split('\n')) {
+          if (/^\s*#{1,6}\s/.test(line)) bad.push(`${lesson.id}: ${line.slice(0, 40)}`);
+        }
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it('表格一定伴隨 |---| 分隔線，否則不會被當成表格', () => {
+    const bad: string[] = [];
+    for (const lesson of allLessons) {
+      for (const t of [lesson.intro.zh, lesson.intro.en,
+                       lesson.pitfalls?.zh ?? '', lesson.pitfalls?.en ?? '']) {
+        const lines = t.split('\n');
+        lines.forEach((line, i) => {
+          if (!line.trimStart().startsWith('|')) return;
+          // 是表格的一部分就好：前一行或下一行有分隔線
+          const sep = /^\s*\|[\s:|-]+\|\s*$/;
+          const inTable = sep.test(lines[i + 1] ?? '') || sep.test(line)
+            || lines.slice(0, i).some((l) => sep.test(l));
+          if (!inTable) bad.push(`${lesson.id}: ${line.slice(0, 40)}`);
+        });
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it('題目的 prompt 只用行內語法，不用區塊語法', () => {
+    // prompt 是單行渲染的，放清單或表格進去不會有效果
+    const bad: string[] = [];
+    for (const lesson of allLessons) {
+      for (const ex of lesson.exercises) {
+        if (!('prompt' in ex)) continue;
+        for (const t of [ex.prompt.zh, ex.prompt.en]) {
+          if (SUPPORTED_BLOCK.test(t) || t.includes('\n')) {
+            bad.push(`${lesson.id}/${ex.id}: ${t.slice(0, 40)}`);
+          }
+        }
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it('選項與選項說明不使用 markdown（那兩處不過渲染器）', () => {
+    const bad: string[] = [];
+    for (const lesson of allLessons) {
+      for (const ex of lesson.exercises) {
+        if (ex.type !== 'mcq') continue;
+        for (const o of [...ex.options, ...ex.optionExplains]) {
+          for (const t of [o.zh, o.en]) {
+            if (t.includes('**') || t.includes('`')) bad.push(`${lesson.id}/${ex.id}: ${t.slice(0, 40)}`);
+          }
+        }
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+});

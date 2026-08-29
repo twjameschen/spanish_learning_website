@@ -121,6 +121,13 @@
       "zh": "旅程的終點。虛擬式三章、條件句、se 的被動與無人稱 —— 開始表達態度、假設與願望。",
       "en": "The end of the journey. Three chapters on the subjunctive, conditional sentences, and passive and impersonal se — starting to express attitude, hypothesis and wishes."
     },
-    "lessonIds": []
+    "lessonIds": [
+      "b1-subjuntivo-forma",
+      "b1-subjuntivo-duda",
+      "b1-subjuntivo-conectores",
+      "b1-imperfecto-subjuntivo",
+      "b1-si-condicionales",
+      "b1-se-pasiva"
+    ]
   }
 ]
