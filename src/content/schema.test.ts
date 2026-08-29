@@ -140,6 +140,9 @@ describe('名詞性別的字尾規則', () => {
     'flor', 'labor',
     // -ambre 一般是陽性（alambre、enjambre），hambre 是那個著名的陰性例外
     'hambre',
+    // 同形不同性：el guía（男導遊）／la guía（女導遊，也指手冊）。
+    // 資料以「人」為主詞條標陽性，另有 genderNote 說明兩種用法。
+    'guia',
     // -umbre 之外的 -e 結尾字不受規則管，不需列入
   ]);
 

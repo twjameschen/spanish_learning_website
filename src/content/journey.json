@@ -93,7 +93,18 @@
       "zh": "安地斯山谷中的殖民古城。學會講過去的事：簡單過去式、未完成過去式，以及兩者最難的對比。",
       "en": "A colonial city in an Andean valley. Learning to talk about the past: the preterite, the imperfect, and the difficult contrast between them."
     },
-    "lessonIds": []
+    "lessonIds": [
+      "a2-preterito-regular",
+      "a2-preterito-irregular",
+      "a2-imperfecto",
+      "a2-preterito-vs-imperfecto",
+      "a2-perfecto",
+      "a2-futuro",
+      "a2-condicional",
+      "a2-imperativo-negativo",
+      "a2-por-para",
+      "a2-relativos"
+    ]
   },
   {
     "city": "galapagos",

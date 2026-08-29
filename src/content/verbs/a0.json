@@ -488,7 +488,55 @@
         "el_ella_usted": "habla",
         "nosotros": "hablamos",
         "ellos_ustedes": "hablan"
+      },
+      "preteritoIndefinido": {
+        "yo": "hablé",
+        "tu": "hablaste",
+        "el_ella_usted": "habló",
+        "nosotros": "hablamos",
+        "ellos_ustedes": "hablaron"
+      },
+      "imperfecto": {
+        "yo": "hablaba",
+        "tu": "hablabas",
+        "el_ella_usted": "hablaba",
+        "nosotros": "hablábamos",
+        "ellos_ustedes": "hablaban"
+      },
+      "futuro": {
+        "yo": "hablaré",
+        "tu": "hablarás",
+        "el_ella_usted": "hablará",
+        "nosotros": "hablaremos",
+        "ellos_ustedes": "hablarán"
+      },
+      "condicional": {
+        "yo": "hablaría",
+        "tu": "hablarías",
+        "el_ella_usted": "hablaría",
+        "nosotros": "hablaríamos",
+        "ellos_ustedes": "hablarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "hable",
+        "tu": "hables",
+        "el_ella_usted": "hable",
+        "nosotros": "hablemos",
+        "ellos_ustedes": "hablen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "hablara",
+        "tu": "hablaras",
+        "el_ella_usted": "hablara",
+        "nosotros": "habláramos",
+        "ellos_ustedes": "hablaran"
       }
+    },
+    "imperativo": {
+      "tu": "habla",
+      "el_ella_usted": "hable",
+      "nosotros": "hablemos",
+      "ellos_ustedes": "hablen"
     }
   },
   {
@@ -518,7 +566,55 @@
         "el_ella_usted": "estudia",
         "nosotros": "estudiamos",
         "ellos_ustedes": "estudian"
+      },
+      "preteritoIndefinido": {
+        "yo": "estudié",
+        "tu": "estudiaste",
+        "el_ella_usted": "estudió",
+        "nosotros": "estudiamos",
+        "ellos_ustedes": "estudiaron"
+      },
+      "imperfecto": {
+        "yo": "estudiaba",
+        "tu": "estudiabas",
+        "el_ella_usted": "estudiaba",
+        "nosotros": "estudiábamos",
+        "ellos_ustedes": "estudiaban"
+      },
+      "futuro": {
+        "yo": "estudiaré",
+        "tu": "estudiarás",
+        "el_ella_usted": "estudiará",
+        "nosotros": "estudiaremos",
+        "ellos_ustedes": "estudiarán"
+      },
+      "condicional": {
+        "yo": "estudiaría",
+        "tu": "estudiarías",
+        "el_ella_usted": "estudiaría",
+        "nosotros": "estudiaríamos",
+        "ellos_ustedes": "estudiarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "estudie",
+        "tu": "estudies",
+        "el_ella_usted": "estudie",
+        "nosotros": "estudiemos",
+        "ellos_ustedes": "estudien"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "estudiara",
+        "tu": "estudiaras",
+        "el_ella_usted": "estudiara",
+        "nosotros": "estudiáramos",
+        "ellos_ustedes": "estudiaran"
       }
+    },
+    "imperativo": {
+      "tu": "estudia",
+      "el_ella_usted": "estudie",
+      "nosotros": "estudiemos",
+      "ellos_ustedes": "estudien"
     }
   },
   {
@@ -548,7 +644,55 @@
         "el_ella_usted": "trabaja",
         "nosotros": "trabajamos",
         "ellos_ustedes": "trabajan"
+      },
+      "preteritoIndefinido": {
+        "yo": "trabajé",
+        "tu": "trabajaste",
+        "el_ella_usted": "trabajó",
+        "nosotros": "trabajamos",
+        "ellos_ustedes": "trabajaron"
+      },
+      "imperfecto": {
+        "yo": "trabajaba",
+        "tu": "trabajabas",
+        "el_ella_usted": "trabajaba",
+        "nosotros": "trabajábamos",
+        "ellos_ustedes": "trabajaban"
+      },
+      "futuro": {
+        "yo": "trabajaré",
+        "tu": "trabajarás",
+        "el_ella_usted": "trabajará",
+        "nosotros": "trabajaremos",
+        "ellos_ustedes": "trabajarán"
+      },
+      "condicional": {
+        "yo": "trabajaría",
+        "tu": "trabajarías",
+        "el_ella_usted": "trabajaría",
+        "nosotros": "trabajaríamos",
+        "ellos_ustedes": "trabajarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "trabaje",
+        "tu": "trabajes",
+        "el_ella_usted": "trabaje",
+        "nosotros": "trabajemos",
+        "ellos_ustedes": "trabajen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "trabajara",
+        "tu": "trabajaras",
+        "el_ella_usted": "trabajara",
+        "nosotros": "trabajáramos",
+        "ellos_ustedes": "trabajaran"
       }
+    },
+    "imperativo": {
+      "tu": "trabaja",
+      "el_ella_usted": "trabaje",
+      "nosotros": "trabajemos",
+      "ellos_ustedes": "trabajen"
     }
   },
   {
@@ -578,7 +722,55 @@
         "el_ella_usted": "necesita",
         "nosotros": "necesitamos",
         "ellos_ustedes": "necesitan"
+      },
+      "preteritoIndefinido": {
+        "yo": "necesité",
+        "tu": "necesitaste",
+        "el_ella_usted": "necesitó",
+        "nosotros": "necesitamos",
+        "ellos_ustedes": "necesitaron"
+      },
+      "imperfecto": {
+        "yo": "necesitaba",
+        "tu": "necesitabas",
+        "el_ella_usted": "necesitaba",
+        "nosotros": "necesitábamos",
+        "ellos_ustedes": "necesitaban"
+      },
+      "futuro": {
+        "yo": "necesitaré",
+        "tu": "necesitarás",
+        "el_ella_usted": "necesitará",
+        "nosotros": "necesitaremos",
+        "ellos_ustedes": "necesitarán"
+      },
+      "condicional": {
+        "yo": "necesitaría",
+        "tu": "necesitarías",
+        "el_ella_usted": "necesitaría",
+        "nosotros": "necesitaríamos",
+        "ellos_ustedes": "necesitarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "necesite",
+        "tu": "necesites",
+        "el_ella_usted": "necesite",
+        "nosotros": "necesitemos",
+        "ellos_ustedes": "necesiten"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "necesitara",
+        "tu": "necesitaras",
+        "el_ella_usted": "necesitara",
+        "nosotros": "necesitáramos",
+        "ellos_ustedes": "necesitaran"
       }
+    },
+    "imperativo": {
+      "tu": "necesita",
+      "el_ella_usted": "necesite",
+      "nosotros": "necesitemos",
+      "ellos_ustedes": "necesiten"
     }
   },
   {
@@ -608,7 +800,55 @@
         "el_ella_usted": "compra",
         "nosotros": "compramos",
         "ellos_ustedes": "compran"
+      },
+      "preteritoIndefinido": {
+        "yo": "compré",
+        "tu": "compraste",
+        "el_ella_usted": "compró",
+        "nosotros": "compramos",
+        "ellos_ustedes": "compraron"
+      },
+      "imperfecto": {
+        "yo": "compraba",
+        "tu": "comprabas",
+        "el_ella_usted": "compraba",
+        "nosotros": "comprábamos",
+        "ellos_ustedes": "compraban"
+      },
+      "futuro": {
+        "yo": "compraré",
+        "tu": "comprarás",
+        "el_ella_usted": "comprará",
+        "nosotros": "compraremos",
+        "ellos_ustedes": "comprarán"
+      },
+      "condicional": {
+        "yo": "compraría",
+        "tu": "comprarías",
+        "el_ella_usted": "compraría",
+        "nosotros": "compraríamos",
+        "ellos_ustedes": "comprarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "compre",
+        "tu": "compres",
+        "el_ella_usted": "compre",
+        "nosotros": "compremos",
+        "ellos_ustedes": "compren"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "comprara",
+        "tu": "compraras",
+        "el_ella_usted": "comprara",
+        "nosotros": "compráramos",
+        "ellos_ustedes": "compraran"
       }
+    },
+    "imperativo": {
+      "tu": "compra",
+      "el_ella_usted": "compre",
+      "nosotros": "compremos",
+      "ellos_ustedes": "compren"
     }
   },
   {
@@ -638,7 +878,55 @@
         "el_ella_usted": "se llama",
         "nosotros": "nos llamamos",
         "ellos_ustedes": "se llaman"
+      },
+      "preteritoIndefinido": {
+        "yo": "me llamé",
+        "tu": "te llamaste",
+        "el_ella_usted": "se llamó",
+        "nosotros": "nos llamamos",
+        "ellos_ustedes": "se llamaron"
+      },
+      "imperfecto": {
+        "yo": "me llamaba",
+        "tu": "te llamabas",
+        "el_ella_usted": "se llamaba",
+        "nosotros": "nos llamábamos",
+        "ellos_ustedes": "se llamaban"
+      },
+      "futuro": {
+        "yo": "me llamaré",
+        "tu": "te llamarás",
+        "el_ella_usted": "se llamará",
+        "nosotros": "nos llamaremos",
+        "ellos_ustedes": "se llamarán"
+      },
+      "condicional": {
+        "yo": "me llamaría",
+        "tu": "te llamarías",
+        "el_ella_usted": "se llamaría",
+        "nosotros": "nos llamaríamos",
+        "ellos_ustedes": "se llamarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "me llame",
+        "tu": "te llames",
+        "el_ella_usted": "se llame",
+        "nosotros": "nos llamemos",
+        "ellos_ustedes": "se llamen"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "me llamara",
+        "tu": "te llamaras",
+        "el_ella_usted": "se llamara",
+        "nosotros": "nos llamáramos",
+        "ellos_ustedes": "se llamaran"
       }
+    },
+    "imperativo": {
+      "tu": "llámate",
+      "el_ella_usted": "llámese",
+      "nosotros": "llamémonos",
+      "ellos_ustedes": "llámense"
     }
   },
   {
@@ -668,7 +956,55 @@
         "el_ella_usted": "come",
         "nosotros": "comemos",
         "ellos_ustedes": "comen"
+      },
+      "preteritoIndefinido": {
+        "yo": "comí",
+        "tu": "comiste",
+        "el_ella_usted": "comió",
+        "nosotros": "comimos",
+        "ellos_ustedes": "comieron"
+      },
+      "imperfecto": {
+        "yo": "comía",
+        "tu": "comías",
+        "el_ella_usted": "comía",
+        "nosotros": "comíamos",
+        "ellos_ustedes": "comían"
+      },
+      "futuro": {
+        "yo": "comeré",
+        "tu": "comerás",
+        "el_ella_usted": "comerá",
+        "nosotros": "comeremos",
+        "ellos_ustedes": "comerán"
+      },
+      "condicional": {
+        "yo": "comería",
+        "tu": "comerías",
+        "el_ella_usted": "comería",
+        "nosotros": "comeríamos",
+        "ellos_ustedes": "comerían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "coma",
+        "tu": "comas",
+        "el_ella_usted": "coma",
+        "nosotros": "comamos",
+        "ellos_ustedes": "coman"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "comiera",
+        "tu": "comieras",
+        "el_ella_usted": "comiera",
+        "nosotros": "comiéramos",
+        "ellos_ustedes": "comieran"
       }
+    },
+    "imperativo": {
+      "tu": "come",
+      "el_ella_usted": "coma",
+      "nosotros": "comamos",
+      "ellos_ustedes": "coman"
     }
   },
   {
@@ -698,7 +1034,55 @@
         "el_ella_usted": "bebe",
         "nosotros": "bebemos",
         "ellos_ustedes": "beben"
+      },
+      "preteritoIndefinido": {
+        "yo": "bebí",
+        "tu": "bebiste",
+        "el_ella_usted": "bebió",
+        "nosotros": "bebimos",
+        "ellos_ustedes": "bebieron"
+      },
+      "imperfecto": {
+        "yo": "bebía",
+        "tu": "bebías",
+        "el_ella_usted": "bebía",
+        "nosotros": "bebíamos",
+        "ellos_ustedes": "bebían"
+      },
+      "futuro": {
+        "yo": "beberé",
+        "tu": "beberás",
+        "el_ella_usted": "beberá",
+        "nosotros": "beberemos",
+        "ellos_ustedes": "beberán"
+      },
+      "condicional": {
+        "yo": "bebería",
+        "tu": "beberías",
+        "el_ella_usted": "bebería",
+        "nosotros": "beberíamos",
+        "ellos_ustedes": "beberían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "beba",
+        "tu": "bebas",
+        "el_ella_usted": "beba",
+        "nosotros": "bebamos",
+        "ellos_ustedes": "beban"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "bebiera",
+        "tu": "bebieras",
+        "el_ella_usted": "bebiera",
+        "nosotros": "bebiéramos",
+        "ellos_ustedes": "bebieran"
       }
+    },
+    "imperativo": {
+      "tu": "bebe",
+      "el_ella_usted": "beba",
+      "nosotros": "bebamos",
+      "ellos_ustedes": "beban"
     }
   },
   {
@@ -728,7 +1112,55 @@
         "el_ella_usted": "aprende",
         "nosotros": "aprendemos",
         "ellos_ustedes": "aprenden"
+      },
+      "preteritoIndefinido": {
+        "yo": "aprendí",
+        "tu": "aprendiste",
+        "el_ella_usted": "aprendió",
+        "nosotros": "aprendimos",
+        "ellos_ustedes": "aprendieron"
+      },
+      "imperfecto": {
+        "yo": "aprendía",
+        "tu": "aprendías",
+        "el_ella_usted": "aprendía",
+        "nosotros": "aprendíamos",
+        "ellos_ustedes": "aprendían"
+      },
+      "futuro": {
+        "yo": "aprenderé",
+        "tu": "aprenderás",
+        "el_ella_usted": "aprenderá",
+        "nosotros": "aprenderemos",
+        "ellos_ustedes": "aprenderán"
+      },
+      "condicional": {
+        "yo": "aprendería",
+        "tu": "aprenderías",
+        "el_ella_usted": "aprendería",
+        "nosotros": "aprenderíamos",
+        "ellos_ustedes": "aprenderían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "aprenda",
+        "tu": "aprendas",
+        "el_ella_usted": "aprenda",
+        "nosotros": "aprendamos",
+        "ellos_ustedes": "aprendan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "aprendiera",
+        "tu": "aprendieras",
+        "el_ella_usted": "aprendiera",
+        "nosotros": "aprendiéramos",
+        "ellos_ustedes": "aprendieran"
       }
+    },
+    "imperativo": {
+      "tu": "aprende",
+      "el_ella_usted": "aprenda",
+      "nosotros": "aprendamos",
+      "ellos_ustedes": "aprendan"
     }
   },
   {
@@ -758,7 +1190,55 @@
         "el_ella_usted": "lee",
         "nosotros": "leemos",
         "ellos_ustedes": "leen"
+      },
+      "preteritoIndefinido": {
+        "yo": "leí",
+        "tu": "leíste",
+        "el_ella_usted": "leyó",
+        "nosotros": "leímos",
+        "ellos_ustedes": "leyeron"
+      },
+      "imperfecto": {
+        "yo": "leía",
+        "tu": "leías",
+        "el_ella_usted": "leía",
+        "nosotros": "leíamos",
+        "ellos_ustedes": "leían"
+      },
+      "futuro": {
+        "yo": "leeré",
+        "tu": "leerás",
+        "el_ella_usted": "leerá",
+        "nosotros": "leeremos",
+        "ellos_ustedes": "leerán"
+      },
+      "condicional": {
+        "yo": "leería",
+        "tu": "leerías",
+        "el_ella_usted": "leería",
+        "nosotros": "leeríamos",
+        "ellos_ustedes": "leerían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "lea",
+        "tu": "leas",
+        "el_ella_usted": "lea",
+        "nosotros": "leamos",
+        "ellos_ustedes": "lean"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "leyera",
+        "tu": "leyeras",
+        "el_ella_usted": "leyera",
+        "nosotros": "leyéramos",
+        "ellos_ustedes": "leyeran"
       }
+    },
+    "imperativo": {
+      "tu": "lee",
+      "el_ella_usted": "lea",
+      "nosotros": "leamos",
+      "ellos_ustedes": "lean"
     }
   },
   {
@@ -788,7 +1268,55 @@
         "el_ella_usted": "vive",
         "nosotros": "vivimos",
         "ellos_ustedes": "viven"
+      },
+      "preteritoIndefinido": {
+        "yo": "viví",
+        "tu": "viviste",
+        "el_ella_usted": "vivió",
+        "nosotros": "vivimos",
+        "ellos_ustedes": "vivieron"
+      },
+      "imperfecto": {
+        "yo": "vivía",
+        "tu": "vivías",
+        "el_ella_usted": "vivía",
+        "nosotros": "vivíamos",
+        "ellos_ustedes": "vivían"
+      },
+      "futuro": {
+        "yo": "viviré",
+        "tu": "vivirás",
+        "el_ella_usted": "vivirá",
+        "nosotros": "viviremos",
+        "ellos_ustedes": "vivirán"
+      },
+      "condicional": {
+        "yo": "viviría",
+        "tu": "vivirías",
+        "el_ella_usted": "viviría",
+        "nosotros": "viviríamos",
+        "ellos_ustedes": "vivirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "viva",
+        "tu": "vivas",
+        "el_ella_usted": "viva",
+        "nosotros": "vivamos",
+        "ellos_ustedes": "vivan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "viviera",
+        "tu": "vivieras",
+        "el_ella_usted": "viviera",
+        "nosotros": "viviéramos",
+        "ellos_ustedes": "vivieran"
       }
+    },
+    "imperativo": {
+      "tu": "vive",
+      "el_ella_usted": "viva",
+      "nosotros": "vivamos",
+      "ellos_ustedes": "vivan"
     }
   },
   {
@@ -818,7 +1346,55 @@
         "el_ella_usted": "escribe",
         "nosotros": "escribimos",
         "ellos_ustedes": "escriben"
+      },
+      "preteritoIndefinido": {
+        "yo": "escribí",
+        "tu": "escribiste",
+        "el_ella_usted": "escribió",
+        "nosotros": "escribimos",
+        "ellos_ustedes": "escribieron"
+      },
+      "imperfecto": {
+        "yo": "escribía",
+        "tu": "escribías",
+        "el_ella_usted": "escribía",
+        "nosotros": "escribíamos",
+        "ellos_ustedes": "escribían"
+      },
+      "futuro": {
+        "yo": "escribiré",
+        "tu": "escribirás",
+        "el_ella_usted": "escribirá",
+        "nosotros": "escribiremos",
+        "ellos_ustedes": "escribirán"
+      },
+      "condicional": {
+        "yo": "escribiría",
+        "tu": "escribirías",
+        "el_ella_usted": "escribiría",
+        "nosotros": "escribiríamos",
+        "ellos_ustedes": "escribirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "escriba",
+        "tu": "escribas",
+        "el_ella_usted": "escriba",
+        "nosotros": "escribamos",
+        "ellos_ustedes": "escriban"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "escribiera",
+        "tu": "escribieras",
+        "el_ella_usted": "escribiera",
+        "nosotros": "escribiéramos",
+        "ellos_ustedes": "escribieran"
       }
+    },
+    "imperativo": {
+      "tu": "escribe",
+      "el_ella_usted": "escriba",
+      "nosotros": "escribamos",
+      "ellos_ustedes": "escriban"
     }
   }
 ]

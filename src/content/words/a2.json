@@ -1,0 +1,2457 @@
+[
+  {
+    "id": "viaje",
+    "es": "viaje",
+    "gloss": {
+      "zh": "旅行；旅程",
+      "en": "trip; journey"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "El viaje a Cuenca dura ocho horas.",
+    "exampleGloss": {
+      "zh": "去昆卡的車程要八小時。",
+      "en": "The trip to Cuenca takes eight hours."
+    }
+  },
+  {
+    "id": "hotel",
+    "es": "hotel",
+    "gloss": {
+      "zh": "旅館",
+      "en": "hotel"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Reservamos un hotel cerca del centro.",
+    "exampleGloss": {
+      "zh": "我們訂了市中心附近的旅館。",
+      "en": "We booked a hotel near the centre."
+    }
+  },
+  {
+    "id": "habitacion",
+    "es": "habitación",
+    "gloss": {
+      "zh": "房間（旅館）",
+      "en": "room (hotel)"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "La habitación tiene vista a la plaza.",
+    "exampleGloss": {
+      "zh": "房間看得到廣場。",
+      "en": "The room looks onto the square."
+    }
+  },
+  {
+    "id": "reserva",
+    "es": "reserva",
+    "gloss": {
+      "zh": "預訂",
+      "en": "reservation; booking"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Tengo una reserva a nombre de Chen.",
+    "exampleGloss": {
+      "zh": "我用陳的名字訂了位。",
+      "en": "I have a booking under the name Chen."
+    }
+  },
+  {
+    "id": "equipaje",
+    "es": "equipaje",
+    "gloss": {
+      "zh": "行李",
+      "en": "luggage"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Dejé el equipaje en la recepción.",
+    "exampleGloss": {
+      "zh": "我把行李放在櫃台。",
+      "en": "I left my luggage at reception."
+    }
+  },
+  {
+    "id": "pasaporte",
+    "es": "pasaporte",
+    "gloss": {
+      "zh": "護照",
+      "en": "passport"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Necesita el pasaporte para el vuelo.",
+    "exampleGloss": {
+      "zh": "搭飛機需要護照。",
+      "en": "You need your passport for the flight."
+    }
+  },
+  {
+    "id": "vuelo",
+    "es": "vuelo",
+    "gloss": {
+      "zh": "班機",
+      "en": "flight"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "El vuelo salió con retraso.",
+    "exampleGloss": {
+      "zh": "班機延誤起飛。",
+      "en": "The flight left late."
+    }
+  },
+  {
+    "id": "estacion",
+    "es": "estación",
+    "gloss": {
+      "zh": "車站；季節",
+      "en": "station; season"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "La estación de buses está al sur.",
+    "exampleGloss": {
+      "zh": "客運站在南邊。",
+      "en": "The bus station is in the south."
+    }
+  },
+  {
+    "id": "llegada",
+    "es": "llegada",
+    "gloss": {
+      "zh": "抵達",
+      "en": "arrival"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "La llegada fue a medianoche.",
+    "exampleGloss": {
+      "zh": "半夜才抵達。",
+      "en": "The arrival was at midnight."
+    }
+  },
+  {
+    "id": "salida",
+    "es": "salida",
+    "gloss": {
+      "zh": "出發；出口",
+      "en": "departure; exit"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "La salida es a las siete en punto.",
+    "exampleGloss": {
+      "zh": "七點整出發。",
+      "en": "Departure is at seven sharp."
+    }
+  },
+  {
+    "id": "retraso",
+    "es": "retraso",
+    "gloss": {
+      "zh": "延誤",
+      "en": "delay"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Hubo un retraso de dos horas.",
+    "exampleGloss": {
+      "zh": "延誤了兩小時。",
+      "en": "There was a two-hour delay."
+    }
+  },
+  {
+    "id": "camino",
+    "es": "camino",
+    "gloss": {
+      "zh": "路；路程",
+      "en": "road; way"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "El camino a Cuenca cruza el páramo.",
+    "exampleGloss": {
+      "zh": "去昆卡的路會穿過高山草原。",
+      "en": "The road to Cuenca crosses the páramo."
+    }
+  },
+  {
+    "id": "recuerdo",
+    "es": "recuerdo",
+    "gloss": {
+      "zh": "回憶；紀念品",
+      "en": "memory; souvenir"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Guardo un buen recuerdo de ese viaje.",
+    "exampleGloss": {
+      "zh": "我對那趟旅行印象很好。",
+      "en": "I have a good memory of that trip."
+    }
+  },
+  {
+    "id": "foto",
+    "es": "foto",
+    "gloss": {
+      "zh": "照片",
+      "en": "photo"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "Tomamos muchas fotos en la plaza.",
+    "exampleGloss": {
+      "zh": "我們在廣場拍了很多照片。",
+      "en": "We took a lot of photos in the square."
+    }
+  },
+  {
+    "id": "guia",
+    "es": "guía",
+    "gloss": {
+      "zh": "導遊；指南",
+      "en": "guide; guidebook"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "El guía nos contó la historia de la ciudad.",
+    "exampleGloss": {
+      "zh": "導遊跟我們講了城市的歷史。",
+      "en": "The guide told us the city’s history."
+    },
+    "genderNote": {
+      "zh": "同形不同性：el guía 是男導遊，la guía 是女導遊，而 la guía 也指「指南、手冊」。看到 la guía 要靠上下文判斷是人還是書。",
+      "en": "Same form, both genders: el guía is a male guide, la guía a female guide — and la guía also means a guidebook. Context tells you whether it’s a person or a book."
+    }
+  },
+  {
+    "id": "entrada",
+    "es": "entrada",
+    "gloss": {
+      "zh": "入場券；入口",
+      "en": "ticket; entrance"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "viajes",
+    "exampleEs": "La entrada al museo cuesta dos dólares.",
+    "exampleGloss": {
+      "zh": "博物館門票兩塊美金。",
+      "en": "Entry to the museum costs two dollars."
+    }
+  },
+  {
+    "id": "montana",
+    "es": "montaña",
+    "gloss": {
+      "zh": "山",
+      "en": "mountain"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Las montañas rodean la ciudad.",
+    "exampleGloss": {
+      "zh": "群山環繞著城市。",
+      "en": "Mountains surround the city."
+    }
+  },
+  {
+    "id": "volcan",
+    "es": "volcán",
+    "gloss": {
+      "zh": "火山",
+      "en": "volcano"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El volcán se ve desde el norte.",
+    "exampleGloss": {
+      "zh": "從北邊看得到火山。",
+      "en": "The volcano is visible from the north."
+    }
+  },
+  {
+    "id": "rio",
+    "es": "río",
+    "gloss": {
+      "zh": "河",
+      "en": "river"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El río pasa por el centro de Cuenca.",
+    "exampleGloss": {
+      "zh": "河流穿過昆卡市中心。",
+      "en": "The river runs through the centre of Cuenca."
+    }
+  },
+  {
+    "id": "mar",
+    "es": "mar",
+    "gloss": {
+      "zh": "海",
+      "en": "sea"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El mar está a ocho horas de aquí.",
+    "exampleGloss": {
+      "zh": "海離這裡八小時車程。",
+      "en": "The sea is eight hours from here."
+    }
+  },
+  {
+    "id": "playa",
+    "es": "playa",
+    "gloss": {
+      "zh": "海灘",
+      "en": "beach"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "En la Costa hay playas muy largas.",
+    "exampleGloss": {
+      "zh": "沿海地區有很長的海灘。",
+      "en": "There are very long beaches on the coast."
+    }
+  },
+  {
+    "id": "bosque",
+    "es": "bosque",
+    "gloss": {
+      "zh": "森林",
+      "en": "forest"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El bosque nublado empieza aquí.",
+    "exampleGloss": {
+      "zh": "雲霧森林從這裡開始。",
+      "en": "The cloud forest starts here."
+    }
+  },
+  {
+    "id": "arbol",
+    "es": "árbol",
+    "gloss": {
+      "zh": "樹",
+      "en": "tree"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Ese árbol tiene más de cien años.",
+    "exampleGloss": {
+      "zh": "那棵樹超過一百歲。",
+      "en": "That tree is over a hundred years old."
+    }
+  },
+  {
+    "id": "flor",
+    "es": "flor",
+    "gloss": {
+      "zh": "花",
+      "en": "flower"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Ecuador exporta flores a todo el mundo.",
+    "exampleGloss": {
+      "zh": "厄瓜多把花賣到全世界。",
+      "en": "Ecuador exports flowers worldwide."
+    }
+  },
+  {
+    "id": "lluvia",
+    "es": "lluvia",
+    "gloss": {
+      "zh": "雨",
+      "en": "rain"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "La lluvia empezó en la tarde.",
+    "exampleGloss": {
+      "zh": "雨從下午開始下。",
+      "en": "The rain started in the afternoon."
+    }
+  },
+  {
+    "id": "sol",
+    "es": "sol",
+    "gloss": {
+      "zh": "太陽",
+      "en": "sun"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El sol de la Sierra quema mucho.",
+    "exampleGloss": {
+      "zh": "高地的太陽很曬。",
+      "en": "The highland sun is very strong."
+    }
+  },
+  {
+    "id": "viento",
+    "es": "viento",
+    "gloss": {
+      "zh": "風",
+      "en": "wind"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Hace mucho viento en el páramo.",
+    "exampleGloss": {
+      "zh": "高山草原上風很大。",
+      "en": "It’s very windy on the páramo."
+    }
+  },
+  {
+    "id": "nube",
+    "es": "nube",
+    "gloss": {
+      "zh": "雲",
+      "en": "cloud"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Las nubes cubren el volcán.",
+    "exampleGloss": {
+      "zh": "雲遮住了火山。",
+      "en": "Clouds cover the volcano."
+    }
+  },
+  {
+    "id": "cielo",
+    "es": "cielo",
+    "gloss": {
+      "zh": "天空",
+      "en": "sky"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El cielo está despejado hoy.",
+    "exampleGloss": {
+      "zh": "今天天空很晴朗。",
+      "en": "The sky is clear today."
+    }
+  },
+  {
+    "id": "tierra",
+    "es": "tierra",
+    "gloss": {
+      "zh": "土地；地球",
+      "en": "land; earth"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "La tierra aquí es muy fértil.",
+    "exampleGloss": {
+      "zh": "這裡的土地很肥沃。",
+      "en": "The land here is very fertile."
+    }
+  },
+  {
+    "id": "paramo",
+    "es": "páramo",
+    "gloss": {
+      "zh": "高山草原",
+      "en": "páramo (high moorland)"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El páramo está sobre los tres mil metros.",
+    "exampleGloss": {
+      "zh": "高山草原在三千公尺以上。",
+      "en": "The páramo lies above three thousand metres."
+    },
+    "regional": {
+      "region": "Andes",
+      "note": {
+        "zh": "高海拔的濕冷草原地形，通常在三千公尺以上。",
+        "en": "High-altitude wet grassland, typically above three thousand metres."
+      },
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "altura",
+    "es": "altura",
+    "gloss": {
+      "zh": "海拔；高度",
+      "en": "altitude; height"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Quito está a mucha altura.",
+    "exampleGloss": {
+      "zh": "基多海拔很高。",
+      "en": "Quito is at a high altitude."
+    }
+  },
+  {
+    "id": "clima",
+    "es": "clima",
+    "gloss": {
+      "zh": "氣候",
+      "en": "climate"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "El clima cambia rápido en la Sierra.",
+    "exampleGloss": {
+      "zh": "高地的天氣變得很快。",
+      "en": "The weather changes fast in the Sierra."
+    }
+  },
+  {
+    "id": "animal",
+    "es": "animal",
+    "gloss": {
+      "zh": "動物",
+      "en": "animal"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "En Galápagos los animales no tienen miedo.",
+    "exampleGloss": {
+      "zh": "在加拉巴哥，動物不怕人。",
+      "en": "In the Galápagos the animals aren’t afraid."
+    }
+  },
+  {
+    "id": "pajaro",
+    "es": "pájaro",
+    "gloss": {
+      "zh": "鳥",
+      "en": "bird"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Hay muchos pájaros en el bosque.",
+    "exampleGloss": {
+      "zh": "森林裡有很多鳥。",
+      "en": "There are many birds in the forest."
+    }
+  },
+  {
+    "id": "tortuga",
+    "es": "tortuga",
+    "gloss": {
+      "zh": "烏龜",
+      "en": "tortoise; turtle"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "naturaleza",
+    "exampleEs": "Las tortugas gigantes viven muchos años.",
+    "exampleGloss": {
+      "zh": "象龜活很久。",
+      "en": "Giant tortoises live for many years."
+    }
+  },
+  {
+    "id": "anoche",
+    "es": "anoche",
+    "gloss": {
+      "zh": "昨晚",
+      "en": "last night"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Anoche llegué muy tarde.",
+    "exampleGloss": {
+      "zh": "我昨晚很晚才到。",
+      "en": "Last night I got in very late."
+    }
+  },
+  {
+    "id": "entonces-tiempo",
+    "es": "entonces",
+    "gloss": {
+      "zh": "當時",
+      "en": "back then"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Entonces yo vivía en Quito.",
+    "exampleGloss": {
+      "zh": "當時我住在基多。",
+      "en": "Back then I was living in Quito."
+    }
+  },
+  {
+    "id": "mientras",
+    "es": "mientras",
+    "gloss": {
+      "zh": "當……的時候",
+      "en": "while"
+    },
+    "pos": "conj",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Mientras caminaba, empezó a llover.",
+    "exampleGloss": {
+      "zh": "我走著走著就開始下雨。",
+      "en": "While I was walking, it started to rain."
+    }
+  },
+  {
+    "id": "de-repente",
+    "es": "de repente",
+    "gloss": {
+      "zh": "突然",
+      "en": "suddenly"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "De repente se apagó la luz.",
+    "exampleGloss": {
+      "zh": "燈突然滅了。",
+      "en": "Suddenly the light went out."
+    }
+  },
+  {
+    "id": "al-final",
+    "es": "al final",
+    "gloss": {
+      "zh": "最後",
+      "en": "in the end"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Al final tomamos un taxi.",
+    "exampleGloss": {
+      "zh": "最後我們搭了計程車。",
+      "en": "In the end we took a taxi."
+    }
+  },
+  {
+    "id": "por-fin",
+    "es": "por fin",
+    "gloss": {
+      "zh": "終於",
+      "en": "finally; at last"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Por fin llegamos al hotel.",
+    "exampleGloss": {
+      "zh": "我們終於到旅館了。",
+      "en": "We finally got to the hotel."
+    }
+  },
+  {
+    "id": "hace-tiempo",
+    "es": "hace",
+    "gloss": {
+      "zh": "（多久）以前",
+      "en": "ago"
+    },
+    "pos": "prep",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Llegué hace dos horas.",
+    "exampleGloss": {
+      "zh": "我兩小時前到的。",
+      "en": "I arrived two hours ago."
+    }
+  },
+  {
+    "id": "siglo",
+    "es": "siglo",
+    "gloss": {
+      "zh": "世紀",
+      "en": "century"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "La catedral es del siglo diecinueve.",
+    "exampleGloss": {
+      "zh": "大教堂是十九世紀的。",
+      "en": "The cathedral is from the nineteenth century."
+    }
+  },
+  {
+    "id": "historia",
+    "es": "historia",
+    "gloss": {
+      "zh": "歷史；故事",
+      "en": "history; story"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Me contó una historia muy larga.",
+    "exampleGloss": {
+      "zh": "他跟我講了一個很長的故事。",
+      "en": "He told me a very long story."
+    }
+  },
+  {
+    "id": "vida",
+    "es": "vida",
+    "gloss": {
+      "zh": "生活；人生",
+      "en": "life"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Su vida cambió después del viaje.",
+    "exampleGloss": {
+      "zh": "那趟旅行之後他的人生變了。",
+      "en": "His life changed after the trip."
+    }
+  },
+  {
+    "id": "momento",
+    "es": "momento",
+    "gloss": {
+      "zh": "時刻",
+      "en": "moment"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "En ese momento entendí el problema.",
+    "exampleGloss": {
+      "zh": "那一刻我懂了問題在哪。",
+      "en": "At that moment I understood the problem."
+    }
+  },
+  {
+    "id": "cuando-conj",
+    "es": "cuando",
+    "gloss": {
+      "zh": "當……時",
+      "en": "when"
+    },
+    "pos": "conj",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Cuando era niño, vivía en el campo.",
+    "exampleGloss": {
+      "zh": "我小時候住在鄉下。",
+      "en": "When I was a child, I lived in the countryside."
+    }
+  },
+  {
+    "id": "campo",
+    "es": "campo",
+    "gloss": {
+      "zh": "鄉下；田野",
+      "en": "countryside; field"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "Mis abuelos vivían en el campo.",
+    "exampleGloss": {
+      "zh": "我祖父母住在鄉下。",
+      "en": "My grandparents lived in the countryside."
+    }
+  },
+  {
+    "id": "nino-pasado",
+    "es": "infancia",
+    "gloss": {
+      "zh": "童年",
+      "en": "childhood"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "narrar",
+    "exampleEs": "En mi infancia no había internet.",
+    "exampleGloss": {
+      "zh": "我童年時沒有網路。",
+      "en": "There was no internet in my childhood."
+    }
+  },
+  {
+    "id": "feliz",
+    "es": "feliz",
+    "gloss": {
+      "zh": "快樂的",
+      "en": "happy"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Estoy feliz con el resultado.",
+    "exampleGloss": {
+      "zh": "我對結果很滿意。",
+      "en": "I’m happy with the result."
+    }
+  },
+  {
+    "id": "triste",
+    "es": "triste",
+    "gloss": {
+      "zh": "難過的",
+      "en": "sad"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Se puso triste cuando lo supo.",
+    "exampleGloss": {
+      "zh": "他知道之後很難過。",
+      "en": "He got sad when he found out."
+    }
+  },
+  {
+    "id": "enojado",
+    "es": "enojado",
+    "gloss": {
+      "zh": "生氣的",
+      "en": "angry"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Estaba enojado por el retraso.",
+    "exampleGloss": {
+      "zh": "他因為延誤而生氣。",
+      "en": "He was angry about the delay."
+    }
+  },
+  {
+    "id": "nervioso",
+    "es": "nervioso",
+    "gloss": {
+      "zh": "緊張的",
+      "en": "nervous"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Estoy nervioso antes de hablar.",
+    "exampleGloss": {
+      "zh": "講話前我很緊張。",
+      "en": "I get nervous before speaking."
+    }
+  },
+  {
+    "id": "preocupado",
+    "es": "preocupado",
+    "gloss": {
+      "zh": "擔心的",
+      "en": "worried"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Mi mamá estaba preocupada.",
+    "exampleGloss": {
+      "zh": "我媽媽很擔心。",
+      "en": "My mother was worried."
+    }
+  },
+  {
+    "id": "sorprendido",
+    "es": "sorprendido",
+    "gloss": {
+      "zh": "驚訝的",
+      "en": "surprised"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Me quedé sorprendido con la noticia.",
+    "exampleGloss": {
+      "zh": "那消息讓我很驚訝。",
+      "en": "I was surprised by the news."
+    }
+  },
+  {
+    "id": "miedo",
+    "es": "miedo",
+    "gloss": {
+      "zh": "害怕",
+      "en": "fear"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Le tengo miedo a las alturas.",
+    "exampleGloss": {
+      "zh": "我怕高。",
+      "en": "I’m afraid of heights."
+    }
+  },
+  {
+    "id": "suerte",
+    "es": "suerte",
+    "gloss": {
+      "zh": "運氣",
+      "en": "luck"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Tuvimos suerte con el clima.",
+    "exampleGloss": {
+      "zh": "我們天氣運不錯。",
+      "en": "We were lucky with the weather."
+    }
+  },
+  {
+    "id": "sonrisa",
+    "es": "sonrisa",
+    "gloss": {
+      "zh": "微笑",
+      "en": "smile"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Me recibió con una sonrisa.",
+    "exampleGloss": {
+      "zh": "他微笑著迎接我。",
+      "en": "She greeted me with a smile."
+    }
+  },
+  {
+    "id": "simpatico",
+    "es": "simpático",
+    "gloss": {
+      "zh": "friendly 的；討喜的",
+      "en": "nice; likeable"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "El dueño del hotel es muy simpático.",
+    "exampleGloss": {
+      "zh": "旅館老闆人很好。",
+      "en": "The hotel owner is very likeable."
+    }
+  },
+  {
+    "id": "serio",
+    "es": "serio",
+    "gloss": {
+      "zh": "嚴肅的；認真的",
+      "en": "serious"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Es un problema serio.",
+    "exampleGloss": {
+      "zh": "這是個嚴重的問題。",
+      "en": "It’s a serious problem."
+    }
+  },
+  {
+    "id": "divertido",
+    "es": "divertido",
+    "gloss": {
+      "zh": "有趣的；好玩的",
+      "en": "fun; entertaining"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "El paseo fue muy divertido.",
+    "exampleGloss": {
+      "zh": "那趟散步很好玩。",
+      "en": "The walk was great fun."
+    }
+  },
+  {
+    "id": "aburrido",
+    "es": "aburrido",
+    "gloss": {
+      "zh": "無聊的",
+      "en": "boring; bored"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "La reunión fue aburrida.",
+    "exampleGloss": {
+      "zh": "那場會議很無聊。",
+      "en": "The meeting was boring."
+    }
+  },
+  {
+    "id": "valiente",
+    "es": "valiente",
+    "gloss": {
+      "zh": "勇敢的",
+      "en": "brave"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "emociones",
+    "exampleEs": "Fue muy valiente al preguntar.",
+    "exampleGloss": {
+      "zh": "他很勇敢地開口問。",
+      "en": "It was brave of him to ask."
+    }
+  },
+  {
+    "id": "idioma",
+    "es": "idioma",
+    "gloss": {
+      "zh": "語言",
+      "en": "language"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "El quichua es un idioma de los Andes.",
+    "exampleGloss": {
+      "zh": "基丘亞語是安地斯地區的語言。",
+      "en": "Kichwa is a language of the Andes."
+    }
+  },
+  {
+    "id": "palabra",
+    "es": "palabra",
+    "gloss": {
+      "zh": "字；詞",
+      "en": "word"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "No entendí esa palabra.",
+    "exampleGloss": {
+      "zh": "我聽不懂那個字。",
+      "en": "I didn’t understand that word."
+    }
+  },
+  {
+    "id": "frase",
+    "es": "frase",
+    "gloss": {
+      "zh": "句子",
+      "en": "sentence; phrase"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Repita la frase, por favor.",
+    "exampleGloss": {
+      "zh": "請重複這個句子。",
+      "en": "Please repeat the sentence."
+    }
+  },
+  {
+    "id": "pregunta",
+    "es": "pregunta",
+    "gloss": {
+      "zh": "問題",
+      "en": "question"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Tengo una pregunta sobre la tarea.",
+    "exampleGloss": {
+      "zh": "我對作業有個問題。",
+      "en": "I have a question about the homework."
+    }
+  },
+  {
+    "id": "respuesta",
+    "es": "respuesta",
+    "gloss": {
+      "zh": "回答",
+      "en": "answer"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Su respuesta fue muy clara.",
+    "exampleGloss": {
+      "zh": "他的回答很清楚。",
+      "en": "Their answer was very clear."
+    }
+  },
+  {
+    "id": "error",
+    "es": "error",
+    "gloss": {
+      "zh": "錯誤",
+      "en": "mistake"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Cometí el mismo error otra vez.",
+    "exampleGloss": {
+      "zh": "我又犯了同樣的錯。",
+      "en": "I made the same mistake again."
+    }
+  },
+  {
+    "id": "ejemplo",
+    "es": "ejemplo",
+    "gloss": {
+      "zh": "例子",
+      "en": "example"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "¿Me puede dar un ejemplo?",
+    "exampleGloss": {
+      "zh": "您可以給我一個例子嗎？",
+      "en": "Could you give me an example?"
+    }
+  },
+  {
+    "id": "regla",
+    "es": "regla",
+    "gloss": {
+      "zh": "規則",
+      "en": "rule"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Esta regla tiene muchas excepciones.",
+    "exampleGloss": {
+      "zh": "這條規則有很多例外。",
+      "en": "This rule has a lot of exceptions."
+    }
+  },
+  {
+    "id": "tarea",
+    "es": "tarea",
+    "gloss": {
+      "zh": "作業；任務",
+      "en": "homework; task"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Terminé la tarea anoche.",
+    "exampleGloss": {
+      "zh": "我昨晚做完作業了。",
+      "en": "I finished the homework last night."
+    }
+  },
+  {
+    "id": "examen",
+    "es": "examen",
+    "gloss": {
+      "zh": "考試",
+      "en": "exam"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "El examen fue más fácil de lo que pensaba.",
+    "exampleGloss": {
+      "zh": "考試比我想的簡單。",
+      "en": "The exam was easier than I expected."
+    }
+  },
+  {
+    "id": "nivel",
+    "es": "nivel",
+    "gloss": {
+      "zh": "程度；等級",
+      "en": "level"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Mi nivel de español mejoró mucho.",
+    "exampleGloss": {
+      "zh": "我的西班牙文程度進步很多。",
+      "en": "My level of Spanish improved a lot."
+    }
+  },
+  {
+    "id": "cuaderno",
+    "es": "cuaderno",
+    "gloss": {
+      "zh": "筆記本",
+      "en": "notebook"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "Escribo las palabras nuevas en el cuaderno.",
+    "exampleGloss": {
+      "zh": "我把新單字寫在筆記本上。",
+      "en": "I write new words in my notebook."
+    }
+  },
+  {
+    "id": "significado",
+    "es": "significado",
+    "gloss": {
+      "zh": "意思；意義",
+      "en": "meaning"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "No sabía el significado de esa palabra.",
+    "exampleGloss": {
+      "zh": "我不知道那個字的意思。",
+      "en": "I didn’t know the meaning of that word."
+    }
+  },
+  {
+    "id": "acento",
+    "es": "acento",
+    "gloss": {
+      "zh": "口音；重音",
+      "en": "accent"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "estudio",
+    "exampleEs": "El acento de la Costa es distinto.",
+    "exampleGloss": {
+      "zh": "沿海地區的口音不一樣。",
+      "en": "The coastal accent is different."
+    }
+  },
+  {
+    "id": "precio",
+    "es": "precio",
+    "gloss": {
+      "zh": "價格",
+      "en": "price"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "¿Cuál es el precio de esta chompa?",
+    "exampleGloss": {
+      "zh": "這件外套多少錢？",
+      "en": "What’s the price of this jacket?"
+    }
+  },
+  {
+    "id": "descuento",
+    "es": "descuento",
+    "gloss": {
+      "zh": "折扣",
+      "en": "discount"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "¿Me hace un descuento?",
+    "exampleGloss": {
+      "zh": "可以算便宜一點嗎？",
+      "en": "Could you give me a discount?"
+    }
+  },
+  {
+    "id": "tarjeta",
+    "es": "tarjeta",
+    "gloss": {
+      "zh": "卡片；信用卡",
+      "en": "card"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "¿Aceptan tarjeta?",
+    "exampleGloss": {
+      "zh": "你們收卡嗎？",
+      "en": "Do you take cards?"
+    }
+  },
+  {
+    "id": "efectivo",
+    "es": "efectivo",
+    "gloss": {
+      "zh": "現金",
+      "en": "cash"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "Prefiero pagar en efectivo.",
+    "exampleGloss": {
+      "zh": "我比較想付現。",
+      "en": "I’d rather pay in cash."
+    }
+  },
+  {
+    "id": "cambio",
+    "es": "cambio",
+    "gloss": {
+      "zh": "零錢；找零；改變",
+      "en": "change"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "¿Tiene cambio de veinte?",
+    "exampleGloss": {
+      "zh": "您有二十塊的零錢嗎？",
+      "en": "Do you have change for a twenty?"
+    }
+  },
+  {
+    "id": "recibo",
+    "es": "recibo",
+    "gloss": {
+      "zh": "收據",
+      "en": "receipt"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "¿Me da el recibo, por favor?",
+    "exampleGloss": {
+      "zh": "可以給我收據嗎？",
+      "en": "Could I have the receipt, please?"
+    }
+  },
+  {
+    "id": "oferta",
+    "es": "oferta",
+    "gloss": {
+      "zh": "特價",
+      "en": "offer; sale"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "Estos zapatos están en oferta.",
+    "exampleGloss": {
+      "zh": "這雙鞋在特價。",
+      "en": "These shoes are on offer."
+    }
+  },
+  {
+    "id": "regalo",
+    "es": "regalo",
+    "gloss": {
+      "zh": "禮物",
+      "en": "gift"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "Compré un regalo para mi hermana.",
+    "exampleGloss": {
+      "zh": "我買了禮物給我姐姐。",
+      "en": "I bought a gift for my sister."
+    }
+  },
+  {
+    "id": "artesania",
+    "es": "artesanía",
+    "gloss": {
+      "zh": "手工藝品",
+      "en": "handicraft"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "En Otavalo venden artesanías.",
+    "exampleGloss": {
+      "zh": "奧塔瓦洛賣手工藝品。",
+      "en": "They sell handicrafts in Otavalo."
+    }
+  },
+  {
+    "id": "caro-barato",
+    "es": "económico",
+    "gloss": {
+      "zh": "便宜的；經濟實惠的",
+      "en": "affordable; economical"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "compras",
+    "exampleEs": "Es un hotel económico y limpio.",
+    "exampleGloss": {
+      "zh": "那是間便宜又乾淨的旅館。",
+      "en": "It’s an affordable, clean hotel."
+    }
+  },
+  {
+    "id": "sin-embargo",
+    "es": "sin embargo",
+    "gloss": {
+      "zh": "然而",
+      "en": "however"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Llovió; sin embargo, salimos.",
+    "exampleGloss": {
+      "zh": "下雨了，不過我們還是出門。",
+      "en": "It rained; however, we went out."
+    }
+  },
+  {
+    "id": "ademas",
+    "es": "además",
+    "gloss": {
+      "zh": "而且；此外",
+      "en": "besides; moreover"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Es barato y además está cerca.",
+    "exampleGloss": {
+      "zh": "便宜而且很近。",
+      "en": "It’s cheap and it’s close as well."
+    }
+  },
+  {
+    "id": "por-eso",
+    "es": "por eso",
+    "gloss": {
+      "zh": "所以",
+      "en": "that’s why; so"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Llovía, por eso tomamos un taxi.",
+    "exampleGloss": {
+      "zh": "那時在下雨，所以我們搭了計程車。",
+      "en": "It was raining, so we took a taxi."
+    }
+  },
+  {
+    "id": "aunque-a2",
+    "es": "a pesar de",
+    "gloss": {
+      "zh": "儘管",
+      "en": "in spite of"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "A pesar del retraso, llegamos bien.",
+    "exampleGloss": {
+      "zh": "儘管延誤，我們還是順利抵達。",
+      "en": "In spite of the delay, we arrived fine."
+    }
+  },
+  {
+    "id": "primero-luego",
+    "es": "en primer lugar",
+    "gloss": {
+      "zh": "首先",
+      "en": "in the first place"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "En primer lugar, hay que reservar.",
+    "exampleGloss": {
+      "zh": "首先要先訂位。",
+      "en": "In the first place, you have to book."
+    }
+  },
+  {
+    "id": "mientras-tanto",
+    "es": "mientras tanto",
+    "gloss": {
+      "zh": "同時",
+      "en": "meanwhile"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Mientras tanto, yo esperaba afuera.",
+    "exampleGloss": {
+      "zh": "同時我在外面等。",
+      "en": "Meanwhile, I was waiting outside."
+    }
+  },
+  {
+    "id": "afuera",
+    "es": "afuera",
+    "gloss": {
+      "zh": "外面",
+      "en": "outside"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Te espero afuera.",
+    "exampleGloss": {
+      "zh": "我在外面等你。",
+      "en": "I’ll wait for you outside."
+    }
+  },
+  {
+    "id": "adentro",
+    "es": "adentro",
+    "gloss": {
+      "zh": "裡面",
+      "en": "inside"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Hace más calor adentro.",
+    "exampleGloss": {
+      "zh": "裡面比較暖。",
+      "en": "It’s warmer inside."
+    }
+  },
+  {
+    "id": "arriba",
+    "es": "arriba",
+    "gloss": {
+      "zh": "上面；樓上",
+      "en": "up; upstairs"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "Mi cuarto está arriba.",
+    "exampleGloss": {
+      "zh": "我的房間在樓上。",
+      "en": "My room is upstairs."
+    }
+  },
+  {
+    "id": "abajo",
+    "es": "abajo",
+    "gloss": {
+      "zh": "下面；樓下",
+      "en": "down; downstairs"
+    },
+    "pos": "adv",
+    "level": "A2",
+    "topic": "conectores",
+    "exampleEs": "La cocina está abajo.",
+    "exampleGloss": {
+      "zh": "廚房在樓下。",
+      "en": "The kitchen is downstairs."
+    }
+  },
+  {
+    "id": "biblioteca",
+    "es": "biblioteca",
+    "gloss": {
+      "zh": "圖書館",
+      "en": "library"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "La biblioteca cierra a las seis.",
+    "exampleGloss": {
+      "zh": "圖書館六點關門。",
+      "en": "The library closes at six."
+    }
+  },
+  {
+    "id": "catedral",
+    "es": "catedral",
+    "gloss": {
+      "zh": "大教堂",
+      "en": "cathedral"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "La catedral es del siglo diecinueve.",
+    "exampleGloss": {
+      "zh": "大教堂是十九世紀的。",
+      "en": "The cathedral is from the nineteenth century."
+    }
+  },
+  {
+    "id": "barrio",
+    "es": "barrio",
+    "gloss": {
+      "zh": "街區；社區",
+      "en": "neighbourhood"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "Mi barrio es muy tranquilo.",
+    "exampleGloss": {
+      "zh": "我住的社區很安靜。",
+      "en": "My neighbourhood is very quiet."
+    }
+  },
+  {
+    "id": "centro-historico",
+    "es": "centro histórico",
+    "gloss": {
+      "zh": "歷史城區",
+      "en": "historic centre"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "El centro histórico de Quito es patrimonio mundial.",
+    "exampleGloss": {
+      "zh": "基多的歷史城區是世界遺產。",
+      "en": "Quito’s historic centre is a World Heritage site."
+    }
+  },
+  {
+    "id": "correo-oficina",
+    "es": "oficina de correos",
+    "gloss": {
+      "zh": "郵局",
+      "en": "post office"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "La oficina de correos abre a las ocho.",
+    "exampleGloss": {
+      "zh": "郵局八點開門。",
+      "en": "The post office opens at eight."
+    }
+  },
+  {
+    "id": "policia",
+    "es": "policía",
+    "gloss": {
+      "zh": "警察",
+      "en": "police"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "La policía nos ayudó con la dirección.",
+    "exampleGloss": {
+      "zh": "警察幫我們指路。",
+      "en": "The police helped us with directions."
+    },
+    "genderNote": {
+      "zh": "la policía 指警察機關或女警，el policía 指男警。講「我叫警察」是 llamar a la policía（機關）。",
+      "en": "la policía is the police force or a policewoman; el policía is a policeman. “Call the police” is llamar a la policía (the force)."
+    }
+  },
+  {
+    "id": "direccion",
+    "es": "dirección",
+    "gloss": {
+      "zh": "地址；方向",
+      "en": "address; direction"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "¿Me da la dirección del hotel?",
+    "exampleGloss": {
+      "zh": "可以給我旅館的地址嗎？",
+      "en": "Could you give me the hotel address?"
+    }
+  },
+  {
+    "id": "edificio",
+    "es": "edificio",
+    "gloss": {
+      "zh": "建築物",
+      "en": "building"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "Ese edificio es el más alto del barrio.",
+    "exampleGloss": {
+      "zh": "那棟是社區裡最高的建築。",
+      "en": "That building is the tallest in the neighbourhood."
+    }
+  },
+  {
+    "id": "ascensor",
+    "es": "ascensor",
+    "gloss": {
+      "zh": "電梯",
+      "en": "lift; elevator"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "El ascensor no funciona.",
+    "exampleGloss": {
+      "zh": "電梯壞了。",
+      "en": "The lift isn’t working."
+    }
+  },
+  {
+    "id": "bano-publico",
+    "es": "servicios",
+    "gloss": {
+      "zh": "公共廁所",
+      "en": "public toilets"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "¿Dónde están los servicios?",
+    "exampleGloss": {
+      "zh": "廁所在哪裡？",
+      "en": "Where are the toilets?"
+    }
+  },
+  {
+    "id": "llamada",
+    "es": "llamada",
+    "gloss": {
+      "zh": "電話（通話）",
+      "en": "phone call"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "Recibí una llamada del hotel.",
+    "exampleGloss": {
+      "zh": "我接到旅館的電話。",
+      "en": "I got a call from the hotel."
+    }
+  },
+  {
+    "id": "internet",
+    "es": "internet",
+    "gloss": {
+      "zh": "網路",
+      "en": "internet"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "El hotel tiene internet gratis.",
+    "exampleGloss": {
+      "zh": "旅館有免費網路。",
+      "en": "The hotel has free internet."
+    }
+  },
+  {
+    "id": "gratis",
+    "es": "gratis",
+    "gloss": {
+      "zh": "免費的",
+      "en": "free (no cost)"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "La entrada es gratis los domingos.",
+    "exampleGloss": {
+      "zh": "週日免費入場。",
+      "en": "Entry is free on Sundays."
+    }
+  },
+  {
+    "id": "lleno-vacio",
+    "es": "ocupado-a2",
+    "gloss": {
+      "zh": "已被佔用的",
+      "en": "taken; occupied"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "ciudad",
+    "exampleEs": "Esta mesa está ocupada.",
+    "exampleGloss": {
+      "zh": "這桌有人了。",
+      "en": "This table is taken."
+    }
+  },
+  {
+    "id": "salud",
+    "es": "salud",
+    "gloss": {
+      "zh": "健康",
+      "en": "health"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "Su salud mejoró mucho.",
+    "exampleGloss": {
+      "zh": "他的健康好轉很多。",
+      "en": "Their health improved a lot."
+    }
+  },
+  {
+    "id": "enfermo",
+    "es": "enfermo",
+    "gloss": {
+      "zh": "生病的",
+      "en": "ill; sick"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "Estuve enfermo toda la semana.",
+    "exampleGloss": {
+      "zh": "我病了一整個星期。",
+      "en": "I was ill all week."
+    }
+  },
+  {
+    "id": "sano",
+    "es": "sano",
+    "gloss": {
+      "zh": "健康的",
+      "en": "healthy"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "Es una comida muy sana.",
+    "exampleGloss": {
+      "zh": "這是很健康的食物。",
+      "en": "It’s a very healthy meal."
+    }
+  },
+  {
+    "id": "receta",
+    "es": "receta",
+    "gloss": {
+      "zh": "處方；食譜",
+      "en": "prescription; recipe"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "El doctor me dio una receta.",
+    "exampleGloss": {
+      "zh": "醫生開了處方給我。",
+      "en": "The doctor gave me a prescription."
+    }
+  },
+  {
+    "id": "farmaceutico",
+    "es": "farmacéutico",
+    "gloss": {
+      "zh": "藥師",
+      "en": "pharmacist"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "El farmacéutico me explicó la dosis.",
+    "exampleGloss": {
+      "zh": "藥師跟我解釋劑量。",
+      "en": "The pharmacist explained the dose to me."
+    },
+    "genderNote": {
+      "zh": "男性 el farmacéutico，女性 la farmacéutica。",
+      "en": "el farmacéutico for a man, la farmacéutica for a woman."
+    }
+  },
+  {
+    "id": "sueno",
+    "es": "sueño",
+    "gloss": {
+      "zh": "睡意；夢",
+      "en": "sleepiness; dream"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "Tengo mucho sueño.",
+    "exampleGloss": {
+      "zh": "我很睏。",
+      "en": "I’m very sleepy."
+    }
+  },
+  {
+    "id": "cansancio",
+    "es": "cansancio",
+    "gloss": {
+      "zh": "疲勞",
+      "en": "tiredness"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "cuerpo",
+    "exampleEs": "El cansancio de la altura es normal.",
+    "exampleGloss": {
+      "zh": "高海拔造成的疲勞很正常。",
+      "en": "Tiredness from the altitude is normal."
+    }
+  },
+  {
+    "id": "almuerzo-a2",
+    "es": "plato fuerte",
+    "gloss": {
+      "zh": "主菜",
+      "en": "main course"
+    },
+    "pos": "phrase",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "El plato fuerte viene después de la sopa.",
+    "exampleGloss": {
+      "zh": "主菜在湯之後上。",
+      "en": "The main course comes after the soup."
+    }
+  },
+  {
+    "id": "bebida",
+    "es": "bebida",
+    "gloss": {
+      "zh": "飲料",
+      "en": "drink"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "¿Qué bebida quiere?",
+    "exampleGloss": {
+      "zh": "您要喝什麼？",
+      "en": "What would you like to drink?"
+    }
+  },
+  {
+    "id": "locro",
+    "es": "locro",
+    "gloss": {
+      "zh": "馬鈴薯起司濃湯",
+      "en": "locro (potato and cheese soup)"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "El locro lleva papa y queso.",
+    "exampleGloss": {
+      "zh": "locro 用馬鈴薯和起司做。",
+      "en": "Locro is made with potato and cheese."
+    },
+    "regional": {
+      "region": "Ecuador",
+      "note": {
+        "zh": "厄瓜多高地的傳統濃湯，用馬鈴薯與起司熬成，常配酪梨。",
+        "en": "A traditional highland soup made with potato and cheese, usually served with avocado."
+      },
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "humita",
+    "es": "humita",
+    "gloss": {
+      "zh": "玉米糕",
+      "en": "humita (steamed corn cake)"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "Comimos humitas en el desayuno.",
+    "exampleGloss": {
+      "zh": "我們早餐吃了玉米糕。",
+      "en": "We had humitas for breakfast."
+    },
+    "regional": {
+      "region": "Andes",
+      "note": {
+        "zh": "玉米糊拌起司蒸成的糕點，安地斯地區常見的早餐或點心。",
+        "en": "A steamed cake of ground corn and cheese, common across the Andes as breakfast or a snack."
+      },
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "encebollado",
+    "es": "encebollado",
+    "gloss": {
+      "zh": "鮪魚洋蔥湯",
+      "en": "encebollado (fish and onion soup)"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "El encebollado es un plato de la Costa.",
+    "exampleGloss": {
+      "zh": "encebollado 是沿海地區的菜。",
+      "en": "Encebollado is a coastal dish."
+    },
+    "regional": {
+      "region": "Ecuador",
+      "note": {
+        "zh": "沿海地區的鮪魚洋蔥湯，常被視為厄瓜多的國民菜之一。",
+        "en": "A coastal tuna-and-onion soup, often called one of Ecuador’s national dishes."
+      },
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "cuy",
+    "es": "cuy",
+    "gloss": {
+      "zh": "天竺鼠（食用）",
+      "en": "guinea pig (as food)"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "El cuy es un plato tradicional de la Sierra.",
+    "exampleGloss": {
+      "zh": "天竺鼠是高地的傳統菜。",
+      "en": "Cuy is a traditional highland dish."
+    },
+    "regional": {
+      "region": "Andes",
+      "note": {
+        "zh": "天竺鼠，安地斯地區的傳統節慶食物。",
+        "en": "Guinea pig, a traditional festive dish in the Andes."
+      },
+      "needsVerify": false
+    }
+  },
+  {
+    "id": "sabor",
+    "es": "sabor",
+    "gloss": {
+      "zh": "味道",
+      "en": "flavour; taste"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comida",
+    "exampleEs": "Tiene un sabor muy fuerte.",
+    "exampleGloss": {
+      "zh": "味道很重。",
+      "en": "It has a very strong flavour."
+    }
+  },
+  {
+    "id": "cosa",
+    "es": "cosa",
+    "gloss": {
+      "zh": "東西；事情",
+      "en": "thing"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Tengo muchas cosas que hacer.",
+    "exampleGloss": {
+      "zh": "我有很多事要做。",
+      "en": "I have a lot of things to do."
+    }
+  },
+  {
+    "id": "parte",
+    "es": "parte",
+    "gloss": {
+      "zh": "部分",
+      "en": "part"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Esta parte de la ciudad es antigua.",
+    "exampleGloss": {
+      "zh": "城市的這一區很古老。",
+      "en": "This part of the city is old."
+    }
+  },
+  {
+    "id": "lugar",
+    "es": "lugar",
+    "gloss": {
+      "zh": "地方",
+      "en": "place"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Es un buen lugar para descansar.",
+    "exampleGloss": {
+      "zh": "這是個休息的好地方。",
+      "en": "It’s a good place to rest."
+    }
+  },
+  {
+    "id": "manera",
+    "es": "manera",
+    "gloss": {
+      "zh": "方式",
+      "en": "way; manner"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Hay otra manera de llegar.",
+    "exampleGloss": {
+      "zh": "還有另一種到達的方式。",
+      "en": "There’s another way to get there."
+    }
+  },
+  {
+    "id": "razon",
+    "es": "razón",
+    "gloss": {
+      "zh": "理由；道理",
+      "en": "reason"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "No me dio ninguna razón.",
+    "exampleGloss": {
+      "zh": "他沒給我任何理由。",
+      "en": "He didn’t give me any reason."
+    }
+  },
+  {
+    "id": "idea",
+    "es": "idea",
+    "gloss": {
+      "zh": "主意；想法",
+      "en": "idea"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Es una buena idea.",
+    "exampleGloss": {
+      "zh": "這是個好主意。",
+      "en": "That’s a good idea."
+    }
+  },
+  {
+    "id": "problema-a2",
+    "es": "solución",
+    "gloss": {
+      "zh": "解決辦法",
+      "en": "solution"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Encontramos una solución rápida.",
+    "exampleGloss": {
+      "zh": "我們很快找到解決辦法。",
+      "en": "We found a quick solution."
+    }
+  },
+  {
+    "id": "resultado",
+    "es": "resultado",
+    "gloss": {
+      "zh": "結果",
+      "en": "result"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "El resultado fue mejor de lo esperado.",
+    "exampleGloss": {
+      "zh": "結果比預期好。",
+      "en": "The result was better than expected."
+    }
+  },
+  {
+    "id": "noticia",
+    "es": "noticia",
+    "gloss": {
+      "zh": "消息；新聞",
+      "en": "news"
+    },
+    "pos": "noun",
+    "gender": "f",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "Tengo una buena noticia.",
+    "exampleGloss": {
+      "zh": "我有個好消息。",
+      "en": "I have some good news."
+    }
+  },
+  {
+    "id": "numero",
+    "es": "número",
+    "gloss": {
+      "zh": "號碼；數字",
+      "en": "number"
+    },
+    "pos": "noun",
+    "gender": "m",
+    "level": "A2",
+    "topic": "comunes",
+    "exampleEs": "¿Cuál es su número de habitación?",
+    "exampleGloss": {
+      "zh": "您的房號是幾號？",
+      "en": "What’s your room number?"
+    }
+  },
+  {
+    "id": "antiguo",
+    "es": "antiguo",
+    "gloss": {
+      "zh": "古老的",
+      "en": "old; ancient"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "Es una casa antigua.",
+    "exampleGloss": {
+      "zh": "那是一棟老房子。",
+      "en": "It’s an old house."
+    }
+  },
+  {
+    "id": "moderno",
+    "es": "moderno",
+    "gloss": {
+      "zh": "現代的",
+      "en": "modern"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "El edificio es muy moderno.",
+    "exampleGloss": {
+      "zh": "那棟建築很現代。",
+      "en": "The building is very modern."
+    }
+  },
+  {
+    "id": "seguro",
+    "es": "seguro",
+    "gloss": {
+      "zh": "安全的；確定的",
+      "en": "safe; sure"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "Este barrio es seguro de día.",
+    "exampleGloss": {
+      "zh": "這一區白天很安全。",
+      "en": "This neighbourhood is safe by day."
+    }
+  },
+  {
+    "id": "peligroso",
+    "es": "peligroso",
+    "gloss": {
+      "zh": "危險的",
+      "en": "dangerous"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "El camino es peligroso con lluvia.",
+    "exampleGloss": {
+      "zh": "下雨時這條路很危險。",
+      "en": "The road is dangerous in the rain."
+    }
+  },
+  {
+    "id": "posible",
+    "es": "posible",
+    "gloss": {
+      "zh": "可能的",
+      "en": "possible"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "¿Es posible cambiar la fecha?",
+    "exampleGloss": {
+      "zh": "可以改日期嗎？",
+      "en": "Is it possible to change the date?"
+    }
+  },
+  {
+    "id": "necesario",
+    "es": "necesario",
+    "gloss": {
+      "zh": "必要的",
+      "en": "necessary"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "No es necesario reservar.",
+    "exampleGloss": {
+      "zh": "不需要訂位。",
+      "en": "It isn’t necessary to book."
+    }
+  },
+  {
+    "id": "parecido",
+    "es": "parecido",
+    "gloss": {
+      "zh": "相似的",
+      "en": "similar"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "Los dos platos son parecidos.",
+    "exampleGloss": {
+      "zh": "這兩道菜很像。",
+      "en": "The two dishes are similar."
+    }
+  },
+  {
+    "id": "distinto",
+    "es": "distinto",
+    "gloss": {
+      "zh": "不同的",
+      "en": "different"
+    },
+    "pos": "adj",
+    "level": "A2",
+    "topic": "adjetivos",
+    "exampleEs": "El acento de la Costa es distinto.",
+    "exampleGloss": {
+      "zh": "沿海地區的口音不一樣。",
+      "en": "The coastal accent is different."
+    }
+  }
+]
