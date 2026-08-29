@@ -87,6 +87,8 @@ app 會自動降級成「記憶體模式」並在頂端顯示警示條 —— �
 | `npm test` | vitest 單元測試 |
 | `npm run test:watch` | 測試 watch 模式 |
 
+瀏覽器實測（畫面、鍵盤、對比、離線）另外放在 `scripts/e2e/`，用法見該目錄的 README。
+
 ---
 
 ## 技術棧
