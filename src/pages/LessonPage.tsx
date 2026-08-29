@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play } from 'lucide-react';
+import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Markish, Inline } from '@/components/Markish';
@@ -395,12 +395,22 @@ export function LessonPage({ id }: { id: string }) {
             {t('exercisesCount', { n: lesson.exercises.length })}
           </span>
         </h2>
-        <Button asChild size="lg" variant="primary" className="w-full sm:w-auto">
-          <a href={hrefFor({ name: 'practice', id: lesson.id })}>
-            <Play aria-hidden="true" />
-            {t('startPractice')}
-          </a>
-        </Button>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <Button asChild size="lg" variant="primary" className="w-full sm:w-auto">
+            <a href={hrefFor({ name: 'practice', id: lesson.id })}>
+              <Play aria-hidden="true" />
+              {t('startPractice')}
+            </a>
+          </Button>
+          {lesson.vocabIds.length > 0 ? (
+            <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
+              <a href={hrefFor({ name: 'drill', id: lesson.id })}>
+                <Layers aria-hidden="true" />
+                {t('drillCta')}
+              </a>
+            </Button>
+          ) : null}
+        </div>
         <p className="rounded-2xl bg-surface-2 px-4 py-2.5 text-sm text-muted">
           {t('previewNote')}
         </p>

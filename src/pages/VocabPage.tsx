@@ -1,11 +1,12 @@
 import { useMemo, useState } from 'react';
-import { Search, X } from 'lucide-react';
+import { Search, X, Layers } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { allWords, allTopics, topicLabel, POS_LABEL } from '@/content';
+import { hrefFor } from '@/lib/router';
 import { PERSON_LABEL, PERSONS, type Word, type Verb } from '@/content/schema';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
@@ -127,9 +128,17 @@ export function VocabPage() {
 
   return (
     <div className="space-y-5">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-extrabold tracking-tight text-body">{t('vocabTitle')}</h1>
-        <p className="text-sm text-muted">{t('vocabSubtitle', { n: allWords.length })}</p>
+      <header className="flex flex-wrap items-end justify-between gap-3">
+        <div className="space-y-1">
+          <h1 className="text-2xl font-extrabold tracking-tight text-body">{t('vocabTitle')}</h1>
+          <p className="text-sm text-muted">{t('vocabSubtitle', { n: allWords.length })}</p>
+        </div>
+        <Button asChild variant="secondary">
+          <a href={hrefFor({ name: 'drill', id: 'all' })}>
+            <Layers aria-hidden="true" />
+            {t('drillCtaAll')}
+          </a>
+        </Button>
       </header>
 
       <div className="space-y-3 rounded-3xl border border-line/70 bg-surface p-4 shadow-soft">

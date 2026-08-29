@@ -6,6 +6,8 @@ import { LessonListPage, LessonPage } from '@/pages/LessonPage';
 import { PracticePage } from '@/pages/PracticePage';
 import { ReviewPage } from '@/pages/ReviewPage';
 import { AchievementsPage } from '@/pages/AchievementsPage';
+import { DashboardPage } from '@/pages/DashboardPage';
+import { DrillPage } from '@/pages/DrillPage';
 import { CelebrationOverlay } from '@/components/CelebrationOverlay';
 import { CompassLoading } from '@/components/decor/Illustrations';
 import { useRoute } from '@/lib/router';
@@ -42,6 +44,8 @@ export default function App() {
         {route.name === 'practice' ? <PracticePage lessonId={route.id} /> : null}
         {route.name === 'review' ? <ReviewPage /> : null}
         {route.name === 'achievements' ? <AchievementsPage /> : null}
+        {route.name === 'dashboard' ? <DashboardPage /> : null}
+        {route.name === 'drill' ? <DrillPage id={route.id} /> : null}
       </AppShell>
       <BottomNav current={route} />
       <CelebrationOverlay />

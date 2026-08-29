@@ -9,6 +9,7 @@ const ROUTES: Route[] = [
   { name: 'practice', id: 'a0-11-ser-estar' },
   { name: 'review' },
   { name: 'achievements' },
+  { name: 'dashboard' },
 ];
 
 describe('hash 路由', () => {

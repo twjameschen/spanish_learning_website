@@ -1,4 +1,4 @@
-import { Home, BookMarked, GraduationCap, CalendarCheck, Trophy } from 'lucide-react';
+import { Home, BookMarked, GraduationCap, CalendarCheck, Trophy, ChartColumn } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { hrefFor, type Route } from '@/lib/router';
 import { useT } from '@/i18n';
@@ -11,6 +11,7 @@ const ITEMS: { route: Route; labelKey: UIKey; shortKey?: UIKey; icon: typeof Hom
   { route: { name: 'lessons' }, labelKey: 'navLessons', icon: GraduationCap },
   { route: { name: 'review' }, labelKey: 'navReview', icon: CalendarCheck },
   { route: { name: 'achievements' }, labelKey: 'navAchievements', shortKey: 'navAchievementsShort', icon: Trophy },
+  { route: { name: 'dashboard' }, labelKey: 'navDashboard', icon: ChartColumn },
 ];
 
 const isActive = (route: Route, current: Route): boolean =>
