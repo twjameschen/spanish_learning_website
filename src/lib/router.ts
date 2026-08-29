@@ -14,7 +14,9 @@ export type Route =
   | { name: 'home' }
   | { name: 'vocab' }
   | { name: 'lessons' }
-  | { name: 'lesson'; id: string };
+  | { name: 'lesson'; id: string }
+  | { name: 'practice'; id: string }
+  | { name: 'review' };
 
 export function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, '').split('?')[0] ?? '';
@@ -22,6 +24,10 @@ export function parseHash(hash: string): Route {
   switch (head) {
     case 'vocab':
       return { name: 'vocab' };
+    case 'review':
+      return { name: 'review' };
+    case 'practice':
+      return param ? { name: 'practice', id: param } : { name: 'lessons' };
     case 'lessons':
       return param ? { name: 'lesson', id: param } : { name: 'lessons' };
     default:
@@ -34,6 +40,8 @@ export function hrefFor(route: Route): string {
     case 'vocab': return '#/vocab';
     case 'lessons': return '#/lessons';
     case 'lesson': return `#/lessons/${route.id}`;
+    case 'practice': return `#/practice/${route.id}`;
+    case 'review': return '#/review';
     case 'home': return '#/';
   }
 }

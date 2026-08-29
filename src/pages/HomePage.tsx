@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { BookMarked, GraduationCap, Sparkles, Camera, MapPin, ArrowRight } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import { BookMarked, GraduationCap, Sparkles, Camera, MapPin, ArrowRight, CalendarCheck } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -8,6 +8,8 @@ import { EmptyState } from '@/components/decor/Illustrations';
 import { SunMotif } from '@/components/decor/Patterns';
 import { useStorageTier } from '@/hooks/useStorageTier';
 import { takeSnapshot, listSnapshots, type SnapshotMeta } from '@/lib/snapshot';
+import { useProgressStore, dueTodayCount } from '@/store/useProgressStore';
+import { levelProgress } from '@/lib/xp';
 import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
@@ -27,6 +29,10 @@ export function HomePage() {
   const { t, L } = useT();
   const tier = useStorageTier();
   const [snapshots, setSnapshots] = useState<SnapshotMeta[]>([]);
+  const cards = useProgressStore((s) => s.cards);
+  const totalXp = useProgressStore((s) => s.totalXp);
+  const dueCount = useMemo(() => dueTodayCount(), [cards]);
+  const level = levelProgress(totalXp);
 
   useEffect(() => {
     let alive = true;
@@ -63,6 +69,38 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 今日複習：有到期卡片時才顯示，沒有就不佔版面 */}
+      {dueCount > 0 ? (
+        <a href={hrefFor({ name: 'review' })} className="group block">
+          <Card className="border-secondary-300 bg-secondary-50 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift dark:border-secondary-800 dark:bg-secondary-900/25">
+            <CardHeader>
+              <div className="flex items-center gap-2.5">
+                <span className="grid size-10 place-items-center rounded-2xl bg-secondary-500 text-ink-900">
+                  <CalendarCheck aria-hidden="true" className="size-5" />
+                </span>
+                <CardTitle>{t('dueToday', { n: dueCount })}</CardTitle>
+                <ArrowRight aria-hidden="true" className="ml-auto size-4 text-muted transition-transform group-hover:translate-x-1" />
+              </div>
+            </CardHeader>
+          </Card>
+        </a>
+      ) : null}
+
+      {/* 等級進度 */}
+      {totalXp > 0 ? (
+        <Card>
+          <CardContent className="space-y-2 pt-5">
+            <div className="flex items-baseline justify-between text-sm">
+              <span className="font-extrabold text-body">Lv. {level.level}</span>
+              <span className="font-semibold text-muted">
+                {level.intoLevel} / {level.levelSpan} XP
+              </span>
+            </div>
+            <Progress value={level.ratio * 100} />
+          </CardContent>
+        </Card>
+      ) : null}
 
       <div className="grid gap-4 sm:grid-cols-2">
         <a href={hrefFor({ name: 'vocab' })} className="group">

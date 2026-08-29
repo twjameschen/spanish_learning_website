@@ -51,10 +51,21 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, type, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
-      <Comp className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} />
+      <Comp
+        className={cn(buttonVariants({ variant, size }), className)}
+        ref={ref}
+        /*
+         * HTML 的 <button> 預設 type 是 submit。這個 app 裡沒有任何 form，
+         * 但 submit 語意會讓瀏覽器把它當成「預設按鈕」，
+         * 於是在輸入框按 Enter 時可能被意外啟用。一律預設成 button。
+         * asChild 時不能塞 type（渲染出來的可能是 <a>）。
+         */
+        {...(asChild ? {} : { type: type ?? 'button' })}
+        {...props}
+      />
     );
   },
 );

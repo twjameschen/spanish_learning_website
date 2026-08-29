@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock } from 'lucide-react';
+import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Markish } from '@/components/Markish';
@@ -393,8 +393,14 @@ export function LessonPage({ id }: { id: string }) {
             {t('exercisesCount', { n: lesson.exercises.length })}
           </span>
         </h2>
+        <Button asChild size="lg" variant="primary" className="w-full sm:w-auto">
+          <a href={hrefFor({ name: 'practice', id: lesson.id })}>
+            <Play aria-hidden="true" />
+            {t('startPractice')}
+          </a>
+        </Button>
         <p className="rounded-2xl bg-surface-2 px-4 py-2.5 text-sm text-muted">
-          {t('readOnlyNote')}
+          {t('previewNote')}
         </p>
         <ul className="space-y-2">
           {lesson.exercises.map((ex) => (

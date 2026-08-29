@@ -150,9 +150,9 @@ export const UI = {
   regionalHeading: { zh: '區域用法', en: 'Regional usage' },
   exercisesHeading: { zh: '練習題', en: 'Exercises' },
   exercisesCount: { zh: '（{n} 題）', en: '({n} exercises)' },
-  readOnlyNote: {
-    zh: '目前是唯讀預覽，正確答案直接標示出來。實際作答、計分與間隔複習屬於 Phase 3。',
-    en: 'This is a read-only preview with the answers shown. Answering, scoring and spaced repetition arrive in Phase 3.',
+  previewNote: {
+    zh: '以下是題目預覽，正確答案直接標示出來。想實際作答請按上面的「開始練習」。',
+    en: 'Below is a preview with the answers shown. Use "Start practice" above to actually answer them.',
   },
   wrongAnswerExplain: { zh: '答錯時會看到的解釋', en: 'Explanation shown on a wrong answer' },
   lessonNotFound: { zh: '找不到這一課', en: 'Lesson not found' },
@@ -174,6 +174,72 @@ export const UI = {
   },
   dailyGoal: { zh: '每日目標', en: 'Daily goal' },
   minutes: { zh: '{n} 分鐘', en: '{n} min' },
+  // ---- 答題流程 ----
+  correctLabel: { zh: '答對了', en: 'Correct' },
+  wrongLabel: { zh: '答錯了', en: 'Not quite' },
+  nextQuestion: { zh: '下一題', en: 'Next' },
+  finish: { zh: '完成', en: 'Finish' },
+  check: { zh: '檢查', en: 'Check' },
+  clear: { zh: '清空', en: 'Clear' },
+  comboCount: { zh: '連對 {n}', en: '{n} in a row' },
+  correctAnswer: { zh: '正確答案', en: 'Correct answer' },
+  accentImperfect: {
+    zh: '答對了。正確寫法是 **{answer}** —— 重音符號要記得打。',
+    en: 'Correct. The proper spelling is **{answer}** — remember the accent marks.',
+  },
+
+  // ---- 各題型的題面 ----
+  flashcardToMeaning: { zh: '這個字是什麼意思？', en: 'What does this word mean?' },
+  flashcardToSpanish: { zh: '西班牙文怎麼說？', en: 'How do you say this in Spanish?' },
+  flashcardReveal: { zh: '翻開答案', en: 'Reveal' },
+  flashcardKnew: { zh: '我記得', en: 'I knew it' },
+  flashcardForgot: { zh: '想不起來', en: "Didn't know" },
+  translateToSpanish: { zh: '翻成西班牙文', en: 'Translate into Spanish' },
+  typeInSpanish: { zh: '用西班牙文輸入…', en: 'Type in Spanish…' },
+  conjugatePrompt: { zh: '寫出對應的動詞變化', en: 'Write the matching verb form' },
+  typeTheForm: { zh: '輸入動詞形式…', en: 'Type the form…' },
+  wordOrderPrompt: { zh: '把字排成正確的句子', en: 'Put the words in the right order' },
+  yourSentence: { zh: '你排的句子', en: 'Your sentence' },
+  tapWordsToBuild: { zh: '點下面的字塊來造句', en: 'Tap the words below to build the sentence' },
+  listeningPrompt: { zh: '聽完後把句子打出來', en: 'Listen, then type what you hear' },
+  listeningFallbackPrompt: {
+    zh: '照著下面的句子打一次',
+    en: 'Type out the sentence shown below',
+  },
+  typeWhatYouHear: { zh: '打出你聽到的句子…', en: 'Type what you hear…' },
+  playAudio: { zh: '播放', en: 'Play' },
+  playSlower: { zh: '放慢再聽一次', en: 'Play more slowly' },
+  noSpanishVoice: {
+    zh: '這台裝置沒有西班牙文語音，改成抄寫練習。',
+    en: 'No Spanish voice on this device — this becomes a copying exercise instead.',
+  },
+  genderSortPrompt: { zh: '限時分類：這個名詞配 el 還是 la？', en: 'Beat the clock: el or la?' },
+  genderSortProgress: { zh: '{done} / {total}', en: '{done} / {total}' },
+  genderSortDone: { zh: '這一輪結束', en: 'Round complete' },
+
+  // ---- 結算 ----
+  sessionDone: { zh: '這一輪完成了', en: 'Session complete' },
+  sessionSummary: { zh: '答對 {correct} / {total} 題', en: '{correct} of {total} correct' },
+  accuracy: { zh: '正確率', en: 'Accuracy' },
+  xpEarned: { zh: '獲得 XP', en: 'XP earned' },
+  bestCombo: { zh: '最長連對', en: 'Best streak' },
+  practiceAgain: { zh: '再練一次', en: 'Practise again' },
+  backToLesson: { zh: '回到課文', en: 'Back to lesson' },
+
+  // ---- 練習與複習 ----
+  practiceTitle: { zh: '練習', en: 'Practice' },
+  startPractice: { zh: '開始練習', en: 'Start practice' },
+  reviewTitle: { zh: '今日複習', en: "Today's review" },
+  reviewSubtitle: { zh: '有 {n} 張卡片到期', en: '{n} cards due' },
+  reviewEmpty: { zh: '今天沒有要複習的東西', en: 'Nothing due today' },
+  reviewEmptyHint: {
+    zh: '複習佇列由間隔重複排程決定。去上一課新的，之後這裡就會排進來。',
+    en: 'The queue is set by spaced repetition. Work through a lesson and items will start appearing here.',
+  },
+  goToLessons: { zh: '去看課程', en: 'Browse lessons' },
+  dueToday: { zh: '今天要複習 {n} 張', en: '{n} cards due today' },
+  navReview: { zh: '複習', en: 'Review' },
+  mastery: { zh: '掌握度', en: 'Mastery' },
 } as const satisfies Record<string, Localized>;
 
 export type UIKey = keyof typeof UI;

@@ -1,4 +1,4 @@
-import { Home, BookMarked, GraduationCap } from 'lucide-react';
+import { Home, BookMarked, GraduationCap, CalendarCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { hrefFor, type Route } from '@/lib/router';
 import { useT } from '@/i18n';
@@ -8,10 +8,12 @@ const ITEMS: { route: Route; labelKey: UIKey; icon: typeof Home }[] = [
   { route: { name: 'home' }, labelKey: 'navHome', icon: Home },
   { route: { name: 'vocab' }, labelKey: 'navVocab', icon: BookMarked },
   { route: { name: 'lessons' }, labelKey: 'navLessons', icon: GraduationCap },
+  { route: { name: 'review' }, labelKey: 'navReview', icon: CalendarCheck },
 ];
 
 const isActive = (route: Route, current: Route): boolean =>
-  route.name === current.name || (route.name === 'lessons' && current.name === 'lesson');
+  route.name === current.name ||
+  (route.name === 'lessons' && (current.name === 'lesson' || current.name === 'practice'));
 
 export function SideNav({ current }: { current: Route }) {
   const { t } = useT();

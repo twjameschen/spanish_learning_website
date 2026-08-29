@@ -21,3 +21,10 @@ export function daysBetween(fromKey: string, toKey: string): number {
   const b = Date.UTC(ty, tm - 1, td);
   return Math.round((b - a) / 86_400_000);
 }
+
+/** 本地時區當天的最後一刻，用於「今天到期」的判斷 */
+export function endOfLocalDay(d: Date = new Date()): Date {
+  const end = new Date(d);
+  end.setHours(23, 59, 59, 999);
+  return end;
+}
