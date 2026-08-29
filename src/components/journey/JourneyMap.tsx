@@ -97,9 +97,9 @@ export function JourneyMap() {
                 className={cn(
                   'grid size-10 place-items-center rounded-full border-2 text-[11px] font-extrabold tabular-nums transition-colors',
                   cleared
-                    ? 'border-primary-500 bg-primary-500 text-white'
+                    ? 'border-primary-500 bg-primary-500 text-ink-900'
                     : isOpen
-                      ? 'border-primary-400 bg-surface text-primary-600'
+                      ? 'border-primary-400 bg-surface text-primary-800 dark:text-primary-300'
                       : 'border-ink-300 bg-surface-2 text-muted dark:border-ink-600',
                 )}
               >
@@ -141,7 +141,7 @@ export function JourneyMap() {
                 <span
                   className={cn(
                     'grid size-8 shrink-0 place-items-center rounded-xl',
-                    cleared ? 'bg-primary-500 text-white'
+                    cleared ? 'bg-primary-500 text-ink-900'
                       : isOpen ? 'bg-secondary-500 text-ink-900'
                       : 'bg-ink-200 text-ink-400 dark:bg-ink-700',
                   )}

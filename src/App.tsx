@@ -9,6 +9,7 @@ import { AchievementsPage } from '@/pages/AchievementsPage';
 import { DashboardPage } from '@/pages/DashboardPage';
 import { DrillPage } from '@/pages/DrillPage';
 import { CelebrationOverlay } from '@/components/CelebrationOverlay';
+import { ShortcutsHelp } from '@/components/ShortcutsHelp';
 import { CompassLoading } from '@/components/decor/Illustrations';
 import { useRoute } from '@/lib/router';
 import { useStreakSync } from '@/hooks/useStreakSync';
@@ -49,6 +50,7 @@ export default function App() {
       </AppShell>
       <BottomNav current={route} />
       <CelebrationOverlay />
+      <ShortcutsHelp />
     </>
   );
 }

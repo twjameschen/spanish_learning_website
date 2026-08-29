@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Flame, Trophy, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -35,6 +36,8 @@ export interface PlayerResult {
 }
 
 /** 這一題要更新哪一張 FSRS 卡片 */
+const SPRING = { type: 'spring', stiffness: 300, damping: 20 } as const;
+
 function cardKeyFor(ex: Exercise) {
   // 閃卡與陰陽性分類直接對應單字；其餘題目自成一張卡
   if (ex.type === 'flashcard') return wordKey(ex.wordId);
@@ -59,6 +62,8 @@ export function ExercisePlayer({
   const [bestCombo, setBestCombo] = useState(0);
   const [tally, setTally] = useState({ answered: 0, correct: 0, xp: 0 });
   const [finished, setFinished] = useState(false);
+  // 規格指定的 spring 參數；使用者若開了「減少動態效果」就整個關掉
+  const reduceMotion = useReducedMotion();
   const startedAt = useRef(Date.now());
   const nextRef = useRef<HTMLButtonElement>(null);
 
@@ -222,8 +227,15 @@ export function ExercisePlayer({
       </div>
 
       {/* 回饋：答錯一定要說明為什麼，不是只說「錯了」 */}
+      {/* 刻意不用 AnimatePresence：離場動畫期間舊面板還留在 DOM 裡，
+          它的「下一題」按鈕仍然可以點，連按兩下就會跳過一題。
+          這裡只需要進場動畫，換題時直接卸載才是對的。 */}
       {outcome ? (
-        <div
+        <motion.div
+          key={`fb-${index}`}
+          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={SPRING}
           className={cn(
             'space-y-3 rounded-3xl border-2 p-5',
             outcome.correct
@@ -253,7 +265,7 @@ export function ExercisePlayer({
             {index + 1 >= exercises.length ? t('finish') : t('nextQuestion')}
             <ArrowRight aria-hidden="true" />
           </Button>
-        </div>
+        </motion.div>
       ) : null}
     </div>
   );

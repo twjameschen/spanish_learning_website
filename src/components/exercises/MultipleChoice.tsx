@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Prompt, ChoiceButton } from './Shared';
+import { useShortcut } from '@/hooks/useShortcut';
 import { useT } from '@/i18n';
 import type { ExerciseProps } from './types';
 import type { Exercise } from '@/content/schema';
@@ -40,6 +41,12 @@ export function MultipleChoice({ exercise, answered, outcome, onAnswer }: Exerci
     return 'muted';
   };
 
+  // 數字鍵直接選答案。已作答就停掉，免得按到下一題的數字被誤解成上一題的選擇
+  useShortcut((key) => {
+    const n = Number(key);
+    if (Number.isInteger(n) && n >= 1 && n <= exercise.options.length) choose(n - 1);
+  }, !answered);
+
   return (
     <div className="space-y-5">
       <Prompt>{L(exercise.prompt)}</Prompt>
@@ -59,7 +66,7 @@ export function MultipleChoice({ exercise, answered, outcome, onAnswer }: Exerci
             >
               <span className="flex items-start gap-3">
                 <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-lg bg-black/5 text-xs font-extrabold dark:bg-white/10">
-                  {String.fromCharCode(65 + i)}
+                  {i + 1}
                 </span>
                 <span className="min-w-0 break-es">{L(opt)}</span>
               </span>
@@ -69,7 +76,7 @@ export function MultipleChoice({ exercise, answered, outcome, onAnswer }: Exerci
               <p
                 className={
                   i === exercise.answerIndex
-                    ? 'mt-1 px-4 text-sm font-semibold text-success-700 dark:text-success-200'
+                    ? 'mt-1 px-4 text-sm font-semibold text-success-800 dark:text-success-200'
                     : 'mt-1 px-4 text-sm text-muted'
                 }
               >

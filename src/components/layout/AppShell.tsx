@@ -54,7 +54,7 @@ export function AppShell({
       <header className="sticky top-0 z-30 border-b border-line/70 bg-canvas/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
           <div className="flex items-center gap-2.5">
-            <span className="grid size-10 place-items-center rounded-2xl bg-primary-500 text-white shadow-soft">
+            <span className="grid size-10 place-items-center rounded-2xl bg-primary-500 text-ink-900 shadow-soft">
               <Mountain aria-hidden="true" className="size-5" />
             </span>
             <div className="leading-tight">

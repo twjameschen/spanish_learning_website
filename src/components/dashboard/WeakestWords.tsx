@@ -31,7 +31,7 @@ export function WeakestWords({ limit = 10 }: { limit?: number }) {
 
           <span className="ml-auto flex shrink-0 items-center gap-2">
             {lapses > 0 ? (
-              <span className="flex items-center gap-1 text-xs font-semibold text-error-600">
+              <span className="flex items-center gap-1 text-xs font-semibold text-error-700 dark:text-error-300">
                 <RotateCcw aria-hidden="true" className="size-3.5" />
                 {t('weakestLapses', { n: lapses })}
               </span>

@@ -11,6 +11,8 @@ import { useT } from '@/i18n';
  * spring 參數照規格：{ stiffness: 300, damping: 20 }。
  */
 const SPRING = { type: 'spring', stiffness: 300, damping: 20 } as const;
+/** 離場用短 tween —— spring 的收斂尾巴很長，關閉拖到一秒會很鈍 */
+const EXIT = { duration: 0.15 } as const;
 
 export function CelebrationOverlay() {
   const { t, L } = useT();
@@ -24,6 +26,7 @@ export function CelebrationOverlay() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={EXIT}
           onClick={dismiss}
           role="dialog"
           aria-modal="true"
@@ -32,7 +35,7 @@ export function CelebrationOverlay() {
             className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-surface p-8 text-center shadow-lift"
             initial={{ scale: 0.8, y: 24 }}
             animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            exit={{ scale: 0.9, opacity: 0, transition: EXIT }}
             transition={SPRING}
             onClick={(e) => e.stopPropagation()}
           >
@@ -43,7 +46,7 @@ export function CelebrationOverlay() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ ...SPRING, delay: 0.1 }}
-                  className="mx-auto grid size-20 place-items-center rounded-3xl bg-primary-500 text-white"
+                  className="mx-auto grid size-20 place-items-center rounded-3xl bg-primary-500 text-ink-900"
                 >
                   <TrendingUp aria-hidden="true" className="size-10" />
                 </motion.div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useShortcut } from '@/hooks/useShortcut';
 import { Prompt, SpanishDisplay } from './Shared';
 import { getWord } from '@/content';
 import { useT } from '@/i18n';
@@ -24,9 +25,20 @@ export function Flashcard({ exercise, answered, onAnswer }: ExerciseProps<Card>)
   }, [exercise.id]);
 
   if (!word) return null;
+
   const front = exercise.direction === 'es-zh' ? word.es : L(word.gloss);
   const back = exercise.direction === 'es-zh' ? L(word.gloss) : word.es;
   const frontIsSpanish = exercise.direction === 'es-zh';
+
+  // 空白翻面；翻開後 1 = 想不起來、2 = 我記得
+  useShortcut((key, e) => {
+    if (!revealed) {
+      if (key === ' ') { e.preventDefault(); setRevealed(true); }
+      return;
+    }
+    if (key === '1') onAnswer({ correct: false });
+    if (key === '2') onAnswer({ correct: true });
+  }, !answered);
 
   return (
     <div className="space-y-5">

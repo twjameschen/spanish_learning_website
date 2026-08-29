@@ -130,7 +130,7 @@ export function GenderSort({ exercise, answered, onAnswer }: ExerciseProps<Gende
                 hits[i] === undefined
                   ? 'bg-surface-2 text-muted'
                   : hits[i]
-                    ? 'bg-success-100 text-success-700 dark:bg-success-700/30 dark:text-success-50'
+                    ? 'bg-success-100 text-success-800 dark:bg-success-700/30 dark:text-success-50'
                     : 'bg-error-100 text-error-700 dark:bg-error-700/30 dark:text-error-50',
               )}
             >

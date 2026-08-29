@@ -66,7 +66,7 @@ export function LessonListPage() {
                         href={hrefFor({ name: 'lesson', id: lesson.id })}
                         className="flex items-center gap-3 rounded-2xl bg-surface-2 px-4 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft"
                       >
-                        <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-primary-500 text-sm font-extrabold text-white">
+                        <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-primary-500 text-sm font-extrabold text-ink-900">
                           {lesson.order}
                         </span>
                         <span className="min-w-0">
@@ -107,7 +107,7 @@ function ExamplePair({ es, gloss, note }: { es: string; gloss: string; note?: st
       <p lang="es" className="break-es font-bold text-body">{es}</p>
       <p className="mt-0.5 text-sm text-muted">{gloss}</p>
       {note ? (
-        <p className="mt-1 text-xs leading-relaxed text-secondary-700 dark:text-secondary-300">
+        <p className="mt-1 text-xs leading-relaxed text-secondary-800 dark:text-secondary-300">
           {note}
         </p>
       ) : null}
@@ -151,7 +151,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
                   key={i}
                   className={
                     i === ex.answerIndex
-                      ? 'rounded-xl bg-success-100 px-2.5 py-1 text-sm font-bold text-success-700 dark:bg-success-700/30 dark:text-success-100'
+                      ? 'rounded-xl bg-success-100 px-2.5 py-1 text-sm font-bold text-success-800 dark:bg-success-700/30 dark:text-success-100'
                       : 'px-2.5 py-1 text-sm text-muted'
                   }
                 >
@@ -171,7 +171,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
             {' · '}
             {L(TENSE_LABEL[ex.tense].label)}
             {' → '}
-            <span lang="es" className="font-bold text-success-700 dark:text-success-200">
+            <span lang="es" className="font-bold text-success-800 dark:text-success-200">
               {ex.answer}
             </span>
           </p>
@@ -181,7 +181,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
         return (
           <p className="text-sm text-body">
             <Inline text={L(ex.prompt)} /> →{' '}
-            <span lang="es" className="font-bold text-success-700 dark:text-success-200">
+            <span lang="es" className="font-bold text-success-800 dark:text-success-200">
               {ex.canonical}
             </span>
           </p>
@@ -238,7 +238,7 @@ function ExercisePreview({ ex }: { ex: Exercise }) {
       </div>
       {body}
       <details className="mt-2.5">
-        <summary className="cursor-pointer text-xs font-bold text-primary-600 hover:underline">
+        <summary className="cursor-pointer text-xs font-bold text-primary-800 dark:text-primary-300 hover:underline">
           {t('wrongAnswerExplain')}
         </summary>
         <div className="mt-1.5 text-sm text-muted">
@@ -282,7 +282,7 @@ export function LessonPage({ id }: { id: string }) {
       <header className="space-y-2">
         <a
           href={hrefFor({ name: 'lessons' })}
-          className="inline-flex items-center gap-1 text-sm font-bold text-primary-600 hover:underline"
+          className="inline-flex items-center gap-1 text-sm font-bold text-primary-800 dark:text-primary-300 hover:underline"
         >
           <ArrowLeft aria-hidden="true" className="size-4" />
           {t('backToLessons')}
@@ -364,7 +364,7 @@ export function LessonPage({ id }: { id: string }) {
             {lesson.pronunciation.map((p, i) => (
               <li key={i} className="rounded-3xl border border-line/70 bg-surface p-4 shadow-soft">
                 <div className="flex flex-wrap items-baseline gap-2">
-                  <span lang="es" className="text-lg font-extrabold text-primary-600">
+                  <span lang="es" className="text-lg font-extrabold text-primary-800 dark:text-primary-300">
                     {p.letter}
                   </span>
                   <code className="rounded-md bg-surface-2 px-1.5 py-0.5 font-mono text-sm text-muted">

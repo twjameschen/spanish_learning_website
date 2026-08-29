@@ -89,14 +89,14 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
       </div>
 
       {status.kind === 'ok' ? (
-        <p className="flex items-start gap-1.5 text-sm font-semibold text-success-700 dark:text-success-200">
+        <p className="flex items-start gap-1.5 text-sm font-semibold text-success-800 dark:text-success-200">
           <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
           {status.message}
         </p>
       ) : null}
 
       {status.kind === 'error' ? (
-        <p className="flex items-start gap-1.5 text-sm font-semibold text-error-600">
+        <p className="flex items-start gap-1.5 text-sm font-semibold text-error-700 dark:text-error-300">
           <TriangleAlert aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
           {status.message}
         </p>

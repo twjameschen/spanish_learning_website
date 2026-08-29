@@ -59,25 +59,25 @@ export function HomePage() {
 
   return (
     <div className="space-y-6">
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500 via-primary-400 to-accent-400 p-6 text-white shadow-lift sm:p-9">
-        <SunMotif className="absolute -right-10 -top-10 size-64 text-white/25" />
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500 via-primary-400 to-accent-400 p-6 text-ink-900 shadow-lift sm:p-9">
+        <SunMotif className="absolute -right-10 -top-10 size-64 text-ink-900/15" />
         <div className="relative space-y-3">
-          <Badge variant="accent" className="bg-white/25 text-white">
+          <Badge variant="accent" className="bg-ink-900/10 text-ink-900">
             <Sparkles aria-hidden="true" />
             A0 – B1
           </Badge>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             {t('heroTitle')}
           </h1>
-          <p className="max-w-lg text-sm leading-relaxed text-white/90 sm:text-base">
+          <p className="max-w-lg text-sm leading-relaxed text-ink-900/85 sm:text-base">
             {t('heroBody')}
           </p>
           <div className="max-w-sm pt-2">
-            <div className="mb-1.5 flex items-baseline justify-between text-xs font-bold text-white/90">
+            <div className="mb-1.5 flex items-baseline justify-between text-xs font-bold text-ink-900/85">
               <span>{t('progress')}</span>
               <span>Phase 5 / 7</span>
             </div>
-            <Progress value={(5 / 7) * 100} className="bg-white/25" />
+            <Progress value={(5 / 7) * 100} className="bg-ink-900/15" />
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export function HomePage() {
           <Card className="h-full transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift">
             <CardHeader>
               <div className="flex items-center gap-2.5">
-                <span className="grid size-10 place-items-center rounded-2xl bg-primary-500 text-white">
+                <span className="grid size-10 place-items-center rounded-2xl bg-primary-500 text-ink-900">
                   <GraduationCap aria-hidden="true" className="size-5" />
                 </span>
                 <CardTitle>{t('navLessons')}</CardTitle>

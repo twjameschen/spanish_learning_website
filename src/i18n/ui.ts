@@ -304,6 +304,18 @@ export const UI = {
   overviewMinutes: { zh: '練習分鐘', en: 'Minutes practised' },
   overviewWordsSeen: { zh: '接觸過的字', en: 'Words encountered' },
   overviewWordsMastered: { zh: '滾瓜爛熟', en: 'Words mastered' },
+  // ---- 鍵盤快捷鍵 ----
+  shortcutsTitle: { zh: '鍵盤快捷鍵', en: 'Keyboard shortcuts' },
+  shortcutChoose: { zh: '選第 1–4 個選項', en: 'Pick answer 1–4' },
+  shortcutReveal: { zh: '翻開閃卡', en: 'Reveal the flashcard' },
+  shortcutSelfRate: { zh: '翻開後：想不起來／我記得', en: 'After reveal: didn’t know / knew it' },
+  shortcutNext: { zh: '下一題', en: 'Next question' },
+  shortcutHelp: { zh: '打開這個說明', en: 'Open this panel' },
+  shortcutClose: { zh: '關閉', en: 'Close' },
+  shortcutsNote: {
+    zh: '游標在輸入框裡時快捷鍵不會作用 —— 打字優先。',
+    en: 'Shortcuts are off while you are typing in a field — the keyboard is yours.',
+  },
   drillTitle: { zh: '單字閃卡', en: 'Vocabulary flashcards' },
   drillDesc: {
     zh: '{n} 張卡，先看西文想意思，再反過來。掌握度星等是由這種練習累積的。',

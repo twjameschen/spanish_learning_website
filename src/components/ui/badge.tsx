@@ -11,7 +11,7 @@ const badgeVariants = cva(
         secondary:
           'bg-secondary-100 text-secondary-800 dark:bg-secondary-900/50 dark:text-secondary-200',
         accent: 'bg-accent-100 text-accent-800 dark:bg-accent-900/50 dark:text-accent-200',
-        success: 'bg-success-100 text-success-700 dark:bg-success-700/40 dark:text-success-100',
+        success: 'bg-success-100 text-success-800 dark:bg-success-700/40 dark:text-success-100',
         error: 'bg-error-100 text-error-700 dark:bg-error-700/40 dark:text-error-100',
         neutral: 'bg-surface-2 text-muted',
         outline: 'border-2 border-line text-muted',

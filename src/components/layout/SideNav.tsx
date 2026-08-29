@@ -32,7 +32,7 @@ export function SideNav({ current }: { current: Route }) {
               className={cn(
                 'flex items-center gap-2.5 rounded-2xl px-4 py-2.5 text-[15px] font-bold transition-all duration-200',
                 active
-                  ? 'bg-primary-500 text-white shadow-soft'
+                  ? 'bg-primary-500 text-ink-900 shadow-soft'
                   : 'text-muted hover:bg-surface-2 hover:text-body',
               )}
             >
@@ -61,7 +61,7 @@ export function BottomNav({ current }: { current: Route }) {
                 aria-current={active ? 'page' : undefined}
                 className={cn(
                   'flex flex-col items-center gap-0.5 px-1 py-2.5 text-[11px] font-bold transition-colors',
-                  active ? 'text-primary-600' : 'text-muted',
+                  active ? 'text-primary-800 dark:text-primary-300' : 'text-muted',
                 )}
               >
                 <Icon aria-hidden="true" className="size-5" />

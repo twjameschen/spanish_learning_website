@@ -68,7 +68,7 @@ export function ChoiceButton({
         state === 'idle' &&
           'border-line bg-surface text-body hover:-translate-y-0.5 hover:border-primary-400 hover:shadow-soft',
         state === 'selected' && 'border-primary-500 bg-primary-50 text-primary-800 dark:bg-primary-900/40 dark:text-primary-100',
-        state === 'correct' && 'border-success-500 bg-success-100 text-success-700 dark:bg-success-700/30 dark:text-success-50',
+        state === 'correct' && 'border-success-500 bg-success-100 text-success-800 dark:bg-success-700/30 dark:text-success-50',
         state === 'wrong' && 'border-error-500 bg-error-100 text-error-700 dark:bg-error-700/30 dark:text-error-50',
         state === 'muted' && 'border-line bg-surface-2 text-muted',
         className,

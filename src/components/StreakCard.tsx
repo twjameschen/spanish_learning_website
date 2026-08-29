@@ -27,7 +27,7 @@ export function StreakCard() {
             className={cn(
               'grid size-11 shrink-0 place-items-center rounded-2xl',
               streak.current > 0
-                ? 'bg-primary-500 text-white'
+                ? 'bg-primary-500 text-ink-900'
                 : 'bg-surface-2 text-muted',
             )}
           >

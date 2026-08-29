@@ -39,7 +39,7 @@ export function PracticePage({ lessonId }: { lessonId: string }) {
       <header className="space-y-1">
         <a
           href={hrefFor({ name: 'lesson', id: lesson.id })}
-          className="inline-flex items-center gap-1 text-sm font-bold text-primary-600 hover:underline"
+          className="inline-flex items-center gap-1 text-sm font-bold text-primary-800 dark:text-primary-300 hover:underline"
         >
           <ArrowLeft aria-hidden="true" className="size-4" />
           {L(lesson.title)}

@@ -40,11 +40,13 @@ export default {
         },
         success: {
           50: '#F3FAF1', 100: '#E8F6E5', 200: '#CDEBC7', 300: '#A8DC9E',
-          500: '#7BC96F', 600: '#5FAE53', 700: '#4A8A41', DEFAULT: '#7BC96F',
+          500: '#7BC96F', 600: '#5FAE53', 700: '#4A8A41', 800: '#3C7135',
+          DEFAULT: '#7BC96F',
         },
         error: {
           50: '#FEF1F1', 100: '#FCDDDD', 200: '#F9BDBD', 300: '#F59595',
-          500: '#F26D6D', 600: '#DC4646', 700: '#B53636', DEFAULT: '#F26D6D',
+          500: '#F26D6D', 600: '#DC4646', 700: '#B53636', 800: '#8F2B2B',
+          DEFAULT: '#F26D6D',
         },
         // 語意色：隨深色模式翻面
         surface: 'rgb(var(--surface) / <alpha-value>)',

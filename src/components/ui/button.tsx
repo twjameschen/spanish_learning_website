@@ -19,18 +19,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary-500 text-white shadow-soft hover:bg-primary-600 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:scale-[.98] focus-visible:ring-primary-500',
+          'bg-primary-500 text-ink-900 shadow-soft hover:bg-primary-600 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:scale-[.98] focus-visible:ring-primary-500',
         secondary:
           'bg-secondary-500 text-ink-900 shadow-soft hover:bg-secondary-600 hover:text-white hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:scale-[.98] focus-visible:ring-secondary-500',
         accent:
           'bg-accent-500 text-ink-800 shadow-soft hover:bg-accent-600 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:scale-[.98] focus-visible:ring-accent-600',
         outline:
-          'border-2 border-line bg-surface text-body hover:border-primary-400 hover:text-primary-600 hover:-translate-y-0.5 hover:shadow-soft active:translate-y-0 focus-visible:ring-primary-400',
+          'border-2 border-line bg-surface text-body hover:border-primary-400 hover:text-primary-800 dark:text-primary-300 hover:-translate-y-0.5 hover:shadow-soft active:translate-y-0 focus-visible:ring-primary-400',
         ghost:
-          'text-body hover:bg-surface-2 hover:text-primary-600 active:scale-[.98] focus-visible:ring-primary-400',
+          'text-body hover:bg-surface-2 hover:text-primary-800 dark:text-primary-300 active:scale-[.98] focus-visible:ring-primary-400',
         danger:
           'bg-error-500 text-white shadow-soft hover:bg-error-600 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-error-500',
-        link: 'text-primary-600 underline-offset-4 hover:underline',
+        link: 'text-primary-800 dark:text-primary-300 underline-offset-4 hover:underline',
       },
       size: {
         sm: 'h-9 rounded-2xl px-3.5 text-sm [&_svg]:size-4',
