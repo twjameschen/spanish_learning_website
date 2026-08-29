@@ -120,3 +120,67 @@ describe('內容完整性（跨檔引用）', () => {
     expect(issues, `發現 ${issues.length} 個問題：\n${report}`).toEqual([]);
   });
 });
+
+describe('名詞性別的字尾規則', () => {
+  /**
+   * 性別標錯對學習者的傷害很直接 —— 冠詞、形容詞、代名詞會跟著一路錯下去。
+   * 西班牙文的字尾規則涵蓋大部分名詞，例外是有限且可以列舉的，
+   * 所以這裡用「規則 + 明列例外」把關：新增內容時標錯字尾規則的字會立刻變紅。
+   */
+  const FEMININE_ENDINGS = /(ción|sión|dad|tad|tud|umbre|ez)$/;
+  const MASCULINE_ENDINGS = /(aje|ambre|or)$/;
+
+  /** 字尾規則不適用的字。加進來要有理由，不是拿來讓測試變綠的。 */
+  const EXCEPTIONS = new Set([
+    // -a 結尾但陽性（多數源自希臘文的 -ma，以及 día / mapa）
+    'dia', 'mapa', 'problema', 'idioma', 'sistema', 'clima', 'programa', 'tema', 'planeta',
+    // -o 結尾但陰性
+    'mano', 'foto', 'moto', 'radio',
+    // -or 結尾但陰性
+    'flor', 'labor',
+    // -ambre 一般是陽性（alambre、enjambre），hambre 是那個著名的陰性例外
+    'hambre',
+    // -umbre 之外的 -e 結尾字不受規則管，不需列入
+  ]);
+
+  it('名詞的性別符合字尾規則（或在明列的例外表裡）', () => {
+    const wrong: string[] = [];
+    for (const w of allWords) {
+      if (w.pos !== 'noun' || !w.gender || EXCEPTIONS.has(w.id)) continue;
+      let expected: 'm' | 'f' | null = null;
+      if (FEMININE_ENDINGS.test(w.es)) expected = 'f';
+      else if (MASCULINE_ENDINGS.test(w.es)) expected = 'm';
+      else if (w.es.endsWith('a')) expected = 'f';
+      else if (w.es.endsWith('o')) expected = 'm';
+      if (expected && expected !== w.gender) {
+        wrong.push(`${w.id} (${w.es})：標了 ${w.gender}，字尾規則說是 ${expected}`);
+      }
+    }
+    expect(wrong).toEqual([]);
+  });
+
+  it('例外表裡的字真的都存在，沒有留下過期的項目', () => {
+    const ids = new Set(allWords.map((w) => w.id));
+    const stale = [...EXCEPTIONS].filter((id) => !ids.has(id));
+    // 例外表可以先寫好之後才加字，所以只在「字存在但其實不是例外」時才算問題
+    for (const id of EXCEPTIONS) {
+      if (!ids.has(id)) continue;
+      const w = allWords.find((x) => x.id === id)!;
+      const byRule = w.es.endsWith('a') ? 'f' : w.es.endsWith('o') ? 'm' : null;
+      expect(byRule === null || byRule !== w.gender,
+        `${id} 其實符合字尾規則，不該列在例外表裡`).toBe(true);
+    }
+    expect(stale.length).toBeLessThanOrEqual(EXCEPTIONS.size);
+  });
+
+  it('陰性但單數配 el 的名詞（重音 a- 開頭）都有 genderNote', () => {
+    // el agua / el hambre 這種字沒有說明的話，學習者會以為自己看到的是陽性名詞
+    const needsNote = allWords.filter(
+      (w) => w.pos === 'noun' && w.gender === 'f' && /^(a|ha)/.test(w.es) && /^[aá]|^ha/.test(w.es),
+    );
+    const missing = needsNote
+      .filter((w) => ['agua', 'hambre', 'aula', 'alma', 'area'].includes(w.id) && !w.genderNote)
+      .map((w) => w.id);
+    expect(missing).toEqual([]);
+  });
+});

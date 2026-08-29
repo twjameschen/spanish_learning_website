@@ -5,6 +5,7 @@ import {
 } from './schema';
 
 import rawWordsA0 from './words/a0.json';
+import rawWordsA1 from './words/a1.json';
 import rawVerbsA0 from './verbs/a0.json';
 import rawVerbsA1 from './verbs/a1.json';
 import rawLessonsA0 from './lessons/a0.json';
@@ -34,6 +35,7 @@ function parseOrThrow<T>(
 }
 
 export const wordsA0: Word[] = parseOrThrow(wordArraySchema, rawWordsA0, 'words/a0.json');
+export const wordsA1: Word[] = parseOrThrow(wordArraySchema, rawWordsA1, 'words/a1.json');
 export const verbsA0: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA0, 'verbs/a0.json');
 export const verbsA1: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA1, 'verbs/a1.json');
 export const lessonsA0: GrammarLesson[] = parseOrThrow(
@@ -42,7 +44,7 @@ export const lessonsA0: GrammarLesson[] = parseOrThrow(
 export const journey: JourneyStop[] = parseOrThrow(journeySchema, rawJourney, 'journey.json');
 
 /** 所有單字（含動詞）。動詞也是 Word 的子型別，可以混在一起查。 */
-export const allWords: Word[] = [...wordsA0, ...verbsA0, ...verbsA1];
+export const allWords: Word[] = [...wordsA0, ...wordsA1, ...verbsA0, ...verbsA1];
 export const allVerbs: Verb[] = [...verbsA0, ...verbsA1];
 export const allLessons: GrammarLesson[] = [...lessonsA0];
 
@@ -79,6 +81,13 @@ export const TOPIC_LABEL: Record<string, Localized> = {
   comunes: { zh: '常用副詞', en: 'Common adverbs' },
   animales: { zh: '動物', en: 'Animals' },
   ecuador: { zh: '厄瓜多特色詞', en: 'Ecuadorian usage' },
+  casa: { zh: '家與家具', en: 'Home & furniture' },
+  ciudad: { zh: '城市與交通', en: 'City & transport' },
+  cuerpo: { zh: '身體與健康', en: 'Body & health' },
+  ropa: { zh: '衣物', en: 'Clothing' },
+  trabajo: { zh: '工作與職業', en: 'Work & jobs' },
+  rutina: { zh: '作息與時間', en: 'Routine & time' },
+  gramatica: { zh: '代名詞與指示詞', en: 'Pronouns & determiners' },
 };
 
 export const topicLabel = (topic: string): Localized =>
