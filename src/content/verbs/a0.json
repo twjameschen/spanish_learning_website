@@ -26,7 +26,55 @@
         "el_ella_usted": "es",
         "nosotros": "somos",
         "ellos_ustedes": "son"
+      },
+      "preteritoIndefinido": {
+        "yo": "fui",
+        "tu": "fuiste",
+        "el_ella_usted": "fue",
+        "nosotros": "fuimos",
+        "ellos_ustedes": "fueron"
+      },
+      "imperfecto": {
+        "yo": "era",
+        "tu": "eras",
+        "el_ella_usted": "era",
+        "nosotros": "éramos",
+        "ellos_ustedes": "eran"
+      },
+      "futuro": {
+        "yo": "seré",
+        "tu": "serás",
+        "el_ella_usted": "será",
+        "nosotros": "seremos",
+        "ellos_ustedes": "serán"
+      },
+      "condicional": {
+        "yo": "sería",
+        "tu": "serías",
+        "el_ella_usted": "sería",
+        "nosotros": "seríamos",
+        "ellos_ustedes": "serían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "sea",
+        "tu": "seas",
+        "el_ella_usted": "sea",
+        "nosotros": "seamos",
+        "ellos_ustedes": "sean"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "fuera",
+        "tu": "fueras",
+        "el_ella_usted": "fuera",
+        "nosotros": "fuéramos",
+        "ellos_ustedes": "fueran"
       }
+    },
+    "imperativo": {
+      "tu": "sé",
+      "el_ella_usted": "sea",
+      "nosotros": "seamos",
+      "ellos_ustedes": "sean"
     }
   },
   {
@@ -56,7 +104,55 @@
         "el_ella_usted": "está",
         "nosotros": "estamos",
         "ellos_ustedes": "están"
+      },
+      "preteritoIndefinido": {
+        "yo": "estuve",
+        "tu": "estuviste",
+        "el_ella_usted": "estuvo",
+        "nosotros": "estuvimos",
+        "ellos_ustedes": "estuvieron"
+      },
+      "imperfecto": {
+        "yo": "estaba",
+        "tu": "estabas",
+        "el_ella_usted": "estaba",
+        "nosotros": "estábamos",
+        "ellos_ustedes": "estaban"
+      },
+      "futuro": {
+        "yo": "estaré",
+        "tu": "estarás",
+        "el_ella_usted": "estará",
+        "nosotros": "estaremos",
+        "ellos_ustedes": "estarán"
+      },
+      "condicional": {
+        "yo": "estaría",
+        "tu": "estarías",
+        "el_ella_usted": "estaría",
+        "nosotros": "estaríamos",
+        "ellos_ustedes": "estarían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "esté",
+        "tu": "estés",
+        "el_ella_usted": "esté",
+        "nosotros": "estemos",
+        "ellos_ustedes": "estén"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "estuviera",
+        "tu": "estuvieras",
+        "el_ella_usted": "estuviera",
+        "nosotros": "estuviéramos",
+        "ellos_ustedes": "estuvieran"
       }
+    },
+    "imperativo": {
+      "tu": "está",
+      "el_ella_usted": "esté",
+      "nosotros": "estemos",
+      "ellos_ustedes": "estén"
     }
   },
   {
@@ -86,7 +182,55 @@
         "el_ella_usted": "tiene",
         "nosotros": "tenemos",
         "ellos_ustedes": "tienen"
+      },
+      "preteritoIndefinido": {
+        "yo": "tuve",
+        "tu": "tuviste",
+        "el_ella_usted": "tuvo",
+        "nosotros": "tuvimos",
+        "ellos_ustedes": "tuvieron"
+      },
+      "imperfecto": {
+        "yo": "tenía",
+        "tu": "tenías",
+        "el_ella_usted": "tenía",
+        "nosotros": "teníamos",
+        "ellos_ustedes": "tenían"
+      },
+      "futuro": {
+        "yo": "tendré",
+        "tu": "tendrás",
+        "el_ella_usted": "tendrá",
+        "nosotros": "tendremos",
+        "ellos_ustedes": "tendrán"
+      },
+      "condicional": {
+        "yo": "tendría",
+        "tu": "tendrías",
+        "el_ella_usted": "tendría",
+        "nosotros": "tendríamos",
+        "ellos_ustedes": "tendrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "tenga",
+        "tu": "tengas",
+        "el_ella_usted": "tenga",
+        "nosotros": "tengamos",
+        "ellos_ustedes": "tengan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "tuviera",
+        "tu": "tuvieras",
+        "el_ella_usted": "tuviera",
+        "nosotros": "tuviéramos",
+        "ellos_ustedes": "tuvieran"
       }
+    },
+    "imperativo": {
+      "tu": "ten",
+      "el_ella_usted": "tenga",
+      "nosotros": "tengamos",
+      "ellos_ustedes": "tengan"
     }
   },
   {
@@ -116,6 +260,48 @@
         "el_ella_usted": "ha",
         "nosotros": "hemos",
         "ellos_ustedes": "han"
+      },
+      "preteritoIndefinido": {
+        "yo": "hube",
+        "tu": "hubiste",
+        "el_ella_usted": "hubo",
+        "nosotros": "hubimos",
+        "ellos_ustedes": "hubieron"
+      },
+      "imperfecto": {
+        "yo": "había",
+        "tu": "habías",
+        "el_ella_usted": "había",
+        "nosotros": "habíamos",
+        "ellos_ustedes": "habían"
+      },
+      "futuro": {
+        "yo": "habré",
+        "tu": "habrás",
+        "el_ella_usted": "habrá",
+        "nosotros": "habremos",
+        "ellos_ustedes": "habrán"
+      },
+      "condicional": {
+        "yo": "habría",
+        "tu": "habrías",
+        "el_ella_usted": "habría",
+        "nosotros": "habríamos",
+        "ellos_ustedes": "habrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "haya",
+        "tu": "hayas",
+        "el_ella_usted": "haya",
+        "nosotros": "hayamos",
+        "ellos_ustedes": "hayan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "hubiera",
+        "tu": "hubieras",
+        "el_ella_usted": "hubiera",
+        "nosotros": "hubiéramos",
+        "ellos_ustedes": "hubieran"
       }
     }
   },
@@ -146,7 +332,55 @@
         "el_ella_usted": "va",
         "nosotros": "vamos",
         "ellos_ustedes": "van"
+      },
+      "preteritoIndefinido": {
+        "yo": "fui",
+        "tu": "fuiste",
+        "el_ella_usted": "fue",
+        "nosotros": "fuimos",
+        "ellos_ustedes": "fueron"
+      },
+      "imperfecto": {
+        "yo": "iba",
+        "tu": "ibas",
+        "el_ella_usted": "iba",
+        "nosotros": "íbamos",
+        "ellos_ustedes": "iban"
+      },
+      "futuro": {
+        "yo": "iré",
+        "tu": "irás",
+        "el_ella_usted": "irá",
+        "nosotros": "iremos",
+        "ellos_ustedes": "irán"
+      },
+      "condicional": {
+        "yo": "iría",
+        "tu": "irías",
+        "el_ella_usted": "iría",
+        "nosotros": "iríamos",
+        "ellos_ustedes": "irían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "vaya",
+        "tu": "vayas",
+        "el_ella_usted": "vaya",
+        "nosotros": "vayamos",
+        "ellos_ustedes": "vayan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "fuera",
+        "tu": "fueras",
+        "el_ella_usted": "fuera",
+        "nosotros": "fuéramos",
+        "ellos_ustedes": "fueran"
       }
+    },
+    "imperativo": {
+      "tu": "ve",
+      "el_ella_usted": "vaya",
+      "nosotros": "vamos",
+      "ellos_ustedes": "vayan"
     }
   },
   {
@@ -176,7 +410,55 @@
         "el_ella_usted": "quiere",
         "nosotros": "queremos",
         "ellos_ustedes": "quieren"
+      },
+      "preteritoIndefinido": {
+        "yo": "quise",
+        "tu": "quisiste",
+        "el_ella_usted": "quiso",
+        "nosotros": "quisimos",
+        "ellos_ustedes": "quisieron"
+      },
+      "imperfecto": {
+        "yo": "quería",
+        "tu": "querías",
+        "el_ella_usted": "quería",
+        "nosotros": "queríamos",
+        "ellos_ustedes": "querían"
+      },
+      "futuro": {
+        "yo": "querré",
+        "tu": "querrás",
+        "el_ella_usted": "querrá",
+        "nosotros": "querremos",
+        "ellos_ustedes": "querrán"
+      },
+      "condicional": {
+        "yo": "querría",
+        "tu": "querrías",
+        "el_ella_usted": "querría",
+        "nosotros": "querríamos",
+        "ellos_ustedes": "querrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "quiera",
+        "tu": "quieras",
+        "el_ella_usted": "quiera",
+        "nosotros": "queramos",
+        "ellos_ustedes": "quieran"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "quisiera",
+        "tu": "quisieras",
+        "el_ella_usted": "quisiera",
+        "nosotros": "quisiéramos",
+        "ellos_ustedes": "quisieran"
       }
+    },
+    "imperativo": {
+      "tu": "quiere",
+      "el_ella_usted": "quiera",
+      "nosotros": "queramos",
+      "ellos_ustedes": "quieran"
     }
   },
   {

@@ -6,6 +6,7 @@ import {
 
 import rawWordsA0 from './words/a0.json';
 import rawVerbsA0 from './verbs/a0.json';
+import rawVerbsA1 from './verbs/a1.json';
 import rawLessonsA0 from './lessons/a0.json';
 import rawJourney from './journey.json';
 
@@ -34,14 +35,15 @@ function parseOrThrow<T>(
 
 export const wordsA0: Word[] = parseOrThrow(wordArraySchema, rawWordsA0, 'words/a0.json');
 export const verbsA0: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA0, 'verbs/a0.json');
+export const verbsA1: Verb[] = parseOrThrow(verbArraySchema, rawVerbsA1, 'verbs/a1.json');
 export const lessonsA0: GrammarLesson[] = parseOrThrow(
   lessonArraySchema, rawLessonsA0, 'lessons/a0.json',
 );
 export const journey: JourneyStop[] = parseOrThrow(journeySchema, rawJourney, 'journey.json');
 
 /** 所有單字（含動詞）。動詞也是 Word 的子型別，可以混在一起查。 */
-export const allWords: Word[] = [...wordsA0, ...verbsA0];
-export const allVerbs: Verb[] = [...verbsA0];
+export const allWords: Word[] = [...wordsA0, ...verbsA0, ...verbsA1];
+export const allVerbs: Verb[] = [...verbsA0, ...verbsA1];
 export const allLessons: GrammarLesson[] = [...lessonsA0];
 
 const wordIndex = new Map<string, Word>(allWords.map((w) => [w.id, w]));

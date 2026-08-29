@@ -1,0 +1,698 @@
+[
+  {
+    "id": "hacer",
+    "es": "hacer",
+    "gloss": {
+      "zh": "做；製作；（天氣）",
+      "en": "to do; to make; (weather)"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Hoy hace frío en Quito.",
+    "exampleGloss": {
+      "zh": "今天基多很冷。",
+      "en": "It's cold in Quito today."
+    },
+    "infinitive": "hacer",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "hecho",
+    "gerundio": "haciendo",
+    "conjugations": {
+      "presente": {
+        "yo": "hago",
+        "tu": "haces",
+        "el_ella_usted": "hace",
+        "nosotros": "hacemos",
+        "ellos_ustedes": "hacen"
+      },
+      "preteritoIndefinido": {
+        "yo": "hice",
+        "tu": "hiciste",
+        "el_ella_usted": "hizo",
+        "nosotros": "hicimos",
+        "ellos_ustedes": "hicieron"
+      },
+      "imperfecto": {
+        "yo": "hacía",
+        "tu": "hacías",
+        "el_ella_usted": "hacía",
+        "nosotros": "hacíamos",
+        "ellos_ustedes": "hacían"
+      },
+      "futuro": {
+        "yo": "haré",
+        "tu": "harás",
+        "el_ella_usted": "hará",
+        "nosotros": "haremos",
+        "ellos_ustedes": "harán"
+      },
+      "condicional": {
+        "yo": "haría",
+        "tu": "harías",
+        "el_ella_usted": "haría",
+        "nosotros": "haríamos",
+        "ellos_ustedes": "harían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "haga",
+        "tu": "hagas",
+        "el_ella_usted": "haga",
+        "nosotros": "hagamos",
+        "ellos_ustedes": "hagan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "hiciera",
+        "tu": "hicieras",
+        "el_ella_usted": "hiciera",
+        "nosotros": "hiciéramos",
+        "ellos_ustedes": "hicieran"
+      }
+    },
+    "imperativo": {
+      "tu": "haz",
+      "el_ella_usted": "haga",
+      "nosotros": "hagamos",
+      "ellos_ustedes": "hagan"
+    }
+  },
+  {
+    "id": "poder",
+    "es": "poder",
+    "gloss": {
+      "zh": "能夠；可以",
+      "en": "to be able to; can"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Puede repetir, por favor?",
+    "exampleGloss": {
+      "zh": "您可以再說一次嗎？",
+      "en": "Could you repeat that, please?"
+    },
+    "infinitive": "poder",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "podido",
+    "gerundio": "pudiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "puedo",
+        "tu": "puedes",
+        "el_ella_usted": "puede",
+        "nosotros": "podemos",
+        "ellos_ustedes": "pueden"
+      },
+      "preteritoIndefinido": {
+        "yo": "pude",
+        "tu": "pudiste",
+        "el_ella_usted": "pudo",
+        "nosotros": "pudimos",
+        "ellos_ustedes": "pudieron"
+      },
+      "imperfecto": {
+        "yo": "podía",
+        "tu": "podías",
+        "el_ella_usted": "podía",
+        "nosotros": "podíamos",
+        "ellos_ustedes": "podían"
+      },
+      "futuro": {
+        "yo": "podré",
+        "tu": "podrás",
+        "el_ella_usted": "podrá",
+        "nosotros": "podremos",
+        "ellos_ustedes": "podrán"
+      },
+      "condicional": {
+        "yo": "podría",
+        "tu": "podrías",
+        "el_ella_usted": "podría",
+        "nosotros": "podríamos",
+        "ellos_ustedes": "podrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "pueda",
+        "tu": "puedas",
+        "el_ella_usted": "pueda",
+        "nosotros": "podamos",
+        "ellos_ustedes": "puedan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pudiera",
+        "tu": "pudieras",
+        "el_ella_usted": "pudiera",
+        "nosotros": "pudiéramos",
+        "ellos_ustedes": "pudieran"
+      }
+    }
+  },
+  {
+    "id": "decir",
+    "es": "decir",
+    "gloss": {
+      "zh": "說；告訴",
+      "en": "to say; to tell"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Cómo se dice esto en español?",
+    "exampleGloss": {
+      "zh": "這個西班牙文怎麼說？",
+      "en": "How do you say this in Spanish?"
+    },
+    "infinitive": "decir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "dicho",
+    "gerundio": "diciendo",
+    "conjugations": {
+      "presente": {
+        "yo": "digo",
+        "tu": "dices",
+        "el_ella_usted": "dice",
+        "nosotros": "decimos",
+        "ellos_ustedes": "dicen"
+      },
+      "preteritoIndefinido": {
+        "yo": "dije",
+        "tu": "dijiste",
+        "el_ella_usted": "dijo",
+        "nosotros": "dijimos",
+        "ellos_ustedes": "dijeron"
+      },
+      "imperfecto": {
+        "yo": "decía",
+        "tu": "decías",
+        "el_ella_usted": "decía",
+        "nosotros": "decíamos",
+        "ellos_ustedes": "decían"
+      },
+      "futuro": {
+        "yo": "diré",
+        "tu": "dirás",
+        "el_ella_usted": "dirá",
+        "nosotros": "diremos",
+        "ellos_ustedes": "dirán"
+      },
+      "condicional": {
+        "yo": "diría",
+        "tu": "dirías",
+        "el_ella_usted": "diría",
+        "nosotros": "diríamos",
+        "ellos_ustedes": "dirían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "diga",
+        "tu": "digas",
+        "el_ella_usted": "diga",
+        "nosotros": "digamos",
+        "ellos_ustedes": "digan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "dijera",
+        "tu": "dijeras",
+        "el_ella_usted": "dijera",
+        "nosotros": "dijéramos",
+        "ellos_ustedes": "dijeran"
+      }
+    },
+    "imperativo": {
+      "tu": "di",
+      "el_ella_usted": "diga",
+      "nosotros": "digamos",
+      "ellos_ustedes": "digan"
+    }
+  },
+  {
+    "id": "ver",
+    "es": "ver",
+    "gloss": {
+      "zh": "看見；看",
+      "en": "to see; to watch"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Desde aquí se ve el volcán.",
+    "exampleGloss": {
+      "zh": "從這裡看得到火山。",
+      "en": "You can see the volcano from here."
+    },
+    "infinitive": "ver",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "visto",
+    "gerundio": "viendo",
+    "conjugations": {
+      "presente": {
+        "yo": "veo",
+        "tu": "ves",
+        "el_ella_usted": "ve",
+        "nosotros": "vemos",
+        "ellos_ustedes": "ven"
+      },
+      "preteritoIndefinido": {
+        "yo": "vi",
+        "tu": "viste",
+        "el_ella_usted": "vio",
+        "nosotros": "vimos",
+        "ellos_ustedes": "vieron"
+      },
+      "imperfecto": {
+        "yo": "veía",
+        "tu": "veías",
+        "el_ella_usted": "veía",
+        "nosotros": "veíamos",
+        "ellos_ustedes": "veían"
+      },
+      "futuro": {
+        "yo": "veré",
+        "tu": "verás",
+        "el_ella_usted": "verá",
+        "nosotros": "veremos",
+        "ellos_ustedes": "verán"
+      },
+      "condicional": {
+        "yo": "vería",
+        "tu": "verías",
+        "el_ella_usted": "vería",
+        "nosotros": "veríamos",
+        "ellos_ustedes": "verían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "vea",
+        "tu": "veas",
+        "el_ella_usted": "vea",
+        "nosotros": "veamos",
+        "ellos_ustedes": "vean"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "viera",
+        "tu": "vieras",
+        "el_ella_usted": "viera",
+        "nosotros": "viéramos",
+        "ellos_ustedes": "vieran"
+      }
+    },
+    "imperativo": {
+      "tu": "ve",
+      "el_ella_usted": "vea",
+      "nosotros": "veamos",
+      "ellos_ustedes": "vean"
+    }
+  },
+  {
+    "id": "dar",
+    "es": "dar",
+    "gloss": {
+      "zh": "給",
+      "en": "to give"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿Me da la cuenta, por favor?",
+    "exampleGloss": {
+      "zh": "可以給我帳單嗎？",
+      "en": "Could I have the bill, please?"
+    },
+    "infinitive": "dar",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "dado",
+    "gerundio": "dando",
+    "conjugations": {
+      "presente": {
+        "yo": "doy",
+        "tu": "das",
+        "el_ella_usted": "da",
+        "nosotros": "damos",
+        "ellos_ustedes": "dan"
+      },
+      "preteritoIndefinido": {
+        "yo": "di",
+        "tu": "diste",
+        "el_ella_usted": "dio",
+        "nosotros": "dimos",
+        "ellos_ustedes": "dieron"
+      },
+      "imperfecto": {
+        "yo": "daba",
+        "tu": "dabas",
+        "el_ella_usted": "daba",
+        "nosotros": "dábamos",
+        "ellos_ustedes": "daban"
+      },
+      "futuro": {
+        "yo": "daré",
+        "tu": "darás",
+        "el_ella_usted": "dará",
+        "nosotros": "daremos",
+        "ellos_ustedes": "darán"
+      },
+      "condicional": {
+        "yo": "daría",
+        "tu": "darías",
+        "el_ella_usted": "daría",
+        "nosotros": "daríamos",
+        "ellos_ustedes": "darían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "dé",
+        "tu": "des",
+        "el_ella_usted": "dé",
+        "nosotros": "demos",
+        "ellos_ustedes": "den"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "diera",
+        "tu": "dieras",
+        "el_ella_usted": "diera",
+        "nosotros": "diéramos",
+        "ellos_ustedes": "dieran"
+      }
+    },
+    "imperativo": {
+      "tu": "da",
+      "el_ella_usted": "dé",
+      "nosotros": "demos",
+      "ellos_ustedes": "den"
+    }
+  },
+  {
+    "id": "saber",
+    "es": "saber",
+    "gloss": {
+      "zh": "知道；會（某項技能）",
+      "en": "to know (facts); to know how to"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "No sé dónde está la parada.",
+    "exampleGloss": {
+      "zh": "我不知道站牌在哪裡。",
+      "en": "I don't know where the stop is."
+    },
+    "infinitive": "saber",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "sabido",
+    "gerundio": "sabiendo",
+    "conjugations": {
+      "presente": {
+        "yo": "sé",
+        "tu": "sabes",
+        "el_ella_usted": "sabe",
+        "nosotros": "sabemos",
+        "ellos_ustedes": "saben"
+      },
+      "preteritoIndefinido": {
+        "yo": "supe",
+        "tu": "supiste",
+        "el_ella_usted": "supo",
+        "nosotros": "supimos",
+        "ellos_ustedes": "supieron"
+      },
+      "imperfecto": {
+        "yo": "sabía",
+        "tu": "sabías",
+        "el_ella_usted": "sabía",
+        "nosotros": "sabíamos",
+        "ellos_ustedes": "sabían"
+      },
+      "futuro": {
+        "yo": "sabré",
+        "tu": "sabrás",
+        "el_ella_usted": "sabrá",
+        "nosotros": "sabremos",
+        "ellos_ustedes": "sabrán"
+      },
+      "condicional": {
+        "yo": "sabría",
+        "tu": "sabrías",
+        "el_ella_usted": "sabría",
+        "nosotros": "sabríamos",
+        "ellos_ustedes": "sabrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "sepa",
+        "tu": "sepas",
+        "el_ella_usted": "sepa",
+        "nosotros": "sepamos",
+        "ellos_ustedes": "sepan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "supiera",
+        "tu": "supieras",
+        "el_ella_usted": "supiera",
+        "nosotros": "supiéramos",
+        "ellos_ustedes": "supieran"
+      }
+    },
+    "imperativo": {
+      "tu": "sabe",
+      "el_ella_usted": "sepa",
+      "nosotros": "sepamos",
+      "ellos_ustedes": "sepan"
+    }
+  },
+  {
+    "id": "venir",
+    "es": "venir",
+    "gloss": {
+      "zh": "來",
+      "en": "to come"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "¿De dónde viene usted?",
+    "exampleGloss": {
+      "zh": "您從哪裡來？",
+      "en": "Where do you come from?"
+    },
+    "infinitive": "venir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "venido",
+    "gerundio": "viniendo",
+    "conjugations": {
+      "presente": {
+        "yo": "vengo",
+        "tu": "vienes",
+        "el_ella_usted": "viene",
+        "nosotros": "venimos",
+        "ellos_ustedes": "vienen"
+      },
+      "preteritoIndefinido": {
+        "yo": "vine",
+        "tu": "viniste",
+        "el_ella_usted": "vino",
+        "nosotros": "vinimos",
+        "ellos_ustedes": "vinieron"
+      },
+      "imperfecto": {
+        "yo": "venía",
+        "tu": "venías",
+        "el_ella_usted": "venía",
+        "nosotros": "veníamos",
+        "ellos_ustedes": "venían"
+      },
+      "futuro": {
+        "yo": "vendré",
+        "tu": "vendrás",
+        "el_ella_usted": "vendrá",
+        "nosotros": "vendremos",
+        "ellos_ustedes": "vendrán"
+      },
+      "condicional": {
+        "yo": "vendría",
+        "tu": "vendrías",
+        "el_ella_usted": "vendría",
+        "nosotros": "vendríamos",
+        "ellos_ustedes": "vendrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "venga",
+        "tu": "vengas",
+        "el_ella_usted": "venga",
+        "nosotros": "vengamos",
+        "ellos_ustedes": "vengan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "viniera",
+        "tu": "vinieras",
+        "el_ella_usted": "viniera",
+        "nosotros": "viniéramos",
+        "ellos_ustedes": "vinieran"
+      }
+    },
+    "imperativo": {
+      "tu": "ven",
+      "el_ella_usted": "venga",
+      "nosotros": "vengamos",
+      "ellos_ustedes": "vengan"
+    }
+  },
+  {
+    "id": "poner",
+    "es": "poner",
+    "gloss": {
+      "zh": "放；擺",
+      "en": "to put; to place"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "Pongo el libro en la mesa.",
+    "exampleGloss": {
+      "zh": "我把書放在桌上。",
+      "en": "I put the book on the table."
+    },
+    "infinitive": "poner",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "puesto",
+    "gerundio": "poniendo",
+    "conjugations": {
+      "presente": {
+        "yo": "pongo",
+        "tu": "pones",
+        "el_ella_usted": "pone",
+        "nosotros": "ponemos",
+        "ellos_ustedes": "ponen"
+      },
+      "preteritoIndefinido": {
+        "yo": "puse",
+        "tu": "pusiste",
+        "el_ella_usted": "puso",
+        "nosotros": "pusimos",
+        "ellos_ustedes": "pusieron"
+      },
+      "imperfecto": {
+        "yo": "ponía",
+        "tu": "ponías",
+        "el_ella_usted": "ponía",
+        "nosotros": "poníamos",
+        "ellos_ustedes": "ponían"
+      },
+      "futuro": {
+        "yo": "pondré",
+        "tu": "pondrás",
+        "el_ella_usted": "pondrá",
+        "nosotros": "pondremos",
+        "ellos_ustedes": "pondrán"
+      },
+      "condicional": {
+        "yo": "pondría",
+        "tu": "pondrías",
+        "el_ella_usted": "pondría",
+        "nosotros": "pondríamos",
+        "ellos_ustedes": "pondrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "ponga",
+        "tu": "pongas",
+        "el_ella_usted": "ponga",
+        "nosotros": "pongamos",
+        "ellos_ustedes": "pongan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "pusiera",
+        "tu": "pusieras",
+        "el_ella_usted": "pusiera",
+        "nosotros": "pusiéramos",
+        "ellos_ustedes": "pusieran"
+      }
+    },
+    "imperativo": {
+      "tu": "pon",
+      "el_ella_usted": "ponga",
+      "nosotros": "pongamos",
+      "ellos_ustedes": "pongan"
+    }
+  },
+  {
+    "id": "salir",
+    "es": "salir",
+    "gloss": {
+      "zh": "出去；離開；出發",
+      "en": "to go out; to leave"
+    },
+    "pos": "verb",
+    "level": "A1",
+    "topic": "verbos",
+    "exampleEs": "El bus sale a las ocho.",
+    "exampleGloss": {
+      "zh": "公車八點出發。",
+      "en": "The bus leaves at eight."
+    },
+    "infinitive": "salir",
+    "irregular": true,
+    "reflexive": false,
+    "participio": "salido",
+    "gerundio": "saliendo",
+    "conjugations": {
+      "presente": {
+        "yo": "salgo",
+        "tu": "sales",
+        "el_ella_usted": "sale",
+        "nosotros": "salimos",
+        "ellos_ustedes": "salen"
+      },
+      "preteritoIndefinido": {
+        "yo": "salí",
+        "tu": "saliste",
+        "el_ella_usted": "salió",
+        "nosotros": "salimos",
+        "ellos_ustedes": "salieron"
+      },
+      "imperfecto": {
+        "yo": "salía",
+        "tu": "salías",
+        "el_ella_usted": "salía",
+        "nosotros": "salíamos",
+        "ellos_ustedes": "salían"
+      },
+      "futuro": {
+        "yo": "saldré",
+        "tu": "saldrás",
+        "el_ella_usted": "saldrá",
+        "nosotros": "saldremos",
+        "ellos_ustedes": "saldrán"
+      },
+      "condicional": {
+        "yo": "saldría",
+        "tu": "saldrías",
+        "el_ella_usted": "saldría",
+        "nosotros": "saldríamos",
+        "ellos_ustedes": "saldrían"
+      },
+      "presenteSubjuntivo": {
+        "yo": "salga",
+        "tu": "salgas",
+        "el_ella_usted": "salga",
+        "nosotros": "salgamos",
+        "ellos_ustedes": "salgan"
+      },
+      "imperfectoSubjuntivo": {
+        "yo": "saliera",
+        "tu": "salieras",
+        "el_ella_usted": "saliera",
+        "nosotros": "saliéramos",
+        "ellos_ustedes": "salieran"
+      }
+    },
+    "imperativo": {
+      "tu": "sal",
+      "el_ella_usted": "salga",
+      "nosotros": "salgamos",
+      "ellos_ustedes": "salgan"
+    }
+  }
+]
