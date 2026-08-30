@@ -295,53 +295,21 @@
         "answer": "conozca"
       },
       {
-        "id": "ex-b1sf-7",
-        "type": "mcq",
+        "id": "ex-b1sf-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "兩邊主詞不同，要用 que + 虛擬式。",
-          "en": "Different subjects on each side call for que + subjunctive."
+          "zh": "兩個子句的主詞不同（我／你），所以 que 後面要用虛擬式 vengas。主詞相同的話就直接用不定式，不會有 que。",
+          "en": "The two clauses have different subjects (I / you), so que is followed by the subjunctive vengas. With the same subject you would use a plain infinitive and there would be no que at all."
         },
-        "prompt": {
-          "zh": "「我希望你明天來。」該用哪個？",
-          "en": "Which fits “I want you to come tomorrow”?"
+        "es": "Quiero que vengas mañana.",
+        "gloss": {
+          "zh": "我希望你明天來。",
+          "en": "I want you to come tomorrow."
         },
-        "options": [
-          {
-            "zh": "Quiero que vienes mañana.",
-            "en": "Quiero que vienes mañana."
-          },
-          {
-            "zh": "Quiero que vengas mañana.",
-            "en": "Quiero que vengas mañana."
-          },
-          {
-            "zh": "Quiero venir mañana.",
-            "en": "Quiero venir mañana."
-          },
-          {
-            "zh": "Quiero que venir mañana.",
-            "en": "Quiero que venir mañana."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "que 後面要用虛擬式，vienes 是直陳式。",
-            "en": "The que clause needs the subjunctive; vienes is indicative."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "這句意思是「我想來」，主詞變成我了。",
-            "en": "That means “I want to come” — the subject has changed."
-          },
-          {
-            "zh": "que 後面要接變位動詞，不是不定式。",
-            "en": "que is followed by a conjugated verb, not an infinitive."
-          }
+        "accept": [
+          "Quiero que vengas mañana",
+          "Quiero que vengas manana"
         ]
       },
       {
@@ -758,53 +726,20 @@
         ]
       },
       {
-        "id": "ex-b1sd-3",
-        "type": "mcq",
+        "id": "ex-b1sd-11",
+        "type": "listening",
         "difficulty": "hard",
         "explain": {
-          "zh": "es evidente 是斷言事實，用直陳式。",
-          "en": "es evidente asserts a fact, so it takes the indicative."
+          "zh": "es evidente 表示確定，所以 que 後面用直陳式 necesita，不是 necesite。只有懷疑或評價的說法才會轉成虛擬式。",
+          "en": "es evidente states certainty, so que is followed by the indicative necesita, not necesite. Only expressions of doubt or judgement flip it into the subjunctive."
         },
-        "prompt": {
-          "zh": "「很明顯他需要幫助。」該用哪個？",
-          "en": "Which fits “It’s obvious he needs help”?"
+        "es": "Es evidente que necesita ayuda.",
+        "gloss": {
+          "zh": "很明顯他需要幫忙。",
+          "en": "It is obvious that he needs help."
         },
-        "options": [
-          {
-            "zh": "Es evidente que necesite ayuda.",
-            "en": "Es evidente que necesite ayuda."
-          },
-          {
-            "zh": "Es evidente que necesita ayuda.",
-            "en": "Es evidente que necesita ayuda."
-          },
-          {
-            "zh": "Es evidente necesitar ayuda.",
-            "en": "Es evidente necesitar ayuda."
-          },
-          {
-            "zh": "Es evidente que necesitar ayuda.",
-            "en": "Es evidente que necesitar ayuda."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "es evidente 斷言事實，用直陳式。",
-            "en": "es evidente asserts a fact and takes the indicative."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "少了 que，主詞也不見了。",
-            "en": "que is missing, and so is the subject."
-          },
-          {
-            "zh": "que 後面要接變位動詞。",
-            "en": "que is followed by a conjugated verb."
-          }
+        "accept": [
+          "Es evidente que necesita ayuda"
         ]
       },
       {
@@ -1540,53 +1475,20 @@
         ]
       },
       {
-        "id": "ex-b1sc-10",
-        "type": "mcq",
-        "difficulty": "medium",
+        "id": "ex-b1sc-11",
+        "type": "listening",
+        "difficulty": "hard",
         "explain": {
-          "zh": "判準是「這件事已經是事實了嗎」。",
-          "en": "The test is “is this already a fact?”"
+          "zh": "cuando 講已經發生的事時用直陳式（llegué），只有講還沒發生的未來才轉虛擬式。ya 放在動詞前面，強調「已經」。",
+          "en": "When cuando refers to something that already happened it takes the indicative (llegué); only a future that has not happened yet flips it to the subjunctive. ya sits before the verb and carries the “already”."
         },
-        "prompt": {
-          "zh": "「我到的時候已經關了。」（已經發生）該用哪個？",
-          "en": "Which fits “When I arrived, it was already closed” (already happened)?"
+        "es": "Cuando llegué ya estaba cerrado.",
+        "gloss": {
+          "zh": "我到的時候已經關了。",
+          "en": "By the time I got there it was already closed."
         },
-        "options": [
-          {
-            "zh": "Cuando llegue, ya estaba cerrado.",
-            "en": "Cuando llegue, ya estaba cerrado."
-          },
-          {
-            "zh": "Cuando llegué, ya estaba cerrado.",
-            "en": "Cuando llegué, ya estaba cerrado."
-          },
-          {
-            "zh": "Cuando llegara, ya estaba cerrado.",
-            "en": "Cuando llegara, ya estaba cerrado."
-          },
-          {
-            "zh": "Cuando llegar, ya estaba cerrado.",
-            "en": "Cuando llegar, ya estaba cerrado."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "這是虛擬式，用在還沒發生的事。",
-            "en": "That’s the subjunctive, for things that haven’t happened."
-          },
-          {
-            "zh": "正確。已經發生用直陳式的簡單過去式。",
-            "en": "Correct: something that has happened takes the indicative preterite."
-          },
-          {
-            "zh": "過去虛擬式在這裡不合。",
-            "en": "The past subjunctive doesn’t fit here."
-          },
-          {
-            "zh": "連接詞後面要接變位動詞。",
-            "en": "A conjunction is followed by a conjugated verb."
-          }
+        "accept": [
+          "Cuando llegué ya estaba cerrado"
         ]
       }
     ],
@@ -1904,53 +1806,20 @@
         ]
       },
       {
-        "id": "ex-b1ps-8",
-        "type": "mcq",
+        "id": "ex-b1ps-11",
+        "type": "listening",
         "difficulty": "hard",
         "explain": {
-          "zh": "過去虛擬式從簡單過去式的 ellos 形推，不是從不定式。",
-          "en": "The past subjunctive derives from the ellos preterite, not from the infinitive."
+          "zh": "主句是過去式 quería，從句就跟著用過去虛擬式 vinieras。vinieras 是從簡單過去式 vinieron 推出來的：去掉 -ron，接上 -ra 那一組字尾。",
+          "en": "The main clause is in the past (quería), so the subordinate clause follows with the past subjunctive vinieras. vinieras comes from the preterite vinieron: drop the -ron and add the -ra endings."
         },
-        "prompt": {
-          "zh": "decir 的過去虛擬式 yo 形是？",
-          "en": "What is the yo past subjunctive of decir?"
+        "es": "Quería que vinieras con nosotros.",
+        "gloss": {
+          "zh": "我那時希望你跟我們一起來。",
+          "en": "I wanted you to come with us."
         },
-        "options": [
-          {
-            "zh": "decira",
-            "en": "decira"
-          },
-          {
-            "zh": "dijera",
-            "en": "dijera"
-          },
-          {
-            "zh": "diciera",
-            "en": "diciera"
-          },
-          {
-            "zh": "dijiera",
-            "en": "dijiera"
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "這是從不定式推的，方法錯了。",
-            "en": "That derives from the infinitive — the wrong method."
-          },
-          {
-            "zh": "正確。dijeron → dije- → dijera。",
-            "en": "Correct: dijeron → dije- → dijera."
-          },
-          {
-            "zh": "字根錯了。",
-            "en": "Wrong stem."
-          },
-          {
-            "zh": "j 字根不接 -ie。",
-            "en": "A j-stem doesn’t take -ie."
-          }
+        "accept": [
+          "Quería que vinieras con nosotros"
         ]
       },
       {
@@ -2175,53 +2044,21 @@
     },
     "exercises": [
       {
-        "id": "ex-b1si-1",
-        "type": "mcq",
-        "difficulty": "medium",
+        "id": "ex-b1si-11",
+        "type": "listening",
+        "difficulty": "hard",
         "explain": {
-          "zh": "si 後面永遠不用現在虛擬式。",
-          "en": "si is never followed by the present subjunctive."
+          "zh": "跟現在的事實相反：si 後面用過去虛擬式 tuviera，主句用條件式 iría。si 後面絕對不會出現現在虛擬式。si 子句放前面時要加逗號。",
+          "en": "Contrary to present fact: si takes the past subjunctive tuviera and the main clause takes the conditional iría. The present subjunctive never follows si. A si-clause placed first is separated by a comma."
         },
-        "prompt": {
-          "zh": "哪一句是對的？",
-          "en": "Which sentence is correct?"
+        "es": "Si tuviera tiempo, iría a Galápagos.",
+        "gloss": {
+          "zh": "如果我有時間，我就會去加拉巴哥。（但我沒有）",
+          "en": "If I had time, I would go to the Galápagos. (But I do not.)"
         },
-        "options": [
-          {
-            "zh": "Si tenga tiempo, iré a Galápagos.",
-            "en": "Si tenga tiempo, iré a Galápagos."
-          },
-          {
-            "zh": "Si tengo tiempo, iré a Galápagos.",
-            "en": "Si tengo tiempo, iré a Galápagos."
-          },
-          {
-            "zh": "Si tendría tiempo, iré a Galápagos.",
-            "en": "Si tendría tiempo, iré a Galápagos."
-          },
-          {
-            "zh": "Si tuviera tiempo, iré a Galápagos.",
-            "en": "Si tuviera tiempo, iré a Galápagos."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "si 後面不用現在虛擬式。",
-            "en": "si isn’t followed by the present subjunctive."
-          },
-          {
-            "zh": "正確。現在式配未來式。",
-            "en": "Correct: present with future."
-          },
-          {
-            "zh": "條件式不出現在 si 子句裡。",
-            "en": "The conditional doesn’t belong inside the si clause."
-          },
-          {
-            "zh": "過去虛擬式要配條件式 iría，不是未來式。",
-            "en": "The past subjunctive pairs with the conditional iría, not the future."
-          }
+        "accept": [
+          "Si tuviera tiempo, iría a Galápagos",
+          "Si tuviera tiempo iría a Galápagos"
         ]
       },
       {
@@ -3033,6 +2870,23 @@
             "zh": "少了 se，意思變成公園自己創造了什麼。",
             "en": "Without se it reads as the park creating something."
           }
+        ]
+      },
+      {
+        "id": "ex-b1se-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "無人稱的 se 一律配第三人稱單數，不講是誰在吃。這是推薦一個地方時最自然的說法。se come 兩個字連著唸，中間不停。",
+          "en": "Impersonal se always takes a third-person singular verb and never says who is doing the eating. This is the natural way to recommend somewhere to eat. se come runs together with no pause."
+        },
+        "es": "Aquí se come muy bien.",
+        "gloss": {
+          "zh": "這裡的東西很好吃。",
+          "en": "The food here is very good."
+        },
+        "accept": [
+          "Aquí se come muy bien"
         ]
       }
     ],

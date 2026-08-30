@@ -386,7 +386,12 @@
     "exampleGloss": {
       "zh": "訪客必須有導遊陪同。",
       "en": "Visitors must go with a guide."
-    }
+    },
+    "genderNote": {
+      "zh": "陰陽同形：男訪客是 el visitante，女訪客是 la visitante，字尾不變。",
+      "en": "Same form for both genders: el visitante and la visitante; the ending doesn’t change."
+    },
+    "genderSortExempt": true
   },
   {
     "id": "recurso",

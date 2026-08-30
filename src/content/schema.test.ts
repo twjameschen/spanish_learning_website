@@ -261,3 +261,86 @@ describe('內容裡的 markdown 語法都要渲染得出來', () => {
     expect(bad).toEqual([]);
   });
 });
+
+describe('題目本身答得出來', () => {
+  /**
+   * 這四條擋的是「內容看起來沒問題、但實際上做不了」的題目。
+   * 前兩條跟 `normalizeAnswer()` 的行為綁在一起：它會折疊重音、去掉句首句尾的
+   * 標點，所以那些不用另外列；但 ñ 與逗號**不會**被處理掉。
+   */
+  const listeningItems = allLessons.flatMap((l) =>
+    l.exercises.filter((e) => e.type === 'listening').map((e) => ({ at: `${l.id}/${e.id}`, ex: e })),
+  );
+
+  it('有聽力題可以檢查', () => {
+    expect(listeningItems.length).toBeGreaterThan(40);
+  });
+
+  it('句子含 ñ 時，accept 一定有無 ñ 的版本', () => {
+    // ñ 刻意不被折成 n（año ≠ ano），沒有西文鍵盤的人打不出來，
+    // 漏了這條那一題就永遠答不對
+    const bad = listeningItems
+      .filter(({ ex }) => ex.es.includes('ñ') || ex.es.includes('Ñ'))
+      .filter(({ ex }) => !ex.accept.some((a) => !a.includes('ñ') && !a.includes('Ñ')))
+      .map(({ at, ex }) => `${at}: ${ex.es}`);
+    expect(bad).toEqual([]);
+  });
+
+  it('句子含逗號時，accept 一定有無逗號的版本', () => {
+    // 逗號不在 normalizeAnswer 的去除清單裡，聽寫時漏打逗號很正常
+    const bad = listeningItems
+      .filter(({ ex }) => ex.es.includes(','))
+      .filter(({ ex }) => !ex.accept.some((a) => !a.includes(',')))
+      .map(({ at, ex }) => `${at}: ${ex.es}`);
+    expect(bad).toEqual([]);
+  });
+
+  it('accept 的每個版本都不是空的', () => {
+    const bad = listeningItems
+      .filter(({ ex }) => ex.accept.length === 0 || ex.accept.some((a) => a.trim().length === 0))
+      .map(({ at }) => at);
+    expect(bad).toEqual([]);
+  });
+
+  it('陰陽性分類題不會用到兩個冠詞都對的字', () => {
+    // el/la estudiante 兩個都對、el agua 陰性卻配 el —— 用 el/la 兩個按鈕問，
+    // 這兩種字都會把正確答案判成錯的
+    const exempt = new Set(allWords.filter((w) => w.genderSortExempt).map((w) => w.id));
+    expect(exempt.size).toBeGreaterThan(0);
+    const bad: string[] = [];
+    for (const lesson of allLessons) {
+      for (const ex of lesson.exercises) {
+        if (ex.type !== 'genderSort') continue;
+        for (const id of ex.wordIds) if (exempt.has(id)) bad.push(`${lesson.id}/${ex.id}: ${id}`);
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+});
+
+describe('每一課的題目配置', () => {
+  it('每課 6–10 題 —— 規格訂的範圍', () => {
+    // 少於 6 題練不夠，多於 10 題一次做不完。之前這條規則只寫在規格裡沒有守門，
+    // 補內容時會不知不覺變成 11、12 題
+    const bad = allLessons
+      .filter((l) => l.exercises.length < 6 || l.exercises.length > 10)
+      .map((l) => `${l.id}: ${l.exercises.length} 題`);
+    expect(bad).toEqual([]);
+  });
+
+  it('每一課至少 1 題聽力', () => {
+    // 少了這條，聽力會像之前那樣慢慢流失到只剩 A0 有
+    const bad = allLessons
+      .filter((l) => !l.exercises.some((e) => e.type === 'listening'))
+      .map((l) => l.id);
+    expect(bad).toEqual([]);
+  });
+
+  it('四選一佔全部題目不超過 45%', () => {
+    // 四選一最好寫，放著不管就會吃掉整份題庫（Phase 8 之前是 47%）。
+    // 個別課程仍然可以偏多 —— 發音課本來就適合用四選一辨音；擋的是整體失衡
+    const all = allLessons.flatMap((l) => l.exercises);
+    const mcq = all.filter((e) => e.type === 'mcq').length;
+    expect(mcq / all.length).toBeLessThanOrEqual(0.45);
+  });
+});

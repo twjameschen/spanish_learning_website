@@ -320,53 +320,20 @@
         ]
       },
       {
-        "id": "ex-a2pr-7",
-        "type": "mcq",
+        "id": "ex-a2pr-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "-er／-ir 動詞用 i 系列字尾，不能套 -ar 的 a 系列。",
-          "en": "-er/-ir verbs take the i-series endings, never the -ar a-series."
+          "zh": "viajé 的重音在最後一個音節，而且有重音符號 —— 簡單過去式的 yo 那一格都是這樣。ayer 把時間框住，是這個時態最自然的搭配。",
+          "en": "viajé is stressed on the final syllable and carries a written accent — that is how the yo slot of the preterite always looks. ayer frames the time, which is the most natural companion for this tense."
         },
-        "prompt": {
-          "zh": "「我在市中心吃了飯。」該用哪個？",
-          "en": "Which form completes “I ate downtown”?"
+        "es": "Ayer viajé a Cuenca en bus.",
+        "gloss": {
+          "zh": "我昨天搭公車去了昆卡。",
+          "en": "Yesterday I travelled to Cuenca by bus."
         },
-        "options": [
-          {
-            "zh": "Yo comé en el centro.",
-            "en": "Yo comé en el centro."
-          },
-          {
-            "zh": "Yo comí en el centro.",
-            "en": "Yo comí en el centro."
-          },
-          {
-            "zh": "Yo comió en el centro.",
-            "en": "Yo comió en el centro."
-          },
-          {
-            "zh": "Yo comiste en el centro.",
-            "en": "Yo comiste en el centro."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "comer 是 -er 動詞，不用 -é。",
-            "en": "comer is an -er verb and doesn’t take -é."
-          },
-          {
-            "zh": "正確。com- + í。",
-            "en": "Correct: com- + í."
-          },
-          {
-            "zh": "-ió 是 él 的字尾。",
-            "en": "-ió is the él ending."
-          },
-          {
-            "zh": "-iste 是 tú 的字尾。",
-            "en": "-iste is the tú ending."
-          }
+        "accept": [
+          "Ayer viajé a Cuenca en bus"
         ]
       },
       {
@@ -744,53 +711,20 @@
         "answer": "fui"
       },
       {
-        "id": "ex-a2pi-7",
-        "type": "mcq",
+        "id": "ex-a2pi-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "不規則的簡單過去式沒有重音符號。",
-          "en": "Irregular preterite forms carry no written accent."
+          "zh": "tuve 沒有重音符號，重音落在第一個音節 —— 不規則那一群的字尾一律不帶重音符號，這是跟規則變化最好認的差別。tener que + 不定式是「必須」。",
+          "en": "tuve carries no written accent and is stressed on the first syllable — none of the irregular group takes an accent on its endings, which is the easiest way to tell them from the regular ones. tener que + infinitive means “to have to”."
         },
-        "prompt": {
-          "zh": "哪一個拼對了？",
-          "en": "Which one is spelled correctly?"
+        "es": "Tuve que salir temprano.",
+        "gloss": {
+          "zh": "我那時得早點出門。",
+          "en": "I had to leave early."
         },
-        "options": [
-          {
-            "zh": "Yo tuvé que salir.",
-            "en": "Yo tuvé que salir."
-          },
-          {
-            "zh": "Yo tuve que salir.",
-            "en": "Yo tuve que salir."
-          },
-          {
-            "zh": "Yo tení que salir.",
-            "en": "Yo tení que salir."
-          },
-          {
-            "zh": "Yo tuvo que salir.",
-            "en": "Yo tuvo que salir."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "這一組字尾沒有重音符號。",
-            "en": "This group’s endings take no accent."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "字根換了，字尾也要換成這一組。",
-            "en": "The stem changed, so the endings must change too."
-          },
-          {
-            "zh": "tuvo 是 él 的形式。",
-            "en": "tuvo is the él form."
-          }
+        "accept": [
+          "Tuve que salir temprano"
         ]
       },
       {
@@ -1170,53 +1104,20 @@
         "answer": "veían"
       },
       {
-        "id": "ex-a2im-7",
-        "type": "mcq",
-        "difficulty": "medium",
+        "id": "ex-a2im-11",
+        "type": "listening",
+        "difficulty": "hard",
         "explain": {
-          "zh": "-er／-ir 的未完成過去式每一格都有重音符號。",
-          "en": "Every -er/-ir imperfect form carries a written accent."
+          "zh": "-ir 動詞的 -ía 有重音符號，-ar 動詞的 -aba 沒有；同一句裡兩種都出現。antes 提示這是過去的習慣，不是某一次的事件。",
+          "en": "The -ía ending of -ir verbs carries an accent while the -aba of -ar verbs does not, and both turn up in this sentence. antes signals a past habit rather than a one-off event."
         },
-        "prompt": {
-          "zh": "哪一個拼對了？",
-          "en": "Which one is spelled correctly?"
+        "es": "Antes vivía en Cuenca y trabajaba en un hotel.",
+        "gloss": {
+          "zh": "我以前住在昆卡，在一家旅館工作。",
+          "en": "I used to live in Cuenca and work at a hotel."
         },
-        "options": [
-          {
-            "zh": "Ella vivia en Cuenca.",
-            "en": "Ella vivia en Cuenca."
-          },
-          {
-            "zh": "Ella vivía en Cuenca.",
-            "en": "Ella vivía en Cuenca."
-          },
-          {
-            "zh": "Ella vivíba en Cuenca.",
-            "en": "Ella vivíba en Cuenca."
-          },
-          {
-            "zh": "Ella vivaba en Cuenca.",
-            "en": "Ella vivaba en Cuenca."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "少了重音符號。",
-            "en": "The accent is missing."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "沒有這種字尾。",
-            "en": "No such ending exists."
-          },
-          {
-            "zh": "-aba 是 -ar 動詞的字尾，vivir 是 -ir。",
-            "en": "-aba belongs to -ar verbs; vivir is an -ir verb."
-          }
+        "accept": [
+          "Antes vivía en Cuenca y trabajaba en un hotel"
         ]
       },
       {
@@ -1881,53 +1782,20 @@
         ]
       },
       {
-        "id": "ex-a2pv-9",
-        "type": "mcq",
-        "difficulty": "medium",
+        "id": "ex-a2pv-11",
+        "type": "listening",
+        "difficulty": "hard",
         "explain": {
-          "zh": "選時態看的是「怎麼講」，不是「多久以前」。",
-          "en": "The tense choice is about how you frame it, not how long ago it was."
+          "zh": "背景用未完成過去式（llovía），插進來的事件用簡單過去式（salí）—— 這兩個時態最典型的搭配就是這個形狀。兩個動詞的重音都在最後一個音節。",
+          "en": "The background takes the imperfect (llovía) and the event that cuts into it takes the preterite (salí) — that shape is the classic pairing of these two tenses. Both verbs are stressed on their final syllable."
         },
-        "prompt": {
-          "zh": "下面哪一個說法是**對的**？",
-          "en": "Which statement is **correct**?"
+        "es": "Llovía cuando salí de la casa.",
+        "gloss": {
+          "zh": "我出門的時候正在下雨。",
+          "en": "It was raining when I left the house."
         },
-        "options": [
-          {
-            "zh": "越久以前的事越要用未完成過去式。",
-            "en": "The longer ago it was, the more you use the imperfect."
-          },
-          {
-            "zh": "講完成的事件用簡單過去式，講當時的狀況用未完成過去式。",
-            "en": "Completed events take the preterite; the situation at the time takes the imperfect."
-          },
-          {
-            "zh": "昨天的事一律用簡單過去式。",
-            "en": "Anything from yesterday always takes the preterite."
-          },
-          {
-            "zh": "兩個時態可以隨意互換。",
-            "en": "The two tenses are interchangeable."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "時間遠近跟時態選擇無關。",
-            "en": "Distance in time doesn’t determine the tense."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "昨天也可以有背景描述，那要用未完成過去式。",
-            "en": "Yesterday can have background too, and that takes the imperfect."
-          },
-          {
-            "zh": "互換會改變意思。",
-            "en": "Swapping them changes the meaning."
-          }
+        "accept": [
+          "Llovía cuando salí de la casa"
         ]
       },
       {
@@ -2198,53 +2066,20 @@
     },
     "exercises": [
       {
-        "id": "ex-a2pf-1",
-        "type": "mcq",
+        "id": "ex-a2pf-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "過去分詞不隨主詞變形，永遠是同一個形狀。",
-          "en": "The participle never agrees with the subject; it keeps one shape."
+          "zh": "haber 變位（han）加上分詞（hablado），兩個部分中間不能插東西。分詞永遠是 -ado／-ido，不隨主詞變 —— 這裡不會變成 habladas。",
+          "en": "A conjugated haber (han) plus a participle (hablado), with nothing allowed in between. The participle is always -ado/-ido and never agrees with the subject — it does not become habladas here."
         },
-        "prompt": {
-          "zh": "「她們跟導遊談過了。」該用哪個？",
-          "en": "Which fits “They (fem.) have spoken with the guide”?"
+        "es": "Ellas han hablado con el guía.",
+        "gloss": {
+          "zh": "她們跟導遊談過了。",
+          "en": "They have spoken with the guide."
         },
-        "options": [
-          {
-            "zh": "Ellas han hablada con el guía.",
-            "en": "Ellas han hablada con el guía."
-          },
-          {
-            "zh": "Ellas han hablado con el guía.",
-            "en": "Ellas han hablado con el guía."
-          },
-          {
-            "zh": "Ellas han habladas con el guía.",
-            "en": "Ellas han habladas con el guía."
-          },
-          {
-            "zh": "Ellas hemos hablado con el guía.",
-            "en": "Ellas hemos hablado con el guía."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "分詞不變陰性。",
-            "en": "The participle doesn’t take a feminine form."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "分詞不變複數。",
-            "en": "The participle doesn’t take a plural form."
-          },
-          {
-            "zh": "haber 的人稱錯了，ellas 要用 han。",
-            "en": "Wrong person on haber — ellas takes han."
-          }
+        "accept": [
+          "Ellas han hablado con el guía"
         ]
       },
       {
@@ -2838,53 +2673,20 @@
         "answer": "saldrá"
       },
       {
-        "id": "ex-a2fu-6",
-        "type": "mcq",
+        "id": "ex-a2fu-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "hablé 是簡單過去式，hablaré 是未來式。中間那個 ar 就是差別。",
-          "en": "hablé is preterite, hablaré is future. The ar in the middle is the whole difference."
+          "zh": "未來式的字尾接在完整的不定式 llamar 後面，所以是 llamaré，重音在最後。代名詞 te 放在動詞前面，是分開的一個字。",
+          "en": "Future endings attach to the whole infinitive llamar, giving llamaré with the stress at the end. The pronoun te sits in front of the verb as its own word."
         },
-        "prompt": {
-          "zh": "「我今晚會打給你。」該用哪個？",
-          "en": "Which fits “I’ll call you tonight”?"
+        "es": "Te llamaré esta noche.",
+        "gloss": {
+          "zh": "我今晚會打給你。",
+          "en": "I will call you tonight."
         },
-        "options": [
-          {
-            "zh": "Te llamé esta noche.",
-            "en": "Te llamé esta noche."
-          },
-          {
-            "zh": "Te llamaré esta noche.",
-            "en": "Te llamaré esta noche."
-          },
-          {
-            "zh": "Te llamare esta noche.",
-            "en": "Te llamare esta noche."
-          },
-          {
-            "zh": "Te llamaremos esta noche.",
-            "en": "Te llamaremos esta noche."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "llamé 是過去式「我打了」。",
-            "en": "llamé is the past “I called”."
-          },
-          {
-            "zh": "正確。",
-            "en": "Correct."
-          },
-          {
-            "zh": "少了重音符號。",
-            "en": "The accent is missing."
-          },
-          {
-            "zh": "這是 nosotros 的形式。",
-            "en": "That’s the nosotros form."
-          }
+        "accept": [
+          "Te llamaré esta noche"
         ]
       },
       {
@@ -3278,53 +3080,21 @@
         "answer": "haría"
       },
       {
-        "id": "ex-a2co-5",
-        "type": "mcq",
-        "difficulty": "hard",
+        "id": "ex-a2co-11",
+        "type": "listening",
+        "difficulty": "medium",
         "explain": {
-          "zh": "條件式保留完整的不定式當字根，未完成過去式則把字尾切掉。",
-          "en": "The conditional keeps the whole infinitive as its stem; the imperfect chops the ending off."
+          "zh": "podría 是條件式，比 puede 客氣得多，開口求助時用這個形式最保險。代名詞 me 黏在不定式 ayudar 後面，兩個字唸成一串。",
+          "en": "podría is the conditional and lands far more politely than puede — it is the safe form to open with when you need help. The pronoun me attaches to the infinitive ayudar and the two run together as one word."
         },
-        "prompt": {
-          "zh": "哪一個是條件式「我會吃」？",
-          "en": "Which one is the conditional “I would eat”?"
+        "es": "¿Podría ayudarme, por favor?",
+        "gloss": {
+          "zh": "您可以幫我一下嗎？",
+          "en": "Could you help me, please?"
         },
-        "options": [
-          {
-            "zh": "comía",
-            "en": "comía"
-          },
-          {
-            "zh": "comería",
-            "en": "comería"
-          },
-          {
-            "zh": "comí",
-            "en": "comí"
-          },
-          {
-            "zh": "comeré",
-            "en": "comeré"
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "這是未完成過去式「我那時在吃」。",
-            "en": "That’s the imperfect “I was eating”."
-          },
-          {
-            "zh": "正確。comer + ía。",
-            "en": "Correct: comer + ía."
-          },
-          {
-            "zh": "這是簡單過去式。",
-            "en": "That’s the preterite."
-          },
-          {
-            "zh": "這是未來式。",
-            "en": "That’s the future."
-          }
+        "accept": [
+          "¿Podría ayudarme, por favor?",
+          "¿Podría ayudarme por favor?"
         ]
       },
       {
@@ -3980,6 +3750,23 @@
             "en": "The pronouns belong before the verb."
           }
         ]
+      },
+      {
+        "id": "ex-a2in-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "否定命令式是 no + hable，動詞形式跟肯定的 usted 命令式一樣。這句本身就是聽不懂時最有用的一句。rápido 重音在第一個音節。",
+          "en": "The negative command is no + hable; the verb form is the same as the positive usted command. This is itself the most useful sentence to have ready when you cannot follow. rápido is stressed on the first syllable."
+        },
+        "es": "No hable tan rápido.",
+        "gloss": {
+          "zh": "請您不要講那麼快。",
+          "en": "Please do not speak so fast."
+        },
+        "accept": [
+          "No hable tan rápido"
+        ]
       }
     ],
     "prerequisites": [
@@ -4278,53 +4065,21 @@
         ]
       },
       {
-        "id": "ex-a2pp-2",
-        "type": "mcq",
+        "id": "ex-a2pp-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "para 講目的，後面接不定式。",
-          "en": "para expresses purpose and is followed by an infinitive."
+          "zh": "目的用 para，後面接不定式 viajar。換成 por 意思會變成原因，整句就說不通了。español 的重音在最後一個音節。",
+          "en": "Purpose takes para, followed by the infinitive viajar. Swapping in por would turn it into a cause and the sentence would stop making sense. español is stressed on its last syllable."
         },
-        "prompt": {
-          "zh": "「我學西班牙文是為了旅行。」該用哪個？",
-          "en": "Which fits “I study Spanish in order to travel”?"
+        "es": "Estudio español para viajar.",
+        "gloss": {
+          "zh": "我學西班牙文是為了旅行。",
+          "en": "I study Spanish in order to travel."
         },
-        "options": [
-          {
-            "zh": "Estudio español por viajar.",
-            "en": "Estudio español por viajar."
-          },
-          {
-            "zh": "Estudio español para viajar.",
-            "en": "Estudio español para viajar."
-          },
-          {
-            "zh": "Estudio español para viaje.",
-            "en": "Estudio español para viaje."
-          },
-          {
-            "zh": "Estudio español por el viaje.",
-            "en": "Estudio español por el viaje."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "por 講原因，這裡講的是目的。",
-            "en": "por marks a cause, but this is a goal."
-          },
-          {
-            "zh": "正確。para + 不定式表示目的。",
-            "en": "Correct: para + infinitive expresses purpose."
-          },
-          {
-            "zh": "para 講目的時後面接不定式比較自然。",
-            "en": "For purpose, para is followed by an infinitive."
-          },
-          {
-            "zh": "意思變成「因為那趟旅行而讀」。",
-            "en": "That reads as “I study because of the trip”."
-          }
+        "accept": [
+          "Estudio español para viajar",
+          "Estudio espanol para viajar"
         ]
       },
       {
@@ -5119,6 +4874,43 @@
           "el",
           "clima"
         ]
+      },
+      {
+        "id": "ex-a2re-9",
+        "type": "listening",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "donde 用來接地點，等於 en el que 但短得多。中間的 donde comimos 是插進來說明餐廳的，主句其實是 El restaurante está cerrado —— 先抓住頭尾就聽得懂。",
+          "en": "donde introduces a place and is much shorter than en el que. The donde comimos in the middle is there to describe the restaurant; the main sentence is really El restaurante está cerrado, so catch the beginning and the end first."
+        },
+        "es": "El restaurante donde comimos está cerrado.",
+        "gloss": {
+          "zh": "我們吃飯的那家餐廳關門了。",
+          "en": "The restaurant where we ate is closed."
+        },
+        "accept": [
+          "El restaurante donde comimos está cerrado"
+        ]
+      },
+      {
+        "id": "ex-a2re-10",
+        "type": "genderSort",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "-a 結尾不保證陰性，-o 結尾也不保證陽性：problema、idioma、clima、mapa 是陽性，cama、sopa 是陰性，mano、foto 反過來。關係代名詞 el que／la que 要跟先行詞一致，所以這裡選錯，後面整句都會錯。",
+          "en": "An -a ending does not guarantee feminine, nor an -o ending masculine: problema, idioma, clima and mapa are masculine, cama and sopa are feminine, and mano and foto go the other way. The relative el que / la que agrees with the noun it points back to, so getting this wrong derails the rest of the sentence."
+        },
+        "wordIds": [
+          "problema",
+          "idioma",
+          "clima",
+          "mapa",
+          "cama",
+          "sopa",
+          "mano",
+          "foto"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [

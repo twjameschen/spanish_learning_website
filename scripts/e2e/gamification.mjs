@@ -84,7 +84,14 @@ for (let i=0;i<60;i++){
   // 送出鍵只有圖示，靠 aria-label 找
   const send = p.getByRole('button',{name:/送出答案|Submit answer/});
   if (await send.count() && await send.first().isEnabled()) { await send.first().click(); await p.waitForTimeout(300); continue; }
-  // 四選一 / 陰陽性分類
+  // 陰陽性分類：el / la 兩顆大按鈕，一組八個字要連點八次才會結算
+  const el = p.getByRole('button',{name:/^el$/});
+  if (await el.count()) {
+    for (let k=0;k<10 && await el.count();k++){ await el.first().click().catch(()=>{}); await p.waitForTimeout(150); }
+    await p.waitForTimeout(400);
+    continue;
+  }
+  // 四選一
   const opts = p.locator('main ol li button, main ul li button');
   if (await opts.count()) { await opts.first().click().catch(()=>{}); await p.waitForTimeout(300); continue; }
   break;

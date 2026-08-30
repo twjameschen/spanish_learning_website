@@ -17,18 +17,18 @@ ck('選項標的是數字不是字母', /^1$/m.test(t)&&!/^A$/m.test(t));
 await p.keyboard.press('2'); await p.waitForTimeout(600);
 t=await T(p);
 ck('按 2 選到第二個選項並顯示回饋', /答對了|答錯了/.test(t));
-ck('進度沒有前進（回饋看得到）', /1\/9/.test(t), t.match(/\d+\/\d+/)?.[0]??'');
+ck('進度沒有前進（回饋看得到）', /1\/10/.test(t), t.match(/\d+\/\d+/)?.[0]??'');
 await p.screenshot({path:`${SP}/p7-mcq-key.png`});
 
 console.log('\n[2] Enter 前進到下一題');
 await p.keyboard.press('Enter'); await p.waitForTimeout(600);
-ck('Enter 前進到 2/9', /2\/9/.test(await T(p)));
+ck('Enter 前進到 2/10', /2\/10/.test(await T(p)));
 
 console.log('\n[3] 作答後數字鍵不再改答案');
 await p.keyboard.press('1'); await p.waitForTimeout(400);
 await p.keyboard.press('1'); await p.waitForTimeout(400);
 t=await T(p);
-ck('第二次按 1 沒有再作答一次', /2\/9/.test(t), t.match(/\d+\/\d+/)?.[0]??'');
+ck('第二次按 1 沒有再作答一次', /2\/10/.test(t), t.match(/\d+\/\d+/)?.[0]??'');
 
 console.log('\n[4] 閃卡：Space 翻面，1/2 自評');
 await p.goto(BASE+'#/drill/a0-hay',{waitUntil:'networkidle'}); await p.waitForTimeout(800);

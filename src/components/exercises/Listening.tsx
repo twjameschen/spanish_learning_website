@@ -82,12 +82,13 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
             submit();
           }}
           disabled={answered}
-          placeholder={t('typeWhatYouHear')}
+          /* 沒有語音時題目變成抄寫，提示語也要跟著換 —— 螢幕上根本沒有東西可以「聽」 */
+          placeholder={t(speech.available ? 'typeWhatYouHear' : 'typeWhatYouSee')}
           lang="es"
           autoCapitalize="off"
           autoCorrect="off"
           spellCheck={false}
-          aria-label={t('typeWhatYouHear')}
+          aria-label={t(speech.available ? 'typeWhatYouHear' : 'typeWhatYouSee')}
         />
         <Button onClick={submit} disabled={answered || !value.trim()} aria-label={t('submitAnswer')}>
           <CornerDownLeft aria-hidden="true" />

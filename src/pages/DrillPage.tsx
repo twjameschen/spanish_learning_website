@@ -3,16 +3,21 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ExercisePlayer } from '@/components/exercises/ExercisePlayer';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
-import { getLesson, allWords } from '@/content';
+import { getLesson, allWords, topicLabel } from '@/content';
 import { buildVocabDrill } from '@/lib/vocabDrill';
+import { buildGenderDrill, isGenderDrillId, topicFromDrillId } from '@/lib/genderDrill';
 import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
 
 /**
- * 單字閃卡練習。
+ * 單字練習（閃卡與陰陽性分類共用這一頁）。
  *
- * `id` 是課程 id 時，練那一課的 vocabIds；是 `all` 時，從整個單字表隨機抽。
- * 這裡刻意**不**傳 lessonId 給 ExercisePlayer —— 這不是課程練習，
+ * `id` 的三種形態：
+ * - 課程 id —— 練那一課的 vocabIds
+ * - `all` —— 從整個單字表隨機抽
+ * - `gender-<主題>` —— 那個主題的一組陰陽性分類
+ *
+ * 三種都刻意**不**傳 lessonId 給 ExercisePlayer —— 這不是課程練習，
  * 不該把它算成「完成了這一課」。
  */
 const DRILL_SIZE = 20;
@@ -33,14 +38,19 @@ function pickDaily<T>(items: T[], n: number): T[] {
 export function DrillPage({ id }: { id: string }) {
   const { t, L } = useT();
   const isAll = id === 'all';
-  const lesson = isAll ? undefined : getLesson(id);
+  const genderTopic = isGenderDrillId(id) ? topicFromDrillId(id) : null;
+  const lesson = isAll || genderTopic ? undefined : getLesson(id);
 
   const exercises = useMemo(() => {
+    if (genderTopic) {
+      const drill = buildGenderDrill(genderTopic);
+      return drill ? [drill] : [];
+    }
     if (isAll) return buildVocabDrill(pickDaily(allWords.map((w) => w.id), DRILL_SIZE / 2), DRILL_SIZE);
     return lesson ? buildVocabDrill(lesson.vocabIds, DRILL_SIZE) : [];
-  }, [isAll, lesson]);
+  }, [genderTopic, isAll, lesson]);
 
-  if (!isAll && !lesson) {
+  if (!isAll && !genderTopic && !lesson) {
     return (
       <EmptyState
         icon={<BrokenSignpost />}
@@ -74,11 +84,19 @@ export function DrillPage({ id }: { id: string }) {
           <ArrowLeft aria-hidden="true" className="size-4" />
           {lesson ? L(lesson.title) : t('navVocab')}
         </a>
-        <h1 className="text-xl font-extrabold tracking-tight text-body">{t('drillTitle')}</h1>
-        <p className="text-sm text-muted">{t('drillDesc', { n: exercises.length })}</p>
+        <h1 className="text-xl font-extrabold tracking-tight text-body">
+          {t(genderTopic ? 'genderDrillTitle' : 'drillTitle')}
+        </h1>
+        <p className="text-sm text-muted">
+          {genderTopic
+            ? t('genderDrillDesc', { topic: L(topicLabel(genderTopic)) })
+            : t('drillDesc', { n: exercises.length })}
+        </p>
       </header>
 
+      {/* key 換掉整組狀態：#/drill/gender-comida 跳到 #/drill/gender-ciudad 要從第一題開始 */}
       <ExercisePlayer
+        key={id}
         exercises={exercises}
         onExit={() => { location.hash = back; }}
       />

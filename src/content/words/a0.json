@@ -935,7 +935,8 @@
     "exampleGloss": {
       "zh": "我是西班牙文的學生。",
       "en": "I'm a Spanish student."
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "profesor",
@@ -1873,7 +1874,8 @@
     "exampleGloss": {
       "zh": "請給我一杯水。",
       "en": "A glass of water, please."
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "cafe-bebida",
@@ -2165,7 +2167,8 @@
     "exampleGloss": {
       "zh": "咖啡要加糖嗎？",
       "en": "Coffee with sugar?"
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "almuerzo",

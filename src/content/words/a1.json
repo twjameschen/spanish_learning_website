@@ -2139,7 +2139,8 @@
     "genderNote": {
       "zh": "陰性名詞但單數配 el（el hambre），因為字首是重音的 a-。形容詞仍用陰性：mucha hambre。",
       "en": "A feminine noun that takes el in the singular (el hambre) because it starts with a stressed a-. Adjectives stay feminine: mucha hambre."
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "sed",

@@ -148,6 +148,14 @@ const wordBaseSchema = z.object({
   gender: genderSchema.optional(),
   /** 陰陽同形或例外時的說明，例如 el/la estudiante */
   genderNote: localizedSchema.optional(),
+  /**
+   * 不能拿來出陰陽性分類題的字。分類題問的是「配 el 還是 la」，
+   * 這兩種字用那個問法都會判錯正確答案：
+   * - 兩個冠詞都對：el/la estudiante、el/la guía、el/la policía、el/la azúcar
+   * - 冠詞與性別不一致：el agua、el hambre（陰性，但單數配 el）
+   * 這些字仍然留在單字表裡，用 genderNote 說明 —— 只是不出成分類題。
+   */
+  genderSortExempt: z.boolean().optional(),
   level: levelSchema,
   topic: z.string().min(1),
   exampleEs: z.string().min(1),

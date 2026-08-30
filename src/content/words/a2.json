@@ -256,7 +256,8 @@
     "genderNote": {
       "zh": "同形不同性：el guía 是男導遊，la guía 是女導遊，而 la guía 也指「指南、手冊」。看到 la guía 要靠上下文判斷是人還是書。",
       "en": "Same form, both genders: el guía is a male guide, la guía a female guide — and la guía also means a guidebook. Context tells you whether it’s a person or a book."
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "entrada",
@@ -1749,7 +1750,8 @@
     "genderNote": {
       "zh": "la policía 指警察機關或女警，el policía 指男警。講「我叫警察」是 llamar a la policía（機關）。",
       "en": "la policía is the police force or a policewoman; el policía is a policeman. “Call the police” is llamar a la policía (the force)."
-    }
+    },
+    "genderSortExempt": true
   },
   {
     "id": "direccion",

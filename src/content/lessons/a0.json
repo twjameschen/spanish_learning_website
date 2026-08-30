@@ -3414,8 +3414,8 @@
         "type": "genderSort",
         "difficulty": "hard",
         "explain": {
-          "zh": "這一組全是例外或特殊字尾：el día、la mano、el problema、el mapa 違反 -o/-a 原則；ciudad、universidad 是 -dad 陰性；agua 陰性但配 el；luz 陰性。",
-          "en": "These are all exceptions or special endings: el día, la mano, el problema and el mapa break the -o/-a pattern; ciudad and universidad are -dad feminines; agua is feminine but takes el; luz is feminine."
+          "zh": "這一組全是例外或特殊字尾：el día、la mano、el problema、el mapa 違反 -o/-a 原則；ciudad、universidad 是 -dad 陰性；flor 雖然是 -or 結尾卻是陰性；luz 陰性。",
+          "en": "These are all exceptions or special endings: el día, la mano, el problema and el mapa break the -o/-a pattern; ciudad and universidad are -dad feminines; flor ends in -or yet is feminine; luz is feminine."
         },
         "wordIds": [
           "dia",
@@ -3424,7 +3424,7 @@
           "mapa",
           "ciudad",
           "universidad",
-          "agua",
+          "flor",
           "luz"
         ],
         "seconds": 75
@@ -3657,6 +3657,43 @@
           "la mesa es blanca"
         ],
         "canonical": "La mesa es blanca."
+      },
+      {
+        "id": "ex-gen-9",
+        "type": "listening",
+        "difficulty": "easy",
+        "explain": {
+          "zh": "這兩個是這一課最該記住的例外：día 以 -a 結尾卻是陽性，mano 以 -o 結尾卻是陰性。聽的時候注意 día 要分成 dí-a 兩個音節，重音在前面那個 i。",
+          "en": "These are the two exceptions worth memorising from this lesson: día ends in -a but is masculine, mano ends in -o but is feminine. Listen for día splitting into two syllables, dí-a, with the stress on the i."
+        },
+        "es": "el día y la mano",
+        "gloss": {
+          "zh": "白天與手",
+          "en": "the day and the hand"
+        },
+        "accept": [
+          "el día y la mano"
+        ]
+      },
+      {
+        "id": "ex-gen-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "這一組把好認的（silla、dinero）跟例外（día、mapa）混在一起。字尾規則只涵蓋大約八成，剩下的兩成沒有捷徑 —— 遇到新的名詞就連冠詞一起記下來。",
+          "en": "This set mixes the easy ones (silla, dinero) with the exceptions (día, mapa). The ending rules cover only about eight nouns in ten; for the rest there is no shortcut — write down every new noun together with its article."
+        },
+        "wordIds": [
+          "profesor",
+          "hermana",
+          "silla",
+          "dinero",
+          "ciudad",
+          "dia",
+          "mapa",
+          "sopa"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -4194,6 +4231,43 @@
             "en": "The key is the general sense, not the verb itself."
           }
         ]
+      },
+      {
+        "id": "ex-art-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "職業放在 soy 後面時不加冠詞 —— 這裡 estudiante 前面是空的。後半段的 un lápiz 才有不定冠詞。lápiz 重音在 lá，字尾的 z 在這裡唸成 s。",
+          "en": "A job after soy takes no article — there is nothing in front of estudiante here. The indefinite article only shows up later, in un lápiz. Stress lápiz on lá, and the final z is pronounced as an s."
+        },
+        "es": "Soy estudiante y necesito un lápiz.",
+        "gloss": {
+          "zh": "我是學生，我需要一支鉛筆。",
+          "en": "I am a student and I need a pencil."
+        },
+        "accept": [
+          "Soy estudiante y necesito un lápiz"
+        ]
+      },
+      {
+        "id": "ex-art-10",
+        "type": "genderSort",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "-dad 與 -ción 結尾一律陰性，-or 結尾多半陽性 —— 但 flor 是陰性，是這一組唯一的例外。字尾能幫你猜，猜不到的時候還是要查。",
+          "en": "Nouns in -dad and -ción are always feminine and those in -or are usually masculine — but flor is feminine, the one exception in this set. Endings help you guess; when they do not, you still have to look it up."
+        },
+        "wordIds": [
+          "ciudad",
+          "universidad",
+          "estacion",
+          "flor",
+          "profesor",
+          "senor",
+          "doctor",
+          "dolor"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -4683,6 +4757,43 @@
         },
         "wordId": "luz",
         "direction": "es-zh"
+      },
+      {
+        "id": "ex-plu-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "-z 結尾變複數要改成 -ces：lápiz → lápices，luz → luces。改了拼字，唸出來也多一個音節，注意聽 lá-pi-ces 三拍。冠詞跟著變成 los 與 las。",
+          "en": "Nouns ending in -z take -ces in the plural: lápiz → lápices, luz → luces. The spelling change adds a syllable, so listen for lá-pi-ces in three beats. The articles become los and las to match."
+        },
+        "es": "los lápices y las luces",
+        "gloss": {
+          "zh": "鉛筆與燈",
+          "en": "the pencils and the lights"
+        },
+        "accept": [
+          "los lápices y las luces"
+        ]
+      },
+      {
+        "id": "ex-plu-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "這些字變複數時字尾會改（luz → luces、ciudad → ciudades），但冠詞是跟著性別走的。先確定單數配 el 還是 la，複數才知道要用 los 還是 las。",
+          "en": "These nouns change their ending in the plural (luz → luces, ciudad → ciudades), but the article follows the gender. Settle whether the singular takes el or la, and the plural — los or las — follows from that."
+        },
+        "wordIds": [
+          "luz",
+          "lapiz",
+          "arroz",
+          "nariz",
+          "maiz",
+          "flor",
+          "ciudad",
+          "profesor"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -4924,53 +5035,20 @@
     },
     "exercises": [
       {
-        "id": "ex-pro-1",
-        "type": "mcq",
+        "id": "ex-pro-11",
+        "type": "listening",
         "difficulty": "easy",
         "explain": {
-          "zh": "拉丁美洲的第二人稱複數只有 ustedes 一種。看到教材教 vosotros 可以直接跳過 —— 在厄瓜多用不到，還會顯得很奇怪。",
-          "en": "Latin America has only one second-person plural: ustedes. When a course teaches vosotros you can skip it — it's unused in Ecuador and would sound strange there."
+          "zh": "「你們」在拉丁美洲一律是 ustedes，動詞用第三人稱複數的 son。vosotros 與 sois 在這裡不會出現。問句的語調在句尾上揚。",
+          "en": "In Latin America “you” in the plural is always ustedes, and the verb is the third-person plural son. vosotros and sois do not appear here. The intonation rises at the end of the question."
         },
-        "prompt": {
-          "zh": "在厄瓜多，「你們」要用哪個字？",
-          "en": "In Ecuador, which word means \"you all\"?"
+        "es": "¿Ustedes son de Quito?",
+        "gloss": {
+          "zh": "你們是基多人嗎？",
+          "en": "Are you all from Quito?"
         },
-        "options": [
-          {
-            "zh": "vosotros",
-            "en": "vosotros"
-          },
-          {
-            "zh": "ustedes",
-            "en": "ustedes"
-          },
-          {
-            "zh": "vos",
-            "en": "vos"
-          },
-          {
-            "zh": "tús",
-            "en": "tús"
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "vosotros 只在西班牙使用，拉美完全不用。",
-            "en": "vosotros is used only in Spain, never in Latin America."
-          },
-          {
-            "zh": "正確。拉美一律用 ustedes，不分親疏。",
-            "en": "Correct. Latin America always uses ustedes, formal or not."
-          },
-          {
-            "zh": "vos 是阿根廷、烏拉圭等地取代 tú 的單數形式，厄瓜多不用。",
-            "en": "vos replaces singular tú in Argentina and Uruguay, but not in Ecuador."
-          },
-          {
-            "zh": "沒有這種形式。",
-            "en": "No such form exists."
-          }
+        "accept": [
+          "¿Ustedes son de Quito?"
         ]
       },
       {
@@ -5461,53 +5539,20 @@
     },
     "exercises": [
       {
-        "id": "ex-se-1",
-        "type": "mcq",
-        "difficulty": "easy",
+        "id": "ex-se-11",
+        "type": "listening",
+        "difficulty": "medium",
         "explain": {
-          "zh": "職業和身分是「你是什麼」，用 ser：Soy estudiante。注意職業前面不加冠詞。",
-          "en": "Profession and identity are about what you *are*, so they take ser: Soy estudiante. Note that no article goes before the profession."
+          "zh": "同一句裡兩個動詞：身分用 ser（soy estudiante），暫時的狀態用 estar（estoy cansado）。soy 與 estoy 字尾都是 -oy，靠前面的音節分辨。",
+          "en": "Two verbs in one sentence: ser for identity (soy estudiante) and estar for a passing state (estoy cansado). Both end in -oy, so the syllable before it is what tells them apart."
         },
-        "prompt": {
-          "zh": "「我是學生。」該用哪個動詞？",
-          "en": "Which verb does \"I am a student\" need?"
+        "es": "Soy estudiante y estoy cansado.",
+        "gloss": {
+          "zh": "我是學生，我很累。",
+          "en": "I am a student and I am tired."
         },
-        "options": [
-          {
-            "zh": "Estoy estudiante.",
-            "en": "Estoy estudiante."
-          },
-          {
-            "zh": "Soy estudiante.",
-            "en": "Soy estudiante."
-          },
-          {
-            "zh": "Yo estudiante.",
-            "en": "Yo estudiante."
-          },
-          {
-            "zh": "Hay estudiante.",
-            "en": "Hay estudiante."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "estar 不用於職業或身分。",
-            "en": "estar isn't used for professions or identity."
-          },
-          {
-            "zh": "正確。職業、身分用 ser。",
-            "en": "Correct. Profession and identity take ser."
-          },
-          {
-            "zh": "漏了動詞 —— 只有主詞加名詞不成句。",
-            "en": "The verb is missing — a bare subject and noun isn't a sentence."
-          },
-          {
-            "zh": "hay 表示存在，不能拿來說自己的身分。",
-            "en": "hay expresses existence and can't state who you are."
-          }
+        "accept": [
+          "Soy estudiante y estoy cansado"
         ]
       },
       {
@@ -6368,6 +6413,26 @@
             "en": "hay doesn't inflect for gender."
           }
         ]
+      },
+      {
+        "id": "ex-hay-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "A0 到這裡累積的名詞混在一起。hay 本身不分性別（hay un baño 與 hay una mesa 都對），但接下來要加冠詞或形容詞時，性別就跑不掉了。",
+          "en": "A mix of the nouns built up across A0. hay itself does not care about gender (hay un baño and hay una mesa are both fine), but the moment you add an article or an adjective, gender is back."
+        },
+        "wordIds": [
+          "mesa",
+          "libro",
+          "bano",
+          "calle",
+          "mercado",
+          "tienda",
+          "dia",
+          "mano"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [

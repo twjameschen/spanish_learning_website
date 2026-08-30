@@ -209,6 +209,7 @@ export const UI = {
     en: 'Type out the sentence shown below',
   },
   typeWhatYouHear: { zh: '打出你聽到的句子…', en: 'Type what you hear…' },
+  typeWhatYouSee: { zh: '照著上面的句子打…', en: 'Type the sentence shown above…' },
   playAudio: { zh: '播放', en: 'Play' },
   playSlower: { zh: '放慢再聽一次', en: 'Play more slowly' },
   noSpanishVoice: {
@@ -325,6 +326,12 @@ export const UI = {
   drillEmptyHint: { zh: '去單字表練整體的字。', en: 'Try the vocabulary list for a general drill.' },
   drillCta: { zh: '練這一課的單字', en: 'Drill this lesson’s words' },
   drillCtaAll: { zh: '今天的單字閃卡', en: 'Today’s flashcards' },
+  genderDrillTitle: { zh: '陰陽性快速分類', en: 'Gender sorting drill' },
+  genderDrillDesc: {
+    zh: '「{topic}」主題的 8 個名詞，限時分成 el 與 la 兩邊。性別要變成反射，停下來想就是還沒熟。',
+    en: 'Eight nouns from “{topic}”, sorted into el and la against the clock. Gender has to become a reflex — pausing to think means it is not there yet.',
+  },
+  genderDrillCta: { zh: '練這個主題的陰陽性', en: 'Drill gender in this topic' },
   backupTitle: { zh: '備份與還原', en: 'Backup & restore' },
   backupDesc: {
     zh: '匯出成 JSON 檔留存，換電腦時再匯入回來。',

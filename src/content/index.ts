@@ -180,6 +180,9 @@ export function findIntegrityIssues(): IntegrityIssue[] {
           if (!word) push(at, `genderSort 指向不存在的單字 ${id}`);
           else if (word.pos !== 'noun') push(at, `genderSort 只能用名詞，但 ${id} 是 ${word.pos}`);
           else if (!word.gender) push(at, `genderSort 的 ${id} 沒有標註性別`);
+          else if (word.genderSortExempt) {
+            push(at, `genderSort 不能用 ${id} —— 這個字問「el 還是 la」判不出對錯`);
+          }
         }
         break;
       case 'wordOrder':

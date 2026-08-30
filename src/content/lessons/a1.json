@@ -306,53 +306,20 @@
         ]
       },
       {
-        "id": "ex-a1pr-7",
-        "type": "mcq",
+        "id": "ex-a1pr-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "subir 是 -ir 動詞，nosotros 用 -imos：sub- + imos = subimos。",
-          "en": "subir is an -ir verb, so nosotros takes -imos: sub- + imos = subimos."
+          "zh": "-ir 的 nosotros 是 -imos，-ar 的是 -amos，同一句裡兩種都有。主詞 nosotros 說出來是為了對比，平常會省略。",
+          "en": "The nosotros ending is -imos for -ir verbs and -amos for -ar verbs; both appear here. The subject nosotros is spoken for contrast — normally it would be left out."
         },
-        "prompt": {
-          "zh": "「我們上公車。」該用哪個形式？",
-          "en": "Which form completes “We get on the bus”?"
+        "es": "Nosotros vivimos en Quito y trabajamos aquí.",
+        "gloss": {
+          "zh": "我們住在基多，在這裡工作。",
+          "en": "We live in Quito and we work here."
         },
-        "options": [
-          {
-            "zh": "Nosotros subemos al bus.",
-            "en": "Nosotros subemos al bus."
-          },
-          {
-            "zh": "Nosotros subimos al bus.",
-            "en": "Nosotros subimos al bus."
-          },
-          {
-            "zh": "Nosotros subir al bus.",
-            "en": "Nosotros subir al bus."
-          },
-          {
-            "zh": "Nosotros suben al bus.",
-            "en": "Nosotros suben al bus."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "-emos 是 -er 動詞的字尾，subir 是 -ir。",
-            "en": "-emos belongs to -er verbs; subir is an -ir verb."
-          },
-          {
-            "zh": "正確。-ir 的 nosotros 是 -imos。",
-            "en": "Correct. The -ir nosotros ending is -imos."
-          },
-          {
-            "zh": "不定式沒有變位。",
-            "en": "That’s the unconjugated infinitive."
-          },
-          {
-            "zh": "-en 是 ellos / ustedes 的字尾。",
-            "en": "-en is the ellos/ustedes ending."
-          }
+        "accept": [
+          "Nosotros vivimos en Quito y trabajamos aquí"
         ]
       },
       {
@@ -760,53 +727,20 @@
         "answer": "dicen"
       },
       {
-        "id": "ex-a1pi-8",
-        "type": "mcq",
+        "id": "ex-a1pi-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "後面接 que 加一整個句子，講的是「知道一件事」，用 saber。conocer 用於認識的人或去過的地方。",
-          "en": "Followed by que plus a whole clause, this is knowing a fact, so it takes saber. conocer is for people you’ve met and places you’ve been."
+          "zh": "saber 的 yo 形是 sé，一個音節，重音符號用來跟 se 區別。知道「一件事」用 saber；認識「一個人或地方」才用 conocer。",
+          "en": "The yo form of saber is sé — one syllable, with an accent that separates it from se. saber is for knowing a fact; conocer is for being acquainted with a person or a place."
         },
-        "prompt": {
-          "zh": "「我知道博物館關門了。」該用哪個動詞？",
-          "en": "Which verb fits “I know the museum is closed”?"
+        "es": "No sé dónde está el museo.",
+        "gloss": {
+          "zh": "我不知道博物館在哪裡。",
+          "en": "I do not know where the museum is."
         },
-        "options": [
-          {
-            "zh": "Conozco que el museo está cerrado.",
-            "en": "Conozco que el museo está cerrado."
-          },
-          {
-            "zh": "Sé que el museo está cerrado.",
-            "en": "Sé que el museo está cerrado."
-          },
-          {
-            "zh": "Sabo que el museo está cerrado.",
-            "en": "Sabo que el museo está cerrado."
-          },
-          {
-            "zh": "Conozco el museo está cerrado.",
-            "en": "Conozco el museo está cerrado."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "conocer 不能接 que 加句子。",
-            "en": "conocer can’t be followed by que plus a clause."
-          },
-          {
-            "zh": "正確。知道一件事 → saber，yo 是 sé。",
-            "en": "Correct. Knowing a fact → saber, and the yo form is sé."
-          },
-          {
-            "zh": "saber 的 yo 不規則，是 sé 不是 sabo。",
-            "en": "The yo form of saber is irregular: sé, not sabo."
-          },
-          {
-            "zh": "少了 que，而且動詞也挑錯了。",
-            "en": "que is missing, and the verb is the wrong one anyway."
-          }
+        "accept": [
+          "No sé dónde está el museo"
         ]
       },
       {
@@ -1156,53 +1090,20 @@
         "answer": "juegan"
       },
       {
-        "id": "ex-a1cr-7",
-        "type": "mcq",
+        "id": "ex-a1cr-11",
+        "type": "listening",
         "difficulty": "medium",
         "explain": {
-          "zh": "nosotros 不參與字根變化，字根與不定式相同：volv- + emos = volvemos。",
-          "en": "nosotros doesn’t take the stem change; the stem matches the infinitive: volv- + emos = volvemos."
+          "zh": "volver 是 o → ue 的字根變化動詞，但 nosotros 這一格**不變** —— 是 volvemos，不是 vuelvemos。靴子形狀的缺口就在這裡。",
+          "en": "volver is an o → ue stem-changing verb, but the nosotros slot does not change — it is volvemos, not vuelvemos. That gap is exactly where the boot shape opens up."
         },
-        "prompt": {
-          "zh": "「我們七點回家。」該用哪個？",
-          "en": "Which form completes “We get home at seven”?"
+        "es": "Volvemos a casa a las siete.",
+        "gloss": {
+          "zh": "我們七點回家。",
+          "en": "We go home at seven."
         },
-        "options": [
-          {
-            "zh": "Nosotros vuelvemos a casa a las siete.",
-            "en": "Nosotros vuelvemos a casa a las siete."
-          },
-          {
-            "zh": "Nosotros volvemos a casa a las siete.",
-            "en": "Nosotros volvemos a casa a las siete."
-          },
-          {
-            "zh": "Nosotros volvimos a casa a las siete.",
-            "en": "Nosotros volvimos a casa a las siete."
-          },
-          {
-            "zh": "Nosotros vuelvo a casa a las siete.",
-            "en": "Nosotros vuelvo a casa a las siete."
-          }
-        ],
-        "answerIndex": 1,
-        "optionExplains": [
-          {
-            "zh": "nosotros 不變字根，vuelv- 是錯的。",
-            "en": "nosotros doesn’t change the stem, so vuelv- is wrong."
-          },
-          {
-            "zh": "正確。volv- + emos。",
-            "en": "Correct: volv- + emos."
-          },
-          {
-            "zh": "volvimos 是過去式，這裡要現在式。",
-            "en": "volvimos is the past tense; this needs the present."
-          },
-          {
-            "zh": "vuelvo 是 yo 的形式。",
-            "en": "vuelvo is the yo form."
-          }
+        "accept": [
+          "Volvemos a casa a las siete"
         ]
       },
       {
@@ -1761,6 +1662,43 @@
             "en": "Complete."
           }
         ]
+      },
+      {
+        "id": "ex-a1gu-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "gusta 是單數，因為喜歡的東西是單數的 el jugo。開頭的 A ella le 三個字連著唸成一串，很容易漏聽中間的 le —— 但那個 le 不能省略。",
+          "en": "gusta is singular because the thing being liked, el jugo, is singular. The opening A ella le runs together as one burst, so the le in the middle is easy to miss — but it cannot be dropped."
+        },
+        "es": "A ella le gusta el jugo de mora.",
+        "gloss": {
+          "zh": "她喜歡黑莓汁。",
+          "en": "She likes blackberry juice."
+        },
+        "accept": [
+          "A ella le gusta el jugo de mora"
+        ]
+      },
+      {
+        "id": "ex-a1gu-10",
+        "type": "genderSort",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "-e 結尾完全沒有規則 —— el postre 與 la leche 看起來一樣，性別卻不同。gustar 的句子一定要有冠詞（Me gusta el postre），所以這些字的性別會直接卡住你講不講得出來。",
+          "en": "Nouns ending in -e follow no rule at all — el postre and la leche look alike but differ in gender. A gustar sentence always needs the article (Me gusta el postre), so the gender of these words decides whether the sentence comes out right."
+        },
+        "wordIds": [
+          "llave",
+          "postre",
+          "noche",
+          "nombre",
+          "leche",
+          "tomate",
+          "carne",
+          "pasaporte"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -2275,6 +2213,43 @@
           "las",
           "manos"
         ]
+      },
+      {
+        "id": "ex-a1rf-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "兩個動作各自要有自己的 me —— 第二個不能省。反身代名詞放在變位動詞前面，是分開的一個字，唸的時候會跟後面的動詞連成一串。",
+          "en": "Each action needs its own me — the second one cannot be left out. The reflexive pronoun sits in front of the conjugated verb as a separate word, though it runs straight into the verb when spoken."
+        },
+        "es": "Me levanto temprano y me ducho.",
+        "gloss": {
+          "zh": "我很早起床，然後洗澡。",
+          "en": "I get up early and take a shower."
+        },
+        "accept": [
+          "Me levanto temprano y me ducho"
+        ]
+      },
+      {
+        "id": "ex-a1rf-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "講到身體部位與隨身衣物時配的是冠詞，不是所有格：Me lavo las manos、Me pongo la chompa。所以性別直接決定你要說 el 還是 la。mano 是 -o 結尾卻陰性。",
+          "en": "Body parts and clothes you put on take an article, not a possessive: Me lavo las manos, Me pongo la chompa. That makes gender decide between el and la every time. Note mano: it ends in -o but is feminine."
+        },
+        "wordIds": [
+          "mano",
+          "cabeza",
+          "brazo",
+          "pie",
+          "chompa",
+          "zapato",
+          "toalla",
+          "jabon"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -2693,6 +2668,24 @@
             "zh": "正確：nos 黏在不定式後面。",
             "en": "Correct: nos attached to the infinitive."
           }
+        ]
+      },
+      {
+        "id": "ex-a1ia-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "voy a 後面永遠接不定式 trabajar，不隨人稱變化。mañana 的 ñ 是舌面貼上顎的鼻音，重音在中間的 ña。voy a 兩個字會連成一個音。",
+          "en": "voy a is always followed by the infinitive trabajar, whatever the subject is. The ñ in mañana sounds like the ny in canyon, and the stress falls on ña. voy a runs together into a single sound."
+        },
+        "es": "Mañana voy a trabajar.",
+        "gloss": {
+          "zh": "我明天要工作。",
+          "en": "I am going to work tomorrow."
+        },
+        "accept": [
+          "Mañana voy a trabajar",
+          "Manana voy a trabajar"
         ]
       }
     ],
@@ -3179,6 +3172,23 @@
             "zh": "沒有變位動詞。",
             "en": "There’s no conjugated verb."
           }
+        ]
+      },
+      {
+        "id": "ex-a1pg-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "只有 estar 隨人稱變，haciendo 不動。hacer 的 -ndo 形式是 haciendo，h 不發音，所以聽起來是 a-cien-do。問句的重音落在 qué 與 -cien-。",
+          "en": "Only estar changes with the person; haciendo stays put. The -ndo form of hacer is haciendo, and since h is silent it comes out as a-cien-do. The question stresses qué and -cien-."
+        },
+        "es": "¿Qué estás haciendo?",
+        "gloss": {
+          "zh": "你在做什麼？",
+          "en": "What are you doing?"
+        },
+        "accept": [
+          "¿Qué estás haciendo?"
         ]
       }
     ],
@@ -3678,6 +3688,44 @@
             "en": "Pronoun only — correct."
           }
         ]
+      },
+      {
+        "id": "ex-a1od-9",
+        "type": "listening",
+        "difficulty": "hard",
+        "explain": {
+          "zh": "名詞先講出來，後面仍然要放一個 los 對應它。兩個 los 一個是冠詞、一個是代名詞，唸起來一模一樣，靠位置分辨。",
+          "en": "The noun comes first and a matching los still follows it. One los is the article and the other the pronoun; they sound identical, so position is what tells them apart."
+        },
+        "es": "Los boletos los compro mañana.",
+        "gloss": {
+          "zh": "票我明天買。",
+          "en": "The tickets — I am buying them tomorrow."
+        },
+        "accept": [
+          "Los boletos los compro mañana",
+          "Los boletos los compro manana"
+        ]
+      },
+      {
+        "id": "ex-a1od-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "這一組直接決定你要用 lo 還是 la：¿El boleto? Lo compro. ¿La cuenta? La pago. 兩個要注意：mapa 是陽性，foto 是陰性（來自 fotografía）。",
+          "en": "This set decides directly between lo and la: ¿El boleto? Lo compro. ¿La cuenta? La pago. Two to watch: mapa is masculine and foto is feminine (it is short for fotografía)."
+        },
+        "wordIds": [
+          "llave",
+          "boleto",
+          "cuenta",
+          "chompa",
+          "zapato",
+          "libro",
+          "mapa",
+          "foto"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -4152,6 +4200,23 @@
             "zh": "第二個位置要放直接受詞 las。",
             "en": "The second slot needs the direct object las."
           }
+        ]
+      },
+      {
+        "id": "ex-a1oi-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "間接受詞 me 在前、直接受詞 lo 在後，兩個都放在變位動詞前面。整句唸得很快，而這正是沒聽懂對方講什麼時該說的一句。",
+          "en": "The indirect object me comes first and the direct object lo second, both in front of the conjugated verb. The whole thing runs together fast — and it is the sentence to reach for whenever you did not catch what someone said."
+        },
+        "es": "¿Me lo puede repetir?",
+        "gloss": {
+          "zh": "您可以再說一次嗎？",
+          "en": "Could you say that again?"
+        },
+        "accept": [
+          "¿Me lo puede repetir?"
         ]
       }
     ],
@@ -4728,6 +4793,43 @@
             "en": "A possessive doesn’t take an article in front."
           }
         ]
+      },
+      {
+        "id": "ex-a1po-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "nuestra 用陰性，因為 casa 是陰性 —— 跟「我們」有幾個人無關。esta 同樣跟著 calle 走。兩個字的字尾都是 -a，聽的時候會連在一起。",
+          "en": "nuestra is feminine because casa is feminine — it has nothing to do with how many of us there are. esta agrees with calle the same way. Both endings are -a and they blur together when spoken."
+        },
+        "es": "Nuestra casa está en esta calle.",
+        "gloss": {
+          "zh": "我們家在這條街上。",
+          "en": "Our house is on this street."
+        },
+        "accept": [
+          "Nuestra casa está en esta calle"
+        ]
+      },
+      {
+        "id": "ex-a1po-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "nuestro 要跟名詞的性別一致：nuestro carro、nuestra casa。mi、tu、su 不分陰陽性，只有 nuestro 這一組會變 —— 所以這些字的性別只在配 nuestro 時才看得出來。",
+          "en": "nuestro agrees with the noun: nuestro carro, nuestra casa. mi, tu and su do not change for gender; only nuestro does — so the gender of these words only shows itself when nuestro is in front."
+        },
+        "wordIds": [
+          "carro",
+          "casa",
+          "oficina",
+          "llave",
+          "cuarto",
+          "barrio",
+          "escuela",
+          "equipaje"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -5196,6 +5298,43 @@
             "en": "tan with como — correct."
           }
         ]
+      },
+      {
+        "id": "ex-a1cm-9",
+        "type": "listening",
+        "difficulty": "easy",
+        "explain": {
+          "zh": "más + 形容詞 + que 是固定的三件組，que 不能換成 como —— como 只出現在 tan… como。más 的 s 清楚唸出來，接著 grande 開頭是硬的 g。",
+          "en": "más + adjective + que is a fixed trio, and que cannot be swapped for como — como only belongs with tan… como. The s in más is pronounced clearly, and the g in grande that follows is a hard g."
+        },
+        "es": "Quito es más grande que Cuenca.",
+        "gloss": {
+          "zh": "基多比昆卡大。",
+          "en": "Quito is bigger than Cuenca."
+        },
+        "accept": [
+          "Quito es más grande que Cuenca"
+        ]
+      },
+      {
+        "id": "ex-a1cm-10",
+        "type": "genderSort",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "最高級的形式跟著名詞走：el restaurante más caro、la calle más larga。冠詞與形容詞都要跟名詞一致，所以要比較之前得先知道名詞是 el 還是 la。",
+          "en": "The superlative takes its shape from the noun: el restaurante más caro, la calle más larga. Both the article and the adjective agree with it, so you need the noun’s gender before you can compare anything."
+        },
+        "wordIds": [
+          "ciudad",
+          "calle",
+          "plaza",
+          "parada",
+          "restaurante",
+          "museo",
+          "mercado",
+          "bus"
+        ],
+        "seconds": 75
       }
     ],
     "prerequisites": [
@@ -5765,6 +5904,23 @@
             "en": "That’s a present-tense statement."
           }
         ]
+      },
+      {
+        "id": "ex-a1im-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "siga 是 seguir 的 usted 命令式 —— 問路時會一直聽到這個形式。derecho 是「直走」，跟 la derecha（右邊）只差最後一個母音，那個母音就是重點。",
+          "en": "siga is the usted command of seguir — the form you will hear over and over when asking for directions. derecho means straight ahead and differs from la derecha (right) only in the final vowel, so that vowel is the thing to catch."
+        },
+        "es": "Siga derecho dos cuadras.",
+        "gloss": {
+          "zh": "直走兩個街區。",
+          "en": "Go straight on for two blocks."
+        },
+        "accept": [
+          "Siga derecho dos cuadras"
+        ]
       }
     ],
     "prerequisites": [
@@ -6279,6 +6435,23 @@
           "se",
           "llama",
           "usted?"
+        ]
+      },
+      {
+        "id": "ex-a1cs-9",
+        "type": "listening",
+        "difficulty": "medium",
+        "explain": {
+          "zh": "在基多的餐廳很常聽到這一句。ahorita 的時間範圍是模糊的，可能是一分鐘，也可能是十分鐘。le 指的是「給您」，不能省略。",
+          "en": "You will hear this constantly in restaurants in Quito. How long ahorita actually means is vague — it might be one minute or ten. The le means “to you” and cannot be dropped."
+        },
+        "es": "Ahorita le traigo la cuenta.",
+        "gloss": {
+          "zh": "我馬上把帳單拿來給您。",
+          "en": "I will bring you the bill in a moment."
+        },
+        "accept": [
+          "Ahorita le traigo la cuenta"
         ]
       }
     ],

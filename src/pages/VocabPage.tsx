@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Search, X, Layers } from 'lucide-react';
+import { Search, X, Layers, Shuffle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,6 +7,7 @@ import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { allWords, allTopics, topicLabel, POS_LABEL } from '@/content';
 import { hrefFor } from '@/lib/router';
+import { canDrillTopic, GENDER_DRILL_PREFIX } from '@/lib/genderDrill';
 import { PERSON_LABEL, PERSONS, type Word, type Verb } from '@/content/schema';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
@@ -183,6 +184,17 @@ export function VocabPage() {
             </Button>
           ))}
         </div>
+
+        {/* 主題篩選啟用時才出現 —— 字不夠出一組的主題就不給按鈕，
+            一顆按了沒反應的按鈕比沒有按鈕更糟 */}
+        {topic && canDrillTopic(topic) ? (
+          <Button asChild variant="primary" size="sm">
+            <a href={hrefFor({ name: 'drill', id: `${GENDER_DRILL_PREFIX}${topic}` })}>
+              <Shuffle aria-hidden="true" />
+              {t('genderDrillCta')}
+            </a>
+          </Button>
+        ) : null}
 
         <div className="flex items-center gap-3 pt-1">
           <p className="text-sm font-semibold text-muted">

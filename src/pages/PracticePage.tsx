@@ -49,7 +49,9 @@ export function PracticePage({ lessonId }: { lessonId: string }) {
         </h1>
       </header>
 
+      {/* key 換掉整組狀態：直接改網址跳到另一課時，index 與作答結果不能留著 */}
       <ExercisePlayer
+        key={lesson.id}
         exercises={lesson.exercises}
         lessonId={lesson.id}
         onFinish={finish}
