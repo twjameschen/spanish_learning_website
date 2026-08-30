@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy } from 'lucide-react';
+import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy, Headphones } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -18,6 +18,7 @@ import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
 import { allWords, allLessons, journey } from '@/content';
+import { listenPoolSize, listenDrillId } from '@/lib/listenDrill';
 import type { StorageTier } from '@/lib/storage';
 
 const TIER_TEXT: Record<
@@ -151,7 +152,22 @@ export function HomePage() {
           </Card>
         </a>
 
-        <a href={hrefFor({ name: 'achievements' })} className="group sm:col-span-2 lg:col-span-1">
+        <a href={hrefFor({ name: 'drill', id: listenDrillId('all') })} className="group">
+          <Card className="h-full transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift">
+            <CardHeader>
+              <div className="flex items-center gap-2.5">
+                <span className="grid size-10 place-items-center rounded-2xl bg-success-500 text-ink-900">
+                  <Headphones aria-hidden="true" className="size-5" />
+                </span>
+                <CardTitle>{t('listenDrillCta')}</CardTitle>
+                <ArrowRight aria-hidden="true" className="ml-auto size-4 text-muted transition-transform group-hover:translate-x-1" />
+              </div>
+              <CardDescription>{t('listenDrillCardDesc', { n: listenPoolSize() })}</CardDescription>
+            </CardHeader>
+          </Card>
+        </a>
+
+        <a href={hrefFor({ name: 'achievements' })} className="group">
           <Card className="h-full transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift">
             <CardHeader>
               <div className="flex items-center gap-2.5">

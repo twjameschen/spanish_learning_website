@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play, Layers } from 'lucide-react';
+import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play, Layers, Headphones } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Markish, Inline } from '@/components/Markish';
@@ -11,6 +11,7 @@ import {
   type Exercise, type GrammarLesson,
 } from '@/content/schema';
 import { hrefFor } from '@/lib/router';
+import { canListenDrill, listenDrillId } from '@/lib/listenDrill';
 import { useT } from '@/i18n';
 
 /* -------------------------------------------------------------- *
@@ -57,6 +58,17 @@ export function LessonListPage() {
                 )}
               </div>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{L(stop.blurb)}</p>
+
+              {/* 這一段的整句聽寫入口。句子湊不滿一場就不顯示 ——
+                  台北那六課教的是字母與發音，例句多半是單字與片語 */}
+              {!locked && canListenDrill(stop.city) ? (
+                <Button asChild variant="secondary" size="sm" className="mt-3">
+                  <a href={hrefFor({ name: 'drill', id: listenDrillId(stop.city) })}>
+                    <Headphones aria-hidden="true" />
+                    {t('listenDrillSectionCta')}
+                  </a>
+                </Button>
+              ) : null}
 
               {locked ? null : (
                 <ol className="mt-4 space-y-2">

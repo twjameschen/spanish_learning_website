@@ -332,6 +332,21 @@ export const UI = {
     en: 'Eight nouns from “{topic}”, sorted into el and la against the clock. Gender has to become a reflex — pausing to think means it is not there yet.',
   },
   genderDrillCta: { zh: '練這個主題的陰陽性', en: 'Drill gender in this topic' },
+  listenDrillTitle: { zh: '連續聽寫', en: 'Dictation practice' },
+  listenDrillDescAll: {
+    zh: '橫跨整段旅程的 {n} 句，每天換一批。聽完把整句打出來 —— 沒有西班牙文語音的裝置會自動改成抄寫。',
+    en: '{n} sentences from across the whole journey, refreshed daily. Listen, then type the full sentence — on a device with no Spanish voice this becomes a copying exercise instead.',
+  },
+  listenDrillDescCity: {
+    zh: '「{city}」這一段的 {n} 句，每天換一批。聽完把整句打出來。',
+    en: '{n} sentences from the “{city}” leg, refreshed daily. Listen, then type the full sentence.',
+  },
+  listenDrillCta: { zh: '連續聽寫', en: 'Dictation practice' },
+  listenDrillCardDesc: {
+    zh: '{n} 句整句聽寫，每天換一批，不佔課程進度。',
+    en: '{n} whole sentences to take down by ear, refreshed daily and separate from lesson progress.',
+  },
+  listenDrillSectionCta: { zh: '練這一段的聽力', en: 'Drill this leg by ear' },
   backupTitle: { zh: '備份與還原', en: 'Backup & restore' },
   backupDesc: {
     zh: '匯出成 JSON 檔留存，換電腦時再匯入回來。',

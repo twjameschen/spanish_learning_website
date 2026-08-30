@@ -1,5 +1,6 @@
 import type { Exercise, Word } from '@/content/schema';
 import { allWords, topicLabel } from '@/content';
+import { shuffleSeeded } from './shuffle';
 
 /**
  * 依主題即時產生陰陽性分類題。
@@ -50,28 +51,11 @@ export function drillableTopics(): string[] {
 }
 
 /**
- * 以主題名稱當種子的洗牌。
- * 用主題而不是日期當種子：同一個主題每次進來都是同一組字，
- * 這樣才記得起來；每次重整都換一批的話等於一直在看新字。
- */
-function shuffleSeeded<T>(items: readonly T[], seedText: string): T[] {
-  let s = 0;
-  for (const ch of seedText) s = (s * 31 + ch.charCodeAt(0)) % 2147483647;
-  s = s || 1;
-  const out = [...items];
-  for (let i = out.length - 1; i > 0; i -= 1) {
-    s = (s * 1103515245 + 12345) % 2147483648;
-    const j = s % (i + 1);
-    [out[i], out[j]] = [out[j]!, out[i]!];
-  }
-  return out;
-}
-
-/**
  * 挑出一組，並**保證兩性各至少 MIN_PER_GENDER 個**。
  * 純隨機抽有機會抽到八個全陽性，那道題就變成「全部拖到同一邊」，練不到東西。
  */
 function pickBalanced(nouns: Word[], seedText: string): Word[] {
+  // 種子用主題名稱而不是日期：同一個主題每次進來都是同一組字，這樣才記得起來
   const shuffled = shuffleSeeded(nouns, seedText);
   const masc = shuffled.filter((w) => w.gender === 'm');
   const fem = shuffled.filter((w) => w.gender === 'f');
