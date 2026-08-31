@@ -50,6 +50,39 @@ for (const scheme of ['light','dark']) {
       if(!seen.has(k))seen.set(k,{...h,scheme,route:r});
     }
   }
+
+  /*
+   * 只走頁面量不到「開起來才存在」的東西：設定面板是對話框，
+   * 聽力題的提示區塊要按了「看中文意思」才出現，而且要有語音才有那顆按鈕。
+   * 容器裡沒有 TTS，所以塞一個假的西班牙文語音進去。
+   */
+  const q=await b.newPage({viewport:{width:1100,height:1000}});
+  await q.emulateMedia({colorScheme:scheme});
+  await q.addInitScript(`
+    const v={name:'T',lang:'es-MX',default:false,localService:true,voiceURI:'t'};
+    Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{
+      getVoices:()=>[v],speak:()=>{},cancel:()=>{},
+      addEventListener:()=>{},removeEventListener:()=>{}}});
+    window.SpeechSynthesisUtterance=class{constructor(t){this.text=t;}};
+  `);
+
+  await q.goto(BASE+'#/',{waitUntil:'networkidle'}); await q.waitForTimeout(500);
+  await q.getByRole('button',{name:'設定'}).first().click(); await q.waitForTimeout(600);
+  for(const h of await q.evaluate(AUDIT)){
+    const k=`${h.cls}|${h.ratio}`;
+    if(!seen.has(k))seen.set(k,{...h,scheme,route:'設定面板'});
+  }
+  await q.keyboard.press('Escape'); await q.waitForTimeout(400);
+
+  await q.goto(BASE+'#/practice/b1-si-condicionales',{waitUntil:'networkidle'});
+  await q.waitForTimeout(700);
+  await q.getByRole('button',{name:/看中文意思/}).click(); await q.waitForTimeout(400);
+  for(const h of await q.evaluate(AUDIT)){
+    const k=`${h.cls}|${h.ratio}`;
+    if(!seen.has(k))seen.set(k,{...h,scheme,route:'聽力提示'});
+  }
+  await q.close();
+
   await p.close();
 }
 console.log(`不同的低對比樣式共 ${seen.size} 種：`);

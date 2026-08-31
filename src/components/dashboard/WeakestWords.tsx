@@ -4,6 +4,7 @@ import { weakestWords } from '@/lib/dashboard';
 import { useProgressStore } from '@/store/useProgressStore';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { NeedsVerifyBadge } from '@/components/NeedsVerifyBadge';
+import { useSettingsStore } from '@/store/useSettingsStore';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
 import { MAX_STARS_DISPLAY } from './constants';
@@ -12,6 +13,7 @@ import { MAX_STARS_DISPLAY } from './constants';
 export function WeakestWords({ limit = 10 }: { limit?: number }) {
   const { t, L } = useT();
   const cards = useProgressStore((s) => s.cards);
+  const showNeedsVerify = useSettingsStore((s) => s.showNeedsVerify);
   const weak = useMemo(() => weakestWords(cards, limit), [cards, limit]);
 
   if (weak.length === 0) {
@@ -27,7 +29,7 @@ export function WeakestWords({ limit = 10 }: { limit?: number }) {
         >
           <span lang="es" className="break-es font-extrabold text-body">{word.es}</span>
           <span className="text-sm text-muted">{L(word.gloss)}</span>
-          {word.regional?.needsVerify ? <NeedsVerifyBadge /> : null}
+          {word.regional?.needsVerify && showNeedsVerify ? <NeedsVerifyBadge /> : null}
 
           <span className="ml-auto flex shrink-0 items-center gap-2">
             {lapses > 0 ? (

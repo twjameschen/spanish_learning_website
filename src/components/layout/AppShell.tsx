@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Moon, Sun, MonitorSmartphone, Mountain, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { SettingsPanel } from '@/components/SettingsPanel';
 import { cn } from '@/lib/utils';
 import { PageDecor } from '@/components/decor/Patterns';
 import { StorageBanner } from './StorageBanner';
@@ -87,6 +88,8 @@ export function AppShell({
             >
               <ThemeIcon aria-hidden="true" />
             </Button>
+            {/* 主題與語言留在 header 當快捷鍵，其餘設定在面板裡 */}
+            <SettingsPanel />
           </div>
         </div>
       </header>

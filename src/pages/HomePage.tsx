@@ -56,6 +56,7 @@ export function HomePage() {
   }, []);
 
   const openStops = journey.filter((s) => s.lessonIds.length > 0);
+  const lessonsDone = Object.keys(lessonProgress).length;
   const exerciseCount = allLessons.reduce((n, l) => n + l.exercises.length, 0);
 
   return (
@@ -73,12 +74,14 @@ export function HomePage() {
           <p className="max-w-lg text-sm leading-relaxed text-ink-900/85 sm:text-base">
             {t('heroBody')}
           </p>
+          {/* 這裡原本寫死「Phase 5 / 7」—— 那是開發階段的編號，
+              對學習者沒有意義，而且早就過期了。改成學習者自己的進度。 */}
           <div className="max-w-sm pt-2">
             <div className="mb-1.5 flex items-baseline justify-between text-xs font-bold text-ink-900/85">
               <span>{t('progress')}</span>
-              <span>Phase 5 / 7</span>
+              <span>{t('lessonsDone', { done: lessonsDone, total: allLessons.length })}</span>
             </div>
-            <Progress value={(5 / 7) * 100} className="bg-ink-900/15" />
+            <Progress value={(lessonsDone / allLessons.length) * 100} className="bg-ink-900/15" />
           </div>
         </div>
       </section>

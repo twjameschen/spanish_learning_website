@@ -23,6 +23,33 @@ export const UI = {
   themeCurrent: { zh: '目前', en: 'currently' },
   langToggle: { zh: '切換語言', en: 'Switch language' },
   langCurrent: { zh: '中文', en: 'English' },
+  settingsTitle: { zh: '設定', en: 'Settings' },
+  settingsDailyGoal: { zh: '每日目標', en: 'Daily goal' },
+  settingsDailyGoalHint: {
+    zh: '首頁的連續天數卡以這個數字算今天達標了沒有。',
+    en: 'The streak card on the home page counts today as done against this number.',
+  },
+  settingsMinutes: { zh: '{n} 分鐘', en: '{n} min' },
+  settingsSpeech: { zh: '西班牙文語音', en: 'Spanish audio' },
+  settingsSpeechHint: {
+    zh: '關掉之後聽力題改成看著西班牙文抄寫，題目不會消失。裝置本身沒有西班牙文語音時也一樣。',
+    en: 'With audio off, listening exercises become copying exercises — the questions stay. The same happens when the device has no Spanish voice.',
+  },
+  settingsNeedsVerify: { zh: '未經確認的區域用法', en: 'Unverified regional usage' },
+  settingsNeedsVerifyHint: {
+    zh: '有些區域用法我沒有十足把握，那些會標上「待母語者確認」。選「隱藏」時整塊都不顯示 —— 不會只把標記藏起來讓它看起來像確認過的。',
+    en: 'Some regional notes are not fully verified and carry a “needs native check” tag. Hiding them removes the whole note — the tag is never dropped on its own, which would make unverified usage look confirmed.',
+  },
+  settingsLanguage: { zh: '介面與解說語言', en: 'Interface & explanation language' },
+  settingsTheme: { zh: '主題', en: 'Theme' },
+  settingsOn: { zh: '開', en: 'On' },
+  settingsOff: { zh: '關', en: 'Off' },
+  settingsShow: { zh: '顯示', en: 'Show' },
+  settingsHide: { zh: '隱藏', en: 'Hide' },
+  settingsNote: {
+    zh: '設定存在這台裝置上，重整後保持。',
+    en: 'Settings are stored on this device and survive a refresh.',
+  },
 
   // 首頁
   heroTitle: { zh: '¡Bienvenido al camino!', en: '¡Bienvenido al camino!' },
@@ -31,6 +58,7 @@ export const UI = {
     en: 'Starting in Taipei, connecting through Miami, then on to Quito, Cuenca and finally the Galápagos. Every bit of Spanish on this road is Latin American — no vosotros, no /θ/.',
   },
   progress: { zh: '進度', en: 'Progress' },
+  lessonsDone: { zh: '{done} / {total} 課', en: '{done} of {total} lessons' },
   journeyTitle: { zh: '旅程', en: 'The journey' },
   journeyDesc: {
     zh: '五個城市，五組課程。目前開放 {n} 站。',
@@ -215,6 +243,17 @@ export const UI = {
   noSpanishVoice: {
     zh: '這台裝置沒有西班牙文語音，改成抄寫練習。',
     en: 'No Spanish voice on this device — this becomes a copying exercise instead.',
+  },
+  listenHelpLabel: { zh: '此題求助：', en: 'Stuck?' },
+  listenShowMeaning: { zh: '看中文意思', en: 'Show the meaning' },
+  listenShowAnswer: { zh: '直接看答案', en: 'Show the answer' },
+  listenHintUsedNote: {
+    zh: '答對了，不過這題看過意思才寫出來 —— 排程會讓它比較快再出現一次。',
+    en: 'Correct — but you saw the meaning first, so this one is scheduled to come back sooner.',
+  },
+  listenGaveUpNote: {
+    zh: '這題看了答案，算沒聽出來。下面是整句，唸一遍再往下。',
+    en: 'You looked this one up, so it counts as not heard. The full sentence is below — say it once before moving on.',
   },
   genderSortPrompt: { zh: '限時分類：這個名詞配 el 還是 la？', en: 'Beat the clock: el or la?' },
   genderSortProgress: { zh: '{done} / {total}', en: '{done} / {total}' },

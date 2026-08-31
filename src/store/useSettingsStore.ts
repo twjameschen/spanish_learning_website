@@ -19,9 +19,9 @@ interface SettingsState {
   /** 介面與解說的語言。一個開關切全部，不分開設定。 */
   locale: Locale;
   dailyGoal: DailyGoal;
-  /** 關掉之後聽力題不出現（沒有 es 語音時也會自動失效） */
+  /** 關掉之後聽力題改成看著西班牙文抄寫，題目不會消失（沒有 es 語音時也是同一條路徑） */
   speechEnabled: boolean;
-  /** 顯示「待母語者確認」標記 */
+  /** 顯示未經確認的區域用法。關掉時整塊不顯示 —— 不會只藏標記讓它看起來像確認過的 */
   showNeedsVerify: boolean;
   /** 是否已從儲存層補水完成，避免 hydration 前就渲染錯誤狀態 */
   hydrated: boolean;

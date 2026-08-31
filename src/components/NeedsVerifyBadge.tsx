@@ -1,14 +1,21 @@
 import { CircleHelp, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { useSettingsStore } from '@/store/useSettingsStore';
 import { useT } from '@/i18n';
 import type { Regional } from '@/content/schema';
 
 /**
  * 區域用法標記。規格 §7 要求：不是百分之百確定的用法要顯示「待母語者確認」，
  * 而不是假裝所有區域資訊都同樣可靠。
+ *
+ * 設定裡可以關掉未經確認的用法，關掉時**整塊不顯示**。
+ * 刻意不做成「只把標記藏起來」—— 那會讓沒把握的用法看起來像已經確認過的，
+ * 正好違反上面那條規則。要嘛看到內容連同警告，要嘛看不到。
  */
 export function RegionalNote({ regional }: { regional: Regional }) {
   const { L } = useT();
+  const showNeedsVerify = useSettingsStore((s) => s.showNeedsVerify);
+  if (regional.needsVerify && !showNeedsVerify) return null;
   return (
     <div className="rounded-2xl border border-secondary-300/60 bg-secondary-50 p-3 dark:border-secondary-800 dark:bg-secondary-900/30">
       <div className="mb-1.5 flex flex-wrap items-center gap-1.5">

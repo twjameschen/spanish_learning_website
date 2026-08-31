@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Volume2, CornerDownLeft, VolumeX } from 'lucide-react';
+import { Volume2, CornerDownLeft, VolumeX, Lightbulb, Eye } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Prompt } from './Shared';
@@ -19,23 +19,47 @@ type ListeningEx = Extract<Exercise, { type: 'listening' }>;
  * 這裡更進一步 —— 沒有語音時整題**改成看著西班牙文抄寫**，
  * 而不是留一個聽不到的題目卡住流程。
  * 一個按了沒反應的按鈕比沒有按鈕更糟，一道做不了的題比跳過更糟。
+ *
+ * 求助階梯（有語音時才有意義）：
+ * 完全聽不出來的時候，送出鍵是停用的（沒打字不能送），等於整題卡死，
+ * 只能亂打一通讓它判錯才過得去。所以給兩階出口：
+ *
+ * 1. **看中文意思** —— 只翻出意思，西文還是要自己拼。知道在講什麼之後
+ *    很多句子就聽得出來了。用了之後即使答對也記 `hesitant`（FSRS Hard），
+ *    因為那不是自己聽出來的。
+ * 2. **直接看答案** —— 算答錯，跟閃卡的「想不起來」同一個意思。
+ *    整句西文與翻譯由 Player 的回饋面板印出來。
  */
 export function Listening({ exercise, answered, onAnswer }: ExerciseProps<ListeningEx>) {
   const { t, L } = useT();
   const speech = useSpeech();
   const [value, setValue] = useState('');
+  const [hinted, setHinted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setValue('');
+    setHinted(false);
     inputRef.current?.focus();
     if (speech.available) speak(exercise.es);
   }, [exercise.id, exercise.es, speech.available]);
 
   const submit = () => {
     if (answered || !value.trim()) return;
-    onAnswer({ correct: matchesAnswer(value, [...exercise.accept]), given: value.trim() });
+    const correct = matchesAnswer(value, [...exercise.accept]);
+    onAnswer({
+      correct,
+      given: value.trim(),
+      // 看過意思才寫對的，不算真的聽出來 —— FSRS 記 Hard，會比較快再遇到
+      ...(correct && hinted ? { note: t('listenHintUsedNote'), hesitant: true } : {}),
+    });
   };
+
+  /*
+   * 沒有語音時整句已經印在畫面上，求助按鈕沒有任何東西可以揭曉，
+   * 兩顆都不顯示 —— 按了沒反應的按鈕比沒有按鈕更糟。
+   */
+  const canAskForHelp = speech.available && !answered;
 
   return (
     <div className="space-y-5">
@@ -66,6 +90,14 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
         </div>
       )}
 
+      {/* 看了意思之後，翻譯留在畫面上，西文還是要自己拼 */}
+      {hinted && !answered ? (
+        <div className="flex items-start gap-2.5 rounded-2xl border-2 border-accent-300 bg-accent-50 px-4 py-3 dark:border-accent-700/60 dark:bg-accent-900/25">
+          <Lightbulb aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-700 dark:text-accent-200" />
+          <p className="text-sm font-semibold text-body">{L(exercise.gloss)}</p>
+        </div>
+      ) : null}
+
       <div className="flex gap-2">
         <Input
           ref={inputRef}
@@ -94,6 +126,27 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
           <CornerDownLeft aria-hidden="true" />
         </Button>
       </div>
+
+      {canAskForHelp ? (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-bold text-muted">{t('listenHelpLabel')}</span>
+          {hinted ? null : (
+            <Button variant="outline" size="sm" onClick={() => setHinted(true)}>
+              <Lightbulb aria-hidden="true" />
+              {t('listenShowMeaning')}
+            </Button>
+          )}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="border border-line"
+            onClick={() => onAnswer({ correct: false, note: t('listenGaveUpNote') })}
+          >
+            <Eye aria-hidden="true" />
+            {t('listenShowAnswer')}
+          </Button>
+        </div>
+      ) : null}
 
       {answered ? (
         <div className="rounded-2xl bg-surface-2 px-4 py-3">
