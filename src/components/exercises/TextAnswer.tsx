@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { CornerDownLeft } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Prompt, SpanishDisplay } from './Shared';
+import { Prompt, SpanishDisplay, HelpRow, HintBox } from './Shared';
 import { matchesAnswer, isAccentImperfect } from '@/lib/normalize';
+import { answerSkeleton } from '@/lib/skeleton';
 import { getVerb } from '@/content';
 import { PERSON_LABEL, TENSE_LABEL } from '@/content/schema';
 import { useT } from '@/i18n';
@@ -16,6 +17,14 @@ type Conjugation = Extract<Exercise, { type: 'conjugation' }>;
 /**
  * 文字輸入的共用內裡。翻譯題與變位填空的差別只在題面，
  * 判定邏輯（忽略大小寫與重音、答對後顯示正確重音）完全一樣。
+ *
+ * 求助階梯也共用。這兩種題型的送出鍵在沒打字時是停用的，
+ * 想不出來就整題卡死 —— 只能亂打一通讓它判錯。所以給兩階出口：
+ *
+ * 1. **看提示** —— 給答案的骨架（每個字只留第一個字母）。
+ *    聽力題的第一階給的是中文意思，但這裡意思本來就在畫面上
+ *    （翻譯題的題面就是意思，變位題有原形＋人稱＋時態），所以改給形狀。
+ * 2. **直接看答案** —— 算答錯，跟閃卡的「想不起來」同一個意思。
  */
 function TextInputCore({
   accepted, canonical, answered, onAnswer, children, placeholder,
@@ -29,10 +38,12 @@ function TextInputCore({
 }) {
   const { t } = useT();
   const [value, setValue] = useState('');
+  const [hinted, setHinted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setValue('');
+    setHinted(false);
     inputRef.current?.focus();
   }, [canonical]);
 
@@ -41,16 +52,35 @@ function TextInputCore({
     const correct = matchesAnswer(value, accepted);
     // 答對但漏了重音符號：仍算對，但提示正確寫法，且 FSRS 給 Hard 而非 Good
     const imperfect = correct && isAccentImperfect(value, canonical);
+    /*
+     * 兩種「答對但不夠漂亮」可能同時成立：看了提示，而且漏了重音。
+     * 兩件事都要講 —— 只留一條的話，使用者會漏掉另一件該修正的事。
+     */
+    const notes = [
+      correct && hinted ? t('textHintUsedNote') : '',
+      imperfect ? t('accentImperfect', { answer: canonical }) : '',
+    ].filter(Boolean);
     onAnswer({
       correct,
       given: value.trim(),
-      ...(imperfect ? { note: t('accentImperfect', { answer: canonical }), hesitant: true } : {}),
+      ...(notes.length > 0 ? { note: notes.join('\n\n'), hesitant: true } : {}),
     });
   };
 
   return (
     <div className="space-y-5">
       {children}
+
+      {/* 形狀給你，內容自己填 */}
+      {hinted && !answered ? (
+        <HintBox mono>
+          <span lang="es">{answerSkeleton(canonical)}</span>
+          <span className="ml-3 font-sans font-normal tracking-normal text-muted">
+            {t('textSkeletonNote')}
+          </span>
+        </HintBox>
+      ) : null}
+
       <div className="flex gap-2">
         <Input
           ref={inputRef}
@@ -78,6 +108,15 @@ function TextInputCore({
           <CornerDownLeft aria-hidden="true" />
         </Button>
       </div>
+      {answered ? null : (
+        <HelpRow
+          hinted={hinted}
+          onHint={() => setHinted(true)}
+          onGiveUp={() => onAnswer({ correct: false, note: t('textGaveUpNote') })}
+          hintLabelKey="textShowSkeleton"
+        />
+      )}
+
       {answered ? (
         <div className="rounded-2xl bg-surface-2 px-4 py-3">
           <p className="text-xs font-bold uppercase tracking-wide text-muted">

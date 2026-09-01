@@ -122,11 +122,6 @@ export const UI = {
   },
 
   // 快照
-  snapshotTitle: { zh: '自動快照', en: 'Automatic snapshots' },
-  snapshotDesc: {
-    zh: '每次開站自動存一份，每天一份、保留最近 3 天。瀏覽器誤清資料時可以救回來。',
-    en: 'One snapshot per day, taken when you open the app, keeping the last 3 days. A safety net if the browser clears your data.',
-  },
   snapshotEmpty: { zh: '還沒有任何快照', en: 'No snapshots yet' },
   snapshotEmptyHint: {
     zh: '開始練習之後，每天開站都會自動存一份，保留最近 3 天。',
@@ -193,7 +188,6 @@ export const UI = {
   difficultyHard: { zh: '難', en: 'Hard' },
 
   // 其他
-  loadingStorage: { zh: '正在確認儲存方式…', en: 'Checking storage…' },
   loadingProgress: { zh: '正在載入你的進度…', en: 'Loading your progress…' },
   needsVerify: { zh: '待母語者確認', en: 'Needs native check' },
   needsVerifyHint: {
@@ -244,9 +238,22 @@ export const UI = {
     zh: '這台裝置沒有西班牙文語音，改成抄寫練習。',
     en: 'No Spanish voice on this device — this becomes a copying exercise instead.',
   },
-  listenHelpLabel: { zh: '此題求助：', en: 'Stuck?' },
+  helpLabel: { zh: '此題求助：', en: 'Stuck?' },
+  helpShowAnswer: { zh: '直接看答案', en: 'Show the answer' },
   listenShowMeaning: { zh: '看中文意思', en: 'Show the meaning' },
-  listenShowAnswer: { zh: '直接看答案', en: 'Show the answer' },
+  textShowSkeleton: { zh: '看提示', en: 'Show a hint' },
+  textSkeletonNote: {
+    zh: '每個字只留第一個字母，剩下的自己填。',
+    en: 'Only the first letter of each word is shown — you fill in the rest.',
+  },
+  textHintUsedNote: {
+    zh: '答對了，不過這題看過提示才寫出來 —— 排程會讓它比較快再出現一次。',
+    en: 'Correct — but you used a hint, so this one is scheduled to come back sooner.',
+  },
+  textGaveUpNote: {
+    zh: '這題看了答案，算沒答出來。下面是正解，唸一遍再往下。',
+    en: 'You looked this one up, so it counts as unanswered. The correct answer is below — say it once before moving on.',
+  },
   listenHintUsedNote: {
     zh: '答對了，不過這題看過意思才寫出來 —— 排程會讓它比較快再出現一次。',
     en: 'Correct — but you saw the meaning first, so this one is scheduled to come back sooner.',
@@ -281,7 +288,6 @@ export const UI = {
   goToLessons: { zh: '去看課程', en: 'Browse lessons' },
   dueToday: { zh: '今天要複習 {n} 張', en: '{n} cards due today' },
   navReview: { zh: '複習', en: 'Review' },
-  mastery: { zh: '掌握度', en: 'Mastery' },
 
   // ---- 遊戲化 ----
   achievementsTitle: { zh: '成就', en: 'Achievements' },
@@ -292,7 +298,6 @@ export const UI = {
   navAchievementsShort: { zh: '成就', en: 'Awards' },
   streakDays: { zh: '連續 {n} 天', en: '{n}-day streak' },
   streakNone: { zh: '還沒開始連續紀錄', en: 'No streak yet' },
-  freezesLeft: { zh: '{n} 張補簽卡', en: '{n} streak freezes' },
   freezeExplain: {
     zh: '每週會拿到一張補簽卡，漏一天時自動用掉，連續紀錄不會斷。',
     en: 'You get one streak freeze a week. Miss a day and it is spent automatically, keeping your streak alive.',

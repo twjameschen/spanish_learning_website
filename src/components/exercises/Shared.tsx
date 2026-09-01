@@ -1,7 +1,10 @@
 import type { ReactNode } from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, Lightbulb, Eye } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Inline } from '@/components/Markish';
+import { useT } from '@/i18n';
+import type { UIKey } from '@/i18n';
 
 /**
  * 題目的提示文字（中／英，隨語言切換）。
@@ -76,5 +79,58 @@ export function ChoiceButton({
     >
       {children}
     </button>
+  );
+}
+
+
+/**
+ * 求助列：想不出來時的兩階出口。
+ *
+ * 為什麼一定要有：聽力題、翻譯題、變位填空的送出鍵在沒打字時是停用的，
+ * 完全想不出來就整題卡死 —— 只能亂打一通讓它判錯才過得去。
+ *
+ * 兩階分別是：
+ * 1. **提示** —— 給一點線索但不給答案（聽力給中文意思，文字題給答案的骨架）。
+ *    用了之後即使答對也記 `hesitant`，FSRS 會排得比較近。
+ * 2. **看答案** —— 算答錯，跟閃卡的「想不起來」同一個意思。
+ *
+ * 按過提示之後第一顆自己收起來，只留「看答案」。
+ */
+export function HelpRow({
+  hinted, onHint, onGiveUp, hintLabelKey,
+}: {
+  hinted: boolean;
+  onHint: () => void;
+  onGiveUp: () => void;
+  /** 第一階按鈕的字：聽力是「看中文意思」，文字題是「看提示」 */
+  hintLabelKey: UIKey;
+}) {
+  const { t } = useT();
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="text-xs font-bold text-muted">{t('helpLabel')}</span>
+      {hinted ? null : (
+        <Button variant="outline" size="sm" onClick={onHint}>
+          <Lightbulb aria-hidden="true" />
+          {t(hintLabelKey)}
+        </Button>
+      )}
+      <Button variant="ghost" size="sm" className="border border-line" onClick={onGiveUp}>
+        <Eye aria-hidden="true" />
+        {t('helpShowAnswer')}
+      </Button>
+    </div>
+  );
+}
+
+/** 提示區塊：黃底的一行，聽力放中文意思，文字題放骨架 */
+export function HintBox({ children, mono = false }: { children: ReactNode; mono?: boolean }) {
+  return (
+    <div className="flex items-start gap-2.5 rounded-2xl border-2 border-accent-300 bg-accent-50 px-4 py-3 dark:border-accent-700/60 dark:bg-accent-900/25">
+      <Lightbulb aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-700 dark:text-accent-200" />
+      <p className={cn('text-sm font-semibold text-body', mono && 'font-mono tracking-wider')}>
+        {children}
+      </p>
+    </div>
   );
 }

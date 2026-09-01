@@ -186,6 +186,74 @@ ck('抄寫模式不顯示求助 —— 答案已經在畫面上了',
    && await p.getByRole('button',{name:/直接看答案/}).count()===0);
 
 /* ------------------------------------------------------------------ *
+ * 5b. 翻譯題與變位填空的求助（第一階給的是骨架，不是意思）
+ * ------------------------------------------------------------------ */
+console.log('\n[5b] 翻譯題與變位填空的求助');
+// 語音在上一段被關掉了，先開回來
+await p.getByRole('button',{name:'設定'}).first().click();
+await p.waitForTimeout(400);
+await p.locator('[role="dialog"][aria-label="設定"]').getByRole('button',{name:'開',exact:true}).click();
+await p.keyboard.press('Escape');
+await p.waitForTimeout(500);
+
+// a0-saludos 的 ex-sal-3：把「我叫 Ana。」翻成西班牙文 → Me llamo Ana.
+await p.goto(BASE+'#/practice/a0-saludos',{waitUntil:'networkidle'});
+await p.waitForTimeout(800);
+await clearCelebrations(p);
+for (let i=0;i<12;i++){
+  if (/翻成西班牙文/.test(await T(p))) break;
+  const next=p.getByRole('button',{name:/^下一題|^完成/});
+  if (await next.count()){ await next.first().click(); await p.waitForTimeout(400); continue; }
+  const opts=p.locator('main ol li button, main ul li button');
+  if (await opts.count()){ await opts.first().click(); await p.waitForTimeout(400); continue; }
+  const el=p.getByRole('button',{name:/^el$/});
+  if (await el.count()){ await el.first().click(); await p.waitForTimeout(250); continue; }
+  const inp2=p.locator('main input[type="text"]');
+  if (await inp2.count()){ await inp2.first().fill('x'); await inp2.first().press('Enter'); await p.waitForTimeout(500); continue; }
+  break;
+}
+t=await T(p);
+ck('走到翻譯題', /翻成西班牙文/.test(t), t.split('\n')[2]??'');
+ck('翻譯題也有兩顆求助', await p.getByRole('button',{name:/看提示/}).count()===1
+   && await p.getByRole('button',{name:/直接看答案/}).count()===1);
+ck('求助前沒有洩漏答案', !/Me llamo Ana/.test(t));
+
+await p.getByRole('button',{name:/看提示/}).click();
+await p.waitForTimeout(400);
+t=await T(p);
+const sk=t.split('\n').find(l=>l.includes('·'))??'';
+ck('骨架出現', sk.length>0, sk);
+ck('骨架只留每個字的首字母，其餘是點', /^[^·]*M·+ l·+ A·+/.test(sk.trim()), sk.trim());
+ck('骨架不是答案本身', !/Me llamo Ana/.test(t));
+ck('有說明骨架怎麼讀', /每個字只留第一個字母/.test(t));
+ck('「看提示」按過就收起來', await p.getByRole('button',{name:/看提示/}).count()===0);
+await p.screenshot({path:`${SP}/p11-translate-hint.png`,fullPage:true});
+
+const tinp=p.locator('main input[type="text"]').first();
+await tinp.fill('Me llamo Ana');
+await tinp.press('Enter');
+await p.waitForTimeout(700);
+t=await T(p);
+ck('照骨架打完判對', /答對了/.test(t));
+ck('有講明看過提示', /看過提示/.test(t), t.split('\n').find(l=>/看過提示/.test(l))??'');
+ck('沒打句號不會被誤報重音不完整', !/重音/.test(t), t.split('\n').find(l=>/重音/.test(l))??'');
+await p.screenshot({path:`${SP}/p11-translate-correct.png`,fullPage:true});
+
+console.log('\n[5c] 變位填空直接看答案');
+await p.goto(BASE+'#/practice/a1-presente-regular',{waitUntil:'networkidle'});
+await p.waitForTimeout(800);
+await clearCelebrations(p);
+t=await T(p);
+ck('第一題是變位填空', /填出正確的動詞形式|變位/.test(t) || await p.getByRole('button',{name:/看提示/}).count()===1);
+await p.getByRole('button',{name:/直接看答案/}).click();
+await p.waitForTimeout(700);
+t=await T(p);
+ck('算答錯', /答錯了/.test(t));
+ck('正解印出來了', /hablo/.test(t));
+ck('說明了為什麼算錯', /看了答案/.test(t));
+await p.screenshot({path:`${SP}/p11-conjugation-gaveup.png`,fullPage:true});
+
+/* ------------------------------------------------------------------ *
  * 6. 首頁的進度條講的是學習者自己的進度
  * ------------------------------------------------------------------ */
 console.log('\n[6] 首頁進度條');

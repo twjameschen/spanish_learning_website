@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Volume2, CornerDownLeft, VolumeX, Lightbulb, Eye } from 'lucide-react';
+import { Volume2, CornerDownLeft, VolumeX } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Prompt } from './Shared';
+import { Prompt, HelpRow, HintBox } from './Shared';
 import { matchesAnswer } from '@/lib/normalize';
 import { speak } from '@/lib/speech';
 import { useSpeech } from '@/hooks/useSpeech';
@@ -91,12 +91,7 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
       )}
 
       {/* 看了意思之後，翻譯留在畫面上，西文還是要自己拼 */}
-      {hinted && !answered ? (
-        <div className="flex items-start gap-2.5 rounded-2xl border-2 border-accent-300 bg-accent-50 px-4 py-3 dark:border-accent-700/60 dark:bg-accent-900/25">
-          <Lightbulb aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-700 dark:text-accent-200" />
-          <p className="text-sm font-semibold text-body">{L(exercise.gloss)}</p>
-        </div>
-      ) : null}
+      {hinted && !answered ? <HintBox>{L(exercise.gloss)}</HintBox> : null}
 
       <div className="flex gap-2">
         <Input
@@ -128,24 +123,12 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
       </div>
 
       {canAskForHelp ? (
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-bold text-muted">{t('listenHelpLabel')}</span>
-          {hinted ? null : (
-            <Button variant="outline" size="sm" onClick={() => setHinted(true)}>
-              <Lightbulb aria-hidden="true" />
-              {t('listenShowMeaning')}
-            </Button>
-          )}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="border border-line"
-            onClick={() => onAnswer({ correct: false, note: t('listenGaveUpNote') })}
-          >
-            <Eye aria-hidden="true" />
-            {t('listenShowAnswer')}
-          </Button>
-        </div>
+        <HelpRow
+          hinted={hinted}
+          onHint={() => setHinted(true)}
+          onGiveUp={() => onAnswer({ correct: false, note: t('listenGaveUpNote') })}
+          hintLabelKey="listenShowMeaning"
+        />
       ) : null}
 
       {answered ? (

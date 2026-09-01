@@ -32,7 +32,16 @@ export function foldAccents(input: string): string {
  * 初學階段不必嚴格要求，但也不該把它從答案裡抹掉後再比對。
  */
 export function normalizeAnswer(input: string): string {
-  return foldAccents(input)
+  return normalizeShape(foldAccents(input));
+}
+
+/**
+ * 大小寫、空白、標點的正規化 —— 唯一不碰的就是重音。
+ * `normalizeAnswer` 是「這個再加上折重音」，`isAccentImperfect` 則要
+ * 一個「只差重音」的比較基準，所以拆出來共用。
+ */
+function normalizeShape(input: string): string {
+  return input
     .toLowerCase()
     .replace(/[¿¡]/g, '')
     .replace(/[.!?;:]+$/g, '')
@@ -52,9 +61,16 @@ export function matchesAnswer(input: string, accepted: readonly string[]): boole
  * UI 可據此提示「答對了，不過正確寫法是 …」而不是直接放過。
  */
 export function isAccentImperfect(input: string, canonical: string): boolean {
-  const a = input.toLowerCase().replace(/\s+/g, ' ').trim();
-  const b = canonical.toLowerCase().replace(/\s+/g, ' ').trim();
-  if (a === b) return false;
+  /*
+   * 先把「不是重音」的差異抹平再比。
+   *
+   * 原本這裡只拿掉大小寫與空白，於是 canonical 帶句號而使用者沒打句號時
+   * （accept 清單裡的寫法幾乎都不帶句號），兩邊不相等就落到下面那行，
+   * 而 normalizeAnswer 會把句號去掉 → 判定成「重音不完整」。
+   * 實測 68 題翻譯裡有 66 題會這樣誤報：重音明明一個都沒漏，
+   * 卻被告知寫法不對，FSRS 還跟著降成 Hard。
+   */
+  if (normalizeShape(input) === normalizeShape(canonical)) return false;
   return normalizeAnswer(input) === normalizeAnswer(canonical);
 }
 

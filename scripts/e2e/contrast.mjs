@@ -81,6 +81,26 @@ for (const scheme of ['light','dark']) {
     const k=`${h.cls}|${h.ratio}`;
     if(!seen.has(k))seen.set(k,{...h,scheme,route:'聽力提示'});
   }
+  // 翻譯題的骨架提示（跟聽力提示同一個 HintBox，但字是等寬的）
+  await q.goto(BASE+'#/practice/a0-saludos',{waitUntil:'networkidle'});
+  await q.waitForTimeout(700);
+  for(let i=0;i<12;i++){
+    if(await q.getByRole('button',{name:/看提示/}).count())break;
+    const next=q.getByRole('button',{name:/^下一題|^完成/});
+    if(await next.count()){await next.first().click();await q.waitForTimeout(350);continue;}
+    const opts=q.locator('main ol li button, main ul li button');
+    if(await opts.count()){await opts.first().click();await q.waitForTimeout(350);continue;}
+    const inp=q.locator('main input[type="text"]');
+    if(await inp.count()){await inp.first().fill('x');await inp.first().press('Enter');await q.waitForTimeout(450);continue;}
+    break;
+  }
+  if(await q.getByRole('button',{name:/看提示/}).count()){
+    await q.getByRole('button',{name:/看提示/}).click(); await q.waitForTimeout(400);
+    for(const h of await q.evaluate(AUDIT)){
+      const k=`${h.cls}|${h.ratio}`;
+      if(!seen.has(k))seen.set(k,{...h,scheme,route:'骨架提示'});
+    }
+  }
   await q.close();
 
   await p.close();

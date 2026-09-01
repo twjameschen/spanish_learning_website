@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { SettingsPanel } from './SettingsPanel';
 import { RegionalNote } from './NeedsVerifyBadge';
 import { useSettingsStore } from '@/store/useSettingsStore';
@@ -53,6 +53,34 @@ describe('設定面板', () => {
     open();
     expect(screen.getByRole('button', { name: '10 分鐘' }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.getByRole('button', { name: '5 分鐘' }).getAttribute('aria-pressed')).toBe('false');
+  });
+
+  it('Esc 關得掉，就算焦點被背後的輸入框搶走也一樣', async () => {
+    /*
+     * useShortcut 在焦點落在 input 時完全不接手（那是刻意的）。
+     * 但這個面板改的設定會影響背後那一頁 —— 在聽力題上把語音打開，
+     * Listening 會把焦點搶回它的輸入框，此後 Esc 就再也關不掉面板。
+     */
+    render(
+      <>
+        <input aria-label="背後那一頁的輸入框" />
+        <SettingsPanel />
+      </>,
+    );
+    open();
+    expect(screen.getByRole('dialog')).toBeTruthy();
+
+    const behind = screen.getByLabelText('背後那一頁的輸入框');
+    behind.focus();
+    fireEvent.keyDown(behind, { key: 'Escape' });
+    // 離場動畫跑完才會從 DOM 移除，所以要等
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull(), { timeout: 2000 });
+  });
+
+  it('打開時焦點收進面板裡', () => {
+    render(<SettingsPanel />);
+    open();
+    expect(screen.getByRole('dialog').contains(document.activeElement)).toBe(true);
   });
 
   it('主題與語言在面板裡也找得到', () => {

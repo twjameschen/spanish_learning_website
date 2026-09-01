@@ -1,9 +1,8 @@
-import { useState, type ReactNode } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, X, Sun, Moon, MonitorSmartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useShortcut } from '@/hooks/useShortcut';
 import { useTheme } from '@/hooks/useTheme';
 import { useSettingsStore, type DailyGoal, type ThemeMode } from '@/store/useSettingsStore';
 import { useT } from '@/i18n';
@@ -75,9 +74,26 @@ export function SettingsPanel() {
   const showNeedsVerify = useSettingsStore((s) => s.showNeedsVerify);
   const setShowNeedsVerify = useSettingsStore((s) => s.setShowNeedsVerify);
 
-  useShortcut((key) => {
-    if (key === 'Escape') setOpen(false);
-  });
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  /*
+   * Esc 要自己接，不能只靠 useShortcut。
+   *
+   * useShortcut 在焦點落在 input 時會完全不接手（那是刻意的，使用者正在打字）。
+   * 但這個面板改的設定會影響背後那一頁：在聽力題上把語音打開，
+   * Listening 的 effect 會跟著把焦點搶回它的輸入框 —— 此後 Esc 就再也關不掉面板。
+   * 面板開著的時候鍵盤本來就該屬於面板，所以這裡直接掛自己的監聽。
+   */
+  useEffect(() => {
+    if (!open) return;
+    // 開啟時把焦點收進面板，鍵盤使用者才不會停在面板外面
+    panelRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
 
   return (
     <>
@@ -106,7 +122,9 @@ export function SettingsPanel() {
             aria-label={t('settingsTitle')}
           >
             <motion.div
-              className={cn('w-full max-w-md rounded-3xl bg-surface p-6 shadow-lift')}
+              ref={panelRef}
+              tabIndex={-1}
+              className={cn('w-full max-w-md rounded-3xl bg-surface p-6 shadow-lift outline-none')}
               initial={{ scale: 0.9, y: 16 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, transition: EXIT }}

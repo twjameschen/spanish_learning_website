@@ -86,6 +86,26 @@ describe('重音不完整的提示', () => {
   it('答錯時不提示（那要走答錯的流程）', () => {
     expect(isAccentImperfect('el perro', 'El café está caliente.')).toBe(false);
   });
+
+  it('只差句末標點不算重音不完整', () => {
+    /*
+     * 這裡原本會誤報。canonical 幾乎都帶句號，而 accept 清單裡的寫法幾乎都不帶，
+     * 於是照 accept 打的人（重音一個都沒漏）會被告知「寫法不完整」，FSRS 還降成 Hard。
+     * 實測 68 題翻譯裡有 66 題中招。
+     */
+    expect(isAccentImperfect('El café está caliente', 'El café está caliente.')).toBe(false);
+    expect(isAccentImperfect('Cuánto cuesta', '¿Cuánto cuesta?')).toBe(false);
+    expect(isAccentImperfect('Soy de Taiwán', 'Soy de Taiwán.')).toBe(false);
+  });
+
+  it('大小寫與多餘空白也不算', () => {
+    expect(isAccentImperfect('  el CAFÉ  está caliente ', 'El café está caliente.')).toBe(false);
+  });
+
+  it('少了句號又漏重音時，仍然要提示', () => {
+    // 修掉誤報不能連真的漏重音也一起放過
+    expect(isAccentImperfect('El cafe esta caliente', 'El café está caliente.')).toBe(true);
+  });
 });
 
 describe('語序重組比對', () => {
