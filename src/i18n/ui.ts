@@ -233,6 +233,8 @@ export const UI = {
   typeWhatYouHear: { zh: '打出你聽到的句子…', en: 'Type what you hear…' },
   typeWhatYouSee: { zh: '照著上面的句子打…', en: 'Type the sentence shown above…' },
   playAudio: { zh: '播放', en: 'Play' },
+  charPadLabel: { zh: '西班牙文字元', en: 'Spanish characters' },
+  charPadInsert: { zh: '插入 {ch}', en: 'Insert {ch}' },
   playSlower: { zh: '放慢再聽一次', en: 'Play more slowly' },
   noSpanishVoice: {
     zh: '這台裝置沒有西班牙文語音，改成抄寫練習。',
@@ -376,6 +378,18 @@ export const UI = {
     en: 'Eight nouns from “{topic}”, sorted into el and la against the clock. Gender has to become a reflex — pausing to think means it is not there yet.',
   },
   genderDrillCta: { zh: '練這個主題的陰陽性', en: 'Drill gender in this topic' },
+  mistakesTitle: { zh: '錯題本', en: 'Your mistakes' },
+  mistakesDesc: {
+    zh: '{n} 題還沒答對過。答對之後就會從這裡消失。',
+    en: '{n} questions you have not got right yet. They leave this list once you do.',
+  },
+  mistakesCta: { zh: '練錯過的題', en: 'Practise your mistakes' },
+  mistakesCount: { zh: '{n} 題還沒答對', en: '{n} not yet correct' },
+  mistakesEmpty: { zh: '目前沒有錯題', en: 'No mistakes right now' },
+  mistakesEmptyHint: {
+    zh: '答錯的題目會收到這裡，答對之後自動消失。',
+    en: 'Questions you get wrong collect here, and leave once you get them right.',
+  },
   listenDrillTitle: { zh: '連續聽寫', en: 'Dictation practice' },
   listenDrillDescAll: {
     zh: '橫跨整段旅程的 {n} 句，每天換一批。聽完把整句打出來 —— 沒有西班牙文語音的裝置會自動改成抄寫。',

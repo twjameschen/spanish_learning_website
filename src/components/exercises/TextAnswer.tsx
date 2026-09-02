@@ -3,6 +3,7 @@ import { CornerDownLeft } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Prompt, SpanishDisplay, HelpRow, HintBox } from './Shared';
+import { CharPad } from './CharPad';
 import { matchesAnswer, isAccentImperfect } from '@/lib/normalize';
 import { answerSkeleton } from '@/lib/skeleton';
 import { getVerb } from '@/content';
@@ -80,6 +81,8 @@ function TextInputCore({
           </span>
         </HintBox>
       ) : null}
+
+      <CharPad inputRef={inputRef} value={value} onChange={setValue} disabled={answered} />
 
       <div className="flex gap-2">
         <Input

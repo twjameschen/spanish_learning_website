@@ -7,6 +7,7 @@ import { getLesson, allWords, topicLabel, journey } from '@/content';
 import { buildVocabDrill } from '@/lib/vocabDrill';
 import { buildGenderDrill, isGenderDrillId, topicFromDrillId } from '@/lib/genderDrill';
 import { buildListenDrill, isListenDrillId, scopeFromDrillId } from '@/lib/listenDrill';
+import { buildMistakeDrill } from '@/lib/mistakes';
 import { shuffleSeeded, todaySeed } from '@/lib/shuffle';
 import { hrefFor } from '@/lib/router';
 import { useT, UI } from '@/i18n';
@@ -19,6 +20,7 @@ import { useT, UI } from '@/i18n';
  * - `all` —— 從整個單字表隨機抽
  * - `gender-<主題>` —— 那個主題的一組陰陽性分類
  * - `listen` / `listen-<城市>` —— 連續聽寫，整段或某一段
+ * - `mistakes` —— 錯題本：還沒答對過的題目
  *
  * 四種都刻意**不**傳 lessonId 給 ExercisePlayer —— 這不是課程練習，
  * 不該把它算成「完成了這一課」。
@@ -31,11 +33,13 @@ const pickDaily = <T,>(items: T[], n: number): T[] => shuffleSeeded(items, today
 export function DrillPage({ id }: { id: string }) {
   const { t, L } = useT();
   const isAll = id === 'all';
+  const isMistakes = id === 'mistakes';
   const genderTopic = isGenderDrillId(id) ? topicFromDrillId(id) : null;
   const listenScope = isListenDrillId(id) ? scopeFromDrillId(id) : null;
-  const lesson = isAll || genderTopic || listenScope ? undefined : getLesson(id);
+  const lesson = isAll || isMistakes || genderTopic || listenScope ? undefined : getLesson(id);
 
   const exercises = useMemo(() => {
+    if (isMistakes) return buildMistakeDrill();
     if (listenScope) return buildListenDrill(listenScope);
     if (genderTopic) {
       const drill = buildGenderDrill(genderTopic);
@@ -43,9 +47,9 @@ export function DrillPage({ id }: { id: string }) {
     }
     if (isAll) return buildVocabDrill(pickDaily(allWords.map((w) => w.id), DRILL_SIZE / 2), DRILL_SIZE);
     return lesson ? buildVocabDrill(lesson.vocabIds, DRILL_SIZE) : [];
-  }, [genderTopic, listenScope, isAll, lesson]);
+  }, [isMistakes, genderTopic, listenScope, isAll, lesson]);
 
-  if (!isAll && !genderTopic && !listenScope && !lesson) {
+  if (!isAll && !isMistakes && !genderTopic && !listenScope && !lesson) {
     return (
       <EmptyState
         icon={<BrokenSignpost />}
@@ -64,24 +68,30 @@ export function DrillPage({ id }: { id: string }) {
   }
 
   if (exercises.length === 0) {
-    return <EmptyState title={t('drillEmpty')} hint={t('drillEmptyHint')} />;
+    return isMistakes
+      ? <EmptyState title={t('mistakesEmpty')} hint={t('mistakesEmptyHint')} />
+      : <EmptyState title={t('drillEmpty')} hint={t('drillEmptyHint')} />;
   }
 
-  const title = genderTopic
-    ? UI.genderDrillTitle
-    : listenScope
-      ? UI.listenDrillTitle
-      : UI.drillTitle;
+  const title = isMistakes
+    ? UI.mistakesTitle
+    : genderTopic
+      ? UI.genderDrillTitle
+      : listenScope
+        ? UI.listenDrillTitle
+        : UI.drillTitle;
   const cityName = listenScope
     ? journey.find((stop) => stop.city === listenScope)?.name
     : undefined;
-  const description = genderTopic
-    ? t('genderDrillDesc', { topic: L(topicLabel(genderTopic)) })
-    : listenScope
-      ? (cityName
-        ? t('listenDrillDescCity', { city: L(cityName), n: exercises.length })
-        : t('listenDrillDescAll', { n: exercises.length }))
-      : t('drillDesc', { n: exercises.length });
+  const description = isMistakes
+    ? t('mistakesDesc', { n: exercises.length })
+    : genderTopic
+      ? t('genderDrillDesc', { topic: L(topicLabel(genderTopic)) })
+      : listenScope
+        ? (cityName
+          ? t('listenDrillDescCity', { city: L(cityName), n: exercises.length })
+          : t('listenDrillDescAll', { n: exercises.length }))
+        : t('drillDesc', { n: exercises.length });
 
   /*
    * 回上一頁要回到「進來的地方」，不是統一回單字表：
@@ -90,9 +100,11 @@ export function DrillPage({ id }: { id: string }) {
    */
   const backRoute: Parameters<typeof hrefFor>[0] = lesson
     ? { name: 'lesson', id: lesson.id }
-    : listenScope
-      ? (cityName ? { name: 'lessons' } : { name: 'home' })
-      : { name: 'vocab' };
+    : isMistakes
+      ? { name: 'home' }
+      : listenScope
+        ? (cityName ? { name: 'lessons' } : { name: 'home' })
+        : { name: 'vocab' };
   const back = hrefFor(backRoute);
   const backLabel = lesson
     ? L(lesson.title)

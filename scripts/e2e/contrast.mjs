@@ -94,12 +94,28 @@ for (const scheme of ['light','dark']) {
     if(await inp.count()){await inp.first().fill('x');await inp.first().press('Enter');await q.waitForTimeout(450);continue;}
     break;
   }
+  // 字元列（跟骨架提示在同一頁，一起量）
+  if(await q.getByRole('button',{name:'插入 ñ'}).count()){
+    for(const h of await q.evaluate(AUDIT)){
+      const k=`${h.cls}|${h.ratio}`;
+      if(!seen.has(k))seen.set(k,{...h,scheme,route:'字元列'});
+    }
+  }
   if(await q.getByRole('button',{name:/看提示/}).count()){
     await q.getByRole('button',{name:/看提示/}).click(); await q.waitForTimeout(400);
     for(const h of await q.evaluate(AUDIT)){
       const k=`${h.cls}|${h.ratio}`;
       if(!seen.has(k))seen.set(k,{...h,scheme,route:'骨架提示'});
     }
+  }
+  // 錯題本卡片只有「有錯題」時才出現。上面走過題目時故意填了 x，
+  // 所以這時首頁一定有錯題 —— 回首頁量那張紅色卡片
+  await q.goto(BASE+'#/',{waitUntil:'networkidle'}); await q.waitForTimeout(600);
+  for(let i=0;i<4;i++){if(!(await q.locator('[role="dialog"]').count()))break;
+    await q.getByRole('button',{name:/^好$|^Nice$/}).first().click().catch(()=>{});await q.waitForTimeout(250);}
+  for(const h of await q.evaluate(AUDIT)){
+    const k=`${h.cls}|${h.ratio}`;
+    if(!seen.has(k))seen.set(k,{...h,scheme,route:'首頁（有錯題）'});
   }
   await q.close();
 

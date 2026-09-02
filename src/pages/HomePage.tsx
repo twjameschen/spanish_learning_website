@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy, Headphones } from 'lucide-react';
+import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy, Headphones, CircleX } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -19,6 +19,7 @@ import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
 import { allWords, allLessons, journey } from '@/content';
 import { listenPoolSize, listenDrillId } from '@/lib/listenDrill';
+import { mistakeCount } from '@/lib/mistakes';
 import type { StorageTier } from '@/lib/storage';
 
 const TIER_TEXT: Record<
@@ -37,7 +38,10 @@ export function HomePage() {
   const cards = useProgressStore((s) => s.cards);
   const totalXp = useProgressStore((s) => s.totalXp);
   const lessonProgress = useProgressStore((s) => s.lessons);
+  const recentLog = useProgressStore((s) => s.recentLog);
   const dueCount = useMemo(() => dueTodayCount(), [cards]);
+  // recentLog 變動時才要重算 —— 掃 2000 筆再解析，不該每次 render 都跑
+  const wrongCount = useMemo(() => mistakeCount(), [recentLog]);
   const level = levelProgress(totalXp);
 
   const achievements = useMemo(
@@ -96,6 +100,26 @@ export function HomePage() {
                   <CalendarCheck aria-hidden="true" className="size-5" />
                 </span>
                 <CardTitle>{t('dueToday', { n: dueCount })}</CardTitle>
+                <ArrowRight aria-hidden="true" className="ml-auto size-4 text-muted transition-transform group-hover:translate-x-1" />
+              </div>
+            </CardHeader>
+          </Card>
+        </a>
+      ) : null}
+
+      {/* 錯題本：有錯題才顯示，沒有就不佔版面 */}
+      {wrongCount > 0 ? (
+        <a href={hrefFor({ name: 'drill', id: 'mistakes' })} className="group block">
+          <Card className="border-error-300 bg-error-50 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-lift dark:border-error-700/60 dark:bg-error-700/15">
+            <CardHeader>
+              <div className="flex items-center gap-2.5">
+                <span className="grid size-10 place-items-center rounded-2xl bg-error-500 text-ink-900">
+                  <CircleX aria-hidden="true" className="size-5" />
+                </span>
+                <CardTitle>{t('mistakesTitle')}</CardTitle>
+                <span className="text-sm font-bold text-muted">
+                  {t('mistakesCount', { n: wrongCount })}
+                </span>
                 <ArrowRight aria-hidden="true" className="ml-auto size-4 text-muted transition-transform group-hover:translate-x-1" />
               </div>
             </CardHeader>

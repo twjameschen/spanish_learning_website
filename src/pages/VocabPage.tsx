@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
+import { SpeakButton } from '@/components/SpeakButton';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { allWords, allTopics, topicLabel, POS_LABEL } from '@/content';
 import { hrefFor } from '@/lib/router';
@@ -34,6 +35,7 @@ function WordCard({ word }: { word: Word }) {
         <h3 lang="es" className="break-es text-xl font-extrabold text-body">
           {word.es}
         </h3>
+        <SpeakButton text={word.es} />
         {word.pos === 'noun' && word.gender ? (
           // 直接把冠詞印出來當標記 —— el / la 本身就是要記的資訊，比任何性別符號都直接
           <Badge
@@ -62,6 +64,7 @@ function WordCard({ word }: { word: Word }) {
       <div className="mt-3 rounded-2xl bg-surface-2 px-3 py-2.5">
         <p lang="es" className="break-es text-sm font-semibold text-body">
           {word.exampleEs}
+          <SpeakButton text={word.exampleEs} className="ml-1.5" />
         </p>
         <p className="mt-0.5 text-sm text-muted">{L(word.exampleGloss)}</p>
       </div>

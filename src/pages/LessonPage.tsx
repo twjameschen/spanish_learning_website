@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Markish, Inline } from '@/components/Markish';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
+import { SpeakButton } from '@/components/SpeakButton';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
 import { AndeanBand } from '@/components/decor/Patterns';
 import { allLessons, getLesson, getWord, getVerb, journey } from '@/content';
@@ -116,7 +117,10 @@ export function LessonListPage() {
 function ExamplePair({ es, gloss, note }: { es: string; gloss: string; note?: string | undefined }) {
   return (
     <li className="rounded-2xl bg-surface-2 px-3.5 py-2.5">
-      <p lang="es" className="break-es font-bold text-body">{es}</p>
+      <p lang="es" className="break-es font-bold text-body">
+        {es}
+        <SpeakButton text={es} className="ml-1.5" />
+      </p>
       <p className="mt-0.5 text-sm text-muted">{gloss}</p>
       {note ? (
         <p className="mt-1 text-xs leading-relaxed text-secondary-800 dark:text-secondary-300">

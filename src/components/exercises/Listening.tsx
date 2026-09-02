@@ -3,6 +3,7 @@ import { Volume2, CornerDownLeft, VolumeX } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Prompt, HelpRow, HintBox } from './Shared';
+import { CharPad } from './CharPad';
 import { matchesAnswer } from '@/lib/normalize';
 import { speak } from '@/lib/speech';
 import { useSpeech } from '@/hooks/useSpeech';
@@ -92,6 +93,8 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
 
       {/* 看了意思之後，翻譯留在畫面上，西文還是要自己拼 */}
       {hinted && !answered ? <HintBox>{L(exercise.gloss)}</HintBox> : null}
+
+      <CharPad inputRef={inputRef} value={value} onChange={setValue} disabled={answered} />
 
       <div className="flex gap-2">
         <Input
