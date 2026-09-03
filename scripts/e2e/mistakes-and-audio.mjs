@@ -151,7 +151,52 @@ for (let i=0;i<12;i++){
 }
 ck('翻譯題也有字元列', await p.getByRole('button',{name:'插入 ñ'}).count()===1);
 
-console.log('\n[4] 頁面沒有 JS 錯誤');
+/* ------------------------------------------------------------------ *
+ * 4. 語音偵測只問一次（單字表一頁 1456 顆喇叭）
+ * ------------------------------------------------------------------ */
+console.log('\n[4] 語音偵測只問一次');
+const q=await b.newPage({viewport:{width:1000,height:1300}});
+// 這一頁的 getVoices() 故意先回空陣列 —— 那才會走到「掛監聽器等」那條路
+await q.addInitScript(`
+  window.__listeners = 0;
+  const voice = { name: 'Late', lang: 'es-MX', default: false, localService: true, voiceURI: 'l' };
+  let ready = false;
+  Object.defineProperty(window, 'speechSynthesis', {
+    configurable: true,
+    value: {
+      getVoices: () => (ready ? [voice] : []),
+      speak: () => {}, cancel: () => {},
+      addEventListener: () => { window.__listeners += 1; },
+      removeEventListener: () => {},
+    },
+  });
+  window.SpeechSynthesisUtterance = class { constructor(t){ this.text = t; } };
+`);
+await q.goto(BASE+'#/vocab',{waitUntil:'networkidle'});
+await q.waitForTimeout(1500);
+const cards=await q.locator('main article').count();
+const listeners=await q.evaluate(()=>window.__listeners);
+ck('單字表一次渲染很多張卡', cards>500, `${cards} 張`);
+ck('整頁只掛一個 voiceschanged 監聽器', listeners===1,
+   `${listeners} 個（卡片 ${cards} 張，每張兩顆喇叭）`);
+await q.close();
+
+/* ------------------------------------------------------------------ *
+ * 5. 首頁的複習張數 = 複習頁實際排出來的題數
+ * ------------------------------------------------------------------ */
+console.log('\n[5] 複習張數與佇列同源');
+await p.goto(BASE+'#/',{waitUntil:'networkidle'}); await p.waitForTimeout(800);
+await clearCelebrations(p);
+t=await T(p);
+const dueShown=Number((t.match(/今天要複習 (\d+) 張/)??[])[1] ?? 0);
+ck('首頁顯示今天要複習幾張', dueShown>0, `${dueShown} 張`);
+await p.goto(BASE+'#/review',{waitUntil:'networkidle'}); await p.waitForTimeout(800);
+await clearCelebrations(p);
+t=await T(p);
+const queueLen=Number((t.match(/(\d+)\s*\/\s*(\d+)/)??[])[2] ?? (t.match(/共 (\d+) 題/)??[])[1] ?? 0);
+ck('複習頁排出來的題數跟首頁一樣', queueLen===dueShown, `首頁 ${dueShown}、複習頁 ${queueLen}`);
+
+console.log('\n[6] 頁面沒有 JS 錯誤');
 ck('沒有 pageerror / console error', errs.length===0, errs.slice(0,3).join(' | '));
 
 await b.close();

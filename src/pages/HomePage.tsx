@@ -10,7 +10,7 @@ import { EmptyState } from '@/components/decor/Illustrations';
 import { SunMotif } from '@/components/decor/Patterns';
 import { useStorageTier } from '@/hooks/useStorageTier';
 import { takeSnapshot, listSnapshots, type SnapshotMeta } from '@/lib/snapshot';
-import { useProgressStore, dueTodayCount } from '@/store/useProgressStore';
+import { useProgressStore } from '@/store/useProgressStore';
 import { levelProgress } from '@/lib/xp';
 import { evaluateAchievements } from '@/lib/achievements';
 import { buildAchievementSnapshot } from '@/lib/snapshotProgress';
@@ -20,6 +20,7 @@ import type { UIKey } from '@/i18n';
 import { allWords, allLessons, journey } from '@/content';
 import { listenPoolSize, listenDrillId } from '@/lib/listenDrill';
 import { mistakeCount } from '@/lib/mistakes';
+import { reviewQueueCount } from '@/lib/review';
 import type { StorageTier } from '@/lib/storage';
 
 const TIER_TEXT: Record<
@@ -39,7 +40,9 @@ export function HomePage() {
   const totalXp = useProgressStore((s) => s.totalXp);
   const lessonProgress = useProgressStore((s) => s.lessons);
   const recentLog = useProgressStore((s) => s.recentLog);
-  const dueCount = useMemo(() => dueTodayCount(), [cards]);
+  // 數的是「實際排得出來的題數」而不是到期卡片張數 ——
+  // 孤兒卡片解析不回題目，算進來的話首頁說 8 張、點進去只有 6 張
+  const dueCount = useMemo(() => reviewQueueCount(), [cards]);
   // recentLog 變動時才要重算 —— 掃 2000 筆再解析，不該每次 render 都跑
   const wrongCount = useMemo(() => mistakeCount(), [recentLog]);
   const level = levelProgress(totalXp);

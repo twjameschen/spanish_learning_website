@@ -157,6 +157,56 @@ describe('翻譯題的求助階梯', () => {
   });
 });
 
+describe('換題時的狀態重設', () => {
+  /*
+   * 同一課裡沒有答案重複的文字題，但複習佇列與錯題本會跨課混題，
+   * 而全域有兩組答案一模一樣的題目：
+   *   El café está caliente. → a0-acento/ex-ace-5、a0-ser-estar/ex-se-8
+   *   Me llamo Ana.          → a0-saludos/ex-sal-3、a1-reflexivos/ex-a1rf-5
+   * 重設 effect 若掛在答案上，那兩題相鄰時就不會觸發。
+   */
+  const same = (id: string): Extract<Exercise, { type: 'translate' }> => ({
+    ...accented, id,
+  });
+
+  it('換到答案相同但 id 不同的題目時，輸入框要清空', () => {
+    const { rerender } = render(
+      <TranslateExercise exercise={same('a')} answered={false} outcome={null} onAnswer={() => {}} />,
+    );
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: '打到一半' } });
+    expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('打到一半');
+
+    rerender(
+      <TranslateExercise exercise={same('b')} answered={false} outcome={null} onAnswer={() => {}} />,
+    );
+    expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('');
+  });
+
+  it('上一題按過「看提示」，下一題不該還停在已看提示的狀態', () => {
+    const outcomes: ExerciseOutcome[] = [];
+    const { rerender } = render(
+      <TranslateExercise exercise={same('a')} answered={false} outcome={null} onAnswer={() => {}} />,
+    );
+    hint();
+    expect(screen.queryByRole('button', { name: /看提示/ })).toBeNull();
+
+    rerender(
+      <TranslateExercise
+        exercise={same('b')}
+        answered={false}
+        outcome={null}
+        onAnswer={(o) => outcomes.push(o)}
+      />,
+    );
+    // 提示按鈕要回來，骨架要收起來
+    expect(screen.getByRole('button', { name: /看提示/ })).toBeTruthy();
+    // 而且自己想出來的答案不該被記成「看過提示」
+    type('El café está caliente');
+    expect(outcomes[0]!.correct).toBe(true);
+    expect(outcomes[0]!.hesitant).toBeFalsy();
+  });
+});
+
 describe('變位填空共用同一套求助', () => {
   it('一份實作兩種題型都吃得到', () => {
     const outcomes: ExerciseOutcome[] = [];

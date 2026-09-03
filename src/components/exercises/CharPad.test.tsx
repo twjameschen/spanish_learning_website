@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { useRef, useState } from 'react';
 import { CharPad, insertAtCursor } from './CharPad';
 import { SpeakButton } from '@/components/SpeakButton';
@@ -89,5 +89,29 @@ describe('朗讀按鈕', () => {
     // jsdom 沒有 speechSynthesis，走的就是「偵測不到」那條路
     render(<SpeakButton text="hola" />);
     expect(screen.queryByRole('button')).toBeNull();
+  });
+
+  it('同一輪掛很多顆時每一顆都要出現 —— 不是只有第一顆', async () => {
+    /*
+     * 單字表一頁 1456 顆喇叭是同一輪 render 掛上去的，那時偵測結果還沒出來，
+     * 所以初始狀態都是「沒有語音」。第一顆的 effect 一跑就把共用的結果填好，
+     * 後面幾顆若因此跳過訂閱，就會永遠停在「沒有語音」——
+     * 實測過整頁只剩一顆喇叭。
+     */
+    vi.stubGlobal('speechSynthesis', {
+      getVoices: () => [
+        { name: 'Sabina', lang: 'es-MX', default: false, localService: true, voiceURI: 's' },
+      ],
+      cancel: vi.fn(), speak: vi.fn(),
+      addEventListener: vi.fn(), removeEventListener: vi.fn(),
+    });
+    render(
+      <>
+        <SpeakButton text="uno" />
+        <SpeakButton text="dos" />
+        <SpeakButton text="tres" />
+      </>,
+    );
+    await waitFor(() => expect(screen.getAllByRole('button')).toHaveLength(3));
   });
 });

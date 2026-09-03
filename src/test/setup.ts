@@ -1,5 +1,6 @@
 import { cleanup } from '@testing-library/react';
 import { afterEach, vi } from 'vitest';
+import { __resetSpeechForTests } from '@/lib/speech';
 
 /*
  * jsdom 沒有實作 matchMedia，但 useTheme 靠它判斷「跟隨系統」時該用深色還是淺色。
@@ -24,4 +25,13 @@ if (!window.matchMedia) {
  * 刻意不引入 @testing-library/jest-dom —— RTL 的 getBy* 找不到就會丟例外，
  * 已經足夠當斷言用，不必為了幾個語法糖再多一個依賴。
  */
-afterEach(() => cleanup());
+afterEach(() => {
+  cleanup();
+  /*
+   * 語音偵測的結果是模組層共用的（一頁上千顆喇叭只該問一次）。
+   * 測試會用 vi.stubGlobal 換掉語音環境，快取沒清的話下一個測試
+   * 會拿到上一個環境的答案 —— 例如「沒有語音時不顯示求助」那條，
+   * 前面剛塞過西班牙文語音就會失敗。
+   */
+  __resetSpeechForTests();
+});

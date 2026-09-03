@@ -28,8 +28,10 @@ type Conjugation = Extract<Exercise, { type: 'conjugation' }>;
  * 2. **直接看答案** —— 算答錯，跟閃卡的「想不起來」同一個意思。
  */
 function TextInputCore({
-  accepted, canonical, answered, onAnswer, children, placeholder,
+  exerciseId, accepted, canonical, answered, onAnswer, children, placeholder,
 }: {
+  /** 換題時用來重設狀態。**不能用 canonical 代替** —— 見下方 effect 的說明 */
+  exerciseId: string;
   accepted: string[];
   canonical: string;
   answered: boolean;
@@ -42,11 +44,19 @@ function TextInputCore({
   const [hinted, setHinted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  /*
+   * 換題就重設。這裡一定要掛在題目 id 上，不能掛在 canonical 上：
+   * 同一課裡沒有答案重複的文字題，但複習佇列與錯題本會**跨課混題**，
+   * 而全域有兩組答案一模一樣的題目（El café está caliente. 與 Me llamo Ana.）。
+   * 掛在答案上的話，那兩題剛好相鄰時 effect 不會觸發 ——
+   * 上一題打的字留在輸入框裡，連「看過提示」也一起留著，
+   * 於是新的一題就算自己想出來也會被記成 hesitant。
+   */
   useEffect(() => {
     setValue('');
     setHinted(false);
     inputRef.current?.focus();
-  }, [canonical]);
+  }, [exerciseId]);
 
   const submit = () => {
     if (answered || !value.trim()) return;
@@ -136,6 +146,7 @@ export function TranslateExercise({ exercise, answered, onAnswer }: ExerciseProp
   const { t, L } = useT();
   return (
     <TextInputCore
+      exerciseId={exercise.id}
       accepted={[...exercise.accept]}
       canonical={exercise.canonical}
       answered={answered}
@@ -157,6 +168,7 @@ export function ConjugationExercise({ exercise, answered, onAnswer }: ExercisePr
 
   return (
     <TextInputCore
+      exerciseId={exercise.id}
       accepted={[exercise.answer]}
       canonical={exercise.answer}
       answered={answered}

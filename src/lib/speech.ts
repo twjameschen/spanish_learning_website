@@ -58,24 +58,56 @@ export function speechStatus(): SpeechStatus {
 /**
  * 語音清單在部分瀏覽器是非同步載入的，第一次呼叫 getVoices() 可能回空陣列。
  * 這個函式等到清單就緒（或逾時）才回報，避免一開始就誤判成「沒有語音」。
+ *
+ * **結果共用一份。** 單字表一次會渲染 728 張卡片、每張兩顆喇叭，
+ * 每顆都會問一次「有沒有語音」。沒有共用的話那就是 1456 個
+ * `voiceschanged` 監聽器加 1456 個 timeout 掛在同一個物件上，
+ * 語音就緒時再觸發 1456 次更新 —— 而「有沒有西班牙文語音」本來就是
+ * 全域的一件事，問一次就夠了。
  */
-export function whenVoicesReady(timeoutMs = 2000): Promise<SpeechStatus> {
-  const s = synth();
-  if (!s) return Promise.resolve({ available: false });
-  if (pickSpanishVoice()) return Promise.resolve(speechStatus());
+let pending: Promise<SpeechStatus> | null = null;
+/** 已經問出來的結果。後掛載的元件直接拿，不必再等一次。 */
+let resolved: SpeechStatus | null = null;
 
-  return new Promise((resolve) => {
+export const speechStatusIfKnown = (): SpeechStatus | null => resolved;
+
+export function whenVoicesReady(timeoutMs = 2000): Promise<SpeechStatus> {
+  if (resolved) return Promise.resolve(resolved);
+  if (pending) return pending;
+
+  const remember = (status: SpeechStatus): SpeechStatus => {
+    resolved = status;
+    pending = null;
+    return status;
+  };
+
+  const s = synth();
+  if (!s) return Promise.resolve(remember({ available: false }));
+  if (pickSpanishVoice()) return Promise.resolve(remember(speechStatus()));
+
+  pending = new Promise<SpeechStatus>((resolve) => {
     let settled = false;
     const done = () => {
       if (settled) return;
       settled = true;
       s.removeEventListener('voiceschanged', done);
       clearTimeout(timer);
-      resolve(speechStatus());
+      resolve(remember(speechStatus()));
     };
     const timer = setTimeout(done, timeoutMs);
     s.addEventListener('voiceschanged', done);
   });
+  return pending;
+}
+
+/**
+ * 測試用：清掉快取。
+ * 測試之間會用 `vi.unstubAllGlobals()` 換掉語音環境，
+ * 快取沒清的話後面的測試會拿到前一個環境的答案。
+ */
+export function __resetSpeechForTests(): void {
+  pending = null;
+  resolved = null;
 }
 
 export interface SpeakOptions {

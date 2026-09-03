@@ -1,5 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { pickSpanishVoice, speechStatus, speak, whenVoicesReady } from './speech';
+import {
+  pickSpanishVoice, speechStatus, speak, whenVoicesReady, __resetSpeechForTests,
+} from './speech';
 
 /**
  * jsdom 沒有 speechSynthesis，所以預設路徑就是「不支援」——
@@ -27,7 +29,8 @@ function stubVoices(list: SpeechSynthesisVoice[]) {
 }
 
 describe('沒有語音合成時的降級', () => {
-  afterEach(() => vi.unstubAllGlobals());
+  // 偵測結果是共用的，換掉語音環境時一定要跟著清，否則會拿到上一個環境的答案
+  afterEach(() => { vi.unstubAllGlobals(); __resetSpeechForTests(); });
 
   it('環境完全不支援時回報不可用', () => {
     expect(speechStatus().available).toBe(false);
@@ -53,7 +56,8 @@ describe('沒有語音合成時的降級', () => {
 });
 
 describe('語音挑選偏好', () => {
-  afterEach(() => vi.unstubAllGlobals());
+  // 偵測結果是共用的，換掉語音環境時一定要跟著清，否則會拿到上一個環境的答案
+  afterEach(() => { vi.unstubAllGlobals(); __resetSpeechForTests(); });
 
   it('優先選 es-MX', () => {
     stubVoices([
@@ -83,8 +87,9 @@ describe('語音挑選偏好', () => {
 });
 
 describe('唸出來', () => {
-  beforeEach(() => stubVoices([voice('Sabina', 'es-MX')]));
-  afterEach(() => vi.unstubAllGlobals());
+  beforeEach(() => { __resetSpeechForTests(); stubVoices([voice('Sabina', 'es-MX')]); });
+  // 偵測結果是共用的，換掉語音環境時一定要跟著清，否則會拿到上一個環境的答案
+  afterEach(() => { vi.unstubAllGlobals(); __resetSpeechForTests(); });
 
   it('有語音時回報成功並實際呼叫 speak', () => {
     expect(speak('¿Dónde está el baño?')).toBe(true);
@@ -110,7 +115,8 @@ describe('唸出來', () => {
 });
 
 describe('等待語音清單載入', () => {
-  afterEach(() => vi.unstubAllGlobals());
+  // 偵測結果是共用的，換掉語音環境時一定要跟著清，否則會拿到上一個環境的答案
+  afterEach(() => { vi.unstubAllGlobals(); __resetSpeechForTests(); });
 
   it('已經有語音時立刻回報，不必等', async () => {
     stubVoices([voice('Sabina', 'es-MX')]);
@@ -119,5 +125,37 @@ describe('等待語音清單載入', () => {
 
   it('完全不支援時立刻回報不可用', async () => {
     await expect(whenVoicesReady()).resolves.toEqual({ available: false });
+  });
+
+  it('問幾次都只掛一個監聽器 —— 單字表一頁會問一千多次', () => {
+    /*
+     * 單字表一次渲染 728 張卡片、每張兩顆喇叭，每顆都會問一次有沒有語音。
+     * 沒有共用的話就是 1456 個 voiceschanged 監聽器加 1456 個 timeout
+     * 掛在同一個物件上，語音就緒時再觸發 1456 次更新。
+     */
+    const add = vi.fn();
+    vi.stubGlobal('speechSynthesis', {
+      getVoices: () => [],            // 還沒就緒
+      cancel: vi.fn(), speak: vi.fn(),
+      addEventListener: add, removeEventListener: vi.fn(),
+    });
+    for (let i = 0; i < 5; i += 1) void whenVoicesReady(50);
+    expect(add).toHaveBeenCalledTimes(1);
+  });
+
+  it('第二次問直接拿同一份結果', async () => {
+    stubVoices([voice('Sabina', 'es-MX')]);
+    const first = await whenVoicesReady();
+    const second = await whenVoicesReady();
+    expect(second).toBe(first);
+  });
+
+  it('__resetSpeechForTests 之後會重新偵測', async () => {
+    stubVoices([voice('Sabina', 'es-MX')]);
+    expect((await whenVoicesReady()).available).toBe(true);
+
+    vi.unstubAllGlobals();
+    __resetSpeechForTests();
+    expect((await whenVoicesReady()).available).toBe(false);
   });
 });
