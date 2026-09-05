@@ -127,6 +127,22 @@ export const UI = {
     zh: '開始練習之後，每天開站都會自動存一份，保留最近 3 天。',
     en: 'Once you start practising, a snapshot is saved each day you open the app, keeping the last 3.',
   },
+  snapshotRestore: { zh: '還原', en: 'Restore' },
+  snapshotRestoreTitle: {
+    zh: '把進度倒回這一天的狀態',
+    en: 'Roll your progress back to this day',
+  },
+  snapshotRestoreConfirm: {
+    zh: '確定要還原到 {d}？現在的進度會被蓋掉。',
+    en: 'Restore to {d}? Your current progress will be overwritten.',
+  },
+  snapshotRestoreYes: { zh: '確定還原', en: 'Yes, restore' },
+  snapshotRestoreNo: { zh: '取消', en: 'Cancel' },
+  snapshotRestoreOk: {
+    zh: '已還原 {n} 筆資料，畫面已經是那一天的進度。',
+    en: 'Restored {n} entries — the page now shows that day\u2019s progress.',
+  },
+  snapshotRestoreFailed: { zh: '還原失敗。', en: 'Restore failed.' },
   entries: { zh: '{n} 筆資料', en: '{n} entries' },
 
   // 單字表

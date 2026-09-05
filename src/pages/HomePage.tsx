@@ -1,15 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
-import { BookMarked, GraduationCap, Sparkles, Camera, ArrowRight, CalendarCheck, Trophy, Headphones, CircleX } from 'lucide-react';
+import { useMemo } from 'react';
+import { BookMarked, GraduationCap, Sparkles, ArrowRight, CalendarCheck, Trophy, Headphones, CircleX } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import { SnapshotList } from '@/components/SnapshotList';
 import { BackupControls } from '@/components/BackupControls';
 import { StreakCard } from '@/components/StreakCard';
 import { JourneyMap } from '@/components/journey/JourneyMap';
-import { EmptyState } from '@/components/decor/Illustrations';
 import { SunMotif } from '@/components/decor/Patterns';
 import { useStorageTier } from '@/hooks/useStorageTier';
-import { takeSnapshot, listSnapshots, type SnapshotMeta } from '@/lib/snapshot';
 import { useProgressStore } from '@/store/useProgressStore';
 import { levelProgress } from '@/lib/xp';
 import { evaluateAchievements } from '@/lib/achievements';
@@ -35,7 +34,6 @@ const TIER_TEXT: Record<
 export function HomePage() {
   const { t } = useT();
   const tier = useStorageTier();
-  const [snapshots, setSnapshots] = useState<SnapshotMeta[]>([]);
   const cards = useProgressStore((s) => s.cards);
   const totalXp = useProgressStore((s) => s.totalXp);
   const lessonProgress = useProgressStore((s) => s.lessons);
@@ -53,14 +51,6 @@ export function HomePage() {
   );
   const unlockedCount = achievements.filter((a) => a.unlocked).length;
   const totalAchievements = achievements.length;
-
-  useEffect(() => {
-    let alive = true;
-    void takeSnapshot()
-      .then(() => listSnapshots())
-      .then((m) => { if (alive) setSnapshots(m); });
-    return () => { alive = false; };
-  }, []);
 
   const openStops = journey.filter((s) => s.lessonIds.length > 0);
   const lessonsDone = Object.keys(lessonProgress).length;
@@ -241,21 +231,7 @@ export function HomePage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <BackupControls />
-          {snapshots.length === 0 ? (
-            <EmptyState title={t('snapshotEmpty')} hint={t('snapshotEmptyHint')} />
-          ) : (
-            <ul className="space-y-2">
-              {snapshots.map((s) => (
-                <li key={s.id} className="flex items-center gap-3 rounded-2xl bg-surface-2 px-4 py-2.5">
-                  <Camera aria-hidden="true" className="size-4 text-secondary-600" />
-                  <span className="font-mono text-sm font-semibold text-body">{s.day}</span>
-                  <span className="ml-auto text-xs text-muted">
-                    {t('entries', { n: s.entries })}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <SnapshotList />
         </CardContent>
       </Card>
     </div>

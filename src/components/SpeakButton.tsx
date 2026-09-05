@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Volume2 } from 'lucide-react';
 import { speak } from '@/lib/speech';
 import { useSpeech } from '@/hooks/useSpeech';
@@ -12,8 +13,17 @@ import { cn } from '@/lib/utils';
  *
  * 偵測不到西班牙文語音（或使用者在設定裡關掉語音）時**整顆不顯示**。
  * 一個按了沒反應的按鈕比沒有按鈕更糟 —— 這條規則整個 app 都守著。
+ *
+ * 包 `memo` 是因為單字表一頁就掛 1456 顆，每顆都有自己的 `useSpeech()`；
+ * 父層重繪時沒變的那些應該直接略過。`text` 與 `className` 都是字串，淺比較就夠。
  */
-export function SpeakButton({ text, className }: { text: string; className?: string }) {
+export const SpeakButton = memo(function SpeakButton({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   const { t } = useT();
   const speech = useSpeech();
   if (!speech.available) return null;
@@ -40,4 +50,4 @@ export function SpeakButton({ text, className }: { text: string; className?: str
       <Volume2 aria-hidden="true" className="size-4" />
     </button>
   );
-}
+});

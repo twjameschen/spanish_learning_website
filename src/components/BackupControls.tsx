@@ -8,6 +8,7 @@ import {
   downloadJson,
   parseBackup,
   importBackup,
+  refreshStoresAfterImport,
 } from '@/lib/backup';
 
 type Status =
@@ -45,6 +46,8 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
     try {
       const backup = parseBackup(await file.text());
       const summary = await importBackup(backup, 'replace');
+      // 補水一定要在這裡做：否則畫面停在舊數字，而且下一次作答會把舊進度寫回去
+      await refreshStoresAfterImport(Object.keys(backup.data), 'replace');
       setStatus({
         kind: 'ok',
         message: t('importOk', { n: summary.keys, t: summary.exportedAt }),

@@ -1,5 +1,7 @@
 import { storage, type StorageTier } from './storage';
 import { SNAPSHOT_PREFIX } from './snapshot';
+import { useProgressStore, PROGRESS_KEY } from '@/store/useProgressStore';
+import { useSettingsStore } from '@/store/useSettingsStore';
 
 /**
  * 進度的 JSON 匯出／匯入。
@@ -110,4 +112,29 @@ export function downloadJson(fileName: string, payload: unknown): boolean {
   } catch {
     return false;
   }
+}
+
+/**
+ * 匯入（或還原快照）之後把記憶體裡的 store 補水。
+ *
+ * 沒有這一步的話會有兩層後果，第二層才會吃掉資料：
+ * 1. 畫面顯示「匯入成功」但 XP、連續天數、複習張數全是舊的
+ * 2. **舊的 store 還活著**，下一次作答就把整份舊進度寫回儲存層，
+ *    把剛匯入的資料悄悄蓋掉
+ *
+ * `replace` 模式下若備份檔沒有某個 store 的 key，要先 `reset()` 再補水 ——
+ * zustand 讀不到東西時會維持現有 state，舊進度會因為「沒有東西可以覆蓋」而留下來。
+ */
+export async function refreshStoresAfterImport(
+  keys: Iterable<string> = [],
+  mode: 'replace' | 'merge' = 'replace',
+): Promise<void> {
+  const present = new Set(keys);
+  if (mode === 'replace' && !present.has(PROGRESS_KEY)) {
+    useProgressStore.getState().reset();
+  }
+  await Promise.all([
+    useProgressStore.persist.rehydrate(),
+    useSettingsStore.persist.rehydrate(),
+  ]);
 }

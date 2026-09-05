@@ -70,10 +70,13 @@ export async function pruneSnapshots(): Promise<void> {
   }
 }
 
-/** 把某份快照寫回主要資料區。回傳寫回幾個 key。 */
-export async function restoreSnapshot(id: string): Promise<number> {
+/**
+ * 把某份快照寫回主要資料區。回傳寫回了哪些 key ——
+ * 呼叫端要靠這份名單決定補水時該不該先把進度清成預設值。
+ */
+export async function restoreSnapshot(id: string): Promise<string[]> {
   const body = await storage.get<SnapshotBody>(id);
   if (!body) throw new Error(`找不到快照：${id}`);
   await storage.importAll(body.data);
-  return Object.keys(body.data).length;
+  return Object.keys(body.data);
 }

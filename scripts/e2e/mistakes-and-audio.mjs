@@ -196,7 +196,144 @@ t=await T(p);
 const queueLen=Number((t.match(/(\d+)\s*\/\s*(\d+)/)??[])[2] ?? (t.match(/共 (\d+) 題/)??[])[1] ?? 0);
 ck('複習頁排出來的題數跟首頁一樣', queueLen===dueShown, `首頁 ${dueShown}、複習頁 ${queueLen}`);
 
-console.log('\n[6] 頁面沒有 JS 錯誤');
+/* ------------------------------------------------------------------ *
+ * 6. 匯出 → 作答 → 匯入，不重新整理就回到匯出當時的數字
+ * ------------------------------------------------------------------ */
+console.log('\n[6] 匯入備份立刻生效');
+// 首頁不印 totalXp，只印「Lv. N」與「等級內 XP / 等級跨距」；
+// 而且答錯不給 XP，這支腳本前面刻意全答錯，所以等級卡根本不會出現。
+// 真正會隨著作答動的看得到的數字是「錯題本 N 題」與「今天要複習 N 張」，
+// 這兩個都直接讀自 progress store，拿它們當進度的觀測點。
+const levelLine = async () => {
+  const txt=await T(p);
+  const m=txt.match(/Lv\. \d+\s*\n?\s*\d+ \/ \d+ XP/);
+  return m ? m[0].replace(/\s+/g,' ') : '(沒有等級卡)';
+};
+const progressLine = async () => {
+  const txt=await T(p);
+  const wrong=(txt.match(/(\d+) 題還沒答對/)??[])[1] ?? '0';
+  const due=(txt.match(/今天要複習 (\d+) 張/)??[])[1] ?? '0';
+  return `錯題 ${wrong} 題、複習 ${due} 張`;
+};
+await p.goto(BASE+'#/',{waitUntil:'networkidle'}); await p.waitForTimeout(900);
+await clearCelebrations(p);
+const xpBefore=await progressLine();
+ck('首頁讀得到進度數字', xpBefore!=='錯題 0 題、複習 0 張', xpBefore);
+
+// 匯出：檔案下載在無頭環境要用 download 事件接
+const dl=p.waitForEvent('download');
+await p.getByRole('button',{name:/^匯出/}).first().click();
+const file=`${SP}/e2e-backup.json`;
+await (await dl).saveAs(file);
+ck('匯出真的產生檔案', (await import('node:fs')).existsSync(file));
+
+// 再作答一輪，把 XP 推高
+await p.goto(BASE+'#/practice/a0-numeros',{waitUntil:'networkidle'});
+await p.waitForTimeout(800);
+for (let i=0;i<10;i++){
+  const next=p.getByRole('button',{name:/^下一題|^完成/});
+  if (await next.count()){ await next.first().click(); await p.waitForTimeout(300); continue; }
+  const opts=p.locator('main ol li button, main ul li button');
+  if (await opts.count()){ await opts.first().click(); await p.waitForTimeout(400); continue; }
+  const giveUp=p.getByRole('button',{name:/直接看答案/});
+  if (await giveUp.count()){ await giveUp.first().click(); await p.waitForTimeout(400); continue; }
+  break;
+}
+await p.goto(BASE+'#/',{waitUntil:'networkidle'}); await p.waitForTimeout(900);
+await clearCelebrations(p);
+const xpAfter=await progressLine();
+ck('作答之後進度變了', xpAfter!==xpBefore, `${xpBefore} → ${xpAfter}`);
+
+// 匯入剛才那份，**不重新整理**
+await p.locator('input[type="file"]').setInputFiles(file);
+await p.waitForTimeout(1200);
+t=await T(p);
+ck('顯示匯入成功', /已匯入/.test(t), t.split('\n').find(l=>/匯入/.test(l))??'');
+const xpBack=await progressLine();
+ck('不重新整理，進度就回到匯出當時', xpBack===xpBefore,
+   `匯出當時「${xpBefore}」、匯入後「${xpBack}」`);
+
+// 真正會吃掉資料的那一半：匯入後再作答，寫回去的要是新資料
+await p.goto(BASE+'#/practice/a0-numeros',{waitUntil:'networkidle'});
+await p.waitForTimeout(800);
+for (let i=0;i<3;i++){
+  const next=p.getByRole('button',{name:/^下一題|^完成/});
+  if (await next.count()){ await next.first().click(); await p.waitForTimeout(300); continue; }
+  const opts=p.locator('main ol li button, main ul li button');
+  if (await opts.count()){ await opts.first().click(); await p.waitForTimeout(400); continue; }
+  break;
+}
+await p.reload({waitUntil:'networkidle'}); await p.waitForTimeout(900);
+await p.goto(BASE+'#/',{waitUntil:'networkidle'}); await p.waitForTimeout(900);
+await clearCelebrations(p);
+const xpFinal=await progressLine();
+// 匯入之後又作答了 3 題，所以最後不該等於「匯入前那份被丟掉的舊進度」，
+// 也不該原封不動等於匯出當時 —— 它必須是「匯出當時 + 那 3 題」
+ck('重新整理後沒有跳回被匯入蓋掉的舊進度', xpFinal!==xpAfter,
+   `匯出當時「${xpBefore}」、被蓋掉的舊進度「${xpAfter}」、最後「${xpFinal}」`);
+await p.screenshot({path:`${SP}/p14-import.png`,fullPage:true});
+
+/* ------------------------------------------------------------------ *
+ * 7. 快照還原走得完兩段式確認
+ * ------------------------------------------------------------------ */
+console.log('\n[7] 快照還原');
+// 種一份「前一天」的快照：內容是現在的進度，但 XP 改成 12345，
+// 還原成功與否用這個一眼就看得出來的數字判斷
+// 資料層是 IndexedDB（camino-a-quito / kv，key 前綴 camino:），
+// 快照 body 裡的 data 用的是**去掉前綴**的 key
+const seeded = await p.evaluate(async () => {
+  const db = await new Promise((res, rej) => {
+    const r = indexedDB.open('camino-a-quito', 1);
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+  const read = (k) => new Promise((res, rej) => {
+    const r = db.transaction('kv', 'readonly').objectStore('kv').get(k);
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+  const write = (k, v) => new Promise((res, rej) => {
+    const r = db.transaction('kv', 'readwrite').objectStore('kv').put(v, k);
+    r.onsuccess = () => res(true); r.onerror = () => rej(r.error);
+  });
+  const raw = await read('camino:progress');
+  if (!raw) return 'no progress key';
+  const parsed = JSON.parse(raw);
+  parsed.state.totalXp = 12345;
+  await write('camino:snapshot:2020-01-01', {
+    savedAt: '2020-01-01T00:00:00.000Z',
+    data: { progress: JSON.stringify(parsed) },
+  });
+  return 'ok';
+});
+ck('種得進一份昨天的快照', seeded==='ok', seeded);
+await p.reload({waitUntil:'networkidle'}); await p.waitForTimeout(1200);
+await clearCelebrations(p);
+t=await T(p);
+ck('快照列出現昨天那一份', /2020-01-01/.test(t), t.split('\n').filter(l=>/2020|快照/.test(l)).join(' / '));
+
+const rows=p.locator('main li').filter({hasText:'2020-01-01'});
+ck('那一列有還原按鈕', await rows.getByRole('button',{name:/^還原$/}).count()===1);
+await rows.getByRole('button',{name:/^還原$/}).click();
+await p.waitForTimeout(400);
+ck('第一次點只出現確認', /確定要還原到 2020-01-01/.test(await T(p)));
+const beforeRestore=await levelLine();
+await p.screenshot({path:`${SP}/p14-snapshot-confirm.png`,fullPage:true});
+
+await p.locator('main li').filter({hasText:'2020-01-01'})
+  .getByRole('button',{name:/確定還原/}).click();
+await p.waitForTimeout(1200);
+t=await T(p);
+ck('確認之後才還原', /已還原/.test(t), t.split('\n').find(l=>/已還原/.test(l))??'');
+const afterRestore=await levelLine();
+ck('不重新整理，等級就跟著快照變了', afterRestore!==beforeRestore,
+   `還原前「${beforeRestore}」、還原後「${afterRestore}」`);
+// 再重新整理一次：store 與儲存層要一致，否則就是只改了畫面沒改資料（或反過來）
+await p.reload({waitUntil:'networkidle'}); await p.waitForTimeout(1200);
+await clearCelebrations(p);
+ck('重新整理後還是同一個值，store 與儲存層一致', (await levelLine())===afterRestore,
+   `還原後「${afterRestore}」、重新整理後「${await levelLine()}」`);
+await p.screenshot({path:`${SP}/p14-snapshot-restored.png`,fullPage:true});
+
+console.log('\n[8] 頁面沒有 JS 錯誤');
 ck('沒有 pageerror / console error', errs.length===0, errs.slice(0,3).join(' | '));
 
 await b.close();

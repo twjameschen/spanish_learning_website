@@ -27,6 +27,8 @@ node scripts/e2e/mistakes-and-audio.mjs http://localhost:8000/ /tmp/shots
 node scripts/e2e/dashboard.mjs    http://localhost:8000/ /tmp/shots
 node scripts/e2e/shortcuts.mjs    http://localhost:8000/ /tmp/shots
 node scripts/e2e/contrast.mjs     http://localhost:8000/
+node scripts/e2e/contrast-snapshot.mjs http://localhost:8000/
+node scripts/e2e/vocab-perf.mjs   http://localhost:8000/
 node scripts/e2e/offline.mjs      http://localhost:8000/
 
 # 單檔版走 file://，不需要伺服器
@@ -47,7 +49,7 @@ Chromium 路徑寫在每支腳本最上面的 `EXE` 常數，換機器時改那�
 | `content-a1.mjs` | 課程列表、A1 課文、Sierra 禮貌專課的「待母語者確認」標記、變位題實際作答 |
 | `content-b1.mjs` | 全部 41 課、虛擬式課文、si 條件句的表格渲染、五站全開 |
 | `exercises-p8.mjs` | 沒有 TTS 語音時聽力題的降級路徑、陰陽性分類實際作答到結算、主題分類入口、換一課要重新開始 |
-| `mistakes-and-audio.mjs` | 錯題本（答錯後首頁出現入口、題數對得上）、單字與例句的喇叭真的把西文送去唸、字元列插在游標位置、**單字表整頁只掛一個語音監聽器**、首頁的複習張數等於複習頁的題數 |
+| `mistakes-and-audio.mjs` | 錯題本（答錯後首頁出現入口、題數對得上）、單字與例句的喇叭真的把西文送去唸、字元列插在游標位置、**單字表整頁只掛一個語音監聽器**、首頁的複習張數等於複習頁的題數、**匯出→作答→匯入不重新整理就回到匯出當時（而且下次作答不會把它蓋回去）**、**快照的兩段式還原走得完** |
 | `listen-drill.mjs` | 連續聽寫：首頁與課程頁的入口、一場 12 句、去重音去逗號仍判對、每天固定一批、台北那段不給入口 |
 | `help-and-settings.mjs` | 三種題型的兩階求助（會塞一個假的西班牙文語音進去，否則容器裡量不到有語音的那條路徑）、翻譯題的骨架提示、設定面板改得動而且真的有作用、遮罩鋪滿視窗 |
 | `dashboard.mjs` | 空狀態、熱力圖、XP 折線、詞性雷達、最弱十字、匯出匯入 |
@@ -55,3 +57,5 @@ Chromium 路徑寫在每支腳本最上面的 `EXE` 常數，換機器時改那�
 | `contrast.mjs` | 9 個頁面 × 淺／深兩種模式的 WCAG AA 文字對比，另外量設定面板、聽力提示、骨架提示、字元列、有錯題時的首頁這幾個「要先做點什麼才存在」的狀態（漸層背景會跳過並回報） |
 | `offline.mjs` | 走過 9 個頁面攔截所有請求，斷言零個對外請求 |
 | `single-file.mjs` | 單檔版在 `file://` 下能不能開、hash 路由與儲存層可不可用 |
+| `contrast-snapshot.mjs` | 快照那一列的「還原」與確認狀態的對比 —— 這兩個要先有快照才畫得出來，`contrast.mjs` 從空白開站量不到 |
+| `vocab-perf.mjs` | 單字表 728 張卡全開時，每按一個鍵到畫面更新完成要多久、切換語言要多久、`content-visibility` 有沒有真的生效 |

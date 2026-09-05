@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import { Search, X, Layers, Shuffle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -23,14 +23,27 @@ function fold(s: string): string {
 
 const isVerb = (w: Word): w is Verb => w.pos === 'verb';
 
-function WordCard({ word }: { word: Word }) {
+/**
+ * 一張單字卡。
+ *
+ * `memo` 不是預先最佳化：沒有它的話，搜尋框每按一個鍵就重繪全部 728 張卡，
+ * 每張卡還帶兩顆 `SpeakButton`、每顆各有自己的 `useSpeech()`（store 訂閱 + state），
+ * 一次按鍵要重新求值約 2200 個訂閱。`word` 是模組層的常數物件，
+ * 參考不會變，所以預設的淺比較就夠 —— 不需要自訂比較函式。
+ */
+const WordCard = memo(function WordCard({ word }: { word: Word }) {
   const { t, L, Lo } = useT();
   const topic = L(topicLabel(word.topic));
   const pos = L(POS_LABEL[word.pos]);
   const genderNote = Lo(word.genderNote);
 
   return (
-    <article className="rounded-3xl border border-line/70 bg-surface p-5 shadow-soft transition-shadow duration-300 hover:shadow-card">
+    <article
+      // content-visibility：畫面外的卡片跳過版面與繪製，內容仍留在 DOM 裡，
+      // Ctrl+F 還是找得到 —— 這是比分頁更好的取捨。
+      // contain-intrinsic-size 給一個高度估計值，否則捲軸長度會跳動。
+      className="[content-visibility:auto] [contain-intrinsic-size:auto_320px] rounded-3xl border border-line/70 bg-surface p-5 shadow-soft transition-shadow duration-300 hover:shadow-card"
+    >
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
         <h3 lang="es" className="break-es text-xl font-extrabold text-body">
           {word.es}
@@ -97,10 +110,10 @@ function WordCard({ word }: { word: Word }) {
       ) : null}
     </article>
   );
-}
+});
 
 export function VocabPage() {
-  const { t, L, locale } = useT();
+  const { t, L } = useT();
   const [query, setQuery] = useState('');
   const [topic, setTopic] = useState<string | null>(null);
   const [pos, setPos] = useState<Word['pos'] | null>(null);
@@ -224,8 +237,10 @@ export function VocabPage() {
         <EmptyState title={t('noMatch')} hint={t('noMatchHint')} />
       ) : (
         <div className="grid gap-3 md:grid-cols-2">
+          {/* key 就是 w.id：加 locale 前綴會讓切語言時整頁重掛 1456 顆喇叭，
+              而 WordCard 內部本來就用 useT() 讀語言，語言變了自然會重繪 */}
           {results.map((w) => (
-            <WordCard key={`${locale}-${w.id}`} word={w} />
+            <WordCard key={w.id} word={w} />
           ))}
         </div>
       )}
