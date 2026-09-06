@@ -2,6 +2,7 @@ import { AppShell } from '@/components/layout/AppShell';
 import { SideNav, BottomNav } from '@/components/layout/SideNav';
 import { HomePage } from '@/pages/HomePage';
 import { VocabPage } from '@/pages/VocabPage';
+import { VerbListPage, VerbPage } from '@/pages/VerbPage';
 import { LessonListPage, LessonPage } from '@/pages/LessonPage';
 import { PracticePage } from '@/pages/PracticePage';
 import { ReviewPage } from '@/pages/ReviewPage';
@@ -51,6 +52,8 @@ export default function App() {
       <AppShell sidebar={<SideNav current={route} />}>
         {route.name === 'home' ? <HomePage /> : null}
         {route.name === 'vocab' ? <VocabPage /> : null}
+        {route.name === 'verbs' ? <VerbListPage /> : null}
+        {route.name === 'verb' ? <VerbPage id={route.id} /> : null}
         {route.name === 'lessons' ? <LessonListPage /> : null}
         {route.name === 'lesson' ? <LessonPage id={route.id} /> : null}
         {route.name === 'practice' ? <PracticePage lessonId={route.id} /> : null}

@@ -13,6 +13,8 @@ import { useCallback, useEffect, useState } from 'react';
 export type Route =
   | { name: 'home' }
   | { name: 'vocab' }
+  | { name: 'verbs' }
+  | { name: 'verb'; id: string }
   | { name: 'lessons' }
   | { name: 'lesson'; id: string }
   | { name: 'practice'; id: string }
@@ -27,6 +29,9 @@ export function parseHash(hash: string): Route {
   switch (head) {
     case 'vocab':
       return { name: 'vocab' };
+    // 比照 lessons：沒帶 id 就是列表頁
+    case 'verbs':
+      return param ? { name: 'verb', id: param } : { name: 'verbs' };
     case 'review':
       return { name: 'review' };
     case 'achievements':
@@ -47,6 +52,8 @@ export function parseHash(hash: string): Route {
 export function hrefFor(route: Route): string {
   switch (route.name) {
     case 'vocab': return '#/vocab';
+    case 'verbs': return '#/verbs';
+    case 'verb': return `#/verbs/${route.id}`;
     case 'lessons': return '#/lessons';
     case 'lesson': return `#/lessons/${route.id}`;
     case 'practice': return `#/practice/${route.id}`;

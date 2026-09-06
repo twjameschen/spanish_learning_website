@@ -115,7 +115,7 @@ console.log('\n[6] 重新整理後成就不會重跳慶祝');
 await p.reload({waitUntil:'networkidle'}); await p.waitForTimeout(1200);
 ck('重新載入後沒有慶祝視窗', (await p.locator('[role="dialog"]').count())===0);
 
-console.log('\n[7] 手機底部列六個項目不重疊');
+console.log('\n[7] 手機底部列七個項目不重疊');
 await p.setViewportSize({width:360,height:740});
 await p.goto(BASE+'#/',{waitUntil:'networkidle'}); await p.waitForTimeout(700);
 // 側邊欄在窄畫面是 display:none 但仍在 DOM 裡，要指名底部那個 nav
@@ -124,7 +124,8 @@ const measure = () => p.locator('nav.fixed.bottom-0 a').evaluateAll(els=>els.map
   return {t:e.innerText,sw:span?span.scrollWidth:0,cw:span?span.clientWidth:0};
 }));
 let boxes = await measure();
-ck('底部列有六個項目', boxes.length===6, boxes.map(b=>b.t).join('/'));
+// Phase 16 加了「動詞」，變成七格；375px 下兩種語言都量過不會截斷
+ck('底部列有七個項目', boxes.length===7, boxes.map(b=>b.t).join('/'));
 ck('底部列可見', await p.locator('nav.fixed.bottom-0').isVisible());
 ck('中文標籤沒有被截斷', boxes.every(b=>b.sw<=b.cw+1), boxes.filter(b=>b.sw>b.cw+1).map(b=>`${b.t}:${b.sw}>${b.cw}`).join(', '));
 await p.screenshot({path:`${SP}/p4-phone.png`,fullPage:true});

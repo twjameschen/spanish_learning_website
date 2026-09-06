@@ -1,5 +1,5 @@
 import { memo, useMemo, useState } from 'react';
-import { Search, X, Layers, Shuffle } from 'lucide-react';
+import { Search, X, Layers, Shuffle, ArrowRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -10,6 +10,7 @@ import { allWords, allTopics, topicLabel, POS_LABEL } from '@/content';
 import { hrefFor } from '@/lib/router';
 import { canDrillTopic, GENDER_DRILL_PREFIX } from '@/lib/genderDrill';
 import { PERSON_LABEL, PERSONS, type Word, type Verb } from '@/content/schema';
+import { hitsForVerb, formLabel } from '@/lib/verbForms';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
 
@@ -31,8 +32,10 @@ const isVerb = (w: Word): w is Verb => w.pos === 'verb';
  * 一次按鍵要重新求值約 2200 個訂閱。`word` 是模組層的常數物件，
  * 參考不會變，所以預設的淺比較就夠 —— 不需要自訂比較函式。
  */
-const WordCard = memo(function WordCard({ word }: { word: Word }) {
+const WordCard = memo(function WordCard({ word, query }: { word: Word; query: string }) {
   const { t, L, Lo } = useT();
+  // 使用者打的是變位形式時，直接在卡上說明那是哪個時態哪個人稱
+  const hits = isVerb(word) && query.trim() ? hitsForVerb(query, word.id) : [];
   const topic = L(topicLabel(word.topic));
   const pos = L(POS_LABEL[word.pos]);
   const genderNote = Lo(word.genderNote);
@@ -61,6 +64,11 @@ const WordCard = memo(function WordCard({ word }: { word: Word }) {
           </Badge>
         ) : null}
         <Badge variant="neutral">{pos}</Badge>
+        {isVerb(word) && word.reflexive ? (
+          <Badge variant="secondary" title={t('verbReflexiveHint')}>
+            {t('verbReflexive')}
+          </Badge>
+        ) : null}
         {topic === pos ? null : (
           <span className="ml-auto text-xs font-semibold text-muted">{topic}</span>
         )}
@@ -82,6 +90,14 @@ const WordCard = memo(function WordCard({ word }: { word: Word }) {
         <p className="mt-0.5 text-sm text-muted">{L(word.exampleGloss)}</p>
       </div>
 
+      {hits.length > 0 ? (
+        <p className="mt-2 text-sm font-semibold text-primary-800 dark:text-primary-300">
+          {hits
+            .map((h) => t('verbFormMatch', { form: h.form, what: L(formLabel(h.what)) }))
+            .join('、')}
+        </p>
+      ) : null}
+
       {isVerb(word) ? (
         <div className="mt-3">
           <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted">
@@ -101,6 +117,17 @@ const WordCard = memo(function WordCard({ word }: { word: Word }) {
             ))}
           </dl>
         </div>
+      ) : null}
+
+      {isVerb(word) ? (
+        // 卡片只印得下現在式，其餘六個時態、命令式與分詞都在動詞頁
+        <a
+          href={hrefFor({ name: 'verb', id: word.id })}
+          className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary-800 hover:underline dark:text-primary-300"
+        >
+          {t('verbAllTenses')}
+          <ArrowRight aria-hidden="true" className="size-4" />
+        </a>
       ) : null}
 
       {word.regional ? (
@@ -136,7 +163,9 @@ export function VocabPage() {
         fold(w.es).includes(q) ||
         fold(w.gloss.en).includes(q) ||
         w.gloss.zh.includes(raw) ||
-        fold(w.exampleEs).includes(q)
+        fold(w.exampleEs).includes(q) ||
+        // 讀到 fui 想查原形的那條路 —— 以前完全找不到
+        (w.pos === 'verb' && hitsForVerb(raw, w.id).length > 0)
       );
     });
   }, [query, topic, pos]);
@@ -240,7 +269,7 @@ export function VocabPage() {
           {/* key 就是 w.id：加 locale 前綴會讓切語言時整頁重掛 1456 顆喇叭，
               而 WordCard 內部本來就用 useT() 讀語言，語言變了自然會重繪 */}
           {results.map((w) => (
-            <WordCard key={w.id} word={w} />
+            <WordCard key={w.id} word={w} query={query} />
           ))}
         </div>
       )}

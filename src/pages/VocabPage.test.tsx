@@ -73,4 +73,34 @@ describe('單字表', () => {
     expect(headings()).toHaveLength(0);
     expect(screen.getByText(/沒有符合的單字|No matching words/)).toBeTruthy();
   });
+
+  /*
+   * 讀到已經變過位的形式想查原形。
+   *
+   * 搜尋以前只比對原形、字義與例句，所以打 fui 完全找不到 ——
+   * 但資料裡知道 fui 同時屬於 ser 和 ir，正是最需要幫忙的那種歧義。
+   */
+  it('打 fui 會找到 ser 與 ir，而且卡上標出是哪個時態哪個人稱', () => {
+    render(<VocabPage />);
+    search('fui');
+
+    const found = headings();
+    expect(found).toContain('ser');
+    expect(found).toContain('ir');
+    expect(screen.getAllByText(/fui＝簡單過去式・我/).length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('反身動詞：打 llamo 找得到 llamarse，而且看得出它是反身', () => {
+    render(<VocabPage />);
+    search('llamo');
+    expect(headings()).toContain('llamarse');
+    expect(screen.getAllByText('反身').length).toBeGreaterThan(0);
+  });
+
+  it('動詞卡連得到完整變位表 —— 卡上只印得下現在式', () => {
+    render(<VocabPage />);
+    search('ser');
+    const link = screen.getAllByRole('link', { name: /看全部 7 個時態/ })[0]!;
+    expect(link.getAttribute('href')).toMatch(/^#\/verbs\//);
+  });
 });

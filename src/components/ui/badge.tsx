@@ -10,7 +10,11 @@ const badgeVariants = cva(
         primary: 'bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200',
         secondary:
           'bg-secondary-100 text-secondary-800 dark:bg-secondary-900/50 dark:text-secondary-200',
-        accent: 'bg-accent-100 text-accent-800 dark:bg-accent-900/50 dark:text-accent-200',
+        // accent-800 在 accent-100 上只有 3.75:1，低於 AA 的 4.5。
+        // 這個變體本來就用在「待母語者確認」與連擊數上，只是那兩處都要
+        // 特定狀態才出現，contrast.mjs 掃靜態頁時一直沒量到。
+        // accent-900 是 6.00:1 —— 色票本身不動，只換用哪一階。
+        accent: 'bg-accent-100 text-accent-900 dark:bg-accent-900/50 dark:text-accent-200',
         success: 'bg-success-100 text-success-800 dark:bg-success-700/40 dark:text-success-100',
         error: 'bg-error-100 text-error-700 dark:bg-error-700/40 dark:text-error-100',
         neutral: 'bg-surface-2 text-muted',

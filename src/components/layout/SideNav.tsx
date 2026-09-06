@@ -1,4 +1,4 @@
-import { Home, BookMarked, GraduationCap, CalendarCheck, Trophy, ChartColumn } from 'lucide-react';
+import { Home, BookMarked, Table2, GraduationCap, CalendarCheck, Trophy, ChartColumn } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { hrefFor, type Route } from '@/lib/router';
 import { useT } from '@/i18n';
@@ -8,6 +8,7 @@ import type { UIKey } from '@/i18n';
 const ITEMS: { route: Route; labelKey: UIKey; shortKey?: UIKey; icon: typeof Home }[] = [
   { route: { name: 'home' }, labelKey: 'navHome', icon: Home },
   { route: { name: 'vocab' }, labelKey: 'navVocab', shortKey: 'navVocabShort', icon: BookMarked },
+  { route: { name: 'verbs' }, labelKey: 'navVerbs', icon: Table2 },
   { route: { name: 'lessons' }, labelKey: 'navLessons', icon: GraduationCap },
   { route: { name: 'review' }, labelKey: 'navReview', icon: CalendarCheck },
   { route: { name: 'achievements' }, labelKey: 'navAchievements', shortKey: 'navAchievementsShort', icon: Trophy },
@@ -16,7 +17,9 @@ const ITEMS: { route: Route; labelKey: UIKey; shortKey?: UIKey; icon: typeof Hom
 
 const isActive = (route: Route, current: Route): boolean =>
   route.name === current.name ||
-  (route.name === 'lessons' && (current.name === 'lesson' || current.name === 'practice'));
+  (route.name === 'lessons' && (current.name === 'lesson' || current.name === 'practice')) ||
+  // 沒有這一條的話 #/verbs/ser 不會把「動詞」標成目前所在
+  (route.name === 'verbs' && current.name === 'verb');
 
 export function SideNav({ current }: { current: Route }) {
   const { t } = useT();

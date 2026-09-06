@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 const BASE=process.argv[2];
 const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
-const routes=['#/','#/vocab','#/lessons','#/lessons/a2-preterito-vs-imperfecto','#/review',
+const routes=['#/','#/vocab','#/verbs','#/verbs/ser','#/lessons','#/lessons/a2-preterito-vs-imperfecto','#/review',
   '#/achievements','#/dashboard','#/drill/a0-hay','#/practice/a0-hay'];
 const AUDIT = () => {
   function lum(rgb){const [r,g,bb]=rgb.map(v=>{const c=v/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);});

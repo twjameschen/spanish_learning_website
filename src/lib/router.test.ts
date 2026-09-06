@@ -4,12 +4,16 @@ import { parseHash, hrefFor, type Route } from './router';
 const ROUTES: Route[] = [
   { name: 'home' },
   { name: 'vocab' },
+  { name: 'verbs' },
+  { name: 'verb', id: 'ser' },
   { name: 'lessons' },
   { name: 'lesson', id: 'a0-11-ser-estar' },
   { name: 'practice', id: 'a0-11-ser-estar' },
   { name: 'review' },
   { name: 'achievements' },
   { name: 'dashboard' },
+  // drill 以前漏在這張表外面，順手補上
+  { name: 'drill', id: 'all' },
 ];
 
 describe('hash 路由', () => {
@@ -28,6 +32,16 @@ describe('hash 路由', () => {
   it('少了 id 的課程與練習路徑退回課程列表', () => {
     expect(parseHash('#/lessons')).toEqual({ name: 'lessons' });
     expect(parseHash('#/practice')).toEqual({ name: 'lessons' });
+  });
+
+  it('少了 id 的動詞路徑退回動詞列表', () => {
+    expect(parseHash('#/verbs')).toEqual({ name: 'verbs' });
+    expect(parseHash('#/verbs/')).toEqual({ name: 'verbs' });
+  });
+
+  it('帶 id 的動詞路徑解析得出來', () => {
+    expect(parseHash('#/verbs/llamarse')).toEqual({ name: 'verb', id: 'llamarse' });
+    expect(parseHash('#/verbs/ser?from=vocab')).toEqual({ name: 'verb', id: 'ser' });
   });
 
   it('忽略 query string', () => {

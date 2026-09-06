@@ -64,14 +64,15 @@ ck('備份區塊在', /備份與還原/.test(t));
 ck('匯出鍵在', (await p.getByRole('button',{name:/匯出/}).count())>0);
 ck('匯入鍵在', (await p.getByRole('button',{name:/匯入/}).count())>0);
 
-console.log('\n[4] 手機底部列六個項目');
+console.log('\n[4] 手機底部列七個項目');
 await p.setViewportSize({width:360,height:740});
 await p.goto(BASE+'#/dashboard',{waitUntil:'networkidle'}); await p.waitForTimeout(900);
 await clear(p);
 const measure=()=>p.locator('nav.fixed.bottom-0 a').evaluateAll(els=>els.map(e=>{
   const s=e.querySelector('span'); return {t:e.innerText,sw:s?s.scrollWidth:0,cw:s?s.clientWidth:0};}));
 let boxes=await measure();
-ck('底部列六個項目', boxes.length===6, boxes.map(b=>b.t).join('/'));
+// Phase 16 加了「動詞」，變成七格；375px 下兩種語言都量過不會截斷
+ck('底部列七個項目', boxes.length===7, boxes.map(b=>b.t).join('/'));
 ck('中文不截斷', boxes.every(b=>b.sw<=b.cw+1), boxes.filter(b=>b.sw>b.cw+1).map(b=>b.t).join(','));
 await p.getByRole('button',{name:/切換語言|Switch language/}).first().click(); await p.waitForTimeout(600);
 boxes=await measure();

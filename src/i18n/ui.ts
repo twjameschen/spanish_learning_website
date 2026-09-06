@@ -13,6 +13,7 @@ export const UI = {
   appTagline: { zh: '西班牙文之路 · 拉美變體', en: 'The road to Spanish · Latin American' },
   navHome: { zh: '首頁', en: 'Home' },
   navVocab: { zh: '單字表', en: 'Vocabulary' },
+  navVerbs: { zh: '動詞', en: 'Verbs' },
   navLessons: { zh: '課程', en: 'Lessons' },
 
   // 主題與語言
@@ -165,6 +166,46 @@ export const UI = {
   matchCount: { zh: '符合 {n} 個字', en: '{n} matching words' },
   clearFilters: { zh: '清除篩選', en: 'Clear filters' },
   noMatch: { zh: '沒有符合的單字', en: 'No matching words' },
+  verbsTitle: { zh: '動詞變位表', en: 'Verb conjugations' },
+  verbAllTenses: { zh: '看全部 7 個時態', en: 'See all seven tenses' },
+  verbsSubtitle: {
+    zh: '{n} 個動詞，每個都有 7 個簡單時態。點進去看完整的變位。',
+    en: '{n} verbs, each with all seven simple tenses. Open one for the full table.',
+  },
+  verbsSearchLabel: { zh: '搜尋動詞', en: 'Search verbs' },
+  verbsSearchPlaceholder: {
+    zh: '原形、字義，或直接打變位形式（例如 fui）',
+    en: 'Infinitive, meaning, or a conjugated form (e.g. fui)',
+  },
+  verbCount: { zh: '{n} 個動詞', en: '{n} verbs' },
+  verbRegular: { zh: '規則', en: 'regular' },
+  verbReflexive: { zh: '反身', en: 'reflexive' },
+  verbReflexiveHint: {
+    zh: '反身動詞：變位時前面要加 me / te / se / nos。',
+    en: 'Reflexive verb: takes me / te / se / nos before the conjugated form.',
+  },
+  verbNotFound: { zh: '找不到這個動詞', en: 'No such verb' },
+  verbNotFoundHint: {
+    zh: '動詞代碼「{id}」不存在。可能是網址打錯了。',
+    en: 'There is no verb with the id \u201c{id}\u201d. The URL may be wrong.',
+  },
+  backToVerbs: { zh: '回動詞列表', en: 'Back to verbs' },
+  verbFormsHeading: { zh: '簡單時態', en: 'Simple tenses' },
+  participioLabel: { zh: '過去分詞', en: 'Past participle' },
+  gerundioLabel: { zh: '現在分詞', en: 'Gerund' },
+  verbImperativeHeading: { zh: '命令式', en: 'Imperative' },
+  verbImperativeNote: {
+    zh: '命令式沒有「我」—— 不能對自己下令。',
+    en: 'The imperative has no “I” form — you cannot command yourself.',
+  },
+  verbLessonsHeading: { zh: '練過這個動詞的課', en: 'Lessons that drill this verb' },
+  verbFormMatch: { zh: '{form}＝{what}', en: '{form} = {what}' },
+  verbNoMatch: { zh: '沒有符合的動詞', en: 'No matching verbs' },
+  verbNoMatchHint: {
+    zh: '試試原形（hablar）、中文字義，或直接打變位形式（fui、tuve）。',
+    en: 'Try an infinitive (hablar), a meaning, or a conjugated form (fui, tuve).',
+  },
+  filterAll: { zh: '全部', en: 'All' },
   noMatchHint: {
     zh: '換個關鍵字試試，或按上面的「清除篩選」回到完整清單。',
     en: 'Try a different search, or use "Clear filters" above to see the full list.',
@@ -216,8 +257,6 @@ export const UI = {
     zh: '這條區域用法我沒有百分之百把握，建議找母語者確認後再當定論使用。',
     en: "I'm not fully certain about this regional usage — worth confirming with a native speaker before relying on it.",
   },
-  dailyGoal: { zh: '每日目標', en: 'Daily goal' },
-  minutes: { zh: '{n} 分鐘', en: '{n} min' },
   // ---- 答題流程 ----
   correctLabel: { zh: '答對了', en: 'Correct' },
   wrongLabel: { zh: '答錯了', en: 'Not quite' },
@@ -405,7 +444,6 @@ export const UI = {
     zh: '{n} 題還沒答對過。答對之後就會從這裡消失。',
     en: '{n} questions you have not got right yet. They leave this list once you do.',
   },
-  mistakesCta: { zh: '練錯過的題', en: 'Practise your mistakes' },
   mistakesCount: { zh: '{n} 題還沒答對', en: '{n} not yet correct' },
   mistakesEmpty: { zh: '目前沒有錯題', en: 'No mistakes right now' },
   mistakesEmptyHint: {
