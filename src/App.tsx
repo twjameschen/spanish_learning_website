@@ -11,7 +11,9 @@ import { DrillPage } from '@/pages/DrillPage';
 import { CelebrationOverlay } from '@/components/CelebrationOverlay';
 import { ShortcutsHelp } from '@/components/ShortcutsHelp';
 import { CompassLoading } from '@/components/decor/Illustrations';
+import { useEffect } from 'react';
 import { useRoute } from '@/lib/router';
+import { stopSpeaking } from '@/lib/speech';
 import { useStreakSync } from '@/hooks/useStreakSync';
 import { useSettingsStore } from '@/store/useSettingsStore';
 import { useT } from '@/i18n';
@@ -23,6 +25,15 @@ export default function App() {
 
   // hook 不能放在 early return 之後，所以在這裡呼叫；內部自己等補水
   useStreakSync();
+
+  /*
+   * 換頁就停止發音。
+   *
+   * 沒有這一段的話，單字表點了喇叭之後切走，那一句會繼續唸完蓋在新畫面上
+   * （`SpeakButton` 自己沒有 cleanup，而 `speak()` 只在**再按一次**時取消）。
+   * 聽力題自己的 cleanup 只管得到它自己卸載的情況。
+   */
+  useEffect(() => stopSpeaking, [route]);
 
   if (!hydrated) {
     return (

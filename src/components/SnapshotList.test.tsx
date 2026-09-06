@@ -1,7 +1,8 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor, within } from '@testing-library/react';
 import { SnapshotList } from './SnapshotList';
 import { storage, initStorage, __resetStorageForTests } from '@/lib/storage';
+import * as snapshotLib from '@/lib/snapshot';
 import { SNAPSHOT_PREFIX } from '@/lib/snapshot';
 import { useProgressStore, PROGRESS_KEY } from '@/store/useProgressStore';
 import { useSettingsStore } from '@/store/useSettingsStore';
@@ -115,5 +116,57 @@ describe('快照還原', () => {
     render(<SnapshotList />);
     await screen.findByText(/還沒有任何快照/);
     expect(screen.queryByRole('button', { name: /還原/ })).toBeNull();
+  });
+
+  /*
+   * 快照存不進去的時候不可以假裝「還沒有快照」。
+   *
+   * takeSnapshot 會把所有 key 完整複製一份並保留 3 份，在 localStorage 那一層
+   * （約 5MB）很有機會 QuotaExceededError。以前這條鏈沒有 .catch，
+   * 一 reject 就無聲中斷、清單留在空的，畫面顯示「還沒有任何快照」——
+   * 在備份最重要的那一層，使用者被告知的是「還沒開始存」。
+   */
+  it('拍快照失敗時說的是「存不起來」，不是「還沒有快照」', async () => {
+    const spy = vi.spyOn(snapshotLib, 'takeSnapshot')
+      .mockRejectedValue(new DOMException('quota', 'QuotaExceededError'));
+    try {
+      render(<SnapshotList />);
+      await screen.findByText(/快照存不起來/);
+      expect(screen.queryByText(/還沒有任何快照/)).toBeNull();
+      // 而且要告訴他還能怎麼辦
+      expect(screen.getByText(/匯出進度/)).toBeTruthy();
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('還原進行中按鈕會停用，連按兩下只會還原一次', async () => {
+    await seedSnapshot();
+    let resolveIt: (v: string[]) => void = () => {};
+    const spy = vi.spyOn(snapshotLib, 'restoreSnapshot').mockImplementation(
+      () => new Promise<string[]>((res) => { resolveIt = res; }),
+    );
+    try {
+      render(<SnapshotList />);
+      await screen.findByText(day);
+      fireEvent.click(inRow().getByRole('button', { name: /^還原$/ }));
+
+      const confirm = inRow().getByRole('button', { name: /確定還原|還原中/ });
+      fireEvent.click(confirm);
+
+      // 處理中：按鈕停用，再點也不會再送一次
+      await waitFor(() => {
+        expect((inRow().getByRole('button', { name: /還原中/ }) as HTMLButtonElement).disabled)
+          .toBe(true);
+      });
+      fireEvent.click(inRow().getByRole('button', { name: /還原中/ }));
+      expect(spy).toHaveBeenCalledTimes(1);
+
+      resolveIt([PROGRESS_KEY]);
+      await screen.findByText(/已還原/);
+      expect(spy).toHaveBeenCalledTimes(1);
+    } finally {
+      spy.mockRestore();
+    }
   });
 });

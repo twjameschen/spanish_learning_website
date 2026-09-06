@@ -1,9 +1,12 @@
+import { useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SunMotif } from '@/components/decor/Patterns';
 import { iconFor, type AchievementIcon } from '@/lib/achievementIcons';
 import { useCelebration } from '@/hooks/useCelebration';
+import { useDialog } from '@/hooks/useDialog';
+import { useShortcut } from '@/hooks/useShortcut';
 import { useT } from '@/i18n';
 
 /**
@@ -17,6 +20,12 @@ const EXIT = { duration: 0.15 } as const;
 export function CelebrationOverlay() {
   const { t, L } = useT();
   const { current, dismiss } = useCelebration();
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  // 跟另外兩個對話框一致：焦點收進來、Tab 關在裡面、關掉時還回去
+  useDialog(panelRef, Boolean(current));
+  // inDialog：這是用來關掉對話框本身的，被自己的規則擋掉就變成關不掉
+  useShortcut((key) => { if (key === 'Escape') dismiss(); }, Boolean(current), { inDialog: true });
 
   return (
     <AnimatePresence>
@@ -32,7 +41,9 @@ export function CelebrationOverlay() {
           aria-modal="true"
         >
           <motion.div
-            className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-surface p-8 text-center shadow-lift"
+            ref={panelRef}
+            tabIndex={-1}
+            className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-surface p-8 text-center shadow-lift outline-none"
             initial={{ scale: 0.8, y: 24 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, transition: EXIT }}

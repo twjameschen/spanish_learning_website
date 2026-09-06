@@ -21,9 +21,13 @@ type Status =
 export function BackupControls({ compact = false }: { compact?: boolean }) {
   const { t } = useT();
   const [status, setStatus] = useState<Status>({ kind: 'idle' });
+  /** 匯出／匯入進行中 —— 兩顆都不能連按，匯入尤其會變成兩次重疊的寫入 */
+  const [busy, setBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   async function handleExport() {
+    if (busy) return;
+    setBusy(true);
     try {
       const backup = await exportBackup();
       const count = Object.keys(backup.data).length;
@@ -39,10 +43,14 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
       );
     } catch (e) {
       setStatus({ kind: 'error', message: e instanceof Error ? e.message : t('exportFailed') });
+    } finally {
+      setBusy(false);
     }
   }
 
   async function handleFile(file: File) {
+    if (busy) return;
+    setBusy(true);
     try {
       const backup = parseBackup(await file.text());
       const summary = await importBackup(backup, 'replace');
@@ -54,6 +62,8 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
       });
     } catch (e) {
       setStatus({ kind: 'error', message: e instanceof Error ? e.message : t('importFailed') });
+    } finally {
+      setBusy(false);
     }
   }
 
@@ -63,6 +73,7 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
         <Button
           variant="outline"
           size={compact ? 'sm' : 'md'}
+          disabled={busy}
           onClick={handleExport}
           title={t('exportTitle')}
         >
@@ -72,6 +83,7 @@ export function BackupControls({ compact = false }: { compact?: boolean }) {
         <Button
           variant="outline"
           size={compact ? 'sm' : 'md'}
+          disabled={busy}
           onClick={() => fileRef.current?.click()}
           title={t('importTitle')}
         >

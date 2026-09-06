@@ -98,6 +98,56 @@ describe('ExercisePlayer', () => {
     expect(screen.queryByText('這一輪完成了')).toBeNull();
   });
 
+  /*
+   * 只有一題的練習重來會卡死。
+   *
+   * 重來時 setIndex(0) 在只有一題的情況下是 no-op，掛在 [index] 的重設
+   * effect 不會再跑，outcome 活了下來 —— 題目整個攤開、不能作答，
+   * 回饋區又跟著出現一顆「完成」，按下去回到結算。使用者出不去。
+   *
+   * 每一組陰陽性分類都恰好是一題，所以這條路徑一定會被踩到。
+   * 上面那條舊測試用的正好也是一題，卻過關 —— 它只看了 1/1 與結算消失，
+   * 從來沒有問過「那一題還能不能作答」。
+   */
+  it('只有一題時重來，那一題要能重新作答（不是攤開的死題目）', () => {
+    render(<ExercisePlayer exercises={[mcq('q1', 0)]} />);
+    pick(1); next();
+    fireEvent.click(screen.getByRole('button', { name: /再練一次/ }));
+
+    // 回饋區不該還在 —— 它在的話代表 outcome 沒被清掉
+    expect(screen.queryByRole('button', { name: /下一題|完成/ })).toBeNull();
+    expect(screen.queryByText('選項1的說明')).toBeNull();
+
+    // 而且真的按得下去，按完又回到「已作答」
+    pick(0);
+    expect(screen.getByRole('button', { name: /下一題|完成/ })).toBeTruthy();
+  });
+
+  it('重來之後再答一次會重新計分，不是沿用上一輪的結果', async () => {
+    render(<ExercisePlayer exercises={[mcq('q1', 0)]} />);
+    pick(1); next();                                   // 第一輪答錯
+    fireEvent.click(screen.getByRole('button', { name: /再練一次/ }));
+    pick(0); next();                                   // 第二輪答對
+
+    expect(screen.getByText('答對 1 / 1 題')).toBeTruthy();
+    expect(screen.getByText('100%')).toBeTruthy();
+    await waitFor(() => {
+      expect(useProgressStore.getState().recentLog[0]?.correct).toBe(true);
+    });
+  });
+
+  it('多題的練習重來也一樣回到第一題且可作答', () => {
+    render(<ExercisePlayer exercises={[mcq('q1', 0), mcq('q2', 0)]} />);
+    pick(0); next(); pick(0); next();
+    expect(screen.getByText('這一輪完成了')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: /再練一次/ }));
+    expect(screen.getByText('1/2')).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /下一題|完成/ })).toBeNull();
+    pick(0);
+    expect(screen.getByRole('button', { name: /下一題|完成/ })).toBeTruthy();
+  });
+
   it('每一題都會寫進進度，答錯的卡片也要排程', async () => {
     render(<ExercisePlayer exercises={[mcq('q1', 0), mcq('q2', 0)]} />);
     pick(3); next();
@@ -133,5 +183,37 @@ describe('ExercisePlayer', () => {
     pick(0); // 再點正解，不該改變結果
     expect(screen.getByText('答錯了')).toBeTruthy();
     expect(useProgressStore.getState().recentLog).toHaveLength(1);
+  });
+
+  /*
+   * 對話框開著時的按鍵不可以流到背後的題目。
+   *
+   * 快捷鍵說明面板上就列著「1～4 選答案」，照著按下去以前會替使用者
+   * 回答背後那一題、recordAnswer 執行、FSRS 寫入一次複習、然後跳下一題，
+   * 全部發生在他正在讀的面板後面。
+   */
+  it('有對話框開著時，數字鍵不會替你回答背後那一題', async () => {
+    render(<ExercisePlayer exercises={[mcq('q1', 0), mcq('q2', 0)]} />);
+    expect(screen.getByText('1/2')).toBeTruthy();
+
+    const dialog = document.createElement('div');
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    document.body.appendChild(dialog);
+    try {
+      fireEvent.keyDown(document.body, { key: '1' });
+      fireEvent.keyDown(document.body, { key: '2' });
+
+      // 沒有作答、沒有前進、沒有寫進記錄
+      expect(screen.queryByRole('button', { name: /下一題|完成/ })).toBeNull();
+      expect(screen.getByText('1/2')).toBeTruthy();
+      expect(useProgressStore.getState().recentLog).toHaveLength(0);
+    } finally {
+      dialog.remove();
+    }
+
+    // 關掉之後照常可用
+    fireEvent.keyDown(document.body, { key: '1' });
+    expect(screen.getByRole('button', { name: /下一題|完成/ })).toBeTruthy();
   });
 });

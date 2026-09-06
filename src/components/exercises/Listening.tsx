@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Prompt, HelpRow, HintBox } from './Shared';
 import { CharPad } from './CharPad';
 import { matchesAnswer } from '@/lib/normalize';
-import { speak } from '@/lib/speech';
+import { speak, stopSpeaking } from '@/lib/speech';
 import { useSpeech } from '@/hooks/useSpeech';
 import { useT } from '@/i18n';
 import type { ExerciseProps } from './types';
@@ -38,12 +38,41 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
   const [hinted, setHinted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  /*
+   * 這一題走「聽」還是走「照著抄」。
+   *
+   * `speech.available` 不是每題固定的值：語音偵測是非同步的（最多等 2 秒），
+   * 設定裡的語音開關也會即時翻轉它。以前重設 effect 把它放進依賴，
+   * 於是「冷開機先看到降級畫面 → 開始抄 → 偵測完成」或
+   * 「打到一半去設定切語音」都會把使用者**打好的字整個清掉**，
+   * 順便把已經付出代價換來的提示也收回去。
+   *
+   * 規則改成：**使用者還沒投入任何東西之前**跟著 `speech.available` 走
+   * （冷開機時語音晚一步到，畫面照樣升級成聽力並自動唸），
+   * 一旦開始打字或看過提示就**凍結**到這一題結束 ——
+   * 已經投入的東西不會因為背景狀態變化而消失。
+   */
+  const [useAudio, setUseAudio] = useState(speech.available);
+  const engaged = value.length > 0 || hinted;
+
+  // 換題才重設。只掛 exercise.id —— 這是 Phase 13 就確立的規則
   useEffect(() => {
     setValue('');
     setHinted(false);
     inputRef.current?.focus();
-    if (speech.available) speak(exercise.es);
-  }, [exercise.id, exercise.es, speech.available]);
+  }, [exercise.id]);
+
+  useEffect(() => {
+    if (engaged) return;              // 投入之後就凍結，不再跟著背景狀態跑
+    setUseAudio(speech.available);
+  }, [speech.available, engaged]);
+
+  // 進到一題、或語音晚一步才就緒時唸一次；離開就停，別蓋在下一個畫面上
+  useEffect(() => {
+    if (!useAudio) return;
+    speak(exercise.es);
+    return () => stopSpeaking();
+  }, [exercise.id, exercise.es, useAudio]);
 
   const submit = () => {
     if (answered || !value.trim()) return;
@@ -60,13 +89,13 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
    * 沒有語音時整句已經印在畫面上，求助按鈕沒有任何東西可以揭曉，
    * 兩顆都不顯示 —— 按了沒反應的按鈕比沒有按鈕更糟。
    */
-  const canAskForHelp = speech.available && !answered;
+  const canAskForHelp = useAudio && !answered;
 
   return (
     <div className="space-y-5">
-      <Prompt>{t(speech.available ? 'listeningPrompt' : 'listeningFallbackPrompt')}</Prompt>
+      <Prompt>{t(useAudio ? 'listeningPrompt' : 'listeningFallbackPrompt')}</Prompt>
 
-      {speech.available ? (
+      {useAudio ? (
         <div className="grid place-items-center gap-3 rounded-3xl bg-surface-2 px-5 py-8">
           <Button
             variant="secondary"
@@ -113,12 +142,12 @@ export function Listening({ exercise, answered, onAnswer }: ExerciseProps<Listen
           }}
           disabled={answered}
           /* 沒有語音時題目變成抄寫，提示語也要跟著換 —— 螢幕上根本沒有東西可以「聽」 */
-          placeholder={t(speech.available ? 'typeWhatYouHear' : 'typeWhatYouSee')}
+          placeholder={t(useAudio ? 'typeWhatYouHear' : 'typeWhatYouSee')}
           lang="es"
           autoCapitalize="off"
           autoCorrect="off"
           spellCheck={false}
-          aria-label={t(speech.available ? 'typeWhatYouHear' : 'typeWhatYouSee')}
+          aria-label={t(useAudio ? 'typeWhatYouHear' : 'typeWhatYouSee')}
         />
         <Button onClick={submit} disabled={answered || !value.trim()} aria-label={t('submitAnswer')}>
           <CornerDownLeft aria-hidden="true" />

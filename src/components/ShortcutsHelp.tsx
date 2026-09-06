@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Keyboard, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useShortcut } from '@/hooks/useShortcut';
+import { useDialog } from '@/hooks/useDialog';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
 
@@ -34,11 +35,16 @@ function Key({ children }: { children: string }) {
 export function ShortcutsHelp() {
   const { t } = useT();
   const [open, setOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
 
+  // 以前開啟時沒有把焦點移進來，按完 ? 的第一個 Tab 會落到遮罩後面
+  useDialog(panelRef, open);
+
+  // inDialog：這一組就是用來開關對話框的，被自己的規則擋掉會變成關不掉
   useShortcut((key) => {
     if (key === '?') setOpen(true);
     if (key === 'Escape') setOpen(false);
-  });
+  }, true, { inDialog: true });
 
   return (
     <>
@@ -66,7 +72,9 @@ export function ShortcutsHelp() {
             aria-label={t('shortcutsTitle')}
           >
             <motion.div
-              className="w-full max-w-sm rounded-3xl bg-surface p-6 shadow-lift"
+              ref={panelRef}
+              tabIndex={-1}
+              className="w-full max-w-sm rounded-3xl bg-surface p-6 shadow-lift outline-none"
               initial={{ scale: 0.9, y: 16 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, transition: EXIT }}

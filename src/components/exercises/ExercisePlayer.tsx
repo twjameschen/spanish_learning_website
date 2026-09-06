@@ -62,6 +62,16 @@ export function ExercisePlayer({
   const [bestCombo, setBestCombo] = useState(0);
   const [tally, setTally] = useState({ answered: 0, correct: 0, xp: 0 });
   const [finished, setFinished] = useState(false);
+  /**
+   * 第幾次做這一輪。「再練一次」時 +1。
+   *
+   * 只有一題的練習（每一組陰陽性分類都是）按重來時 `setIndex(0)` 是 no-op，
+   * 掛在 `[index]` 的重設 effect 不會再跑，`outcome` 就活了下來 ——
+   * 題目變成攤開又不能作答，只能在結算與那一題之間來回彈。
+   * 用它當 remount key，順便把子元件自己的內部狀態（例如 GenderSort 的
+   * finishedRef 與 hits）一起帶回起點，不必每種題型各修一次。
+   */
+  const [attempt, setAttempt] = useState(0);
   // 規格指定的 spring 參數；使用者若開了「減少動態效果」就整個關掉
   const reduceMotion = useReducedMotion();
   const startedAt = useRef(Date.now());
@@ -72,7 +82,7 @@ export function ExercisePlayer({
   useEffect(() => {
     startedAt.current = Date.now();
     setOutcome(null);
-  }, [index]);
+  }, [index, attempt]);
 
   // 作答後把焦點移到「下一題」，鍵盤操作才連得起來
   useEffect(() => {
@@ -142,7 +152,13 @@ export function ExercisePlayer({
 
   const body = useMemo(() => {
     if (!current) return null;
-    const props = { answered: Boolean(outcome), outcome, onAnswer: handleAnswer };
+    const props = {
+      // key 帶上 attempt：重來時整個子元件重新掛載，內部狀態一併回到起點
+      key: `${current.id}-${attempt}`,
+      answered: Boolean(outcome),
+      outcome,
+      onAnswer: handleAnswer,
+    };
     switch (current.type) {
       case 'flashcard': return <Flashcard exercise={current} {...props} />;
       case 'mcq': return <MultipleChoice exercise={current} {...props} />;
@@ -152,7 +168,7 @@ export function ExercisePlayer({
       case 'listening': return <Listening exercise={current} {...props} />;
       case 'genderSort': return <GenderSort exercise={current} {...props} />;
     }
-  }, [current, outcome, handleAnswer]);
+  }, [current, outcome, handleAnswer, attempt]);
 
   if (finished) {
     const accuracy = tally.answered > 0 ? Math.round((tally.correct / tally.answered) * 100) : 0;
@@ -186,6 +202,10 @@ export function ExercisePlayer({
               setTally({ answered: 0, correct: 0, xp: 0 });
               setCombo(0);
               setBestCombo(0);
+              // 一題的練習裡 setIndex(0) 不會觸發任何事，這兩行才是真的把題目放回去
+              setOutcome(null);
+              startedAt.current = Date.now();
+              setAttempt((n) => n + 1);
             }}
           >
             <RotateCcw aria-hidden="true" />

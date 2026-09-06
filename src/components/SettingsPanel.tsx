@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, type ReactNode } from 'react';
+import { useDialog } from '@/hooks/useDialog';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, X, Sun, Moon, MonitorSmartphone } from 'lucide-react';
@@ -86,14 +87,15 @@ export function SettingsPanel() {
    */
   useEffect(() => {
     if (!open) return;
-    // 開啟時把焦點收進面板，鍵盤使用者才不會停在面板外面
-    panelRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
+
+  // 收焦點、關住 Tab、關掉時把焦點還給那顆齒輪
+  useDialog(panelRef, open);
 
   return (
     <>

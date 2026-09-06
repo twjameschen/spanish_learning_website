@@ -19,16 +19,31 @@ export function SnapshotList() {
   /** 正在等待確認的那一列 */
   const [confirming, setConfirming] = useState<string | null>(null);
   const [status, setStatus] = useState<{ kind: 'ok' | 'error'; message: string } | null>(null);
+  /** 還原進行中 —— 破壞性操作不能連按兩下 */
+  const [busy, setBusy] = useState(false);
+  /**
+   * 拍快照本身失敗了。
+   *
+   * 這個要跟「還沒有快照」分開：`takeSnapshot` 會把所有 key 完整複製一份
+   * 並保留 3 份，在 localStorage 那一層（約 5MB）很有機會 QuotaExceededError。
+   * 以前這條鏈沒有 `.catch`，一 reject 就無聲中斷、`snapshots` 留在空的，
+   * 畫面顯示「還沒有任何快照」—— 在備份最重要的那一層，
+   * 使用者被告知的是「還沒開始存」，事實卻是「一直存不進去」。
+   */
+  const [snapshotFailed, setSnapshotFailed] = useState(false);
 
   useEffect(() => {
     let alive = true;
     void takeSnapshot()
       .then(() => listSnapshots())
-      .then((m) => { if (alive) setSnapshots(m); });
+      .then((m) => { if (alive) setSnapshots(m); })
+      .catch(() => { if (alive) setSnapshotFailed(true); });
     return () => { alive = false; };
   }, []);
 
   async function handleRestore(id: string) {
+    if (busy) return;
+    setBusy(true);
     try {
       const keys = await restoreSnapshot(id);
       // 走跟匯入同一條補水路徑，否則畫面停在舊數字、下次作答又把舊進度寫回去。
@@ -42,7 +57,13 @@ export function SnapshotList() {
         kind: 'error',
         message: e instanceof Error ? e.message : t('snapshotRestoreFailed'),
       });
+    } finally {
+      setBusy(false);
     }
+  }
+
+  if (snapshotFailed) {
+    return <EmptyState title={t('snapshotFailed')} hint={t('snapshotFailedHint')} />;
   }
 
   if (snapshots.length === 0) {
@@ -64,10 +85,15 @@ export function SnapshotList() {
                   {t('snapshotRestoreConfirm', { d: s.day })}
                 </span>
                 <div className="ml-auto flex gap-1.5">
-                  <Button size="sm" variant="primary" onClick={() => void handleRestore(s.id)}>
-                    {t('snapshotRestoreYes')}
+                  <Button
+                    size="sm"
+                    variant="primary"
+                    disabled={busy}
+                    onClick={() => void handleRestore(s.id)}
+                  >
+                    {t(busy ? 'snapshotRestoring' : 'snapshotRestoreYes')}
                   </Button>
-                  <Button size="sm" variant="ghost" onClick={() => setConfirming(null)}>
+                  <Button size="sm" variant="ghost" disabled={busy} onClick={() => setConfirming(null)}>
                     {t('snapshotRestoreNo')}
                   </Button>
                 </div>

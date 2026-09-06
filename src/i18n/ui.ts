@@ -143,6 +143,12 @@ export const UI = {
     en: 'Restored {n} entries — the page now shows that day\u2019s progress.',
   },
   snapshotRestoreFailed: { zh: '還原失敗。', en: 'Restore failed.' },
+  snapshotRestoring: { zh: '還原中…', en: 'Restoring…' },
+  snapshotFailed: { zh: '快照存不起來', en: "Snapshots aren't saving" },
+  snapshotFailedHint: {
+    zh: '自動快照寫入失敗，多半是儲存空間滿了。請按上面的「匯出進度」把進度存成檔案，這樣才有備份。',
+    en: 'The automatic snapshot could not be written — most likely the storage quota is full. Use “Export progress” above to save a file so you still have a backup.',
+  },
   entries: { zh: '{n} 筆資料', en: '{n} entries' },
 
   // 單字表

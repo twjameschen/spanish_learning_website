@@ -30,25 +30,45 @@ export function Heatmap({ weeks = 26 }: { weeks?: number }) {
     <div className="space-y-3">
       <p className="text-sm text-muted">{t('heatmapActiveDays', { n: activeCount })}</p>
 
-      {/* 直行是一週，橫列是星期幾；窄畫面就左右捲 */}
+      {/*
+        直行是一週，橫列是星期幾；窄畫面就左右捲。
+
+        每一格是 button 而不是 div：以前只有 onMouseEnter，
+        手機上**沒有任何辦法**看到某一天的 XP 與題數（下面那個 tooltip 欄位
+        永遠是空的），鍵盤也到不了任何一格。
+
+        容器刻意**不再**是 `role="img"` —— 那個 role 會讓子元素完全不暴露給
+        輔助技術，格子改成 button 之後仍然讀不到，等於白做。
+        整體摘要留在上面那行文字裡，本來就讀得到。
+      */}
       <div className="-mx-1 overflow-x-auto px-1 pb-1">
-        <div
-          className="grid w-max grid-flow-col grid-rows-7 gap-1"
-          role="img"
-          aria-label={t('heatmapActiveDays', { n: activeCount })}
-        >
-          {cells.map((cell) => (
-            <div
-              key={cell.day}
-              onMouseEnter={() => setHover(cell)}
-              onMouseLeave={() => setHover(null)}
-              className={cn(
-                'size-3 rounded-[3px] transition-colors',
-                cell.future ? 'bg-transparent' : LEVEL_CLASS[cell.level],
-                !cell.future && 'hover:ring-2 hover:ring-primary-400',
-              )}
-            />
-          ))}
+        <div className="grid w-max grid-flow-col grid-rows-7 gap-1" role="group">
+          {cells.map((cell) =>
+            // 未來的日期只是把最後一週補滿，不該可以聚焦也沒有東西可看
+            cell.future ? (
+              <div key={cell.day} className="size-3 rounded-[3px] bg-transparent" />
+            ) : (
+              <button
+                key={cell.day}
+                type="button"
+                // title 讓桌機的原生 tooltip 也能用；aria-label 給螢幕閱讀器
+                title={t('heatmapTooltip', { day: cell.day, xp: cell.xp, n: cell.answered })}
+                aria-label={t('heatmapTooltip', { day: cell.day, xp: cell.xp, n: cell.answered })}
+                onMouseEnter={() => setHover(cell)}
+                onMouseLeave={() => setHover(null)}
+                onFocus={() => setHover(cell)}
+                onBlur={() => setHover(null)}
+                // 觸控只有 click，沒有 hover
+                onClick={() => setHover(cell)}
+                className={cn(
+                  'size-3 rounded-[3px] transition-colors',
+                  LEVEL_CLASS[cell.level],
+                  'hover:ring-2 hover:ring-primary-400',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
+                )}
+              />
+            ),
+          )}
         </div>
       </div>
 

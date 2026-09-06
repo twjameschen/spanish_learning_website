@@ -62,7 +62,11 @@ export function CharPad({
   };
 
   return (
-    <div className="flex flex-wrap gap-1" role="group" aria-label={t('charPadLabel')}>
+    // gap-1.5 + flex-wrap：九顆 44px 是 396px，比 375px 的手機還寬，
+    // 一定要能換行。這一列是沒有西班牙文鍵盤時打 ñ 的唯一管道，
+    // 而 normalizeAnswer 刻意不折 ñ（año ≠ ano），按錯直接扣分，
+    // 所以觸控目標不能小於 44px。
+    <div className="flex flex-wrap gap-1.5" role="group" aria-label={t('charPadLabel')}>
       {CHARS.map((ch) => (
         <button
           key={ch}
@@ -70,7 +74,7 @@ export function CharPad({
           onClick={() => insert(ch)}
           aria-label={t('charPadInsert', { ch })}
           lang="es"
-          className="h-8 min-w-8 rounded-xl border border-line bg-surface px-2 text-[15px] font-bold text-body transition-colors hover:border-primary-400 hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/30 dark:hover:text-primary-300"
+          className="h-11 min-w-11 rounded-xl border border-line bg-surface px-2 text-[15px] font-bold text-body transition-colors hover:border-primary-400 hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/30 dark:hover:text-primary-300"
         >
           {ch}
         </button>

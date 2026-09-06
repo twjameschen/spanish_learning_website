@@ -45,15 +45,29 @@ export function GenderSort({ exercise, answered, onAnswer }: ExerciseProps<Gende
     finishedRef.current = false;
   }, [exercise.id, exercise.seconds]);
 
+  /*
+   * 倒數與「時間到就結算」刻意拆成兩個 effect。
+   *
+   * 以前是同一個，而且依賴裡有 `hits`；`pick()` 每次作答都產生新陣列，
+   * 於是每按一下就 clearTimeout 掉還沒到期的那一秒再重排一個新的，
+   * 已經走掉的那部分被丟掉。按得比一秒一次快的人會看到時間卡住不動，
+   * 八個字的 75 秒題最多可以賺到約 8 秒。
+   *
+   * `hits` 只有結算那一支要讀，改放 ref，倒數就不必跟著它重跑。
+   */
+  const hitsRef = useRef(hits);
+  hitsRef.current = hits;
+
   useEffect(() => {
-    if (answered || finishedRef.current) return;
-    if (left <= 0) {
-      finish(hits);
-      return;
-    }
+    if (answered || finishedRef.current || left <= 0) return;
     const timer = setTimeout(() => setLeft((s) => s - 1), 1000);
     return () => clearTimeout(timer);
-  }, [left, answered, hits, finish]);
+  }, [left, answered]);
+
+  useEffect(() => {
+    if (answered || finishedRef.current || left > 0) return;
+    finish(hitsRef.current);
+  }, [left, answered, finish]);
 
   const current = words[index];
 
