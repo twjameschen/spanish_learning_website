@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { SpeakButton } from '@/components/SpeakButton';
+import { MasteryStars } from '@/components/MasteryStars';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { ConjugationTable, ImperativeTable } from '@/components/ConjugationTable';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
@@ -11,6 +12,7 @@ import { allVerbs, getVerb, allLessons } from '@/content';
 import { LEVELS, type Level, type Verb } from '@/content/schema';
 import { hrefFor } from '@/lib/router';
 import { hitsForVerb, formLabel } from '@/lib/verbForms';
+import { useProgressStore, starsForWord } from '@/store/useProgressStore';
 import { foldAccents } from '@/lib/normalize';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
@@ -31,43 +33,56 @@ const fold = (s: string): string => foldAccents(s).toLowerCase();
 const VerbRow = memo(function VerbRow({
   verb,
   query,
+  stars,
 }: {
   verb: Verb;
   query: string;
+  stars: number;
 }) {
   const { t, L } = useT();
   // 使用者打的是變位形式時，把「這是哪個時態哪個人稱」直接標在該列上
   const hits = query.trim() ? hitsForVerb(query, verb.id) : [];
 
   return (
-    <li className="[content-visibility:auto] [contain-intrinsic-size:auto_84px]">
+    <li
+      className={cn(
+        '[content-visibility:auto] [contain-intrinsic-size:auto_84px]',
+        'flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-2xl border border-line/70',
+        'bg-surface px-4 py-3 shadow-soft transition-shadow duration-300 hover:shadow-card',
+      )}
+    >
+      {/*
+        喇叭是 <button>，所以**不能**包在 <a> 裡面 —— HTML 不允許互動元素
+        巢狀。以前整列都是一個 <a>，105 列就有 105 個不合法的巢狀結構。
+        改成連結只包住動詞本身，喇叭與標記是它的兄弟節點。
+      */}
       <a
         href={hrefFor({ name: 'verb', id: verb.id })}
-        className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-2xl border border-line/70 bg-surface px-4 py-3 shadow-soft transition-shadow duration-300 hover:shadow-card"
+        lang="es"
+        className="break-es text-lg font-extrabold text-body hover:underline"
       >
-        <span lang="es" className="break-es text-lg font-extrabold text-body">
-          {verb.es}
-        </span>
-        <SpeakButton text={verb.es} />
-        <Badge variant={verb.irregular ? 'accent' : 'neutral'}>
-          {t(verb.irregular ? 'irregular' : 'verbRegular')}
-        </Badge>
-        {verb.reflexive ? (
-          <Badge variant="secondary" title={t('verbReflexiveHint')}>
-            {t('verbReflexive')}
-          </Badge>
-        ) : null}
-        <Badge variant="outline">{verb.level}</Badge>
-        <span className="w-full text-sm text-muted sm:w-auto">{L(verb.gloss)}</span>
-
-        {hits.length > 0 ? (
-          <span className="w-full text-xs font-semibold text-primary-800 dark:text-primary-300">
-            {hits
-              .map((h) => t('verbFormMatch', { form: h.form, what: L(formLabel(h.what)) }))
-              .join('、')}
-          </span>
-        ) : null}
+        {verb.es}
       </a>
+      <SpeakButton text={verb.es} />
+      <MasteryStars stars={stars} />
+      <Badge variant={verb.irregular ? 'accent' : 'neutral'}>
+        {t(verb.irregular ? 'irregular' : 'verbRegular')}
+      </Badge>
+      {verb.reflexive ? (
+        <Badge variant="secondary" title={t('verbReflexiveHint')}>
+          {t('verbReflexive')}
+        </Badge>
+      ) : null}
+      <Badge variant="outline">{verb.level}</Badge>
+      <span className="w-full text-sm text-muted sm:w-auto">{L(verb.gloss)}</span>
+
+      {hits.length > 0 ? (
+        <span className="w-full text-xs font-semibold text-primary-800 dark:text-primary-300">
+          {hits
+            .map((h) => t('verbFormMatch', { form: h.form, what: L(formLabel(h.what)) }))
+            .join('、')}
+        </span>
+      ) : null}
     </li>
   );
 });
@@ -78,6 +93,17 @@ export function VerbListPage() {
   const [level, setLevel] = useState<Level | null>(null);
   /** null = 全部；true = 只看不規則；false = 只看規則 */
   const [irregular, setIrregular] = useState<boolean | null>(null);
+  /*
+   * 訂閱 cards 是為了「答完題回來星星要跟著變」。
+   * 值本身由 starsForWord 讀 —— 它走的是 getState()，
+   * 但因為這裡有訂閱，cards 一變就重繪，拿到的一定是最新的。
+   * 星等當 prop 傳下去，memo 過的列才看得到變化。
+   */
+  const cards = useProgressStore((s) => s.cards);
+  const starsOf = useMemo(() => {
+    void cards;
+    return (id: string) => starsForWord(id);
+  }, [cards]);
 
   const results = useMemo(() => {
     const raw = query.trim();
@@ -175,7 +201,7 @@ export function VerbListPage() {
       ) : (
         <ul className="space-y-2">
           {results.map((v) => (
-            <VerbRow key={v.id} verb={v} query={query} />
+            <VerbRow key={v.id} verb={v} query={query} stars={starsOf(v.id)} />
           ))}
         </ul>
       )}

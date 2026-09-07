@@ -1,7 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, act, waitFor } from '@testing-library/react';
 import { VocabPage } from './VocabPage';
 import { useSettingsStore } from '@/store/useSettingsStore';
+import { useProgressStore, wordKey } from '@/store/useProgressStore';
 
 /**
  * 單字表。
@@ -102,5 +103,28 @@ describe('單字表', () => {
     search('ser');
     const link = screen.getAllByRole('link', { name: /看全部 7 個時態/ })[0]!;
     expect(link.getAttribute('href')).toMatch(/^#\/verbs\//);
+  });
+
+  /*
+   * 熟練度要真的接到卡片上，而且答完題回來會變。
+   * 光有 MasteryStars 元件不算數 —— Phase 10／14 的教訓就是
+   * 「元件寫好了但沒有畫面到得了」。
+   */
+  it('學過的字卡片上看得到星等，沒學過的不顯示', async () => {
+    useProgressStore.getState().reset();
+    render(<VocabPage />);
+    search('café');
+    expect(screen.queryAllByLabelText(/熟練度/)).toHaveLength(0);
+
+    // 答對一次之後，這個字就有卡片了
+    act(() => {
+      useProgressStore.getState().recordAnswer({
+        key: wordKey('cafe-bebida'), exerciseType: 'flashcard', correct: true, ms: 1200, xp: 2,
+      });
+    });
+
+    await waitFor(() => {
+      expect(screen.queryAllByLabelText(/熟練度/).length).toBeGreaterThan(0);
+    });
   });
 });

@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { SpeakButton } from '@/components/SpeakButton';
+import { MasteryStars } from '@/components/MasteryStars';
 import { EmptyState } from '@/components/decor/Illustrations';
 import { allWords, allTopics, topicLabel, POS_LABEL } from '@/content';
 import { hrefFor } from '@/lib/router';
 import { canDrillTopic, GENDER_DRILL_PREFIX } from '@/lib/genderDrill';
 import { PERSON_LABEL, PERSONS, type Word, type Verb } from '@/content/schema';
 import { hitsForVerb, formLabel } from '@/lib/verbForms';
+import { useProgressStore, starsForWord } from '@/store/useProgressStore';
 import { useT } from '@/i18n';
 import { cn } from '@/lib/utils';
 
@@ -32,7 +34,15 @@ const isVerb = (w: Word): w is Verb => w.pos === 'verb';
  * 一次按鍵要重新求值約 2200 個訂閱。`word` 是模組層的常數物件，
  * 參考不會變，所以預設的淺比較就夠 —— 不需要自訂比較函式。
  */
-const WordCard = memo(function WordCard({ word, query }: { word: Word; query: string }) {
+const WordCard = memo(function WordCard({
+  word,
+  query,
+  stars,
+}: {
+  word: Word;
+  query: string;
+  stars: number;
+}) {
   const { t, L, Lo } = useT();
   // 使用者打的是變位形式時，直接在卡上說明那是哪個時態哪個人稱
   const hits = isVerb(word) && query.trim() ? hitsForVerb(query, word.id) : [];
@@ -64,6 +74,7 @@ const WordCard = memo(function WordCard({ word, query }: { word: Word; query: st
           </Badge>
         ) : null}
         <Badge variant="neutral">{pos}</Badge>
+        <MasteryStars stars={stars} />
         {isVerb(word) && word.reflexive ? (
           <Badge variant="secondary" title={t('verbReflexiveHint')}>
             {t('verbReflexive')}
@@ -150,6 +161,13 @@ export function VocabPage() {
     const seen = new Set(allWords.map((w) => w.pos));
     return (Object.keys(POS_LABEL) as Word['pos'][]).filter((p) => seen.has(p));
   }, []);
+
+  /* 訂閱 cards 才會在作答之後跟著更新；值由 starsForWord 讀（見動詞頁的說明） */
+  const cards = useProgressStore((s) => s.cards);
+  const starsOf = useMemo(() => {
+    void cards;
+    return (id: string) => starsForWord(id);
+  }, [cards]);
 
   const results = useMemo(() => {
     const raw = query.trim();
@@ -269,7 +287,7 @@ export function VocabPage() {
           {/* key 就是 w.id：加 locale 前綴會讓切語言時整頁重掛 1456 顆喇叭，
               而 WordCard 內部本來就用 useT() 讀語言，語言變了自然會重繪 */}
           {results.map((w) => (
-            <WordCard key={w.id} word={w} query={query} />
+            <WordCard key={w.id} word={w} query={query} stars={starsOf(w.id)} />
           ))}
         </div>
       )}

@@ -28,6 +28,7 @@ node scripts/e2e/dashboard.mjs    http://localhost:8000/ /tmp/shots
 node scripts/e2e/shortcuts.mjs    http://localhost:8000/ /tmp/shots
 node scripts/e2e/replay-and-focus.mjs http://localhost:8000/ /tmp/shots
 node scripts/e2e/verbs.mjs        http://localhost:8000/ /tmp/shots
+node scripts/e2e/contrast-progress.mjs http://localhost:8000/
 node scripts/e2e/contrast.mjs     http://localhost:8000/
 node scripts/e2e/contrast-snapshot.mjs http://localhost:8000/
 node scripts/e2e/vocab-perf.mjs   http://localhost:8000/
@@ -59,6 +60,7 @@ Chromium 路徑寫在每支腳本最上面的 `EXE` 常數，換機器時改那�
 | `contrast.mjs` | 9 個頁面 × 淺／深兩種模式的 WCAG AA 文字對比，另外量設定面板、聽力提示、骨架提示、字元列、有錯題時的首頁這幾個「要先做點什麼才存在」的狀態（漸層背景會跳過並回報） |
 | `offline.mjs` | 走過 9 個頁面攔截所有請求，斷言零個對外請求 |
 | `single-file.mjs` | 單檔版在 `file://` 下能不能開、hash 路由與儲存層可不可用 |
+| `contrast-progress.mjs` | 課程列表的完成打勾與「全對」、單字卡與動詞列的熟練度星等 —— 這些要先**有進度**才畫得出來，`contrast.mjs` 從空白開站量不到。直接把進度種進 IndexedDB 再量，淺／深兩色都跑 |
 | `contrast-snapshot.mjs` | 快照那一列的「還原」與確認狀態的對比 —— 這兩個要先有快照才畫得出來，`contrast.mjs` 從空白開站量不到 |
 | `verbs.mjs` | 動詞列表與篩選、**打 `fui` 同時查到 ser 與 ir 並標出時態人稱**、反身動詞打 `llamo` 找得到 `llamarse`、完整變位表 7×5=35 格、沒有命令式的動詞不印空區塊、找不到的 id 給錯誤畫面、單字表的動詞卡連得過來、375px 下表格自己橫捲 |
 | `vocab-perf.mjs` | 單字表 728 張卡全開時，每按一個鍵到畫面更新完成要多久、切換語言要多久、`content-visibility` 有沒有真的生效 |

@@ -3,6 +3,7 @@ import { UI } from './ui';
 import { LOCALES, localizedSchema } from '@/content/schema';
 import { allWords, allLessons, journey, TOPIC_LABEL, POS_LABEL } from '@/content';
 import { EXERCISE_TYPE_LABEL, PERSON_LABEL, TENSE_LABEL } from '@/content/schema';
+import { EXTRA_FORM_LABEL } from '@/lib/verbForms';
 
 /**
  * 雙語完整性。
@@ -22,6 +23,8 @@ function collect(): { where: string; value: unknown }[] {
   for (const [key, value] of Object.entries(EXERCISE_TYPE_LABEL)) add(`EXERCISE.${key}`, value);
   for (const [key, v] of Object.entries(PERSON_LABEL)) add(`PERSON.${key}`, v.label);
   for (const [key, v] of Object.entries(TENSE_LABEL)) add(`TENSE.${key}`, v.label);
+  // 命令式與兩個分詞不在 TENSE_LABEL 裡，但一樣會印給使用者看
+  for (const [key, v] of Object.entries(EXTRA_FORM_LABEL)) add(`FORM.${key}`, v);
 
   for (const w of allWords) {
     add(`word:${w.id}.gloss`, w.gloss);

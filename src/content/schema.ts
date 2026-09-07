@@ -253,6 +253,13 @@ export const mcqExerciseSchema = z.object({
   ...exerciseBase,
   type: z.literal('mcq'),
   prompt: localizedSchema,
+  /**
+   * 題面的西班牙文原句。
+   *
+   * 這是預留的欄位，`MultipleChoice` 已經會渲染它，但目前 151 題四選一
+   * **沒有一題**填了它 —— 選填，所以不算壞掉的畫面。
+   * 寫在這裡是為了讓下一個讀到這段的人不必再查一次。
+   */
   promptEs: z.string().min(1).optional(),
   /**
    * 選項也要雙語。有些題目的選項是西班牙文形式（兩版內容相同），

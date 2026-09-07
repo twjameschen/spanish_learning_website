@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play, Layers, Headphones } from 'lucide-react';
+import { ArrowLeft, ArrowRight, TriangleAlert, Volume2, BookOpen, Lock, Play, Layers, Headphones, Check, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Markish, Inline } from '@/components/Markish';
@@ -13,7 +13,9 @@ import {
 } from '@/content/schema';
 import { hrefFor } from '@/lib/router';
 import { canListenDrill, listenDrillId } from '@/lib/listenDrill';
+import { useProgressStore } from '@/store/useProgressStore';
 import { useT } from '@/i18n';
+import { cn } from '@/lib/utils';
 
 /* -------------------------------------------------------------- *
  * 課程列表
@@ -21,6 +23,15 @@ import { useT } from '@/i18n';
 
 export function LessonListPage() {
   const { t, L } = useT();
+  /*
+   * 每一課做過沒有、最好幾分。
+   *
+   * `completedAt` 與 `bestAccuracy` 從 Phase 4 就寫進去了，但**沒有任何畫面
+   * 讀它們** —— 41 課的列表上完全看不出哪些做過、哪些全對。
+   * 偏偏有兩個成就就是「在 N 課中全部答對」：app 要你達到一個數字，
+   * 卻從來不告訴你單項進度。
+   */
+  const lessonProgress = useProgressStore((s) => s.lessons);
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -33,6 +44,7 @@ export function LessonListPage() {
           .map((id) => getLesson(id))
           .filter((l): l is GrammarLesson => Boolean(l));
         const locked = lessons.length === 0;
+        const doneHere = lessons.filter((l) => lessonProgress[l.id]).length;
 
         return (
           <section
@@ -53,8 +65,12 @@ export function LessonListPage() {
                     {t('notOpenYet')}
                   </Badge>
                 ) : (
-                  <Badge variant="success" className="ml-auto">
-                    {t('lessonsCount', { n: lessons.length })}
+                  <Badge
+                    variant={doneHere === lessons.length ? 'success' : 'neutral'}
+                    className="ml-auto"
+                  >
+                    {doneHere === lessons.length ? <Check aria-hidden="true" /> : null}
+                    {t('lessonsDoneOf', { done: doneHere, n: lessons.length })}
                   </Badge>
                 )}
               </div>
@@ -73,14 +89,35 @@ export function LessonListPage() {
 
               {locked ? null : (
                 <ol className="mt-4 space-y-2">
-                  {lessons.map((lesson) => (
+                  {lessons.map((lesson) => {
+                    const progress = lessonProgress[lesson.id];
+                    const done = Boolean(progress);
+                    return (
                     <li key={lesson.id}>
                       <a
                         href={hrefFor({ name: 'lesson', id: lesson.id })}
                         className="flex items-center gap-3 rounded-2xl bg-surface-2 px-4 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft"
                       >
-                        <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-primary-500 text-sm font-extrabold text-ink-900">
-                          {lesson.order}
+                        {/* 做過的課用打勾取代序號 —— 一眼看得出還剩哪幾課 */}
+                        <span
+                          className={cn(
+                            'grid size-8 shrink-0 place-items-center rounded-xl text-sm font-extrabold',
+                            // 深墨字配淺底 —— 跟隔壁沒做過的序號同一個作法。
+                            // success-600 上的白字只有 2.74:1，連圖示的 3:1 都不到
+                            done
+                              ? 'bg-success-600 text-ink-900'
+                              : 'bg-primary-500 text-ink-900',
+                          )}
+                          title={done ? t('lessonDone') : undefined}
+                        >
+                          {done ? (
+                            <>
+                              <Check aria-hidden="true" className="size-4" />
+                              <span className="sr-only">{t('lessonDone')}</span>
+                            </>
+                          ) : (
+                            lesson.order
+                          )}
                         </span>
                         <span className="min-w-0">
                           <span className="block truncate font-bold text-body">
@@ -93,13 +130,25 @@ export function LessonListPage() {
                             })}
                           </span>
                         </span>
+                        {/* 全對過的課另外標出來 —— 有兩個成就就是在數這個 */}
+                        {progress && progress.bestAccuracy >= 1 ? (
+                          <Badge variant="accent" className="ml-auto shrink-0">
+                            <Target aria-hidden="true" />
+                            {t('lessonPerfect')}
+                          </Badge>
+                        ) : progress ? (
+                          <span className="ml-auto shrink-0 text-xs font-bold text-muted">
+                            {t('lessonBest', { p: Math.round(progress.bestAccuracy * 100) })}
+                          </span>
+                        ) : null}
                         <ArrowRight
                           aria-hidden="true"
-                          className="ml-auto size-4 shrink-0 text-muted"
+                          className={cn('size-4 shrink-0 text-muted', done ? '' : 'ml-auto')}
                         />
                       </a>
                     </li>
-                  ))}
+                    );
+                  })}
                 </ol>
               )}
             </div>

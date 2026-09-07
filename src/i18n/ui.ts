@@ -168,6 +168,11 @@ export const UI = {
   noMatch: { zh: '沒有符合的單字', en: 'No matching words' },
   verbsTitle: { zh: '動詞變位表', en: 'Verb conjugations' },
   verbAllTenses: { zh: '看全部 7 個時態', en: 'See all seven tenses' },
+  masteryStars: { zh: '熟練度 {n} / {max} 星', en: 'Mastery {n} of {max}' },
+  lessonsDoneOf: { zh: '做完 {done} / {n} 課', en: '{done} of {n} done' },
+  lessonDone: { zh: '這一課做過了', en: 'Lesson completed' },
+  lessonPerfect: { zh: '全對', en: 'Perfect' },
+  lessonBest: { zh: '最佳 {p}%', en: 'Best {p}%' },
   verbsSubtitle: {
     zh: '{n} 個動詞，每個都有 7 個簡單時態。點進去看完整的變位。',
     en: '{n} verbs, each with all seven simple tenses. Open one for the full table.',
