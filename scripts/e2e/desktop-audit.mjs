@@ -264,7 +264,44 @@ for (const w of [1920, 1100, 1440, 900, 1280]){
 }
 ck('連續改變視窗寬度都不會橫向溢出', !sizes.some(s=>!s.endsWith(':0')), sizes.join(' '));
 
-console.log('\n[6] 全程沒有 JS 錯誤');
+/* ------------------------------------------------------------------ *
+ * 6. 分頁標題與 <html lang>
+ *
+ * 兩個都曾經寫死在 index.html：16 條路由共用同一個 <title>，桌機開一排
+ * 分頁時完全分不出誰是誰（瀏覽記錄與書籤也全部同名）；lang="zh-Hant"
+ * 不跟著語言開關走，讀屏會用中文語音唸英文介面。
+ * ------------------------------------------------------------------ */
+console.log('\n[6] 分頁標題與 html lang');
+{
+  const titles=[];
+  for (const r of ROUTES){
+    await p.goto(BASE+r,{waitUntil:'networkidle'}); await p.waitForTimeout(400);
+    titles.push(await p.title());
+  }
+  ck('每一條路由的標題都不同', new Set(titles).size===ROUTES.length,
+     `${new Set(titles).size}/${ROUTES.length}`);
+  // 辨識用的字要在前面：分頁一窄是從尾巴開始截，品牌放後面才留得住課名
+  ck('標題結尾都是品牌', titles.every((t)=>t.endsWith('Camino a Quito')||t.includes('Camino a Quito')));
+
+  await p.goto(BASE+'#/vocab',{waitUntil:'networkidle'}); await p.waitForTimeout(700);
+  ck('中文模式 lang=zh-Hant', (await p.evaluate(()=>document.documentElement.lang))==='zh-Hant');
+
+  await p.getByRole('button',{name:/設定|Settings/}).first().click(); await p.waitForTimeout(600);
+  await p.locator('[role="dialog"]').getByRole('button',{name:'English'}).click();
+  await p.waitForTimeout(700);
+  await p.keyboard.press('Escape'); await p.waitForTimeout(500);
+  ck('切成英文後 lang=en', (await p.evaluate(()=>document.documentElement.lang))==='en',
+     await p.evaluate(()=>document.documentElement.lang));
+  ck('切成英文後標題也是英文', /Vocabulary/.test(await p.title()), await p.title());
+
+  await p.getByRole('button',{name:/Settings/}).first().click(); await p.waitForTimeout(600);
+  await p.locator('[role="dialog"]').getByRole('button',{name:'中文'}).click(); await p.waitForTimeout(700);
+  await p.keyboard.press('Escape'); await p.waitForTimeout(500);
+  ck('切回中文後兩者都跟著回來',
+     (await p.evaluate(()=>document.documentElement.lang))==='zh-Hant' && /單字表/.test(await p.title()));
+}
+
+console.log('\n[7] 全程沒有 JS 錯誤');
 ck('沒有 pageerror / console error', errs.length===0, errs.slice(0,3).join(' | '));
 
 await p.close();

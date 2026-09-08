@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import { useRoute } from '@/lib/router';
 import { stopSpeaking } from '@/lib/speech';
 import { useStreakSync } from '@/hooks/useStreakSync';
+import { useDocumentMeta } from '@/hooks/useDocumentMeta';
 import { useSettingsStore } from '@/store/useSettingsStore';
 import { useT } from '@/i18n';
 
@@ -26,6 +27,9 @@ export default function App() {
 
   // hook 不能放在 early return 之後，所以在這裡呼叫；內部自己等補水
   useStreakSync();
+
+  // 分頁標題與 <html lang> —— 兩個都要跟著路由與語言走，不能寫死在 index.html
+  useDocumentMeta(route);
 
   /*
    * 換頁就停止發音。
