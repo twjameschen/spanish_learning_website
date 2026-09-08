@@ -6,7 +6,7 @@ import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { SpeakButton } from '@/components/SpeakButton';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
 import { AndeanBand } from '@/components/decor/Patterns';
-import { allLessons, getLesson, getWord, getVerb, journey } from '@/content';
+import { allLessons, getLesson, getWord, getVerb, journey, lessonNeighbours } from '@/content';
 import {
   EXERCISE_TYPE_LABEL, PERSON_LABEL, TENSE_LABEL,
   type Exercise, type GrammarLesson,
@@ -336,10 +336,15 @@ export function LessonPage({ id }: { id: string }) {
     );
   }
 
-  const ordered = [...allLessons].sort((a, b) => a.order - b.order);
-  const idx = ordered.findIndex((l) => l.id === lesson.id);
-  const prev = idx > 0 ? ordered[idx - 1] : undefined;
-  const next = idx < ordered.length - 1 ? ordered[idx + 1] : undefined;
+  /*
+   * 用 journey 的順序，不是 lesson.order。
+   *
+   * order 是每個城市各自從 1 開始編的（41 課只有 13 個相異值），
+   * 拿它排全部課程會把五個城市的第 1 課排在一起 ——
+   * 於是「A0 第 1 課」的下一課變成 A1 的反身動詞、
+   * 上一課變成 B1 的過去虛擬式。初學者照著按就直接掉出 A0。
+   */
+  const { prev, next } = lessonNeighbours(lesson.id);
   const pitfalls = Lo(lesson.pitfalls);
 
   return (

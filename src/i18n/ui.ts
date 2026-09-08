@@ -66,6 +66,13 @@ export const UI = {
     en: 'Five cities, five sets of lessons. {n} currently open.',
   },
   lessonsCount: { zh: '{n} 課', en: '{n} lessons' },
+  /* 首頁的「從哪裡接下去」。{n} 是課程總順序裡的第幾課，不是城市內的編號。 */
+  continueLesson: { zh: '繼續：第 {n} 課', en: 'Continue: lesson {n}' },
+  allLessonsDone: { zh: '{n} 課全部做完了', en: 'All {n} lessons done' },
+  allLessonsDoneHint: {
+    zh: '課程走完了，接下來用複習把字留住。',
+    en: 'The course is done — review is what keeps the words.',
+  },
   notOpenYet: { zh: '尚未開放', en: 'Not open yet' },
 
   // 卡片
@@ -342,6 +349,17 @@ export const UI = {
   bestCombo: { zh: '最長連對', en: 'Best streak' },
   practiceAgain: { zh: '再練一次', en: 'Practise again' },
   backToLesson: { zh: '回到課文', en: 'Back to lesson' },
+  /*
+   * 練完一課之後往哪裡去。
+   *
+   * 在此之前結算畫面只有「再練一次」跟「回到課文」—— 兩條都是回頭路，
+   * 學習者練完 41 課裡的第 1 課，畫面上沒有任何東西告訴他第 2 課是哪一課。
+   */
+  nextLesson: { zh: '下一課：{title}', en: 'Next: {title}' },
+  courseFinished: {
+    zh: '這是最後一課了。接下來靠複習把它們留住。',
+    en: "That's the last lesson. From here, review is what makes it stick.",
+  },
 
   // ---- 練習與複習 ----
   practiceTitle: { zh: '練習', en: 'Practice' },

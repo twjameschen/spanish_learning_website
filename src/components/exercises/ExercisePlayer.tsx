@@ -45,12 +45,22 @@ function cardKeyFor(ex: Exercise) {
 }
 
 export function ExercisePlayer({
-  exercises, lessonId, onFinish, onExit,
+  exercises, lessonId, onFinish, onExit, nextUp, courseDone,
 }: {
   exercises: Exercise[];
   lessonId?: string;
   onFinish?: (result: PlayerResult) => void;
   onExit?: () => void;
+  /**
+   * 結算之後往前走的那一步：下一課。
+   *
+   * 只有課程練習給得出來（`PracticePage`），複習與快速練習沒有「下一課」
+   * 這個概念，所以是選用的。最後一課也不給 —— 這時 `courseFinished`
+   * 那句話會取代按鈕，不會留一顆按了沒事的按鈕在那裡。
+   */
+  nextUp?: { title: string; href: string };
+  /** 剛練完的就是整條路上的最後一課 —— 結算給一句話，不是一顆按不到的按鈕 */
+  courseDone?: boolean;
 }) {
   const { t, L } = useT();
   const recordAnswer = useProgressStore((s) => s.recordAnswer);
@@ -172,6 +182,12 @@ export function ExercisePlayer({
 
   if (finished) {
     const accuracy = tally.answered > 0 ? Math.round((tally.correct / tally.answered) * 100) : 0;
+    /*
+     * 答對不到六成就不要把「下一課」擺成主要動作。
+     * 這一輪的內容都還沒站穩，往前推只是把洞帶著走 ——
+     * 這時候「再練一次」才是主要按鈕，下一課退成次要的，但仍然在。
+     */
+    const weak = accuracy < 60;
     return (
       <div className="space-y-6 rounded-3xl border border-line/70 bg-surface p-6 text-center shadow-card sm:p-10">
         <Trophy aria-hidden="true" className="mx-auto size-14 text-accent-500" />
@@ -195,7 +211,7 @@ export function ExercisePlayer({
         </dl>
         <div className="flex flex-wrap justify-center gap-3">
           <Button
-            variant="outline"
+            variant={weak ? 'primary' : 'outline'}
             onClick={() => {
               setIndex(0);
               setFinished(false);
@@ -211,8 +227,21 @@ export function ExercisePlayer({
             <RotateCcw aria-hidden="true" />
             {t('practiceAgain')}
           </Button>
-          {onExit ? <Button onClick={onExit}>{t('backToLesson')}</Button> : null}
+          {onExit ? (
+            <Button variant={nextUp ? 'outline' : 'primary'} onClick={onExit}>
+              {t('backToLesson')}
+            </Button>
+          ) : null}
+          {nextUp ? (
+            <Button asChild variant={weak ? 'outline' : 'primary'}>
+              <a href={nextUp.href}>
+                {t('nextLesson', { title: nextUp.title })}
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
+          ) : null}
         </div>
+        {courseDone ? <p className="text-sm text-muted">{t('courseFinished')}</p> : null}
       </div>
     );
   }

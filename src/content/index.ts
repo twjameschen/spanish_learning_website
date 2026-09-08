@@ -77,6 +77,46 @@ const wordIndex = new Map<string, Word>(allWords.map((w) => [w.id, w]));
 const verbIndex = new Map<string, Verb>(allVerbs.map((v) => [v.id, v]));
 const lessonIndex = new Map<string, GrammarLesson>(allLessons.map((l) => [l.id, l]));
 
+/**
+ * 課程的**正式順序**：journey 各站的 lessonIds 接起來。
+ *
+ * 千萬不要拿 `lesson.order` 排全部 41 課 —— 那個欄位是**每個城市各自從 1
+ * 開始編**的（41 課只有 13 個相異值）。`[...allLessons].sort(by order)`
+ * 會把五個城市的第 1 課排在一起，於是「A0 第 1 課」的下一課變成 A1、
+ * 上一課變成 B1 的過去虛擬式。這條路徑從 Phase 5 就是壞的。
+ */
+export const orderedLessons: GrammarLesson[] = (() => {
+  const inJourney = journey.flatMap((stop) => stop.lessonIds);
+  const seen = new Set(inJourney);
+  return [
+    ...inJourney.map((id) => lessonIndex.get(id)).filter((l): l is GrammarLesson => Boolean(l)),
+    // journey 沒收錄到的課還是要排得到，接在最後面而不是消失
+    ...allLessons.filter((l) => !seen.has(l.id)),
+  ];
+})();
+
+/** 某一課在正式順序裡的前後鄰居 */
+export function lessonNeighbours(id: string): {
+  prev?: GrammarLesson;
+  next?: GrammarLesson;
+} {
+  const i = orderedLessons.findIndex((l) => l.id === id);
+  if (i < 0) return {};
+  return {
+    ...(i > 0 ? { prev: orderedLessons[i - 1]! } : {}),
+    ...(i < orderedLessons.length - 1 ? { next: orderedLessons[i + 1]! } : {}),
+  };
+}
+
+/** 依正式順序，第一堂還沒做過的課；全部做完回傳 undefined */
+export function firstUnfinishedLesson(
+  done: ReadonlySet<string> | Readonly<Record<string, unknown>>,
+): GrammarLesson | undefined {
+  const has = (lid: string) =>
+    done instanceof Set ? done.has(lid) : Object.prototype.hasOwnProperty.call(done, lid);
+  return orderedLessons.find((l) => !has(l.id));
+}
+
 export const getWord = (id: string): Word | undefined => wordIndex.get(id);
 export const getVerb = (id: string): Verb | undefined => verbIndex.get(id);
 export const getLesson = (id: string): GrammarLesson | undefined => lessonIndex.get(id);

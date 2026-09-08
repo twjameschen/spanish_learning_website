@@ -16,7 +16,7 @@ import { buildAchievementSnapshot } from '@/lib/snapshotProgress';
 import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
 import type { UIKey } from '@/i18n';
-import { allWords, allLessons, journey } from '@/content';
+import { allWords, allLessons, journey, orderedLessons, firstUnfinishedLesson } from '@/content';
 import { listenPoolSize, listenDrillId } from '@/lib/listenDrill';
 import { mistakeCount } from '@/lib/mistakes';
 import { reviewQueueCount } from '@/lib/review';
@@ -32,7 +32,7 @@ const TIER_TEXT: Record<
 };
 
 export function HomePage() {
-  const { t } = useT();
+  const { t, L } = useT();
   const tier = useStorageTier();
   const cards = useProgressStore((s) => s.cards);
   const totalXp = useProgressStore((s) => s.totalXp);
@@ -54,6 +54,18 @@ export function HomePage() {
 
   const openStops = journey.filter((s) => s.lessonIds.length > 0);
   const lessonsDone = Object.keys(lessonProgress).length;
+
+  /*
+   * 「從哪裡接下去」。
+   *
+   * 首頁在此之前完全沒有這個東西：六張卡片全是分類入口（單字、課程、
+   * 練習、成就…），沒有一條路直接把人送回上次卡住的地方。回來的人得先
+   * 點課程列表、再自己回想上次做到哪一課。
+   *
+   * 依 journey 的順序找第一堂還沒做過的課；41 課都做完就換成建議複習。
+   */
+  const nextLesson = firstUnfinishedLesson(lessonProgress);
+  const nextLessonNo = nextLesson ? orderedLessons.indexOf(nextLesson) + 1 : 0;
   const exerciseCount = allLessons.reduce((n, l) => n + l.exercises.length, 0);
 
   return (
@@ -80,6 +92,26 @@ export function HomePage() {
             </div>
             <Progress value={(lessonsDone / allLessons.length) * 100} className="bg-ink-900/15" />
           </div>
+
+          {/* 深底＋淺字，才在這條漸層上撐得住對比（漸層本身很亮） */}
+          {nextLesson ? (
+            <a
+              href={hrefFor({ name: 'lesson', id: nextLesson.id })}
+              className="group/cta mt-1 inline-flex max-w-full items-center gap-2 rounded-2xl bg-ink-900 px-5 py-3 text-[15px] font-bold text-white shadow-lift transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink-900 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-400"
+            >
+              <span className="shrink-0">{t('continueLesson', { n: nextLessonNo })}</span>
+              <span className="truncate font-semibold text-white/80">{L(nextLesson.title)}</span>
+              <ArrowRight
+                aria-hidden="true"
+                className="size-[18px] shrink-0 transition-transform group-hover/cta:translate-x-1"
+              />
+            </a>
+          ) : (
+            <p className="mt-1 text-sm font-bold text-ink-900">
+              {t('allLessonsDone', { n: allLessons.length })}
+              <span className="ml-1.5 font-semibold text-ink-900/85">{t('allLessonsDoneHint')}</span>
+            </p>
+          )}
         </div>
       </section>
 

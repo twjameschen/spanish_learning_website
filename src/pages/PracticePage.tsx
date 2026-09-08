@@ -2,7 +2,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ExercisePlayer, type PlayerResult } from '@/components/exercises/ExercisePlayer';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
-import { getLesson } from '@/content';
+import { getLesson, lessonNeighbours } from '@/content';
 import { useProgressStore } from '@/store/useProgressStore';
 import { hrefFor } from '@/lib/router';
 import { useT } from '@/i18n';
@@ -34,6 +34,15 @@ export function PracticePage({ lessonId }: { lessonId: string }) {
     completeLesson(lesson.id, result.accuracy);
   };
 
+  /*
+   * 練完之後往哪裡去。走 journey 的順序，不是 `lesson.order`
+   * —— order 是每個城市各自從 1 開始編的，拿來排全部 41 課會跳級。
+   *
+   * 連到課文而不是直接連到下一課的練習：新的一課要先讀過文法與陷阱，
+   * 直接丟進題目裡只會變成猜。
+   */
+  const { next } = lessonNeighbours(lesson.id);
+
   return (
     <div className="space-y-5">
       <header className="space-y-1">
@@ -58,6 +67,9 @@ export function PracticePage({ lessonId }: { lessonId: string }) {
         onExit={() => {
           location.hash = hrefFor({ name: 'lesson', id: lesson.id });
         }}
+        {...(next
+          ? { nextUp: { title: L(next.title), href: hrefFor({ name: 'lesson', id: next.id }) } }
+          : { courseDone: true })}
       />
     </div>
   );

@@ -216,4 +216,73 @@ describe('ExercisePlayer', () => {
     fireEvent.keyDown(document.body, { key: '1' });
     expect(screen.getByRole('button', { name: /下一題|完成/ })).toBeTruthy();
   });
+
+  /*
+   * 結算之後往哪裡去。
+   *
+   * 在此之前結算畫面只有「再練一次」與「回到課文」—— 兩條都是回頭路。
+   * 練完第 1 課的人，畫面上沒有任何東西告訴他第 2 課是哪一課，
+   * 得自己回課程列表翻。
+   */
+  describe('結算的下一步', () => {
+    const finish = () => { pick(0); next(); };
+
+    it('有下一課時給一顆連過去的按鈕，標題就印在上面', () => {
+      render(
+        <ExercisePlayer
+          exercises={[mcq('q1', 0)]}
+          nextUp={{ title: '名詞的陰陽性', href: '#/lessons/a0-genero' }}
+        />,
+      );
+      finish();
+      const link = screen.getByRole('link', { name: /下一課：名詞的陰陽性/ });
+      expect(link.getAttribute('href')).toBe('#/lessons/a0-genero');
+    });
+
+    it('沒給下一課就不會多出一顆連不到地方的按鈕', () => {
+      render(<ExercisePlayer exercises={[mcq('q1', 0)]} />);
+      finish();
+      expect(screen.queryByRole('link', { name: /下一課/ })).toBeNull();
+    });
+
+    it('最後一課給一句話，不是一顆按不到的按鈕', () => {
+      render(<ExercisePlayer exercises={[mcq('q1', 0)]} courseDone />);
+      finish();
+      expect(screen.queryByRole('link', { name: /下一課/ })).toBeNull();
+      expect(screen.getByText(/這是最後一課了/)).toBeTruthy();
+    });
+
+    /*
+     * 答對不到六成就不要把人往前推 —— 這一輪的內容還沒站穩。
+     * 「下一課」仍然在，只是退成次要的，主要動作換成「再練一次」。
+     */
+    it('答得差的時候主要動作是再練一次，下一課退成次要的', () => {
+      render(
+        <ExercisePlayer
+          exercises={[mcq('q1', 0), mcq('q2', 0)]}
+          nextUp={{ title: '名詞的陰陽性', href: '#/lessons/a0-genero' }}
+        />,
+      );
+      pick(2); next(); // 錯
+      pick(2); next(); // 錯 → 0%
+      expect(screen.getByText('0%')).toBeTruthy();
+
+      const again = screen.getByRole('button', { name: /再練一次/ });
+      const nextLink = screen.getByRole('link', { name: /下一課/ });
+      expect(again.className).toMatch(/bg-primary-500/);
+      expect(nextLink.className).not.toMatch(/bg-primary-500/);
+    });
+
+    it('答得好的時候主要動作是下一課', () => {
+      render(
+        <ExercisePlayer
+          exercises={[mcq('q1', 0)]}
+          nextUp={{ title: '名詞的陰陽性', href: '#/lessons/a0-genero' }}
+        />,
+      );
+      finish(); // 100%
+      expect(screen.getByRole('link', { name: /下一課/ }).className).toMatch(/bg-primary-500/);
+      expect(screen.getByRole('button', { name: /再練一次/ }).className).not.toMatch(/bg-primary-500/);
+    });
+  });
 });
