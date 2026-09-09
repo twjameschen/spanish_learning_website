@@ -235,13 +235,16 @@ export const UI = {
     en: '{n} lessons from A0 to B1, with all five cities open. Work through them in order — each one builds on the last.',
   },
   lessonNo: { zh: '第 {n} 課', en: 'Lesson {n}' },
+  /*
+   * 課文頁用的版本：帶總數，而且 {n} 是**正式順序**的位置。
+   *
+   * `lessonNo`（只有 {n}）仍然給課程列表用 —— 那裡的課排在城市標題底下，
+   * 「1, 2, 3…」讀起來自然。課文頁沒有城市當 context，只寫「第 13 課」
+   * 會跟首頁的「繼續：第 25 課」對不起來。
+   */
+  lessonNoOf: { zh: '第 {n} / {total} 課', en: 'Lesson {n} of {total}' },
   rulesAndExercises: { zh: '{r} 條規則 · {e} 題', en: '{r} rules · {e} exercises' },
   backToLessons: { zh: '課程列表', en: 'All lessons' },
-  strictlyStaged: { zh: '例句嚴格分級', en: 'Strictly staged examples' },
-  strictlyStagedHint: {
-    zh: '本課示範規則的例句只使用了本課與前置課教過的文法',
-    en: 'The examples illustrating each rule use only grammar taught in this lesson or earlier ones',
-  },
   pitfallsHeading: { zh: '最容易犯的錯', en: 'Common mistakes' },
   rulesHeading: { zh: '規則與例句', en: 'Rules and examples' },
   pronHeading: { zh: '發音重點', en: 'Pronunciation notes' },

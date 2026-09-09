@@ -6,7 +6,9 @@ import { RegionalNote } from '@/components/NeedsVerifyBadge';
 import { SpeakButton } from '@/components/SpeakButton';
 import { EmptyState, BrokenSignpost } from '@/components/decor/Illustrations';
 import { AndeanBand } from '@/components/decor/Patterns';
-import { allLessons, getLesson, getWord, getVerb, journey, lessonNeighbours } from '@/content';
+import {
+  allLessons, getLesson, getWord, getVerb, journey, lessonNeighbours, orderedLessons,
+} from '@/content';
 import {
   EXERCISE_TYPE_LABEL, PERSON_LABEL, TENSE_LABEL,
   type Exercise, type GrammarLesson,
@@ -345,6 +347,7 @@ export function LessonPage({ id }: { id: string }) {
    * 上一課變成 B1 的過去虛擬式。初學者照著按就直接掉出 A0。
    */
   const { prev, next } = lessonNeighbours(lesson.id);
+  const lessonNo = orderedLessons.findIndex((l) => l.id === lesson.id) + 1;
   const pitfalls = Lo(lesson.pitfalls);
 
   return (
@@ -358,13 +361,18 @@ export function LessonPage({ id }: { id: string }) {
           {t('backToLessons')}
         </a>
         <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="primary">{t('lessonNo', { n: lesson.order })}</Badge>
+          {/*
+            * 正式順序的位置，不是 `lesson.order`。
+            *
+            * order 是每個城市各自從 1 開始編的。課程列表印它沒問題 ——
+            * 那裡的課排在城市標題底下 —— 但這顆徽章旁邊沒有城市，
+            * 只寫「第 13 課」會跟首頁的「繼續：第 25 課」對不起來，
+            * 同一課在兩個畫面上有兩個編號。
+            */}
+          <Badge variant="primary">
+            {t('lessonNoOf', { n: lessonNo, total: orderedLessons.length })}
+          </Badge>
           <Badge variant="neutral">{lesson.level}</Badge>
-          {lesson.usesOnlyTaughtGrammar ? (
-            <Badge variant="success" title={t('strictlyStagedHint')}>
-              {t('strictlyStaged')}
-            </Badge>
-          ) : null}
         </div>
         <h1 className="text-2xl font-extrabold tracking-tight text-body sm:text-3xl">
           {L(lesson.title)}
